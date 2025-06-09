@@ -4,396 +4,364 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HATA Humanitarian Inc. - Empowering Winnipeg Communities</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
         :root {
-            --primary: #2a5c8d;
-            --secondary: #e74c3c;
-            --light: #f9f9f9;
-            --dark: #333;
-            --accent: #f39c12;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --primary: #2A5C8D; /* Dark blue from logo */
+            --secondary: #1E40AF; /* Darker blue accent */
+            --accent: #F59E0B; /* Gold/yellow from logo */
+            --light: #F8FAFC;
+            --dark: #1E293B;
+            --text: #334155;
         }
         
         body {
-            line-height: 1.6;
-            color: var(--dark);
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
         }
         
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
+        .bg-primary {
+            background-color: var(--primary) !important;
         }
         
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+        .bg-accent {
+            background-color: var(--accent) !important;
         }
         
-        .btn:hover {
-            background: #1d4b7a;
-            transform: translateY(-2px);
+        .text-accent {
+            color: var(--accent) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
         }
         
         .btn-accent {
-            background: var(--accent);
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
         }
         
         .btn-accent:hover {
-            background: #e67e22;
+            background-color: #D97706;
+            border-color: #D97706;
+            color: #fff;
         }
         
-        section {
-            padding: 80px 0;
+        .btn-outline-accent {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .btn-outline-accent:hover {
+            background-color: var(--accent);
+            color: #fff;
+        }
+        
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
         
         .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 2.2rem;
-            color: var(--primary);
+            position: relative;
+            margin-bottom: 3rem;
         }
         
-        /* Header Styles */
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 100;
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 1rem auto 0;
+            border-radius: 2px;
         }
         
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
+        .program-card, .value-card, .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
         }
         
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
+        .program-card:hover, .value-card:hover, .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
         }
         
-        .logo span {
-            color: var(--accent);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding-top: 80px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        /* Mission Section */
-        .mission {
-            background: var(--light);
-            text-align: center;
-        }
-        
-        .mission-statement {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--primary);
-        }
-        
-        /* Programs Section */
-        .programs {
-            background: white;
-        }
-        
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .program-card {
-            background: var(--light);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .stat-card {
             transition: transform 0.3s ease;
         }
         
-        .program-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .program-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .program-content {
-            padding: 25px;
-        }
-        
-        .program-content h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        /* Impact Section */
-        .impact {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-        }
-        
-        .impact-stats {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-        
-        .stat-item {
-            margin: 20px;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        /* Team Section */
-        .team {
-            background: var(--light);
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .team-member {
-            text-align: center;
+        .stat-card:hover {
+            transform: translateY(-5px);
         }
         
         .member-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .cta-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
             width: 200px;
             height: 200px;
+            background: rgba(255,255,255,0.1);
             border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
+        .cta-section:after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
         }
         
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-        
-        .cta-btns {
+        .social-icon {
+            width: 40px;
+            height: 40px;
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
         }
         
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 50px 0 20px;
+        .social-icon:hover {
+            background-color: var(--accent) !important;
+            color: white !important;
+            transform: translateY(-3px);
         }
         
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+        /* Custom logo styling */
+        .logo-text {
+            font-weight: 700;
+            color: var(--primary);
         }
         
-        .footer-col h3 {
+        .logo-text span {
             color: var(--accent);
-            margin-bottom: 20px;
-            font-size: 1.2rem;
         }
         
-        .footer-col ul {
-            list-style: none;
-        }
-        
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-col a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-col a:hover {
-            color: white;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #aaa;
-            font-size: 0.9rem;
+        .logo-slogan {
+            font-size: 0.8rem;
+            color: var(--dark);
+            margin-left: 10px;
+            border-left: 2px solid var(--accent);
+            padding-left: 10px;
         }
     </style>
 </head>
-<body>
-    <!-- Header/Navigation -->
-    <header>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <nav>
-                <div class="logo">HATA<span>Humanitarian</span></div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
+                <div>
+                    <div class="logo-text">HATA <span>Humanitarian</span></div>
+                    <div class="logo-slogan">Empower Save Transform</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programs">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#values">Values</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-accent mt-2 mt-lg-0" href="#donate">Donate</a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section id="home" class="hero text-white">
         <div class="container">
-            <div class="hero-content">
-                <h1>Empowering Lives Through Mental Well-being, Inclusion, and Recovery</h1>
-                <p>Building resilient communities in Winnipeg with education, advocacy, and holistic support.</p>
-                <div class="hero-btns">
-                    <a href="#" class="btn">Learn How You Can Help</a>
-                    <a href="#" class="btn btn-accent">Donate Now</a>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold mb-4">Empowering Lives Through Mental Well-being, Inclusion, and Recovery</h1>
+                    <p class="lead mb-5">Building resilient communities in Winnipeg with education, advocacy, and holistic support.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="#programs" class="btn btn-primary btn-lg px-4">Our Programs</a>
+                        <a href="#contact" class="btn btn-accent btn-lg px-4">Get Involved</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission Section -->
-    <section class="mission">
-        <div class="container">
-            <h2 class="section-title">Our Mission</h2>
-            <p class="mission-statement">"We empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education and community engagement."</p>
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="text-center mb-5 section-title">About Our Organization</h2>
+                    
+                    <div class="mb-5">
+                        <h3 class="text-primary mb-3">Background</h3>
+                        <p>At the heart of our work is a powerful belief: that every individual, regardless of their background or circumstances, deserves the opportunity to thrive with dignity, resilience, and purpose. Founded in Winnipeg, HATA Humanitarian Inc. exists to bridge the gaps in mental health care, addiction recovery, and newcomer integration ensuring no one is left behind.</p>
+                        <p>Our vision of an inclusive community where every individual is empowered to thrive drives all that we do. Through targeted programs that address mental well-being, combat stigma, and foster inclusive support systems, we aim to create lasting transformation not just for individuals, but for entire communities.</p>
+                    </div>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <h3 class="text-primary mb-3">Our Mission</h3>
+                                    <p>To empower and transform lives by promoting mental well-being, supporting addiction recovery, and facilitating social inclusion. We achieve this through education, advocacy, and strong community engagement.</p>
+                                    <p>Whether it's providing mindset education in schools, helping newcomers acquire life skills, or supporting youth facing addiction with food assistance and recovery mentorship, our work is guided by compassion, evidence-based approaches, and a commitment to equity.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <h3 class="text-primary mb-3">Our Vision</h3>
+                                    <p>An inclusive community where every individual is empowered to thrive with resilience, dignity, and purpose.</p>
+                                    <h4 class="mt-4 mb-3">Objectives</h4>
+                                    <ol class="ps-3">
+                                        <li class="mb-2">To promote mental well-being and break the stigma surrounding mental health through mindset education and support programs.</li>
+                                        <li class="mb-2">To facilitate the integration of newcomers into Winnipeg by providing essential skills training and support services.</li>
+                                        <li class="mb-2">To support youth struggling with addiction by offering food assistance and mindset education for long-term recovery.</li>
+                                        <li>To build a supportive network that encourages resilience, personal growth, and social inclusion.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <blockquote class="blockquote">
+                        <p class="fs-3 text-primary fst-italic">"We empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education, advocacy, and community engagement."</p>
+                    </blockquote>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Programs Section -->
-    <section class="programs" id="programs">
-        <div class="container">
-            <h2 class="section-title">Our Programs</h2>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-img" style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="program-content">
-                        <h3>Stigma-Free Mental Health</h3>
-                        <p>Workshops and peer support to combat stigma and build resilience among Winnipeg youth through mindset education.</p>
-                        <a href="#" class="btn">Learn More</a>
+    <section id="programs" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 section-title">Our Programs</h2>
+            
+            <div class="row g-4">
+                <!-- Program 1 -->
+                <div class="col-lg-4">
+                    <div class="card program-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Mental Health Program" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">Stigma-Free and Mental Health | Mindset Education</h3>
+                            <p class="card-text">This program addresses the growing mental health concerns among youths in Winnipeg through workshops, seminars, and peer support groups, educating participants on mental health, stigma impact, and positive mindset strategies.</p>
+                            <h5 class="mt-4">Activities:</h5>
+                            <ul class="mb-4">
+                                <li>Mental health awareness workshops</li>
+                                <li>Positive mindset and resilience training</li>
+                                <li>Peer support and mentorship programs</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary">Learn More</a>
+                        </div>
                     </div>
                 </div>
-                <div class="program-card">
-                    <div class="program-img" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="program-content">
-                        <h3>Diversity & Inclusion</h3>
-                        <p>Language training and digital skills workshops to help newcomers integrate successfully into Canadian society.</p>
-                        <a href="#" class="btn">Learn More</a>
+                
+                <!-- Program 2 -->
+                <div class="col-lg-4">
+                    <div class="card program-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Diversity Program" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">Diversity and Inclusion Program</h3>
+                            <p class="card-text">Our program focuses on helping newcomers integrate smoothly into life in Winnipeg through language training, digital skills workshops, and guidance on navigating local systems.</p>
+                            <h5 class="mt-4">Activities:</h5>
+                            <ul class="mb-4">
+                                <li>Language training to enhance communication</li>
+                                <li>Digital skills training for employability</li>
+                                <li>Navigating the Canadian Education System</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary">Learn More</a>
+                        </div>
                     </div>
                 </div>
-                <div class="program-card">
-                    <div class="program-img" style="background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="program-content">
-                        <h3>Addiction-Free Youth</h3>
-                        <p>Mindset education and food assistance programs supporting youth in addiction recovery journeys.</p>
-                        <a href="#" class="btn">Learn More</a>
+                
+                <!-- Program 3 -->
+                <div class="col-lg-4">
+                    <div class="card program-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Addiction Program" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">Addiction-Free Program</h3>
+                            <p class="card-text">This program supports drug-addicted youths by addressing their immediate needs and fostering long-term mindset change through education and community outreach.</p>
+                            <h5 class="mt-4">Activities:</h5>
+                            <ul class="mb-4">
+                                <li>Mindset education sessions</li>
+                                <li>Collaboration with rehabilitation services</li>
+                                <li>Community outreach programs</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary">Learn More</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -401,104 +369,302 @@
     </section>
 
     <!-- Impact Section -->
-    <section class="impact">
-        <div class="container">
-            <h2 class="section-title">Our Impact</h2>
-            <div class="impact-stats">
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-desc">Youth educated in mental health annually</div>
+    <section id="impact" class="py-5 bg-primary text-white">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 section-title text-white">Our Impact</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card stat-card h-100 border-0 bg-transparent text-center">
+                        <div class="card-body py-4">
+                            <div class="display-4 fw-bold text-accent mb-2">500+</div>
+                            <p class="mb-0">Youth educated in mental health annually</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">200+</div>
-                    <div class="stat-desc">Newcomers supported</div>
+                
+                <div class="col-md-3">
+                    <div class="card stat-card h-100 border-0 bg-transparent text-center">
+                        <div class="card-body py-4">
+                            <div class="display-4 fw-bold text-accent mb-2">200+</div>
+                            <p class="mb-0">Newcomers supported</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">80%</div>
-                    <div class="stat-desc">Recovery success rate</div>
+                
+                <div class="col-md-3">
+                    <div class="card stat-card h-100 border-0 bg-transparent text-center">
+                        <div class="card-body py-4">
+                            <div class="display-4 fw-bold text-accent mb-2">80%</div>
+                            <p class="mb-0">Recovery success rate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card stat-card h-100 border-0 bg-transparent text-center">
+                        <div class="card-body py-4">
+                            <div class="display-4 fw-bold text-accent mb-2">100%</div>
+                            <p class="mb-0">Commitment to our community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 section-title">Our Core Values</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card value-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="text-primary">Dignity and Respect</h3>
+                            <p>We believe every person, regardless of background or circumstance, deserves to be treated with dignity, compassion, and respect. We honour the unique journey of each individual and uphold their worth in every interaction.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card value-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="text-primary">Inclusion and Belonging</h3>
+                            <p>We are committed to fostering inclusive communities where everyone newcomers, youth, marginalized individuals feels seen, valued, and supported. Diversity is our strength, and belonging is our goal.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card value-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="text-primary">Integrity and Accountability</h3>
+                            <p>We act with transparency, honesty, and a strong sense of responsibility. Our decisions and actions reflect our mission, and we are accountable to the people and communities we serve.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card value-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="text-primary">Empowerment through Education</h3>
+                            <p>Knowledge transforms lives. We provide mindset education, life skills, and training to equip individuals with the tools they need to overcome challenges and shape their futures.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card value-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="text-primary">Hope and Transformation</h3>
+                            <p>We believe in the power of hope to ignite change. From addiction recovery to newcomer integration, we walk alongside individuals on their journey to transformation and purpose.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card value-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="text-primary">Community-Centered Action</h3>
+                            <p>Our work is grounded in the lived experiences of the communities we serve. We engage collaboratively, build trust, and co-create solutions that bring lasting change.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="team" id="team">
-        <div class="container">
-            <h2 class="section-title">Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Pacific Muhumure" class="member-img">
-                    <h3>Pacific Muhumure</h3>
-                    <p>CEO & Director</p>
+    <section id="team" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 section-title">Our Leadership Team</h2>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Team Member 1 -->
+                <div class="col-lg-4">
+                    <div class="card team-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <img src="" alt="Pacific Muhumure" class="member-img rounded-circle mb-4">
+                            <h3 class="text-primary">Pacific Muhumure</h3>
+                            <p class="text-accent fw-bold">CEO & Director</p>
+                            <div class="text-start">
+                                <p>Pacific is a dedicated professional with degrees in Healthcare Management and certifications from Harvard University and the UN. He brings extensive experience in education and community empowerment.</p>
+                                <button class="btn btn-link p-0 text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#pacificBio">Read more <i class="fas fa-chevron-down"></i></button>
+                                <div class="collapse mt-3" id="pacificBio">
+                                    <p>Passionate about community empowerment, Pacific has collaborated with NGOs, government agencies, and the Ministry of Education to serve underserved communities. His diverse experience includes roles as Academic Advisor, Monitoring and Evaluation Officer, and Project Manager.</p>
+                                    <p>Having faced challenges as a young refugee, Pacific is committed to encouraging students by sharing his journey and teaching the importance of mental health and mindset education.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Angelique Nantabara" class="member-img">
-                    <h3>Angelique Nantabara</h3>
-                    <p>Community Leader</p>
+                
+                <!-- Team Member 2 -->
+                <div class="col-lg-4">
+                    <div class="card team-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <img src="" alt="Angelique Nantabara" class="member-img rounded-circle mb-4">
+                            <h3 class="text-primary">Angelique Nantabara</h3>
+                            <p class="text-accent fw-bold">Community Leader | Advocate</p>
+                            <div class="text-start">
+                                <p>Angelique has been a dedicated community advocate in Winnipeg for over 17 years, bringing deep passion and lived experience to her work supporting youth, newcomers, and individuals with disabilities.</p>
+                                <button class="btn btn-link p-0 text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#angeliqueBio">Read more <i class="fas fa-chevron-down"></i></button>
+                                <div class="collapse mt-3" id="angeliqueBio">
+                                    <p>Originally from the Democratic Republic of Congo, she immigrated to Canada and quickly became an active force in settlement services and community integration. Beyond Canada, she has spent more than a decade supporting forcibly displaced families in Congo.</p>
+                                    <p>Angelique served as the overall leader of Ineza Organization, advocating for inclusion and support systems for newcomers and displaced families.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Gentile Ntwayingabo" class="member-img">
-                    <h3>Gentile Ntwayingabo</h3>
-                    <p>Youth Advocate</p>
+                
+                <!-- Team Member 3 -->
+                <div class="col-lg-4">
+                    <div class="card team-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <img src="" alt="Gentile Ntwayingabo" class="member-img rounded-circle mb-4">
+                            <h3 class="text-primary">Gentile Ntwayingabo</h3>
+                            <p class="text-accent fw-bold">Youth Advocate | Community Builder</p>
+                            <div class="text-start">
+                                <p>Gentile immigrated to Canada from the Democratic Republic of Congo as a young girl and has proudly called Winnipeg home for over 16 years. She is passionate about empowering youth and newcomers.</p>
+                                <button class="btn btn-link p-0 text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#gentileBio">Read more <i class="fas fa-chevron-down"></i></button>
+                                <div class="collapse mt-3" id="gentileBio">
+                                    <p>A graduate of Golden Bell High School, Gentile is currently pursuing a Bachelor of Arts degree in Business Administration. She has worked extensively in community development, supporting youth, students, and individuals with disabilities.</p>
+                                    <p>Gentile understands firsthand the barriers young immigrants face and dedicates herself to helping others overcome those hurdles to realize their full potential.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Join us in creating a stigma-free, inclusive Winnipeg!</h2>
-            <p>Your support makes our work possible. Whether through volunteering or donations, you can help transform lives.</p>
-            <div class="cta-btns">
-                <a href="#" class="btn">Donate Now</a>
-                <a href="#" class="btn btn-accent">Volunteer With Us</a>
+    <section id="donate" class="py-5 cta-section bg-primary text-white">
+        <div class="container py-5 position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-4">Join Our Mission to Transform Lives</h2>
+                    <p class="lead mb-5">Your support helps us create a more inclusive, mentally healthy Winnipeg where everyone has the opportunity to thrive.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="#" class="btn btn-accent btn-lg px-4">Donate Now</a>
+                        <a href="#" class="btn btn-outline-accent btn-lg px-4">Volunteer With Us</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>HATA Humanitarian</h3>
-                    <p>Empowering Winnipeg communities through mental health support, newcomer integration, and addiction recovery programs.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li>Winnipeg, Manitoba</li>
-                        <li>info@hatahumanitarian.org</li>
-                        <li>(204) 555-0192</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+    <footer id="contact" class="py-5 bg-dark text-white">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
+                            <div>
+                                <div class="logo-text text-white">HATA <span class="text-accent">Humanitarian</span></div>
+                                <div class="logo-slogan text-white-50">Empower Save Transform</div>
+                            </div>
+                        </div>
+                        <p>Empowering Winnipeg communities through mental health support, newcomer integration, and addiction recovery programs.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon bg-white-10 text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon bg-white-10 text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon bg-white-10 text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon bg-white-10 text-white"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#programs" class="text-white-50 text-decoration-none">Our Programs</a></li>
+                        <li class="mb-2"><a href="#values" class="text-white-50 text-decoration-none">Our Values</a></li>
+                        <li><a href="#team" class="text-white-50 text-decoration-none">Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Programs</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#programs" class="text-white-50 text-decoration-none">Mental Health</a></li>
+                        <li class="mb-2"><a href="#programs" class="text-white-50 text-decoration-none">Diversity & Inclusion</a></li>
+                        <li><a href="#programs" class="text-white-50 text-decoration-none">Addiction-Free</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="text-white mb-4">Contact Us</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-accent me-3 mt-1"></i>
+                            <span>Winnipeg, Manitoba</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-envelope text-accent me-3 mt-1"></i>
+                            <span>info@hatahumanitarian.org</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-phone text-accent me-3 mt-1"></i>
+                            <span>(204) 555-0192</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 HATA Humanitarian Inc. All rights reserved.</p>
+            
+            <hr class="my-4 bg-white-10">
+            
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2023 HATA Humanitarian Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
