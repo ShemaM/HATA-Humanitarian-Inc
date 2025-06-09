@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HATA Humanitarian Inc. - Empowering Winnipeg Communities</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #2a5c8d;
+            --secondary: #e74c3c;
+            --light: #f9f9f9;
+            --dark: #333;
+            --accent: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #1d4b7a;
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background: #e67e22;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Mission Section */
+        .mission {
+            background: var(--light);
+            text-align: center;
+        }
+        
+        .mission-statement {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--primary);
+        }
+        
+        /* Programs Section */
+        .programs {
+            background: white;
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .program-card {
+            background: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .program-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .program-content {
+            padding: 25px;
+        }
+        
+        .program-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Impact Section */
+        .impact {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        
+        .impact-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .stat-item {
+            margin: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        /* Team Section */
+        .team {
+            background: var(--light);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .member-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">HATA<span>Humanitarian</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Empowering Lives Through Mental Well-being, Inclusion, and Recovery</h1>
+                <p>Building resilient communities in Winnipeg with education, advocacy, and holistic support.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn">Learn How You Can Help</a>
+                    <a href="#" class="btn btn-accent">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="mission-statement">"We empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education and community engagement."</p>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <h2 class="section-title">Our Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-img" style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="program-content">
+                        <h3>Stigma-Free Mental Health</h3>
+                        <p>Workshops and peer support to combat stigma and build resilience among Winnipeg youth through mindset education.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-img" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="program-content">
+                        <h3>Diversity & Inclusion</h3>
+                        <p>Language training and digital skills workshops to help newcomers integrate successfully into Canadian society.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-img" style="background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="program-content">
+                        <h3>Addiction-Free Youth</h3>
+                        <p>Mindset education and food assistance programs supporting youth in addiction recovery journeys.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact">
+        <div class="container">
+            <h2 class="section-title">Our Impact</h2>
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-desc">Youth educated in mental health annually</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-desc">Newcomers supported</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-desc">Recovery success rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Pacific Muhumure" class="member-img">
+                    <h3>Pacific Muhumure</h3>
+                    <p>CEO & Director</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Angelique Nantabara" class="member-img">
+                    <h3>Angelique Nantabara</h3>
+                    <p>Community Leader</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Gentile Ntwayingabo" class="member-img">
+                    <h3>Gentile Ntwayingabo</h3>
+                    <p>Youth Advocate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Join us in creating a stigma-free, inclusive Winnipeg!</h2>
+            <p>Your support makes our work possible. Whether through volunteering or donations, you can help transform lives.</p>
+            <div class="cta-btns">
+                <a href="#" class="btn">Donate Now</a>
+                <a href="#" class="btn btn-accent">Volunteer With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>HATA Humanitarian</h3>
+                    <p>Empowering Winnipeg communities through mental health support, newcomer integration, and addiction recovery programs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Winnipeg, Manitoba</li>
+                        <li>info@hatahumanitarian.org</li>
+                        <li>(204) 555-0192</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 HATA Humanitarian Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
