@@ -30,61 +30,329 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;700&display=swap');
+        
+
         :root {
-            --primary: #2A5C8D;
-            --secondary: #1E40AF;
-            --accent: #F59E0B;
-            --light: #F8FAFC;
-            --dark: #1E293B;
-            --text: #334155;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+    --warm-primary: #8d2002; /* A warm, inviting coral/terracotta */
+    --warm-accent: #81B29A; /* A soft, calming sage green */
+    --warm-secondary: #F2CC8F; /* A muted, sunny yellow */
+    --dark-text: #3D405B; /* A deep, rich blue-grey for text */
+    --light-text: #F4F1DE; /* A soft cream for text on dark backgrounds */
+    --background-overlay: rgba(61, 64, 91, 0.6); /* Darker, slightly blue-grey overlay for depth */
+    --button-hover-dark: #C65A41; /* Darker primary for hover */
+    --button-hover-light: #6A997D; /* Darker accent for hover */
+}
+       
         
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-        
-        .bg-primary { background-color: var(--primary) !important; }
-        .bg-accent { background-color: var(--accent) !important; }
-        .text-accent { color: var(--accent) !important; }
-        
-        .btn-primary {
-            background-color: var(--primary);
-            border-color: var(--primary);
+       /* General Body and Base Styles */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif; /* Primary font for body text */
+    line-height: 1.6;
+    color: var(--dark-text); /* Default text color */
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    padding: 6rem 0; /* More padding for spacious feel */
+    min-height: 80vh; /* Ensure it takes up a good portion of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Contain animations */
+    background: linear-gradient(var(--background-overlay), var(--background-overlay)),
+                url('images/background-image.jpg') center/cover no-repeat fixed; /* Added fixed for parallax-like scroll */
+    color: var(--light-text); /* Light text on the dark background */
+}
+
+/* Container for content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    position: relative; /* For z-index if needed */
+    z-index: 2; /* Ensure content is above any decorative elements */
+}
+
+/* Hero Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Space between elements */
+}
+
+.hero-title {
+    font-family: 'Lora', serif; /* Serif font for headline */
+    font-size: 3.5rem; /* Larger font size */
+    font-weight: 700;
+    color: var(--warm-primary); /* Use warm primary color */
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Subtle text shadow for depth */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.3s; /* Delay for sequential animation */
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Center it */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.hero-subtitle strong {
+    color: var(--warm-secondary); /* Highlight strong words with secondary color */
+}
+
+/* Call to Action Buttons */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 1.2rem; /* Space between buttons */
+    margin-top: 2rem;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.9s;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2.2rem;
+    border: none;
+    border-radius: 50px; /* Pill-shaped buttons for a softer look */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.btn-primary {
+    background-color: var(--warm-primary);
+    color: var(--light-text);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover-dark);
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-accent {
+    background-color: var(--warm-accent);
+    color: var(--light-text);
+}
+
+.btn-accent:hover {
+    background-color: var(--button-hover-light);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-light {
+    background-color: var(--light-text); /* Light button on dark background */
+    color: var(--dark-text); /* Dark text for contrast */
+}
+
+.btn-light:hover {
+    background-color: #e0e0d0; /* Slightly darker cream on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Icons within buttons (assuming you have a font icon library or SVG) */
+.btn i {
+    margin-right: 0.6rem;
+    font-size: 1.2rem; /* Adjust icon size */
+}
+
+/* Stats Grid */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted min-width */
+    gap: 1.5rem; /* Space between stat items */
+    margin-top: 3rem;
+    width: 100%; /* Ensure it takes full width of container */
+    max-width: 900px; /* Optional: limit overall width of stats grid */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+.stat-item {
+    background-color: rgba(244, 241, 222, 0.1); /* Slightly more opaque background with light-text base */
+    padding: 1.8rem 1rem; /* More padding */
+    border-radius: 12px; /* Softer rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px); /* Lift more on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stat-number {
+    font-family: 'Lora', serif; /* Use serif for numbers too, or keep Lato for consistency */
+    font-size: 2.8rem; /* Larger numbers */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1; /* Prevent extra space */
+}
+
+.stat-number.text-primary { color: var(--warm-primary); }
+.stat-number.text-accent { color: var(--warm-accent); }
+.stat-number.text-light { color: var(--warm-secondary); } /* Changed to secondary for variety */
+
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9; /* Slightly transparent */
+}
+
+/* Trust Symbols */
+.trust-symbols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+.trust-symbols img {
+    height: 60px; /* Slightly larger logos */
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3)); /* Soft shadow for logos */
+    transition: transform 0.3s ease-in-out;
+}
+
+.trust-symbols img:hover {
+    transform: scale(1.05); /* Slight enlarge on hover */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%; /* Make buttons wider */
+        max-width: 300px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr; /* Stack stats vertically */
+        padding: 0 1rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 4rem 0;
+        min-height: auto; /* Allow height to adjust */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .trust-symbols img {
+        height: 45px;
+    }
+}
+
+        /* Override all button colors to #de1d54 */
+        .btn,
+        .btn-primary,
+        .btn-accent,
+        .btn-outline-primary,
+        .btn-outline-light,
+        .btn-primary:focus,
+        .btn-accent:focus,
+        .btn-outline-primary:focus,
+        .btn-outline-light:focus {
+            background-color: #de1d54 !important;
+            border-color: #de1d54 !important;
+            color: #fff !important;
             transition: var(--transition);
         }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary);
-            border-color: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+        .btn:hover,
+        .btn-primary:hover,
+        .btn-accent:hover,
+        .btn-outline-primary:hover,
+        .btn-outline-light:hover {
+            background-color: #b81a45 !important;
+            border-color: #b81a45 !important;
+            color: #fff !important;
         }
         
-        .btn-accent {
-            background-color: var(--accent);
-            border-color: var(--accent);
-            color: #fff;
-            transition: var(--transition);
-        }
+     
         
-        .btn-accent:hover {
-            background-color: #D97706;
-            border-color: #D97706;
-            color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
         
         /* Navigation */
         .navbar {
@@ -123,146 +391,678 @@
         .nav-link.active:after {
             width: 70%;
         }
-        
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        
-        .hero-description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .hero-image {
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        
-        .impact-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
-        }
-        
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--accent);
-        }
-        
-        /* Card Styling */
-        .feature-card {
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: var(--transition);
-            height: 100%;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-        
-        /* Testimonial */
-        .testimonial-card {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .testimonial-text:before {
-            content: '"';
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 3rem;
-            line-height: 1;
-            color: var(--accent);
-            opacity: 0.3;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .impact-stats {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-        }
+    
+
+/* --- About Section --- */
+.section {
+    padding: 6rem 0; /* Consistent padding with hero section */
+}
+
+.bg-light {
+    background-color: var(--light-background); /* Warm off-white background */
+}
+
+.section-title {
+    font-family: 'Lora', serif; /* Use serif font for section titles */
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--dark-text); /* Use dark text color */
+    margin-bottom: 1rem;
+    position: relative; /* For the subtle underline effect */
+    padding-bottom: 0.5rem;
+}
+
+/* Subtle underline animation for section title */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--warm-primary); /* Primary color underline */
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+    transform: scaleX(0); /* Start hidden for animation */
+    transition: transform 0.6s ease-out; /* Smooth transition */
+}
+
+/* Animate underline on scroll (requires JavaScript or external library if not using AOS) */
+/* If you are using AOS for the section, you can add data-aos="zoom-in" to the section-title itself */
+.section-title.aos-animate::after {
+    transform: scaleX(1); /* Reveal on animation */
+}
+
+
+.lead {
+    font-size: 1.2rem;
+    color: var(--dark-text);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+/* Image Styling */
+.img-fluid.rounded {
+    border-radius: 12px !important; /* Softer rounded corners for images */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: transform 0.4s ease-in-out; /* Smooth transition for subtle hover */
+}
+
+.img-fluid.rounded:hover {
+    transform: translateY(-5px); /* Gentle lift on hover */
+}
+
+/* Content Headings */
+.col-lg-6 h3 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Paragraph Text */
+.col-lg-6 p {
+    font-size: 1.1rem;
+    color: var(--dark-text);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Checklist Items */
+.d-flex.align-items-start {
+    margin-bottom: 1rem; /* Space between checklist items */
+}
+
+.fa-check-circle { /* Font Awesome icon */
+    color: var(--warm-accent); /* Use warm accent color for icons */
+    font-size: 1.5rem; /* Larger icon size */
+    margin-top: 0.2rem; /* Align icon better with text */
+    flex-shrink: 0; /* Prevent icon from shrinking on smaller screens */
+}
+
+.d-flex.align-items-start div {
+    font-size: 1.05rem;
+    color: var(--dark-text);
+}
+
+/* Meet Our Team Button - Reusing existing button styles */
+.btn-primary.mt-3 {
+    /* Styles are already defined in the hero section for .btn-primary */
+    margin-top: 2rem !important; /* Ensure margin top is applied */
+}
+
+
+/* --- Responsive Adjustments for About Section --- */
+@media (max-width: 991px) {
+    .col-lg-6.mb-4[data-aos="fade-right"] {
+        margin-bottom: 2.5rem !important; /* Add space between image and text on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 0; /* Reduce padding on smaller screens */
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .col-lg-6 h3 {
+        font-size: 1.8rem;
+    }
+    .col-lg-6 p {
+        font-size: 1rem;
+    }
+    .fa-check-circle {
+        font-size: 1.3rem;
+    }
+    .d-flex.align-items-start div {
+        font-size: 0.95rem;
+    }
+    .row.align-items-center {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .img-fluid.rounded {
+        border-radius: 8px !important;
+    }
+    .btn-primary.mt-3 {
+        width: 100%; /* Full width button on very small screens */
+        max-width: 280px;
+    }
+}
+
+
+/* --- Programs Section --- */
+/* The .section class is already defined from the About section, ensuring consistent padding */
+/* .section { padding: 6rem 0; } */
+
+/* Programs Card Styling */
+.feature-card {
+    background-color: #ffffff; /* White background for the cards */
+    border: none; /* Remove default card border */
+    border-radius: 15px; /* More rounded corners for a softer look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition for hover */
+    overflow: hidden; /* Ensure anything overflowing is hidden */
+}
+
+.feature-card:hover {
+    transform: translateY(-8px); /* Lift card significantly on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.feature-card .card-body {
+    padding: 2.5rem !important; /* More generous padding inside the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom if content varies */
+}
+
+/* Feature Icon Styling */
+.feature-icon {
+    width: 80px; /* Size of the circle */
+    height: 80px;
+    background-color: var(--warm-primary); /* Use primary warm color for background */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem; /* Center the icon and add space below */
+    color: var(--light-text); /* Light text/icon color inside the circle */
+    font-size: 2.5rem; /* Large icon size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Soft shadow for the icon */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Optional: change icon color/background on card hover */
+.feature-card:hover .feature-icon {
+    background-color: var(--warm-accent); /* Change to accent color on hover */
+}
+
+.feature-card h3 {
+    font-family: 'Lora', serif; /* Consistent heading font */
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: var(--dark-text);
+    line-height: 1.7;
+    margin-bottom: 1.5rem; /* Space before the list */
+}
+
+/* Program List Styling */
+.feature-card ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
+    margin-bottom: 1.5rem; /* Space before the button */
+}
+
+.feature-card ul li {
+    font-size: 0.95rem;
+    color: var(--dark-text);
+    padding-left: 1.8rem; /* Space for custom bullet */
+    position: relative;
+    margin-bottom: 0.6rem; /* Space between list items */
+    text-align: left; /* Ensure text aligns left within the card */
+}
+
+.feature-card ul li::before {
+    content: '\2713'; /* Unicode checkmark character */
+    font-family: 'Font Awesome 5 Free'; /* This needs Font Awesome loaded */
+    font-weight: 900; /* For solid icon style */
+    color: var(--warm-accent); /* Use accent color for checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+}
+
+/* Outline Button Styling */
+.btn-outline-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.8rem;
+    border: 2px solid var(--warm-primary); /* Primary color border */
+    border-radius: 50px; /* Pill shape */
+    background-color: transparent;
+    color: var(--warm-primary); /* Primary color text */
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    margin-top: auto; /* Pushes button to the bottom if h-100 is used on card */
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--warm-primary); /* Fill with primary color on hover */
+    color: var(--light-text); /* Light text on hover */
+    transform: translateY(-3px); /* Subtle lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Adjustments for Programs Section --- */
+@media (max-width: 991px) {
+    .feature-card {
+        margin-bottom: 1.5rem; /* Add space between cards when they stack */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .feature-card .card-body {
+        padding: 2rem !important;
+    }
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    .feature-card h3 {
+        font-size: 1.6rem;
+    }
+    .feature-card p {
+        font-size: 0.95rem;
+    }
+    .feature-card ul li {
+        font-size: 0.9rem;
+    }
+    .btn-outline-primary {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card {
+        margin-bottom: 1rem; /* Less space for very small screens */
+    }
+    .feature-card .card-body {
+        padding: 1.5rem !important;
+    }
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .feature-card h3 {
+        font-size: 1.4rem;
+    }
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+    .feature-card ul li {
+        font-size: 0.85rem;
+        padding-left: 1.5rem;
+    }
+    .feature-card ul li::before {
+        font-size: 1rem;
+    }
+    .btn-outline-primary {
+        width: 100%; /* Full width button on very small screens */
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+/* --- Impact Section --- */
+.section#impact {
+    background-color: var(--warm-primary); /* Use primary warm color as background */
+    color: var(--light-text); /* Light text for contrast */
+    padding: 6rem 0; /* Consistent padding */
+    position: relative;
+    overflow: hidden; /* Ensure elements don't spill out during animations */
+    /* Optional: A subtle pattern or texture could be added here for extra warmth */
+    /* background-image: url('images/subtle-texture.png'); */
+    /* background-repeat: repeat; */
+}
+
+/* Section Title and Lead - already styled globally but specifically for this section */
+.section#impact .section-title {
+    color: var(--light-text); /* Ensure title is white on this background */
+    /* Remove the ::after animation from here if you want it only on light backgrounds */
+    /* Or specifically style the ::after for a different look on dark background */
+}
+
+/* Adjust the underline for dark background if desired */
+.section#impact .section-title::after {
+    background-color: var(--warm-accent); /* Use accent color for underline on dark background */
+}
+
+.section#impact .lead {
+    color: rgba(244, 241, 222, 0.9); /* Slightly translucent light text for lead paragraph */
+}
+
+/* Impact Numbers Styling */
+.impact-number-card {
+    /* No specific card div in HTML, so styling the direct parent div for numbers */
+    padding: 2.5rem; /* Generous padding */
+    border-radius: 12px; /* Soft rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle white overlay for numbers */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle border */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.col-lg-3[data-aos] > div:hover { /* Targeting the div inside the column */
+    transform: translateY(-8px); /* Lift on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+}
+
+
+.display-4.fw-bold.text-accent {
+    font-family: 'Lora', serif; /* Use serif for numbers */
+    font-size: 3.8rem; /* Larger, more impactful numbers */
+    color: var(--warm-secondary); /* Use secondary color for numbers for pop */
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for numbers */
+}
+
+.impact-number-card h4 {
+    font-family: 'Lato', sans-serif; /* Keep titles readable */
+    font-size: 1.5rem;
+    color: var(--light-text);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.impact-number-card p {
+    font-size: 0.95rem;
+    color: rgba(244, 241, 222, 0.8); /* Slightly muted light text for descriptions */
+    line-height: 1.6;
+}
+
+/* Success Stories / Testimonials */
+.section#impact h3.text-center {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem; /* Larger sub-heading */
+    color: var(--light-text);
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.section#impact h3.text-center::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--warm-secondary); /* Secondary color underline */
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Nearly white background for readability */
+    color: var(--dark-text); /* Dark text for testimonials */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content pushes profile to bottom */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px); /* Lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic; /* Emphasize testimonial text */
+}
+
+.testimonial-card img.rounded-circle {
+    border: 3px solid var(--warm-accent); /* Accent border around profile image */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card h5 {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: var(--dark-text);
+    margin-bottom: 0.2rem;
+    font-weight: 700;
+}
+
+.testimonial-card small {
+    font-size: 0.85rem;
+    color: var(--dark-text);
+    opacity: 0.7;
+}
+
+/* --- Responsive Adjustments for Impact Section --- */
+@media (max-width: 991px) {
+    .impact-number-card, .testimonial-card {
+        margin-bottom: 1.5rem; /* Add space between items when they stack */
+    }
+}
+
+@media (max-width: 768px) {
+    .section#impact {
+        padding: 4rem 0;
+    }
+    .section#impact .section-title {
+        font-size: 2.2rem;
+    }
+    .section#impact .lead {
+        font-size: 1rem;
+    }
+    .display-4.fw-bold.text-accent {
+        font-size: 3rem;
+    }
+    .impact-number-card h4 {
+        font-size: 1.3rem;
+    }
+    .impact-number-card p {
+        font-size: 0.85rem;
+    }
+    .section#impact h3.text-center {
+        font-size: 2rem;
+    }
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+    .testimonial-card img {
+        width: 50px !important;
+        height: 50px;
+    }
+    .testimonial-card h5 {
+        font-size: 1.1rem;
+    }
+    .testimonial-card small {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-4.fw-bold.text-accent {
+        font-size: 2.5rem;
+    }
+    .impact-number-card {
+        padding: 1.5rem;
+    }
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+}
+
+
+/* --- Our Leadership (Team) Section --- */
+/* .section and .bg-light are already defined, ensuring consistent padding and background color */
+/* .section { padding: 6rem 0; } */
+/* .bg-light { background-color: var(--light-background); } */
+
+/* Section Title and Lead are also already styled */
+
+/* Team Member Card Styling */
+.section#team .card {
+    border: none; /* Remove default card border */
+    border-radius: 15px; /* Consistent rounded corners with other cards */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer shadow for team cards */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth hover transition */
+    overflow: hidden; /* Important for border-radius to apply correctly with shadow */
+    background-color: #ffffff; /* Explicit white background */
+}
+
+.section#team .card:hover {
+    transform: translateY(-8px); /* Lift card on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.section#team .card-body {
+    padding: 2.5rem !important; /* Generous padding inside card */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Profile Image Styling */
+.section#team .card img.rounded-circle {
+    width: 160px; /* Slightly larger image */
+    height: 160px; /* Ensure it's a perfect circle */
+    object-fit: cover; /* Crop image nicely */
+    border: 5px solid var(--warm-primary); /* Primary color border around image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for image */
+    margin-bottom: 1.5rem; /* Space below image */
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Optional: change image border color on card hover */
+.section#team .card:hover img.rounded-circle {
+    border-color: var(--warm-accent); /* Change to accent color on hover */
+}
+
+/* Name and Title */
+.section#team .card h3 {
+    font-family: 'Lora', serif; /* Consistent heading font */
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.section#team .card p.text-accent {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    color: var(--warm-accent) !important; /* Ensure accent color */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Description Text */
+.section#team .card p:not(.text-accent) { /* Target the general paragraph, not the role */
+    font-size: 0.95rem;
+    color: var(--dark-text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Social Links Container */
+.section#team .card .mt-3 {
+    margin-top: auto; /* Pushes social links to bottom if cards have varied content height */
+    padding-top: 1rem; /* Add some padding above links */
+    border-top: 1px solid rgba(0,0,0,0.05); /* Subtle separator */
+    width: 100%; /* Ensure separator spans width */
+}
+
+/* Small Outline Buttons (Social Icons) */
+.section#team .btn-sm.btn-outline-primary {
+    padding: 0.7rem 0.9rem; /* Adjust padding for small buttons */
+    font-size: 1rem; /* Adjust icon size */
+    border-radius: 50%; /* Make them circular */
+    width: 45px; /* Fixed width for consistent circles */
+    height: 45px; /* Fixed height for consistent circles */
+    display: inline-flex; /* Use flex to center icon */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--warm-primary); /* Primary color border */
+    color: var(--warm-primary); /* Primary color icon */
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.section#team .btn-sm.btn-outline-primary:hover {
+    background-color: var(--warm-primary); /* Fill with primary color on hover */
+    color: var(--light-text); /* White icon on hover */
+    transform: translateY(-3px); /* Subtle lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Adjustments for Leadership Section --- */
+@media (max-width: 991px) {
+    .section#team .col-md-6, .section#team .col-lg-4 {
+        margin-bottom: 1.5rem; /* Add spacing between cards when they wrap */
+    }
+}
+
+@media (max-width: 768px) {
+    .section#team .card-body {
+        padding: 2rem !important;
+    }
+    .section#team .card img.rounded-circle {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+    }
+    .section#team .card h3 {
+        font-size: 1.6rem;
+    }
+    .section#team .card p.text-accent {
+        font-size: 1rem;
+    }
+    .section#team .card p:not(.text-accent) {
+        font-size: 0.9rem;
+    }
+    .section#team .btn-sm.btn-outline-primary {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section#team .card-body {
+        padding: 1.5rem !important;
+    }
+    .section#team .card img.rounded-circle {
+        width: 100px;
+        height: 100px;
+    }
+    .section#team .card h3 {
+        font-size: 1.4rem;
+    }
+    .section#team .card p.text-accent {
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar">
@@ -271,7 +1071,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
-                <span class="fw-bold">HATA Humanitarian</span>
+                <span class="fw-bold">HATA Humanitarian Inc.</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -291,39 +1091,60 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h1 class="hero-title">Empowering Lives Through Compassion and Support</h1>
-                    <p class="hero-description">Building resilient communities in Winnipeg with education, advocacy, and holistic support for mental health, addiction recovery, and newcomer integration.</p>
-                    <div class="d-flex gap-3 mb-4">
-                        <a href="#programs" class="btn btn-primary btn-lg px-4">Our Programs</a>
-                        <a href="#donate" class="btn btn-accent btn-lg px-4">Donate Now</a>
-                    </div>
-                    
-                    <div class="impact-stats">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="500">0</div>
-                            <div>Youth Supported</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="200">0</div>
-                            <div>Newcomers Helped</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="15">0</div>
-                            <div>Community Partners</div>
-                        </div>
-                    </div>
+  <!-- Hero Section -->
+<section id="home" class="hero-section">
+    <!-- Background with semi-transparent overlay and clear mental health/addiction recovery image from Unsplash -->
+    <div class="hero-bg" style="   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('images/background-image.jpg') center/cover no-repeat;
+">
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <!-- Headline with emphasis on community -->
+            <h1 class="hero-title h1 fw-bold" style="color: var(--primary);">
+                Building Inclusive Communities in Winnipeg
+            </h1>
+            
+            <!-- Mission statement -->
+            <p class="hero-subtitle">
+                Supporting immigrants and vulnerable Winnipeggers through <strong>addiction recovery</strong>,  
+                <strong>mental health care</strong>, and <strong>newcomer integration</strong>—  
+                because healing happens together.
+            </p>
+            
+            <!-- CTAs with clear hierarchy -->
+            <div class="hero-actions">
+                <a href="mental-health-support.html" class="btn btn-primary">
+                    <i class="icon-heart"></i> Mental Health Support
+                </a>
+                <a href="addiction-recovery.html" class="btn btn-accent">
+                    <i class="icon-handshake"></i> Recovery Programs
+                </a>
+                <a href="new comer.html" class="btn btn-light">
+                    <i class="icon-community"></i> Newcomer Services
+                </a>
+            </div>
+            
+            <!-- Stats grid - balanced and clean -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number text-primary">80%</div>
+                    <div class="stat-label">Addiction Recovery Success</div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="images/winnipeg.jpg" alt="HATA Humanitarian team" class="img-fluid hero-image">
+                <div class="stat-item">
+                    <div class="stat-number text-accent">1,200+</div>
+                    <div class="stat-label">Mental Health Sessions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number text-light">300+</div>
+                    <div class="stat-label">Newcomers Employed</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- About Section -->
     <section id="about" class="section bg-light">
@@ -445,12 +1266,12 @@
     </section>
 
     <!-- Impact Section -->
-    <section id="impact" class="section bg-primary text-white">
+    <section id="impact" class="section text-white " style="background-image: url('images/community\ impact.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center">
                     <h2 class="section-title text-white">Our Impact</h2>
-                    <p class="lead">Measurable results from our community programs and initiatives</p>
+                    <p class="h3">Measurable results from our community programs and initiatives</p>
                 </div>
             </div>
             
@@ -863,5 +1684,22 @@
             });
         });
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000, // Duration of the animation (in ms)
+        easing: 'ease-out-quad', // Easing function
+        once: true, // Whether animation should happen only once - useful for performance
+    });
+    
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-out-quad',
+        once: true,
+    });
+</script>
 </body>
 </html>
