@@ -3,1320 +3,1373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HATA Humanitarian Inc. - Empowering Winnipeg Communities</title>
+    <title>HATA Humanitarian | Mental Health & Community Support in Winnipeg</title>
+    <meta name="description" content="Breaking stigma, building hope. HATA Humanitarian provides mental health support, addiction recovery programs, and newcomer integration services in Winnipeg.">
+    <meta name="keywords" content="HATA Humanitarian, mental health, community support, Winnipeg, addiction recovery, newcomer integration, humanitarian services">
+    <meta name="author" content="HATA Humanitarian">
+    <link rel="icon" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="HATA Humanitarian empowers Winnipeg communities through mental health support, addiction recovery programs, and newcomer integration services.">
-    <meta name="keywords" content="humanitarian, Winnipeg, mental health, addiction recovery, newcomer support, nonprofit">
-    <meta name="author" content="HATA Humanitarian Inc.">
-    <meta property="og:title" content="HATA Humanitarian - Empowering Winnipeg Communities">
-    <meta property="og:description" content="Promoting mental well-being, supporting addiction recovery, and facilitating social inclusion in Winnipeg.">
-    <meta property="og:image" content="https://www.hatahumanitarian.org/images/social-preview.jpg">
-    <meta property="og:url" content="https://www.hatahumanitarian.org">
-    <meta name="twitter:card" content="summary_large_image">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2a5c8d">
-    <meta name="msapplication-TileColor" content="#2a5c8d">
-    <meta name="theme-color" content="#ffffff">
-    
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
         :root {
-    --warm-primary: #8d2002; /* A warm, inviting coral/terracotta */
-    --warm-accent: #81B29A; /* A soft, calming sage green */
-    --warm-secondary: #F2CC8F; /* A muted, sunny yellow */
-    --dark-text: #3D405B; /* A deep, rich blue-grey for text */
-    --light-text: #F4F1DE; /* A soft cream for text on dark backgrounds */
-    --background-overlay: rgba(61, 64, 91, 0.6); /* Darker, slightly blue-grey overlay for depth */
-    --button-hover-dark: #C65A41; /* Darker primary for hover */
-    --button-hover-light: #6A997D; /* Darker accent for hover */
-}
-       
-        
-       /* General Body and Base Styles */
-body {
-    margin: 0;
-    font-family: 'Lato', sans-serif; /* Primary font for body text */
-    line-height: 1.6;
-    color: var(--dark-text); /* Default text color */
-    overflow-x: hidden; /* Prevent horizontal scroll from animations */
-}
-
-/* Hero Section */
-.hero-section {
-    position: relative;
-    padding: 6rem 0; /* More padding for spacious feel */
-    min-height: 80vh; /* Ensure it takes up a good portion of the viewport */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Contain animations */
-    background: linear-gradient(var(--background-overlay), var(--background-overlay)),
-                url('images/background-image.jpg') center/cover no-repeat fixed; /* Added fixed for parallax-like scroll */
-    color: var(--light-text); /* Light text on the dark background */
-}
-
-/* Container for content */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    text-align: center;
-    position: relative; /* For z-index if needed */
-    z-index: 2; /* Ensure content is above any decorative elements */
-}
-
-/* Hero Content */
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem; /* Space between elements */
-}
-
-.hero-title {
-    font-family: 'Lora', serif; /* Serif font for headline */
-    font-size: 3.5rem; /* Larger font size */
-    font-weight: 700;
-    color: var(--warm-primary); /* Use warm primary color */
-    line-height: 1.2;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Subtle text shadow for depth */
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeInSlideUp 1s ease-out forwards;
-    animation-delay: 0.3s; /* Delay for sequential animation */
-}
-
-.hero-subtitle {
-    font-size: 1.3rem;
-    max-width: 800px; /* Limit width for readability */
-    margin: 0 auto; /* Center it */
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 0.6s;
-}
-
-.hero-subtitle strong {
-    color: var(--warm-secondary); /* Highlight strong words with secondary color */
-}
-
-/* Call to Action Buttons */
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-    justify-content: center;
-    gap: 1.2rem; /* Space between buttons */
-    margin-top: 2rem;
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeInSlideUp 1s ease-out forwards;
-    animation-delay: 0.9s;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 1rem 2.2rem;
-    border: none;
-    border-radius: 50px; /* Pill-shaped buttons for a softer look */
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-}
-
-.btn-primary {
-    background-color: var(--warm-primary);
-    color: var(--light-text);
-}
-
-.btn-primary:hover {
-    background-color: var(--button-hover-dark);
-    transform: translateY(-3px); /* Subtle lift on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.btn-accent {
-    background-color: var(--warm-accent);
-    color: var(--light-text);
-}
-
-.btn-accent:hover {
-    background-color: var(--button-hover-light);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.btn-light {
-    background-color: var(--light-text); /* Light button on dark background */
-    color: var(--dark-text); /* Dark text for contrast */
-}
-
-.btn-light:hover {
-    background-color: #e0e0d0; /* Slightly darker cream on hover */
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Icons within buttons (assuming you have a font icon library or SVG) */
-.btn i {
-    margin-right: 0.6rem;
-    font-size: 1.2rem; /* Adjust icon size */
-}
-
-/* Stats Grid */
-.hero-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted min-width */
-    gap: 1.5rem; /* Space between stat items */
-    margin-top: 3rem;
-    width: 100%; /* Ensure it takes full width of container */
-    max-width: 900px; /* Optional: limit overall width of stats grid */
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeInSlideUp 1s ease-out forwards;
-    animation-delay: 1.2s;
-}
-
-.stat-item {
-    background-color: rgba(244, 241, 222, 0.1); /* Slightly more opaque background with light-text base */
-    padding: 1.8rem 1rem; /* More padding */
-    border-radius: 12px; /* Softer rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    backdrop-filter: blur(5px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(5px); /* For Safari */
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.stat-item:hover {
-    transform: translateY(-5px); /* Lift more on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.stat-number {
-    font-family: 'Lora', serif; /* Use serif for numbers too, or keep Lato for consistency */
-    font-size: 2.8rem; /* Larger numbers */
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    line-height: 1; /* Prevent extra space */
-}
-
-.stat-number.text-primary { color: var(--warm-primary); }
-.stat-number.text-accent { color: var(--warm-accent); }
-.stat-number.text-light { color: var(--warm-secondary); } /* Changed to secondary for variety */
-
-
-.stat-label {
-    font-size: 1.1rem;
-    opacity: 0.9; /* Slightly transparent */
-}
-
-/* Trust Symbols */
-.trust-symbols {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
-    opacity: 0; /* Start hidden for animation */
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 1.5s;
-}
-
-.trust-symbols img {
-    height: 60px; /* Slightly larger logos */
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3)); /* Soft shadow for logos */
-    transition: transform 0.3s ease-in-out;
-}
-
-.trust-symbols img:hover {
-    transform: scale(1.05); /* Slight enlarge on hover */
-}
-
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .hero-actions {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center;
-    }
-
-    .btn {
-        width: 80%; /* Make buttons wider */
-        max-width: 300px;
-    }
-
-    .hero-stats {
-        grid-template-columns: 1fr; /* Stack stats vertically */
-        padding: 0 1rem;
-    }
-
-    .stat-item {
-        padding: 1.5rem;
-    }
-
-    .stat-number {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        padding: 4rem 0;
-        min-height: auto; /* Allow height to adjust */
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .trust-symbols img {
-        height: 45px;
-    }
-}
-
-        /* Override all button colors to #de1d54 */
-        .btn,
-        .btn-primary,
-        .btn-accent,
-        .btn-outline-primary,
-        .btn-outline-light,
-        .btn-primary:focus,
-        .btn-accent:focus,
-        .btn-outline-primary:focus,
-        .btn-outline-light:focus {
-            background-color: #de1d54 !important;
-            border-color: #de1d54 !important;
-            color: #fff !important;
-            transition: var(--transition);
-        }
-
-        .btn:hover,
-        .btn-primary:hover,
-        .btn-accent:hover,
-        .btn-outline-primary:hover,
-        .btn-outline-light:hover {
-            background-color: #b81a45 !important;
-            border-color: #b81a45 !important;
-            color: #fff !important;
+            --primary: #2a5c8d;
+            --primary-light: #3a7cb9;
+            --primary-dark: #1d456e;
+            --secondary: #81B29A;
+            --accent: #F2CC8F;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #e2e8f0;
+            --dark-gray: #94a3b8;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-full: 9999px;
         }
         
-     
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: white;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         
         /* Navigation */
         .navbar {
-            transition: all 0.5s ease;
-            padding: 1rem 0;
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
         
         .navbar.scrolled {
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem 0;
-            background-color: rgba(255, 255, 255, 0.98);
+            padding: 15px 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .navbar-brand:hover {
+            opacity: 0.9;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
         }
         
         .nav-link {
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            position: relative;
             color: var(--dark);
+            font-weight: 500;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+            font-size: 0.95rem;
         }
         
         .nav-link:after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
+            background-color: var(--primary);
+            transition: var(--transition);
         }
         
         .nav-link:hover:after,
         .nav-link.active:after {
-            width: 70%;
+            width: 100%;
         }
-    
-
-/* --- About Section --- */
-.section {
-    padding: 6rem 0; /* Consistent padding with hero section */
-}
-
-.bg-light {
-    background-color: var(--light-background); /* Warm off-white background */
-}
-
-.section-title {
-    font-family: 'Lora', serif; /* Use serif font for section titles */
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--dark-text); /* Use dark text color */
-    margin-bottom: 1rem;
-    position: relative; /* For the subtle underline effect */
-    padding-bottom: 0.5rem;
-}
-
-/* Subtle underline animation for section title */
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--warm-primary); /* Primary color underline */
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-    transform: scaleX(0); /* Start hidden for animation */
-    transition: transform 0.6s ease-out; /* Smooth transition */
-}
-
-/* Animate underline on scroll (requires JavaScript or external library if not using AOS) */
-/* If you are using AOS for the section, you can add data-aos="zoom-in" to the section-title itself */
-.section-title.aos-animate::after {
-    transform: scaleX(1); /* Reveal on animation */
-}
-
-
-.lead {
-    font-size: 1.2rem;
-    color: var(--dark-text);
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    line-height: 1.7;
-}
-
-/* Image Styling */
-.img-fluid.rounded {
-    border-radius: 12px !important; /* Softer rounded corners for images */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    transition: transform 0.4s ease-in-out; /* Smooth transition for subtle hover */
-}
-
-.img-fluid.rounded:hover {
-    transform: translateY(-5px); /* Gentle lift on hover */
-}
-
-/* Content Headings */
-.col-lg-6 h3 {
-    font-family: 'Lora', serif;
-    font-size: 2rem;
-    color: var(--dark-text);
-    margin-bottom: 1.5rem;
-}
-
-/* Paragraph Text */
-.col-lg-6 p {
-    font-size: 1.1rem;
-    color: var(--dark-text);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-}
-
-/* Checklist Items */
-.d-flex.align-items-start {
-    margin-bottom: 1rem; /* Space between checklist items */
-}
-
-.fa-check-circle { /* Font Awesome icon */
-    color: var(--warm-accent); /* Use warm accent color for icons */
-    font-size: 1.5rem; /* Larger icon size */
-    margin-top: 0.2rem; /* Align icon better with text */
-    flex-shrink: 0; /* Prevent icon from shrinking on smaller screens */
-}
-
-.d-flex.align-items-start div {
-    font-size: 1.05rem;
-    color: var(--dark-text);
-}
-
-/* Meet Our Team Button - Reusing existing button styles */
-.btn-primary.mt-3 {
-    /* Styles are already defined in the hero section for .btn-primary */
-    margin-top: 2rem !important; /* Ensure margin top is applied */
-}
-
-
-/* --- Responsive Adjustments for About Section --- */
-@media (max-width: 991px) {
-    .col-lg-6.mb-4[data-aos="fade-right"] {
-        margin-bottom: 2.5rem !important; /* Add space between image and text on tablets */
-    }
-}
-
-@media (max-width: 768px) {
-    .section {
-        padding: 4rem 0; /* Reduce padding on smaller screens */
-    }
-    .section-title {
-        font-size: 2.2rem;
-    }
-    .lead {
-        font-size: 1rem;
-    }
-    .col-lg-6 h3 {
-        font-size: 1.8rem;
-    }
-    .col-lg-6 p {
-        font-size: 1rem;
-    }
-    .fa-check-circle {
-        font-size: 1.3rem;
-    }
-    .d-flex.align-items-start div {
-        font-size: 0.95rem;
-    }
-    .row.align-items-center {
-        flex-direction: column; /* Stack image and text vertically */
-    }
-}
-
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.8rem;
-    }
-    .img-fluid.rounded {
-        border-radius: 8px !important;
-    }
-    .btn-primary.mt-3 {
-        width: 100%; /* Full width button on very small screens */
-        max-width: 280px;
-    }
-}
-
-
-/* --- Programs Section --- */
-/* The .section class is already defined from the About section, ensuring consistent padding */
-/* .section { padding: 6rem 0; } */
-
-/* Programs Card Styling */
-.feature-card {
-    background-color: #ffffff; /* White background for the cards */
-    border: none; /* Remove default card border */
-    border-radius: 15px; /* More rounded corners for a softer look */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition for hover */
-    overflow: hidden; /* Ensure anything overflowing is hidden */
-}
-
-.feature-card:hover {
-    transform: translateY(-8px); /* Lift card significantly on hover */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
-}
-
-.feature-card .card-body {
-    padding: 2.5rem !important; /* More generous padding inside the card */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Pushes button to bottom if content varies */
-}
-
-/* Feature Icon Styling */
-.feature-icon {
-    width: 80px; /* Size of the circle */
-    height: 80px;
-    background-color: var(--warm-primary); /* Use primary warm color for background */
-    border-radius: 50%; /* Make it a circle */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem; /* Center the icon and add space below */
-    color: var(--light-text); /* Light text/icon color inside the circle */
-    font-size: 2.5rem; /* Large icon size */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Soft shadow for the icon */
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* Optional: change icon color/background on card hover */
-.feature-card:hover .feature-icon {
-    background-color: var(--warm-accent); /* Change to accent color on hover */
-}
-
-.feature-card h3 {
-    font-family: 'Lora', serif; /* Consistent heading font */
-    font-size: 1.8rem;
-    color: var(--dark-text);
-    margin-bottom: 1rem;
-    line-height: 1.3;
-}
-
-.feature-card p {
-    font-size: 1rem;
-    color: var(--dark-text);
-    line-height: 1.7;
-    margin-bottom: 1.5rem; /* Space before the list */
-}
-
-/* Program List Styling */
-.feature-card ul {
-    list-style: none; /* Remove default bullet points */
-    padding-left: 0;
-    margin-bottom: 1.5rem; /* Space before the button */
-}
-
-.feature-card ul li {
-    font-size: 0.95rem;
-    color: var(--dark-text);
-    padding-left: 1.8rem; /* Space for custom bullet */
-    position: relative;
-    margin-bottom: 0.6rem; /* Space between list items */
-    text-align: left; /* Ensure text aligns left within the card */
-}
-
-.feature-card ul li::before {
-    content: '\2713'; /* Unicode checkmark character */
-    font-family: 'Font Awesome 5 Free'; /* This needs Font Awesome loaded */
-    font-weight: 900; /* For solid icon style */
-    color: var(--warm-accent); /* Use accent color for checkmark */
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.1rem;
-}
-
-/* Outline Button Styling */
-.btn-outline-primary {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8rem 1.8rem;
-    border: 2px solid var(--warm-primary); /* Primary color border */
-    border-radius: 50px; /* Pill shape */
-    background-color: transparent;
-    color: var(--warm-primary); /* Primary color text */
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    margin-top: auto; /* Pushes button to the bottom if h-100 is used on card */
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--warm-primary); /* Fill with primary color on hover */
-    color: var(--light-text); /* Light text on hover */
-    transform: translateY(-3px); /* Subtle lift */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Responsive Adjustments for Programs Section --- */
-@media (max-width: 991px) {
-    .feature-card {
-        margin-bottom: 1.5rem; /* Add space between cards when they stack */
-    }
-}
-
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2.2rem;
-    }
-    .lead {
-        font-size: 1rem;
-    }
-    .feature-card .card-body {
-        padding: 2rem !important;
-    }
-    .feature-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 2rem;
-    }
-    .feature-card h3 {
-        font-size: 1.6rem;
-    }
-    .feature-card p {
-        font-size: 0.95rem;
-    }
-    .feature-card ul li {
-        font-size: 0.9rem;
-    }
-    .btn-outline-primary {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .feature-card {
-        margin-bottom: 1rem; /* Less space for very small screens */
-    }
-    .feature-card .card-body {
-        padding: 1.5rem !important;
-    }
-    .feature-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-    .feature-card h3 {
-        font-size: 1.4rem;
-    }
-    .feature-card p {
-        font-size: 0.9rem;
-    }
-    .feature-card ul li {
-        font-size: 0.85rem;
-        padding-left: 1.5rem;
-    }
-    .feature-card ul li::before {
-        font-size: 1rem;
-    }
-    .btn-outline-primary {
-        width: 100%; /* Full width button on very small screens */
-        max-width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-
-
-/* --- Impact Section --- */
-.section#impact {
-    background-color: var(--warm-primary); /* Use primary warm color as background */
-    color: var(--light-text); /* Light text for contrast */
-    padding: 6rem 0; /* Consistent padding */
-    position: relative;
-    overflow: hidden; /* Ensure elements don't spill out during animations */
-    /* Optional: A subtle pattern or texture could be added here for extra warmth */
-    /* background-image: url('images/subtle-texture.png'); */
-    /* background-repeat: repeat; */
-}
-
-/* Section Title and Lead - already styled globally but specifically for this section */
-.section#impact .section-title {
-    color: var(--light-text); /* Ensure title is white on this background */
-    /* Remove the ::after animation from here if you want it only on light backgrounds */
-    /* Or specifically style the ::after for a different look on dark background */
-}
-
-/* Adjust the underline for dark background if desired */
-.section#impact .section-title::after {
-    background-color: var(--warm-accent); /* Use accent color for underline on dark background */
-}
-
-.section#impact .lead {
-    color: rgba(244, 241, 222, 0.9); /* Slightly translucent light text for lead paragraph */
-}
-
-/* Impact Numbers Styling */
-.impact-number-card {
-    /* No specific card div in HTML, so styling the direct parent div for numbers */
-    padding: 2.5rem; /* Generous padding */
-    border-radius: 12px; /* Soft rounded corners */
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle white overlay for numbers */
-    backdrop-filter: blur(5px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(5px); /* For Safari */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle border */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.col-lg-3[data-aos] > div:hover { /* Targeting the div inside the column */
-    transform: translateY(-8px); /* Lift on hover */
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
-}
-
-
-.display-4.fw-bold.text-accent {
-    font-family: 'Lora', serif; /* Use serif for numbers */
-    font-size: 3.8rem; /* Larger, more impactful numbers */
-    color: var(--warm-secondary); /* Use secondary color for numbers for pop */
-    margin-bottom: 0.5rem;
-    line-height: 1;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for numbers */
-}
-
-.impact-number-card h4 {
-    font-family: 'Lato', sans-serif; /* Keep titles readable */
-    font-size: 1.5rem;
-    color: var(--light-text);
-    margin-bottom: 0.8rem;
-    font-weight: 700;
-}
-
-.impact-number-card p {
-    font-size: 0.95rem;
-    color: rgba(244, 241, 222, 0.8); /* Slightly muted light text for descriptions */
-    line-height: 1.6;
-}
-
-/* Success Stories / Testimonials */
-.section#impact h3.text-center {
-    font-family: 'Lora', serif;
-    font-size: 2.5rem; /* Larger sub-heading */
-    color: var(--light-text);
-    margin-bottom: 2.5rem;
-    position: relative;
-}
-
-.section#impact h3.text-center::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--warm-secondary); /* Secondary color underline */
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-}
-
-
-.testimonial-card {
-    background-color: rgba(255, 255, 255, 0.95); /* Nearly white background for readability */
-    color: var(--dark-text); /* Dark text for testimonials */
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures content pushes profile to bottom */
-}
-
-.testimonial-card:hover {
-    transform: translateY(-8px); /* Lift on hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial-text {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    font-style: italic; /* Emphasize testimonial text */
-}
-
-.testimonial-card img.rounded-circle {
-    border: 3px solid var(--warm-accent); /* Accent border around profile image */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-card h5 {
-    font-family: 'Lora', serif;
-    font-size: 1.2rem;
-    color: var(--dark-text);
-    margin-bottom: 0.2rem;
-    font-weight: 700;
-}
-
-.testimonial-card small {
-    font-size: 0.85rem;
-    color: var(--dark-text);
-    opacity: 0.7;
-}
-
-/* --- Responsive Adjustments for Impact Section --- */
-@media (max-width: 991px) {
-    .impact-number-card, .testimonial-card {
-        margin-bottom: 1.5rem; /* Add space between items when they stack */
-    }
-}
-
-@media (max-width: 768px) {
-    .section#impact {
-        padding: 4rem 0;
-    }
-    .section#impact .section-title {
-        font-size: 2.2rem;
-    }
-    .section#impact .lead {
-        font-size: 1rem;
-    }
-    .display-4.fw-bold.text-accent {
-        font-size: 3rem;
-    }
-    .impact-number-card h4 {
-        font-size: 1.3rem;
-    }
-    .impact-number-card p {
-        font-size: 0.85rem;
-    }
-    .section#impact h3.text-center {
-        font-size: 2rem;
-    }
-    .testimonial-text {
-        font-size: 0.95rem;
-    }
-    .testimonial-card img {
-        width: 50px !important;
-        height: 50px;
-    }
-    .testimonial-card h5 {
-        font-size: 1.1rem;
-    }
-    .testimonial-card small {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .display-4.fw-bold.text-accent {
-        font-size: 2.5rem;
-    }
-    .impact-number-card {
-        padding: 1.5rem;
-    }
-    .testimonial-card {
-        padding: 1.5rem;
-    }
-}
-
-
-/* --- Our Leadership (Team) Section --- */
-/* .section and .bg-light are already defined, ensuring consistent padding and background color */
-/* .section { padding: 6rem 0; } */
-/* .bg-light { background-color: var(--light-background); } */
-
-/* Section Title and Lead are also already styled */
-
-/* Team Member Card Styling */
-.section#team .card {
-    border: none; /* Remove default card border */
-    border-radius: 15px; /* Consistent rounded corners with other cards */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer shadow for team cards */
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth hover transition */
-    overflow: hidden; /* Important for border-radius to apply correctly with shadow */
-    background-color: #ffffff; /* Explicit white background */
-}
-
-.section#team .card:hover {
-    transform: translateY(-8px); /* Lift card on hover */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
-}
-
-.section#team .card-body {
-    padding: 2.5rem !important; /* Generous padding inside card */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Ensure text is centered */
-}
-
-/* Profile Image Styling */
-.section#team .card img.rounded-circle {
-    width: 160px; /* Slightly larger image */
-    height: 160px; /* Ensure it's a perfect circle */
-    object-fit: cover; /* Crop image nicely */
-    border: 5px solid var(--warm-primary); /* Primary color border around image */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for image */
-    margin-bottom: 1.5rem; /* Space below image */
-    transition: border-color 0.3s ease-in-out;
-}
-
-/* Optional: change image border color on card hover */
-.section#team .card:hover img.rounded-circle {
-    border-color: var(--warm-accent); /* Change to accent color on hover */
-}
-
-/* Name and Title */
-.section#team .card h3 {
-    font-family: 'Lora', serif; /* Consistent heading font */
-    font-size: 1.8rem;
-    color: var(--dark-text);
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-}
-
-.section#team .card p.text-accent {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.1rem;
-    color: var(--warm-accent) !important; /* Ensure accent color */
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-/* Description Text */
-.section#team .card p:not(.text-accent) { /* Target the general paragraph, not the role */
-    font-size: 0.95rem;
-    color: var(--dark-text);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-/* Social Links Container */
-.section#team .card .mt-3 {
-    margin-top: auto; /* Pushes social links to bottom if cards have varied content height */
-    padding-top: 1rem; /* Add some padding above links */
-    border-top: 1px solid rgba(0,0,0,0.05); /* Subtle separator */
-    width: 100%; /* Ensure separator spans width */
-}
-
-/* Small Outline Buttons (Social Icons) */
-.section#team .btn-sm.btn-outline-primary {
-    padding: 0.7rem 0.9rem; /* Adjust padding for small buttons */
-    font-size: 1rem; /* Adjust icon size */
-    border-radius: 50%; /* Make them circular */
-    width: 45px; /* Fixed width for consistent circles */
-    height: 45px; /* Fixed height for consistent circles */
-    display: inline-flex; /* Use flex to center icon */
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--warm-primary); /* Primary color border */
-    color: var(--warm-primary); /* Primary color icon */
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
-}
-
-.section#team .btn-sm.btn-outline-primary:hover {
-    background-color: var(--warm-primary); /* Fill with primary color on hover */
-    color: var(--light-text); /* White icon on hover */
-    transform: translateY(-3px); /* Subtle lift */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Responsive Adjustments for Leadership Section --- */
-@media (max-width: 991px) {
-    .section#team .col-md-6, .section#team .col-lg-4 {
-        margin-bottom: 1.5rem; /* Add spacing between cards when they wrap */
-    }
-}
-
-@media (max-width: 768px) {
-    .section#team .card-body {
-        padding: 2rem !important;
-    }
-    .section#team .card img.rounded-circle {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 1rem;
-    }
-    .section#team .card h3 {
-        font-size: 1.6rem;
-    }
-    .section#team .card p.text-accent {
-        font-size: 1rem;
-    }
-    .section#team .card p:not(.text-accent) {
-        font-size: 0.9rem;
-    }
-    .section#team .btn-sm.btn-outline-primary {
-        width: 40px;
-        height: 40px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .section#team .card-body {
-        padding: 1.5rem !important;
-    }
-    .section#team .card img.rounded-circle {
-        width: 100px;
-        height: 100px;
-    }
-    .section#team .card h3 {
-        font-size: 1.4rem;
-    }
-    .section#team .card p.text-accent {
-        font-size: 0.9rem;
-    }
-}
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            gap: 8px;
+            min-width: 120px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .btn {
+            width: 100%;
+            max-width: 250px;
+            font-size: 1rem;
+            padding: 12px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .btn {
+            font-size: 0.95rem;
+            padding: 10px 0;
+            }
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-white {
+            background-color: white;
+            color: var(--primary);
+        }
+        
+        .btn-white:hover {
+            background-color: var(--light);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') center/cover no-repeat;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+            margin-top: 70px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards 0.3s;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+        
+        .about-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        .about-text ul, .about-text ol {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        
+        .about-text li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+        
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(0,0,0,0.1);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(42, 92, 141, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .value-card:hover .value-icon {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .value-card p {
+            color: var(--dark-gray);
+            font-size: 1rem;
+        }
+        
+        /* Programs Section */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .program-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(0,0,0,0.1);
+        }
+        
+        .program-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .program-content {
+            padding: 30px;
+        }
+        
+        .program-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .program-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--dark);
+        }
+        
+        .program-activities {
+            margin-bottom: 25px;
+        }
+        
+        .program-activities h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .program-activities ul {
+            padding-left: 20px;
+        }
+        
+        .program-activities li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+        
+        /* Impact Section */
+        .impact-section {
+            background-color: var(--primary);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .impact-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6Ii8+PC9nPjwvZz48L3N2Zz4=') repeat;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .impact-section .section-header h2,
+        .impact-section .section-header p {
+            color: white;
+        }
+        
+        .impact-section .section-header h2:after {
+            background-color: var(--accent);
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .impact-card {
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        .impact-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--accent);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .impact-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Testimonials */
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            height: 400px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            margin: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            position: absolute;
+            width: calc(100% - 40px);
+            top: 0;
+            left: 0;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-card.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .testimonial-card.next {
+            transform: translateX(100%);
+        }
+        
+        .testimonial-card.prev {
+            transform: translateX(-100%);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            position: relative;
+            line-height: 1.7;
+            color: var(--dark);
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--gray);
+            position: absolute;
+            top: -30px;
+            left: -20px;
+            z-index: 0;
+            line-height: 1;
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid var(--accent);
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            color: var(--dark-gray);
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .testimonial-dot.active {
+            background-color: var(--primary);
+            transform: scale(1.2);
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            padding: 30px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(0,0,0,0.1);
+        }
+        
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 5px solid var(--light);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
+        
+        .team-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .team-card .position {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .team-card p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6Ii8+PC9nPjwvZz48L3N2Zz4=') repeat;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Contact Section */
+        .contact-form {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(42, 92, 141, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .footer-logo span {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .footer-links h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .newsletter input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: var(--radius-md);
+            border: none;
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+        
+        .newsletter input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .newsletter button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .newsletter button:hover {
+            background-color: var(--primary-light);
+        }
+        
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .partner-logo {
+            height: 40px;
+            opacity: 0.7;
+            transition: var(--transition);
+            filter: brightness(0) invert(1);
+        }
+        
+        .partner-logo:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: var(--transition);
+        }
+        
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                order: -1;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .navbar-nav {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 280px;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+            
+            .navbar-nav.active {
+                right: 0;
+            }
+            
+            .nav-link {
+                padding: 10px 0;
+                font-size: 1.1rem;
+            }
+            
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 20px;
+                cursor: pointer;
+                z-index: 1001;
+            }
+            
+            .hamburger span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: var(--primary);
+                border-radius: 3px;
+                transition: all 0.3s ease;
+            }
+            
+            .hamburger.active span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 600px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                margin: 5px 0;
+            }
+            
+            .impact-number {
+                font-size: 2.5rem;
+            }
+            
+            .testimonials-container {
+                height: 450px;
+            }
+            
+            .testimonial-card {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                min-height: 500px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .team-grid, .programs-grid, .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
     </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar">
+<body>
     <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
-                <span class="fw-bold">HATA Humanitarian Inc.</span>
+    <nav class="navbar" style="background: rgba(255,255,255,0.98); box-shadow: 0 2px 12px rgba(42,92,141,0.08); border-bottom: 2px solid #f2cc8f;">
+        <div class="container navbar-container" style="min-height: 70px;">
+            <a class="navbar-brand" href="#home" style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Humanitarian Logo" style="height: 48px; border-radius: 12px; box-shadow: 0 2px 8px rgba(42,92,141,0.10); background: #fff;">
+                <span style="font-size: 1.45rem; font-family: 'Playfair Display', serif; color: #2a5c8d; letter-spacing: 1px; font-weight: 700; text-shadow: 0 1px 0 #f2cc8f;">HATA Humanitarian</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-accent mt-2 mt-lg-0" href="donate.html">Donate Now</a>
-                    </li>
-                </ul>
+            
+            <div class="hamburger" style="margin-left: 20px;">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            
+            <ul class="navbar-nav" style="backdrop-filter: blur(8px);">
+                <li><a class="nav-link" href="#home" style="font-weight: 600;">Home</a></li>
+                <li><a class="nav-link" href="#about" style="font-weight: 600;">About</a></li>
+                <li><a class="nav-link" href="#programs" style="font-weight: 600;">Programs</a></li>
+                <li><a class="nav-link" href="#impact" style="font-weight: 600;">Impact</a></li>
+                <li><a class="nav-link" href="#team" style="font-weight: 600;">Team</a></li>
+                <li><a class="nav-link" href="#contact" style="font-weight: 600;">Contact</a></li>
+                <li>
+                    <a class="btn btn-outline" href="#donate" style="border-width:2px; font-weight:700; letter-spacing:0.5px; background: linear-gradient(90deg, #f2cc8f 0%, #81b29a 100%); color: #2a5c8d; border: none; box-shadow: 0 2px 8px rgba(242,204,143,0.12);">
+                        <i class="fas fa-heart" style="margin-right:6px; color:#2a5c8d;"></i>Donate
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-  <!-- Hero Section -->
-<section id="home" class="hero-section">
-    <!-- Background with semi-transparent overlay and clear mental health/addiction recovery image from Unsplash -->
-    <div class="hero-bg" style="   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('images/background-image.jpg') center/cover no-repeat;
-">
-    </div>
-    
-    <div class="container">
-        <div class="hero-content">
-            <!-- Headline with emphasis on community -->
-            <h1 class="hero-title h1 fw-bold" style="color: var(--primary);">
-                Building Inclusive Communities in Winnipeg
-            </h1>
-            
-            <!-- Mission statement -->
-            <p class="hero-subtitle">
-                Supporting immigrants and vulnerable Winnipeggers through <strong>addiction recovery</strong>,  
-                <strong>mental health care</strong>, and <strong>newcomer integration</strong>—  
-                because healing happens together.
-            </p>
-            
-            
-            <!-- CTAs with clear hierarchy 
-            <div class="hero-actions">
-                <a href="mental-health-support.html" class="btn btn-primary">
-                    <i class="icon-heart"></i> Mental Health Support
-                </a>
-                <a href="addiction-recovery.html" class="btn btn-accent">
-                    <i class="icon-handshake"></i> Recovery Programs
-                </a>
-                <a href="new comer.html" class="btn btn-light">
-                    <i class="icon-community"></i> Newcomer Services
-                </a>
-            </div>
-            -->
-
-            <!-- Stats grid - balanced and clean -->
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number text-primary">80%</div>
-                    <div class="stat-label">Addiction Recovery Success</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number text-accent">10+</div>
-                    <div class="stat-label">Mental Health Sessions</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number text-light">30+</div>
-                    <div class="stat-label">Newcomers Employed</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- About Section -->
-    <section id="about" class="section bg-light">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title">About Us</h2>
-                    <p class="lead">
-                        At the heart of our work is a powerful belief: that every individual, regardless of their background or circumstances, deserves the opportunity to thrive with dignity, resilience, and purpose. Founded in Winnipeg, HATA Humanitarian Inc. exists to bridge the gaps in mental health care, addiction recovery, and newcomer integration—ensuring no one is left behind.
-                    </p>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4" data-aos="fade-right">
-                    <img src="images/humanitarian.jpg" alt="About HATA Humanitarian" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <h3 class="mb-4">Empowering and Transforming Lives</h3>
-                    <p>
-                        Our vision of an inclusive community where every individual is empowered to thrive drives all that we do. Through targeted programs that address mental well-being, combat stigma, and foster inclusive support systems, we aim to create lasting transformation not just for individuals, but for entire communities.
-                    </p>
-                    <p>
-                        Our mission is to empower and transform lives by promoting mental well-being, supporting addiction recovery, and facilitating social inclusion. We achieve this through education, advocacy, and strong community engagement.
-                    </p>
-                    <p>
-                        Whether it's providing mindset education in schools, helping newcomers acquire life skills, or supporting youth facing addiction with food assistance and recovery mentorship, our work is guided by compassion, evidence-based approaches, and a commitment to equity.
-                    </p>
-                    <p>
-                        Our flagship program <strong>Stigma-Free and Mental Health | Mindset Education</strong> equips youth with the tools to build emotional resilience and fight the stigma around mental health. Through dynamic workshops, peer-led support circles, and hands-on training, we foster environments where healing and growth can take root.
-                    </p>
-                    <ul class="mb-4">
-                        <li>
-                            <strong>Vision:</strong> An inclusive community where every individual is empowered to thrive with resilience, dignity, and purpose.
-                        </li>
-                        <li>
-                            <strong>Mission:</strong> To empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education, advocacy, and community engagement.
-                        </li>
-                    </ul>
-                    <h5 class="mb-3">Objectives:</h5>
-                    <ol>
-                        <li>Promote mental well-being and break the stigma surrounding mental health through mindset education and support programs.</li>
-                        <li>Facilitate the integration of newcomers into Winnipeg by providing essential skills training and support services.</li>
-                        <li>Support youth struggling with addiction by offering food assistance and mindset education for long-term recovery.</li>
-                        <li>Build a supportive network that encourages resilience, personal growth, and social inclusion.</li>
-                    </ol>
+            <div class="hero-content">
+                <h1 class="text-white fw-bold">Building Hope & Healing in Winnipeg</h1>
+                <p>Breaking down barriers to mental health, addiction recovery, and newcomer integration through compassionate support and education.</p>
+                <div class="hero-actions">
+                    <a href="#donate" class="btn btn-primary">Support Our Work</a>
+                    <a href="#programs" class="btn btn-white">Learn About Our Programs</a>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section id="about" class="section bg-light">
+    <!-- About Section -->
+    <section id="about" class="section bg-light text-dark"> 
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title">Our Story</h2>
-                    <p class="lead">Founded by former refugees, HATA Humanitarian transforms lived experience into community empowerment.</p>
-                </div>
+            <div class="section-header">
+                <h2>Our Mission</h2>
+                <p>Empowering Winnipeg communities through mental health support, addiction recovery programs, and newcomer integration services.</p>
             </div>
-            
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4" data-aos="fade-right">
-                    <img src="images/humanitarian.jpg" alt="About HATA Humanitarian" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <h3 class="mb-4">Transforming Lives Since 2022</h3>
-                    <p>HATA Humanitarian Inc. was born from the lived experiences of our founders who overcame adversity, identity struggles, and the challenges of starting anew in Canada. We bridge gaps in mental health care, addiction recovery, and newcomer integration—ensuring no one is left behind.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Creating an Inclusive Community</h3>
+                    <p>At the heart of our work is a powerful belief: that every individual, regardless of their background or circumstances, deserves the opportunity to thrive with dignity, resilience, and purpose.</p>
+                    <p>Our vision of an inclusive community where every individual is empowered to thrive drives all that we do. Through targeted programs that address mental well-being, combat stigma, and foster inclusive support systems, we aim to create lasting transformation not just for individuals, but for entire communities.</p>
                     
-                    <div class="row mt-4">
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-start">
-                                <i class="fas fa-check-circle text-accent mt-1 me-3"></i>
-                                <div> 3+ Years of community advocacy and youth leadership</div>
+                    <div class="values-grid" style="margin-top: 30px;">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
                             </div>
+                            <h3>Our Vision</h3>
+                            <p>An inclusive community where every individual is empowered to thrive with resilience, dignity, and purpose.</p>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-start">
-                                <i class="fas fa-check-circle text-accent mt-1 me-3"></i>
-                                <div>Guided by lived experience in migration and resilience</div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
                             </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-start">
-                                <i class="fas fa-check-circle text-accent mt-1 me-3"></i>
-                                <div>Vision of inclusive, stigma-free communities</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-start">
-                                <i class="fas fa-check-circle text-accent mt-1 me-3"></i>
-                                <div>Holistic approach to community support</div>
-                            </div>
+                            <h3>Our Mission</h3>
+                            <p>To empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery.</p>
                         </div>
                     </div>
-                    
-                    <a href="#team" class="btn btn-primary text-center mt-3">Meet Our Team</a>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="HATA Humanitarian community support">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section text-white bg-primary">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do at HATA Humanitarian</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Compassion</h3>
+                    <!-- Animated SVG Heart for Compassion -->
+                    <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+                        <svg id="compassion-heart" width="48" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+                            <path d="M24 41s-1.6-1.4-4.2-3.5C10.2 29.2 2 22.4 2 14.5 2 8.1 7.1 3 13.5 3c3.5 0 6.7 1.7 8.5 4.3C24.8 4.7 28 3 31.5 3 37.9 3 43 8.1 43 14.5c0 7.9-8.2 14.7-17.8 23C25.6 39.6 24 41 24 41z"
+                                fill="#F2CC8F" stroke="#2a5c8d" stroke-width="2">
+                                <animate attributeName="fill" values="#F2CC8F;#81B29A;#F2CC8F" dur="2s" repeatCount="indefinite"/>
+                                <animateTransform attributeName="transform" type="scale" values="1;1.08;1" keyTimes="0;0.5;1" dur="1.5s" repeatCount="indefinite" additive="sum" />
+                            </path>
+                        </svg>
+                    </div>
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const heart = document.getElementById('compassion-heart');
+                        if (heart) {
+                            heart.style.cursor = 'pointer';
+                            heart.addEventListener('mouseenter', () => {
+                                heart.querySelector('path').setAttribute('fill', '#e57373');
+                            });
+                            heart.addEventListener('mouseleave', () => {
+                                heart.querySelector('path').setAttribute('fill', '#F2CC8F');
+                            });
+                        }
+                    });
+                    </script>
+                    <p>We meet every individual with empathy, understanding, and unconditional positive regard.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Inclusion</h3>
+                    <!-- Animated SVG graphic for Inclusion -->
+                    <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+                        <svg width="48" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+                            <circle cx="24" cy="22" r="18" fill="#81B29A" opacity="0.15"/>
+                            <circle cx="24" cy="22" r="12" fill="#81B29A" opacity="0.3"/>
+                            <g>
+                                <circle cx="24" cy="22" r="6" fill="#2a5c8d">
+                                    <animate attributeName="r" values="6;8;6" dur="1.5s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="12" cy="22" r="3" fill="#F2CC8F">
+                                    <animate attributeName="cy" values="22;18;22" dur="1.5s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="36" cy="22" r="3" fill="#F2CC8F">
+                                    <animate attributeName="cy" values="22;26;22" dur="1.5s" repeatCount="indefinite"/>
+                                </circle>
+                            </g>
+                        </svg>
+                    </div>
+                    <p>We create spaces where everyone feels welcomed, valued, and empowered.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <!-- Animated SVG Book for Education -->
+                    <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+                        <svg width="48" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+                            <rect x="6" y="8" width="16" height="28" rx="3" fill="#F2CC8F" stroke="#2a5c8d" stroke-width="2"/>
+                            <rect x="26" y="8" width="16" height="28" rx="3" fill="#81B29A" stroke="#2a5c8d" stroke-width="2"/>
+                            <path d="M24 12 L24 36" stroke="#2a5c8d" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 12 Q16 18 24 12 Q32 18 40 12" fill="none" stroke="#2a5c8d" stroke-width="2">
+                                <animate attributeName="d" values="M8 12 Q16 18 24 12 Q32 18 40 12;M8 14 Q16 20 24 14 Q32 20 40 14;M8 12 Q16 18 24 12 Q32 18 40 12" dur="2s" repeatCount="indefinite"/>
+                            </path>
+                        </svg>
+                    </div>
+                    <p>We believe knowledge transforms lives and communities.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <!-- Animated SVG graphic for Community -->
+                    <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+                        <svg width="48" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+                            <!-- People icons in a circle -->
+                            <g>
+                                <circle cx="24" cy="22" r="18" fill="#81B29A" opacity="0.12"/>
+                                <circle cx="24" cy="22" r="12" fill="#F2CC8F" opacity="0.18"/>
+                                <!-- Central person -->
+                                <circle cx="24" cy="22" r="5" fill="#2a5c8d">
+                                    <animate attributeName="r" values="5;6;5" dur="1.5s" repeatCount="indefinite"/>
+                                </circle>
+                                <!-- Surrounding people -->
+                                <circle cx="12" cy="14" r="3" fill="#F2CC8F">
+                                    <animate attributeName="cy" values="14;12;14" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="36" cy="14" r="3" fill="#F2CC8F">
+                                    <animate attributeName="cy" values="14;16;14" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="12" cy="30" r="3" fill="#F2CC8F">
+                                    <animate attributeName="cy" values="30;32;30" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="36" cy="30" r="3" fill="#F2CC8F">
+                                    <animate attributeName="cy" values="30;28;30" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                            </g>
+                            <!-- Connecting lines -->
+                            <g stroke="#2a5c8d" stroke-width="1.5" opacity="0.4">
+                                <line x1="24" y1="22" x2="12" y2="14"/>
+                                <line x1="24" y1="22" x2="36" y2="14"/>
+                                <line x1="24" y1="22" x2="12" y2="30"/>
+                                <line x1="24" y1="22" x2="36" y2="30"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <p>We foster connections that heal and empower individuals.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programs Section -->
-    <section id="programs" class="section">
+    <section id="programs" class="section bg-light text-dark">
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center" data-aos="fade-down">
-                    <h2 class="section-title">Our Programs</h2>
-                    <p class="lead">Comprehensive support services addressing critical community needs</p>
-                </div>
+            <div class="section-header">
+                <h2 style="color: #2a5c8d;">Our Programs</h2>
+                <p style="color: #1e293b; font-size: 1.15rem;">Comprehensive support services addressing critical community needs</p>
             </div>
-
-            <div class="row g-4">
-                <!-- Mental Health Support -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card feature-card h-100 shadow-lg border-0">
-                        <div class="card-body text-center p-4 d-flex flex-column align-items-center">
-                            <div class="feature-icon mb-3" data-aos="zoom-in" data-aos-delay="200">
-                                <img src="images/Mental Health.jpg" alt="Mental Health Icon" class="img-fluid rounded-circle" style="width:60px;height:60px;object-fit:cover;">
-                            </div>
-                            <h3 class="fw-bold text-primary mb-3" data-aos="fade-right" data-aos-delay="250">Mental Health Support</h3>
-                            <p class="mb-3" data-aos="fade-in" data-aos-delay="300">
-                                Workshops, seminars, and peer support groups addressing mental health concerns among youth, focusing on stigma reduction and positive mindset strategies.
-                            </p>
-                            <ul class="text-start mb-4" data-aos="fade-in" data-aos-delay="350">
+            <div class="programs-grid">
+                <div class="program-card" style="background: #fff; color: #1e293b;">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Mental Health Program" class="program-img">
+                    <div class="program-content">
+                        <h3 style="color: #2a5c8d;">Stigma-Free Mental Health</h3>
+                        <p>Addressing mental health concerns among youth through workshops, seminars, and peer support groups that educate participants on mental health, stigma reduction, and positive mindset strategies.</p>
+                        <div class="program-activities">
+                            <h4 style="color: #2a5c8d;">Key Activities:</h4>
+                            <ul>
                                 <li>Mental health awareness workshops</li>
-                                <li>Positive mindset training</li>
-                                <li>Peer support programs</li>
+                                <li>Positive mindset and resilience training</li>
+                                <li>Peer support and mentorship programs</li>
                             </ul>
-                            <a href="mental-health-support.html" class="btn btn-outline-primary mt-auto" data-aos="fade-in" data-aos-delay="400">Learn More</a>
                         </div>
+                        <a href="mental-health-support.html" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
-                <!-- Newcomer Integration -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card feature-card h-100 shadow-lg border-0">
-                        <div class="card-body text-center p-4 d-flex flex-column align-items-center">
-                            <div class="feature-icon mb-3" data-aos="zoom-in" data-aos-delay="300">
-                                <img src="images/newcomer.jpg" alt="Newcomer Integration Icon" class="img-fluid rounded-circle" style="width:60px;height:60px;object-fit:cover;">
-                            </div>
-                            <h3 class="fw-bold text-primary mb-3" data-aos="fade-right" data-aos-delay="350">Newcomer Integration</h3>
-                            <p class="mb-3" data-aos="fade-in" data-aos-delay="400">
-                                Helping immigrants build successful lives in Winnipeg through language training, digital skills development, and cultural orientation.
-                            </p>
-                            <ul class="text-start mb-4" data-aos="fade-in" data-aos-delay="450">
-                                <li>Language training</li>
-                                <li>Digital skills workshops</li>
-                                <li>Education system navigation</li>
+                <div class="program-card" style="background: #fff; color: #1e293b;">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" alt="Newcomer Program" class="program-img">
+                    <div class="program-content">
+                        <h3 style="color: #2a5c8d;">Newcomer Integration</h3>
+                        <p>Helping newcomers integrate smoothly into life in Winnipeg through language training, digital skills workshops, and guidance on navigating local systems.</p>
+                        <div class="program-activities">
+                            <h4 style="color: #2a5c8d;">Key Activities:</h4>
+                            <ul>
+                                <li>Language training to enhance communication</li>
+                                <li>Digital skills training for employability</li>
+                                <li>Navigating the Canadian education system</li>
                             </ul>
-                            <a href="new comer.html" class="btn btn-outline-primary mt-auto" data-aos="fade-in" data-aos-delay="500">Learn More</a>
                         </div>
+                        <a href="new comer.html" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
-                <!-- Addiction Recovery -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card feature-card h-100 shadow-lg border-0">
-                        <div class="card-body text-center p-4 d-flex flex-column align-items-center">
-                            <div class="feature-icon mb-3" data-aos="zoom-in" data-aos-delay="400">
-                                <img src="images/addiction-recovery.jpg" alt="Addiction Recovery Icon" class="img-fluid rounded-circle" style="width:60px;height:60px;object-fit:cover;">
-                            </div>
-                            <h3 class="fw-bold text-primary mb-3" data-aos="fade-right" data-aos-delay="450">Addiction Recovery</h3>
-                            <p class="mb-3" data-aos="fade-in" data-aos-delay="500">
-                                Supporting drug-addicted youth through education, rehabilitation collaborations, and community outreach for long-term recovery.
-                            </p>
-                            <ul class="text-start mb-4" data-aos="fade-in" data-aos-delay="550">
-                                <li>Mindset education</li>
-                                <li>Rehab collaborations</li>
-                                <li>Community outreach</li>
+                <div class="program-card" style="background: #fff; color: #1e293b;">
+                    <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Recovery Program" class="program-img">
+                    <div class="program-content">
+                        <h3 style="color: #2a5c8d;">Addiction Recovery</h3>
+                        <p>Supporting drug-addicted youth by addressing their immediate needs and fostering long-term mindset change through education and community support.</p>
+                        <div class="program-activities">
+                            <h4 style="color: #2a5c8d;">Key Activities:</h4>
+                            <ul>
+                                <li>One-on-one and group mindset education</li>
+                                <li>Collaboration with rehabilitation services</li>
+                                <li>Community outreach programs</li>
                             </ul>
-                            <a href="addiction-recovery.html" class="btn btn-outline-primary mt-auto" data-aos="fade-in" data-aos-delay="600">Learn More</a>
                         </div>
+                        <a href="addiction-recovery.html" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -1324,150 +1377,122 @@ body {
     </section>
 
     <!-- Impact Section -->
-    <section id="impact" class="section text-white " style="background-color: #123456;">
+    <section id="impact" class="section impact-section">
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title text-white fw-bolder">Our Impact</h2>
-                    <p class="h3">Measurable results from our community programs and initiatives</p>
-                </div>
+            <div class="section-header">
+                <h2>Our Impact</h2>
+                <p>Measurable results from our community programs and initiatives</p>
             </div>
-            
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3" data-aos="fade-up">
-                    <div class="text-center p-4" style="color: white; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/community-impact.jpg'); background-size: cover;">
-                        <div class="display-4 fw-bold mb-2">500+</div>
-                        <h4>Youth Educated</h4>
-                        <p>Annual mental health education participants</p>
-                    </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number" data-count="500">0</div>
+                    <div class="impact-label">Youth Educated</div>
                 </div>
-                
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center p-4" style="color: white;  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/community-impact.jpg'); background-size: cover;">
-                        <div class="display-4 fw-bold  mb-2">200+</div>
-                        <h4>Newcomers Supported</h4>
-                        <p>Successful integration cases</p>
-                    </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-count="200">0</div>
+                    <div class="impact-label">Newcomers Supported</div>
                 </div>
-                
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-center p-4" style="color: white;  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/community-impact.jpg'); background-size: cover;">
-                        <div class="display-4 fw-bold mb-2">80%</div>
-                        <h4>Recovery Success</h4>
-                        <p>Addiction program participants</p>
-                    </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-count="80">0</div>
+                    <div class="impact-label">Recovery Success Rate</div>
                 </div>
-                
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-center p-4" style="color: white;  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/community-impact.jpg'); background-size: cover;">
-                        <div class="display-4 fw-bold mb-2">15+</div>
-                        <h4>Community Partners</h4>
-                        <p>Collaborating organizations</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row mt-5">
-                <div class="col-12">
-                    <h3 class="text-center mb-4">Success Stories</h3>
-                    <div class="row g-4">
-                        <div class="col-md-4" data-aos="fade-up">
-                            <div class="testimonial-card h-100">
-                                <p class="testimonial-text">The mental health program helped me understand my anxiety and gave me tools to manage it. I'm now able to focus on my studies and have hope for the future.</p>
-                                <div class="d-flex align-items-center mt-4">
-                                    <img src="images/testimonial-1.jpg" alt="Sarah K." class="rounded-circle me-3" width="60">
-                                    <div>
-                                        <h5 class="mb-0">Sarah K.</h5>
-                                        <small>Program Participant</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="testimonial-card h-100">
-                                <p class="testimonial-text">As a newcomer, the integration program was invaluable. The language classes and cultural orientation helped my family settle into Winnipeg much faster than we expected.</p>
-                                <div class="d-flex align-items-center mt-4">
-                                    <img src="images/testimonial-2.jpg" alt="Mohammed A." class="rounded-circle me-3" width="60">
-                                    <div>
-                                        <h5 class="mb-0">Mohammed A.</h5>
-                                        <small>Newcomer Program</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="testimonial-card h-100">
-                                <p class="testimonial-text">After years of struggling with addiction, the recovery program gave me the support and education I needed to turn my life around. I've been clean for 18 months now.</p>
-                                <div class="d-flex align-items-center mt-4">
-                                    <img src="images/testimonial-3.jpg" alt="James L." class="rounded-circle me-3" width="60">
-                                    <div>
-                                        <h5 class="mb-0">James L.</h5>
-                                        <small>Recovery Program</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-count="15">0</div>
+                    <div class="impact-label">Community Partners</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="section bg-light">
+    <!-- Testimonials Section -->
+    <section class="section bg-light">
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title">Our Leadership</h2>
-                    <p class="lead">Passionate advocates with lived experience driving our mission</p>
+            <div class="section-header">
+                <h2>Stories of Hope</h2>
+                <p>Hear from those whose lives have been transformed through our programs</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card active">
+                    <div class="testimonial-text">
+                        The mental health program helped me understand my anxiety and gave me tools to manage it. I'm now able to focus on my studies and have hope for the future.
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah K.">
+                        <div class="author-info">
+                            <h4>Sarah K.</h4>
+                            <p>Mental Health Program Participant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        As a newcomer, the integration program was invaluable. The language classes and cultural orientation helped my family settle into Winnipeg much faster than we expected.
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mohammed A.">
+                        <div class="author-info">
+                            <h4>Mohammed A.</h4>
+                            <p>Newcomer Program Participant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        After years of struggling with addiction, the recovery program gave me the support and education I needed to turn my life around. I've been clean for 18 months now.
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="James L.">
+                        <div class="author-info">
+                            <h4>James L.</h4>
+                            <p>Recovery Program Participant</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <img src="images/pacific-muhumure.jpg" alt="Pacific Muhumure" class="rounded-circle mb-3" width="150">
-                            <h3>Pacific Muhumure</h3>
-                            <p class="text-accent fw-bold">CEO & Director</p>
-                            <p>Former refugee with degrees in Healthcare Management and certifications from Harvard University and the UN. Extensive experience in education and community empowerment.</p>
-                            <div class="mt-3">
-                                <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
+            <div class="testimonial-nav">
+                <div class="testimonial-dot active" data-index="0"></div>
+                <div class="testimonial-dot" data-index="1"></div>
+                <div class="testimonial-dot" data-index="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Leadership</h2>
+                <p>Passionate advocates with lived experience driving our mission</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Pacific Muhumure" class="team-img">
+                    <h3>Pacific Muhumure</h3>
+                    <span class="position">CEO & Director</span>
+                    <p>Dedicated professional with degrees in Healthcare Management and certifications from Harvard University and the UN. Passionate about community empowerment through education & advocacy.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <img src="images/angelique-nantabara.jpg" alt="Angelique Nantabara" class="rounded-circle mb-3" width="150">
-                            <h3>Angelique Nantabara</h3>
-                            <p class="text-accent fw-bold">Community Leader</p>
-                            <p>17+ years advocating for newcomers and refugees from DRC. Former leader of Ineza Organization supporting displaced families.</p>
-                            <div class="mt-3">
-                                <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Angelique Nantabara" class="team-img">
+                    <h3>Angelique Nantabara</h3>
+                    <span class="position">Community Leader</span>
+                    <p>Dedicated advocate in Winnipeg for over 17 years, bringing deep passion and lived experience to supporting youth, newcomers, and individuals with disabilities.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <img src="images/gentile-ntwayingabo.jpg" alt="Gentile Ntwayingabo" class="rounded-circle mb-3" width="150">
-                            <h3>Gentile Ntwayingabo</h3>
-                            <p class="text-accent fw-bold">Youth Advocate</p>
-                            <p>Business student empowering immigrant youth through lived experience. 16+ years in Winnipeg supporting students and individuals with disabilities.</p>
-                            <div class="mt-3">
-                                <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Gentile Ntwayingabo" class="team-img">
+                    <h3>Gentile Ntwayingabo</h3>
+                    <span class="position">Youth Advocate</span>
+                    <p>Immigrated to Canada from DRC as a young girl. Passionate about empowering youth, newcomers, and visible minorities to realize their full potential.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -1475,186 +1500,277 @@ body {
     </section>
 
     <!-- CTA Section -->
-    <section id="donate" class="section bg-accent text-white">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mb-4">Join Our Mission to Transform Lives</h2>
-                    <p class="lead mb-5">Your support helps create a more inclusive, mentally healthy Winnipeg where everyone has the opportunity to thrive.</p>
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="donate.html" class="btn btn-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg px-4">Volunteer With Us</a>
-                    </div>
-                </div>
+    <section id="donate" class="cta-section">
+        <div class="cta-content" style="padding: 60px 30px 50px; border-radius: var(--radius-xl); background: rgba(255,255,255,0.08); box-shadow: 0 4px 24px rgba(42,92,141,0.10);">
+            <h2 style="font-size: 2.7rem; font-weight: 700; margin-bottom: 18px; color: #fff; text-shadow: 0 2px 8px rgba(42,92,141,0.15); letter-spacing: 0.5px;">Join Us in Making a Difference</h2>
+            <p style="font-size: 1.25rem; color: #ffff; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.95;">Your support helps create a more inclusive, mentally healthy Winnipeg where everyone has the opportunity to thrive.</p>
+            <div class="hero-actions text-center" style="justify-content: center; gap: 18px;">
+                <a href="#" class="btn btn-primary" style="min-width:160px; font-size:1.1rem; box-shadow: 0 4px 16px rgba(242,204,143,0.18); letter-spacing: 0.2px;">Donate Now</a>
+                <a href="#contact" class="btn btn-primary" style="min-width:160px; font-size:1.1rem; border-width:2.5px;">Volunteer With Us</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="lead">We'd love to hear from you about our programs, volunteer opportunities, or partnerships.</p>
+    <div class="container">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>We'd love to hear from you about our programs, volunteer opportunities, or partnerships</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Contact Information</h3>
+                <p><strong>Address:</strong> 123 Community Way, Winnipeg, MB R3T 2N2</p>
+                <p><strong>Email:</strong> info@hatahumanitarian.org</p>
+                <p><strong>Phone:</strong> (204) 555-0192</p>
+                <p><strong>Hours:</strong> Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <div class="social-links" style="justify-content: flex-start; margin-top: 20px;">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body p-4 p-lg-5">
-                            <h3 class="mb-4">Contact Information</h3>
-                            <ul class="list-unstyled">
-                                <li class="mb-4 d-flex">
-                                    <i class="fas fa-map-marker-alt text-accent me-3 mt-1"></i>
-                                    <div>
-                                        <h5>Address</h5>
-                                        <p>123 Community Way, Winnipeg, MB R3T 2N2</p>
-                                    </div>
-                                </li>
-                                <li class="mb-4 d-flex">
-                                    <i class="fas fa-envelope text-accent me-3 mt-1"></i>
-                                    <div>
-                                        <h5>Email</h5>
-                                        <p>info@hatahumanitarian.org</p>
-                                    </div>
-                                </li>
-                                <li class="mb-4 d-flex">
-                                    <i class="fas fa-phone text-accent me-3 mt-1"></i>
-                                    <div>
-                                        <h5>Phone</h5>
-                                        <p>(204) 555-0192</p>
-                                    </div>
-                                </li>
-                                <li class="d-flex">
-                                    <i class="fas fa-clock text-accent me-3 mt-1"></i>
-                                    <div>
-                                        <h5>Hours</h5>
-                                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            
-                            <div class="mt-5">
-                                <h4 class="mb-3">Follow Us</h4>
-                                <div class="d-flex gap-3">
-                                    <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" class="btn btn-sm btn-primary"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
+            <div class="about-text">
+                <h3>Send Us a Message</h3>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div id="form-messages" style="display: none; margin-bottom: 20px; padding: 20px; border-radius: 8px;"></div>
+                    
+                    <div id="form-fields">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+                            <div class="error-message" id="name-error"></div>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body p-4 p-lg-5">
-                            <h3 class="mb-4">Send Us a Message</h3>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="subject" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                            </form>
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+                            <div class="error-message" id="email-error"></div>
                         </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Your message" required rows="5"></textarea>
+                            <div class="error-message" id="message-error"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    .required {
+        color: #e53935;
+    }
+    
+    .error-message {
+        color: #e53935;
+        font-size: 0.85rem;
+        margin-top: 5px;
+        display: none;
+    }
+    
+    .form-control.error {
+        border-color: #e53935;
+    }
+    
+    #form-messages.success {
+        background-color: #e8f5e9;
+        border: 1px solid #c8e6c9;
+        color: #2e7d32;
+    }
+    
+    #form-messages.error {
+        background-color: #ffebee;
+        border: 1px solid #ffcdd2;
+        color: #c62828;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const formFields = document.getElementById('form-fields');
+    const formMessages = document.getElementById('form-messages');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            clearErrors();
+            
+            // Validate form
+            let isValid = true;
+            
+            // Name validation
+            const name = form.name.value.trim();
+            if (name.length < 2) {
+                showError('name', 'Please enter your full name');
+                isValid = false;
+            }
+            
+            // Email validation
+            const email = form.email.value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                showError('email', 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            // Message validation
+            const message = form.message.value.trim();
+            if (message.length < 10) {
+                showError('message', 'Please enter a message (at least 10 characters)');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // In a real implementation, you would send the form data to your server here
+                // For this example, we'll simulate a successful submission
+                
+                // Hide form and show success message
+                formFields.style.display = 'none';
+                formMessages.style.display = 'block';
+                formMessages.className = 'success';
+                formMessages.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <h4 style="margin: 0; font-size: 1.2rem; color: #2e7d32;">
+                            <i class="fas fa-check-circle" style="margin-right: 8px;"></i>
+                            Thank you for your message!
+                        </h4>
+                        <p style="margin: 0;">We've received your inquiry and will respond within 1-2 business days.</p>
+                        <p style="margin: 0;">In the meantime, you might want to:</p>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Explore our <a href="#programs" style="color: #2e7d32; font-weight: 500;">programs</a></li>
+                            <li>Learn about <a href="#volunteer" style="color: #2e7d32; font-weight: 500;">volunteer opportunities</a></li>
+                            <li>Follow us on <a href="#" style="color: #2e7d32; font-weight: 500;">social media</a></li>
+                        </ul>
+                    </div>
+                `;
+                
+                // Reset form after 10 seconds (optional)
+                setTimeout(() => {
+                    form.reset();
+                    formFields.style.display = '';
+                    formMessages.style.display = 'none';
+                }, 10000);
+            } else {
+                formMessages.style.display = 'block';
+                formMessages.className = 'error';
+                formMessages.textContent = 'Please correct the errors below and try again.';
+            }
+        });
+        
+        // Add real-time validation
+        form.name.addEventListener('blur', validateName);
+        form.email.addEventListener('blur', validateEmail);
+        form.message.addEventListener('blur', validateMessage);
+    }
+    
+    function validateName() {
+        const name = form.name.value.trim();
+        if (name.length < 2) {
+            showError('name', 'Please enter your full name');
+            return false;
+        } else {
+            clearError('name');
+            return true;
+        }
+    }
+    
+    function validateEmail() {
+        const email = form.email.value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            showError('email', 'Please enter a valid email address');
+            return false;
+        } else {
+            clearError('email');
+            return true;
+        }
+    }
+    
+    function validateMessage() {
+        const message = form.message.value.trim();
+        if (message.length < 10) {
+            showError('message', 'Please enter a message (at least 10 characters)');
+            return false;
+        } else {
+            clearError('message');
+            return true;
+        }
+    }
+    
+    function showError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const errorElement = document.getElementById(`${fieldId}-error`);
+        
+        field.classList.add('error');
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+    }
+    
+    function clearError(fieldId) {
+        const field = document.getElementById(fieldId);
+        const errorElement = document.getElementById(`${fieldId}-error`);
+        
+        field.classList.remove('error');
+        errorElement.textContent = '';
+        errorElement.style.display = 'none';
+    }
+    
+    function clearErrors() {
+        clearError('name');
+        clearError('email');
+        clearError('message');
+    }
+});
+</script>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
+    <footer class="footer">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
-                            <h4 class="mb-0">HATA Humanitarian</h4>
-                        </div>
-                        <p>Empowering Winnipeg communities through mental health support, newcomer integration, and addiction recovery programs.</p>
-                    </div>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="mb-4">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
-                        <li class="mb-2"><a href="../#about" class="text-white-50">About</a></li>
-                        <li class="mb-2"><a href="../#programs" class="text-white-50">Programs</a></li>
-                        <li><a href="#contact" class="text-white-50">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="mb-4">Programs</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="mental-health-support.html" class="text-white-50">Mental Health</a></li>
-                        <li class="mb-2"><a href="new comer.html" class="text-white-50">Newcomer Support</a></li>
-                        <li><a href="addiction-recovery.html" class="text-white-50">Addiction Recovery</a></li>
-                    </ul>
-                </div>
-                
-               
+            <div class="partners">
+                <img src="https://via.placeholder.com/150x60?text=Partner+1" alt="Partner Logo" class="partner-logo">
+                <img src="https://via.placeholder.com/150x60?text=Partner+2" alt="Partner Logo" class="partner-logo">
+                <img src="https://via.placeholder.com/150x60?text=Partner+3" alt="Partner Logo" class="partner-logo">
+                <img src="https://via.placeholder.com/150x60?text=Partner+4" alt="Partner Logo" class="partner-logo">
             </div>
-            
-            <hr class="my-4 bg-white-10">
-            
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="text-white-50">Privacy</a></li>
-                        <li class="list-inline-item"><span class="mx-2">•</span></li>
-                        <li class="list-inline-item"><a href="#" class="text-white-50">Terms</a></li>
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Humanitarian Logo">
+                        <span>HATA Humanitarian</span>
+                    </div>
+                    <p>Empowering Winnipeg communities through mental health support, newcomer integration, and addiction recovery programs.</p>
+    <!-- Removed duplicate contact form script to prevent conflicts -->
+                        <li><a href="#">Community Workshops</a></li>
+                        <li><a href="#">Youth Empowerment</a></li>
                     </ul>
                 </div>
+               
+                <div class="newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for updates on our programs and initiatives.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 HATA Humanitarian Inc. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top btn btn-primary rounded-circle position-fixed">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
     <script>
-        // Initialize AOS animation
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
@@ -1663,28 +1779,28 @@ body {
             } else {
                 navbar.classList.remove('scrolled');
             }
-            
-            // Back to top button
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
         });
         
-        // Back to top button
-        document.querySelector('.back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.navbar-nav');
+        
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             });
         });
         
         // Counter animation
         function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
+            const counters = document.querySelectorAll('.impact-number');
             const speed = 200;
             
             counters.forEach(counter => {
@@ -1701,28 +1817,37 @@ body {
             });
         }
         
-        // Intersection Observer for counter animation
-        const counterSection = document.querySelector('#impact');
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateCounters();
-                observer.unobserve(counterSection);
-            }
-        }, { threshold: 0.5 });
+        // Testimonial carousel
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.testimonial-dot');
         
-        observer.observe(counterSection);
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active', 'prev', 'next'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            // Set previous and next classes for animation
+            const prevIndex = index === 0 ? testimonials.length - 1 : index - 1;
+            const nextIndex = index === testimonials.length - 1 ? 0 : index + 1;
+            
+            testimonials[prevIndex].classList.add('prev');
+            testimonials[nextIndex].classList.add('next');
+            
+            currentTestimonial = index;
+        }
         
-        // Donation amount selection
-        document.querySelectorAll('.donation-amount').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.donation-amount').forEach(btn => {
-                    btn.classList.remove('btn-primary');
-                    btn.classList.add('btn-outline-primary');
-                });
-                this.classList.remove('btn-outline-primary');
-                this.classList.add('btn-primary');
-            });
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showTestimonial(index));
         });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1741,23 +1866,30 @@ body {
                 }
             });
         });
+        
+        // Initialize animations when elements come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    
+                    if (entry.target.classList.contains('impact-number')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.hero-content, .value-card, .program-card, .team-card, .impact-number').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // Initialize first testimonial
+        showTestimonial(0);
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000, // Duration of the animation (in ms)
-        easing: 'ease-out-quad', // Easing function
-        once: true, // Whether animation should happen only once - useful for performance
-    });
-    
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        easing: 'ease-out-quad',
-        once: true,
-    });
-</script>
 </body>
 </html>
