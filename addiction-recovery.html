@@ -1,708 +1,513 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head content as main page -->
-    <title>Addiction Recovery | HATA Humanitarian</title>
-    <meta name="description" content="Youth addiction recovery program offering education, support, and rehabilitation collaborations in Winnipeg.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="HATA Humanitarian empowers Winnipeg communities through mental health support, addiction recovery programs, and newcomer integration services.">
-    <meta name="keywords" content="humanitarian, Winnipeg, mental health, addiction recovery, newcomer support, nonprofit">
+    <title>Addiction Recovery Program | HATA Humanitarian</title>
+    
+    <meta name="description" content="HATA Humanitarian's addiction recovery program for youth in Winnipeg, offering mindset education and support for long-term recovery.">
+    <meta name="keywords" content="addiction recovery winnipeg, youth support, substance use program, mental health, HATA humanitarian, non-profit">
     <meta name="author" content="HATA Humanitarian Inc.">
-    <meta property="og:title" content="HATA Humanitarian - Empowering Winnipeg Communities">
-    <meta property="og:description" content="Promoting mental well-being, supporting addiction recovery, and facilitating social inclusion in Winnipeg.">
-    <meta property="og:image" content="https://www.hatahumanitarian.org/images/social-preview.jpg">
-    <meta property="og:url" content="https://www.hatahumanitarian.org">
+    
+    <meta property="og:title" content="Addiction Recovery Program | HATA Humanitarian">
+    <meta property="og:description" content="Empowering youth in Winnipeg on their journey to addiction recovery through education, support, and community engagement.">
+    <meta property="og:image" content="https://www.hatahumanitarian.org/images/social-preview-recovery.jpg">
+    <meta property="og:url" content="https://www.hatahumanitarian.org/addiction-recovery.html">
     <meta name="twitter:card" content="summary_large_image">
     
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2a5c8d">
-    <meta name="msapplication-TileColor" content="#2a5c8d">
-    <meta name="theme-color" content="#ffffff">
     
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
-            --primary: #2A5C8D;
-            --secondary: #1E40AF;
-            --accent: #F59E0B;
-            --light: #F8FAFC;
-            --dark: #1E293B;
-            --text: #334155;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --primary: #1E3A8A; /* Deep, trustworthy indigo */
+            --secondary: #3B5998; /* Softer, approachable blue */
+            --accent: #C5A66A; /* Warm, hopeful gold */
+            --light: #F8F9FA; /* Off-white for sections */
+            --dark: #212529; /* Dark charcoal for text */
+            --text-muted: #6C757D;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            --transition: all 0.3s ease-in-out;
         }
-        
+
         body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text);
-            line-height: 1.7;
+            font-family: var(--font-sans);
+            color: var(--dark);
+            background-color: #FFFFFF;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4 {
-            font-family: 'Playfair Display', serif;
+
+        h1, h2, h3, h4, h5, h6, .display-4 {
+            font-family: var(--font-serif);
             font-weight: 700;
+            color: var(--primary);
         }
-        
-        .bg-primary { background-color: var(--primary) !important; }
-        .bg-accent { background-color: var(--accent) !important; }
-        .text-accent { color: var(--accent) !important; }
-        
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .btn {
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: var(--transition);
+            letter-spacing: 0.5px;
+        }
+
         .btn-primary {
             background-color: var(--primary);
             border-color: var(--primary);
-            transition: var(--transition);
         }
-        
         .btn-primary:hover {
             background-color: var(--secondary);
             border-color: var(--secondary);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 15px rgba(30, 58, 138, 0.2);
         }
-        
+
         .btn-accent {
             background-color: var(--accent);
             border-color: var(--accent);
-            color: #fff;
-            transition: var(--transition);
+            color: white;
         }
-        
         .btn-accent:hover {
-            background-color: #D97706;
-            border-color: #D97706;
-            color: #fff;
+            opacity: 0.9;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 15px rgba(197, 166, 106, 0.3);
         }
-        
+
         /* Navigation */
         .navbar {
-            transition: all 0.5s ease;
             padding: 1rem 0;
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
+            transition: var(--transition);
         }
-        
         .navbar.scrolled {
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem 0;
-            background-color: rgba(255, 255, 255, 0.98);
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 0.75rem 0;
         }
-        
-        .nav-link {
-            font-weight: 500;
-            padding: 0.5rem 1rem;
+        .navbar-brand span { color: var(--primary); }
+        .nav-link { font-weight: 500; color: var(--dark); }
+        .nav-link:hover, .nav-link.active { color: var(--primary); }
+
+        /* Modern Hero */
+        .hero-modern {
             position: relative;
-            color: var(--dark);
+            padding: 180px 0 120px;
+            background: url('images/recovery group.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
         }
-        
-        .nav-link:after {
+        .hero-modern::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(75deg, rgba(30, 58, 138, 0.85) 0%, rgba(59, 89, 152, 0.7) 100%);
+            z-index: 1;
         }
-        
-        .nav-link:hover:after,
-        .nav-link.active:after {
-            width: 70%;
-        }
-        
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .hero-modern .container {
             position: relative;
             z-index: 2;
         }
-        
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+        .hero-modern .display-4 {
+            color: white;
+            font-size: 3.5rem;
         }
-        
-        .hero-description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        .hero-modern .lead {
+            font-size: 1.25rem;
+            max-width: 600px;
             opacity: 0.9;
         }
-        
-        .hero-image {
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        .breadcrumb-modern {
+            background-color: transparent !important;
+            padding: 0 0 1rem 0;
         }
-        
-        .impact-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
+        .breadcrumb-modern .breadcrumb-item a { color: rgba(255, 255, 255, 0.8); }
+        .breadcrumb-modern .breadcrumb-item a:hover { color: white; }
+        .breadcrumb-modern .breadcrumb-item.active { color: white; font-weight: 500; }
+        .breadcrumb-modern .breadcrumb-item+.breadcrumb-item::before { color: rgba(255, 255, 255, 0.8); }
+
+        /* Crisis Banner */
+        .crisis-banner {
+            background-color: #fffbeb;
+            border-top: 1px solid #fde68a;
+            border-bottom: 1px solid #fde68a;
         }
-        
-        .stat-item {
-            text-align: center;
+        .crisis-banner h4 {
+            color: #b45309;
+            margin-bottom: 0.25rem;
         }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
+        .crisis-banner p {
+             color: #92400e;
         }
-        
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
+        .crisis-banner .fa-life-ring {
+            color: #d97706;
         }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
+
+        /* Services Tabs */
+        .services-tabs .nav-tabs {
+            border-bottom: none;
         }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--accent);
-        }
-        
-        /* Card Styling */
-        .feature-card {
+        .services-tabs .nav-link {
             border: none;
-            border-radius: 10px;
-            overflow: hidden;
+            border-radius: 50px;
+            padding: 10px 20px;
+            margin: 0 5px;
+            color: var(--text-muted);
+            font-weight: 500;
+            background-color: var(--light);
+            transition: var(--transition);
+        }
+        .services-tabs .nav-link.active {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+        }
+        .services-tabs .nav-link:hover:not(.active) {
+            background-color: #e9ecef;
+        }
+        .services-tabs .tab-content {
+            background-color: #FFFFFF;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-top: -20px;
+            position: relative;
+            z-index: 10;
+            border: 1px solid #dee2e6;
+        }
+        
+        /* Program Details Sidebar */
+        .sidebar-card {
+            background-color: var(--light);
+            border-radius: 15px;
+            padding: 2rem;
+            position: sticky;
+            top: 120px;
+        }
+        .sidebar-card h5 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-card p, .sidebar-card ul {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        .sidebar-card li { margin-bottom: 0.5rem; }
+
+        /* Values Section */
+        .value-card {
+            background-color: white;
+            border: 1px solid #e9ecef;
+            border-radius: 15px;
             transition: var(--transition);
             height: 100%;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-        
-        /* Testimonial */
-        .testimonial-card {
-            background: white;
-            border-radius: 10px;
             padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
         }
-        
-        .testimonial-text {
-            font-style: italic;
-            position: relative;
-            padding-left: 2rem;
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
-        
-        .testimonial-text:before {
-            content: '"';
-            position: absolute;
-            left: 0;
-            top: 0;
+        .value-card .value-icon {
             font-size: 3rem;
-            line-height: 1;
             color: var(--accent);
-            opacity: 0.3;
+            margin-bottom: 1.5rem;
+        }
+        .value-card p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
         }
         
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .impact-stats {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+        /* Footer */
+        .footer-modern { background-color: var(--dark); }
+        .footer-modern h5 { color: var(--accent); }
+        .footer-modern a { color: rgba(255,255,255,0.7); transition: var(--transition); }
+        .footer-modern a:hover { color: white; }
+        .footer-modern .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
         }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
+        .footer-modern .social-links a:hover { background-color: var(--accent); }
+
+        @media (max-width: 991.98px) {
+            .hero-modern { padding: 120px 0 80px; }
+            .hero-modern .display-4 { font-size: 2.75rem; }
         }
 
-          /* Ensure all story images are the same size */
-        .story-img img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            max-width: 300px;
-            min-height: 220px;
-        }
     </style>
 </head>
-
 <body>
-    <!-- Same header/navigation as main page -->
-       <!-- Navigation (same as main site) -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
-                <span class="fw-bold">HATA Humanitarian</span>
+                <span class="fw-bold fs-5">HATA Humanitarian</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#programs">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#impact">Impact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html#programs">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#impact">Impact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-accent mt-2 mt-lg-0" href="../#donate">Donate Now</a>
+                        <a class="btn btn-accent mt-2 mt-lg-0" href="index.html#donate">Donate Now</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Breadcrumb Navigation -->
-    <nav aria-label="breadcrumb" class="bg-light py-2">
-        <div class="container">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="index.html#programs">Programs</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Addiction Recovery</li>
-            </ol>
-        </div>
-    </nav>
 
-    <!-- Program Hero Section -->
-    <section class="program-hero bg-primary text-white">
-        <div class="container py-5">
+    <header class="hero-modern">
+        <div class="container">
+            <nav class="breadcrumb-modern" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#programs">Programs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Addiction Recovery</li>
+                </ol>
+            </nav>
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="index.html#programs">Programs</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Addiction Recovery</li>
-                        </ol>
-                    </nav>
-                    <h1 class="display-4 fw-bold mb-4">Addiction Recovery Program</h1>
-                    <p class="lead">Supporting youth on their journey to sobriety and wellness</p>
-                    <a href="#services" class="btn btn-accent btn-lg me-3">Our Approach</a>
-                    <a href="#contact" class="btn btn-outline-light btn-lg">Get Help</a>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/recovery group.jpg" alt="Recovery group meeting" class="img-fluid rounded shadow">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Program Approach -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <div class="row g-5">
                 <div class="col-lg-8">
-                    <h2 class="mb-4">Holistic Recovery Support</h2>
-                    <p>Our Addiction Recovery Program takes a comprehensive approach to supporting youth (ages 13-24) struggling with substance use. We combine evidence-based practices with peer support to address the root causes of addiction.</p>
-                    
-                    <div class="alert alert-warning mt-5">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-exclamation-triangle me-3 fs-4"></i>
-                            <button class="btn btn-danger me-3" onclick="window.location.href='tel:204555HELP'">
-                                <i class="fas fa-phone-alt me-2"></i>Call Now
-                            </button> <h4 class="alert-heading text-danger">Need Immediate Help?</h4>
-                                <p class="mb-0 text-danger">If you or someone you know is in crisis, call our 24/7 support line at <strong>204-555-HELP</strong>.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h3 class="mt-5">Our Services</h3>
-                    <div class="services-tabs mt-4">
-                        <ul class="nav nav-tabs" id="recoveryTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab">
-                                    <i class="fas fa-graduation-cap me-2"></i>Education
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="support-tab" data-bs-toggle="tab" data-bs-target="#support" type="button" role="tab">
-                                    <i class="fas fa-hands-helping me-2"></i>Support
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="rehab-tab" data-bs-toggle="tab" data-bs-target="#rehab" type="button" role="tab">
-                                    <i class="fas fa-clinic-medical me-2"></i>Rehab
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="aftercare-tab" data-bs-toggle="tab" data-bs-target="#aftercare" type="button" role="tab">
-                                    <i class="fas fa-home me-2"></i>Aftercare
-                                </button>
-                            </li>
-                        </ul>
-                        <div class="tab-content p-4 border border-top-0 rounded-bottom" id="recoveryTabsContent">
-                            <!-- Education Tab -->
-                            <div class="tab-pane fade show active" id="education" role="tabpanel">
-                                <h4>Addiction Education</h4>
-                                <p>Our educational programs help youth understand addiction and build healthy coping skills:</p>
-                                <ul>
-                                    <li>Weekly educational workshops</li>
-                                    <li>Science of addiction seminars</li>
-                                    <li>Harm reduction strategies</li>
-                                    <li>Healthy lifestyle training</li>
-                                </ul>
-                                <p>All education is trauma-informed and delivered by professionals with lived experience.</p>
-                            </div>
-                            
-                            <!-- Support Tab -->
-                            <div class="tab-pane fade" id="support" role="tabpanel">
-                                <h4>Peer Support</h4>
-                                <p>We offer multiple support options tailored to youth needs:</p>
-                                <ul>
-                                    <li>Daily recovery meetings (in-person & virtual)</li>
-                                    <li>One-on-one mentoring</li>
-                                    <li>Family support groups</li>
-                                    <li>24/7 crisis text line</li>
-                                </ul>
-                                <p>All support groups are confidential and judgment-free.</p>
-                            </div>
-                            
-                            <!-- Rehab Tab -->
-                            <div class="tab-pane fade" id="rehab" role="tabpanel">
-                                <h4>Rehabilitation Partnerships</h4>
-                                <p>We collaborate with treatment centers to provide:</p>
-                                <ul>
-                                    <li>Referrals to youth-focused rehab programs</li>
-                                    <li>Scholarships for treatment</li>
-                                    <li>Transition planning</li>
-                                    <li>Family education during treatment</li>
-                                </ul>
-                                <p>We maintain relationships with 5 local treatment centers specializing in youth addiction.</p>
-                            </div>
-                            
-                            <!-- Aftercare Tab -->
-                            <div class="tab-pane fade" id="aftercare" role="tabpanel">
-                                <h4>Aftercare Support</h4>
-                                <p>Continuing care is essential for lasting recovery:</p>
-                                <ul>
-                                    <li>Sober living referrals</li>
-                                    <li>Alumni events</li>
-                                    <li>Vocational training</li>
-                                    <li>Relapse prevention planning</li>
-                                </ul>
-                                <p>Our aftercare program has demonstrated 75% sobriety rates at 12 months post-treatment.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h3 class="mt-5">Program Outcomes</h3>
-                    <div class="row g-4 mb-5">
-                        <div class="col-md-6">
-                            <div class="outcome-card p-4 h-100 rounded">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="outcome-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                        <i class="fas fa-user-check"></i>
-                                    </div>
-                                    <h4 class="mb-0">Engagement</h4>
-                                </div>
-                                <p>150+ youth actively participating in recovery programs each month, with 80% regular attendance.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="outcome-card p-4 h-100 rounded">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="outcome-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                        <i class="fas fa-heart"></i>
-                                    </div>
-                                    <h4 class="mb-0">Recovery</h4>
-                                </div>
-                                <p>65% of participants maintain sobriety at 6 months, compared to 35% community average.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="outcome-card p-4 h-100 rounded">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="outcome-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <h4 class="mb-0">Education</h4>
-                                </div>
-                                <p>90% of participants in our school reintegration program complete their academic year.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="outcome-card p-4 h-100 rounded">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="outcome-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                        <i class="fas fa-briefcase"></i>
-                                    </div>
-                                    <h4 class="mb-0">Employment</h4>
-                                </div>
-                                <p>45% of alumni gain employment within 3 months of completing our vocational program.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="get-involved" class="mt-5 pt-5">
-                        <h2>Get Involved</h2>
-                        <div class="row g-4 mt-4">
-                            <div class="col-md-6">
-                                <div class="card h-100 border-0 shadow-sm">
-                                    <div class="card-body p-4">
-                                        <h4><i class="fas fa-hand-holding-heart text-accent me-2"></i> Volunteer</h4>
-                                        <p>Opportunities to support recovery:</p>
-                                        <ul>
-                                            <li>Recovery meeting facilitator</li>
-                                            <li>Mentor for youth in recovery</li>
-                                            <li>Event coordination</li>
-                                            <li>Transportation assistance</li>
-                                        </ul>
-                                        <a href="#contact" class="btn btn-primary mt-3">Volunteer Today</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card h-100 border-0 shadow-sm">
-                                    <div class="card-body p-4">
-                                        <h4><i class="fas fa-dollar-sign text-accent me-2"></i> Donate</h4>
-                                        <p>Support our recovery initiatives:</p>
-                                        <ul>
-                                            <li>Sponsor a treatment scholarship</li>
-                                            <li>Fund educational materials</li>
-                                            <li>Support sober social events</li>
-                                            <li>General program support</li>
-                                        </ul>
-                                        <a href="#contact" class="btn btn-primary mt-3">Donate Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h1 class="display-4 fw-bold mb-4">Empower. Save. Transform. [cite: 2]</h1>
+                    <p class="lead mb-4">Our mission is to empower and transform lives by promoting mental well-being, supporting addiction recovery, and facilitating social inclusion[cite: 11].</p>
+                    <a href="#program-approach" class="btn btn-accent btn-lg me-2">Our Approach</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Get Help Now</a>
                 </div>
-                
-                <div class="col-lg-4">
-                    <div class="card border-0 shadow-sm sticky-top" style="top: 20px;">
-                        <div class="card-body p-4">
-                            <h4 class="mb-4">Program Details</h4>
-                            <div class="program-detail mb-4">
-                                <h5><i class="fas fa-user-friends text-accent me-2"></i> Eligibility</h5>
-                                <p class="mt-2">Youth ages 13-24 struggling with substance use. No referral required.</p>
+            </div>
+        </div>
+    </header>
+    
+    <section class="crisis-banner py-4">
+        <div class="container">
+            <div class="row align-items-center justify-content-center text-center text-md-start gy-3">
+                <div class="col-md-auto">
+                    <i class="fas fa-life-ring fa-3x"></i>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="fw-bold">Support is Available</h4>
+                    <p class="mb-0">If you or someone you know is struggling, we are here to help. Please reach out to learn about our confidential support options.</p>
+                </div>
+                <div class="col-md-3 text-center text-md-end">
+                     <a href="#contact" class="btn btn-warning">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="program-approach" class="section">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-8">
+                        <h2 class="mb-4">Our Addiction-Free Program</h2>
+                        <p class="lead text-muted mb-5">At the heart of our work is the belief that every individual deserves to thrive with dignity and purpose[cite: 7]. Our Addiction-Free Program supports youths by addressing their immediate needs and fostering the long-term mindset change required for a successful recovery journey[cite: 47].</p>
+                        
+                        <div class="services-tabs">
+                            <ul class="nav nav-tabs justify-content-center mb-4" id="recoveryTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab"><i class="fas fa-book-open me-2"></i>Mindset Education</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="support-tab" data-bs-toggle="tab" data-bs-target="#support" type="button" role="tab"><i class="fas fa-hands-helping me-2"></i>Support</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="rehab-tab" data-bs-toggle="tab" data-bs-target="#rehab" type="button" role="tab"><i class="fas fa-clinic-medical me-2"></i>Collaboration</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="aftercare-tab" data-bs-toggle="tab" data-bs-target="#aftercare" type="button" role="tab"><i class="fas fa-shield-alt me-2"></i>Long-Term Recovery</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="recoveryTabsContent">
+                                <div class="tab-pane fade show active" id="education" role="tabpanel">
+                                    <h4>Empowerment Through Mindset</h4>
+                                    <p>We provide education to equip individuals with the tools they need to overcome challenges and shape their futures[cite: 64].</p>
+                                    <ul>
+                                        <li>One-on-one and group mindset education sessions[cite: 49].</li>
+                                        <li>Positive mindset and resilience training.</li>
+                                        <li>Mental health awareness workshops to break the stigma[cite: 25, 35].</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="support" role="tabpanel">
+                                    <h4>A Supportive Network</h4>
+                                    <p>Our goal is to build a supportive network that encourages resilience, personal growth, and social inclusion[cite: 28].</p>
+                                    <ul>
+                                        <li>Peer support and mentorship programs[cite: 37].</li>
+                                        <li>Community outreach programs to build trust and support recovery journeys[cite: 51].</li>
+                                        <li>We foster environments where healing and growth can take root[cite: 15].</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="rehab" role="tabpanel">
+                                    <h4>Partners in Healing</h4>
+                                    <p>We work closely with community partners to ensure youth have access to comprehensive care.</p>
+                                    <ul>
+                                        <li>Collaboration with rehabilitation services and mental health professionals.</li>
+                                        <li>We connect youth with a network of support to ensure care is readily accessible[cite: 33].</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="aftercare" role="tabpanel">
+                                    <h4>Supporting the Journey</h4>
+                                    <p>We are dedicated to fostering long-term mindset change and supporting individuals throughout their recovery journey[cite: 47].</p>
+                                    <ul>
+                                        <li>We offer support that is guided by compassion and evidence-based approaches[cite: 13].</li>
+                                        <li>Our work aims to create lasting transformation for individuals and communities[cite: 10].</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="program-detail mb-4">
-                                <h5><i class="fas fa-calendar-alt text-accent me-2"></i> Schedule</h5>
-                                <ul class="mt-2">
-                                    <li>Daily support meetings</li>
-                                    <li>Weekly educational sessions</li>
-                                    <li>24/7 crisis support</li>
-                                </ul>
+                        </div>
+                    </div>
+                    
+                    <aside class="col-lg-4">
+                        <div class="sidebar-card">
+                            <h4 class="mb-4">Program at a Glance</h4>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-user-friends text-accent me-2"></i> Who We Support</h5>
+                                <p>This program is designed to approach and support drug-addicted youths [cite: 47] in Winnipeg. We also help newcomers and other immigrants overcome challenges[cite: 18].</p>
                             </div>
-                            <div class="program-detail mb-4">
-                                <h5><i class="fas fa-map-marker-alt text-accent me-2"></i> Locations</h5>
-                                <ul class="mt-2">
-                                    <li>Downtown Recovery Center</li>
-                                    <li>North End Youth Space</li>
-                                    <li>Virtual options available</li>
-                                </ul>
+                            <div class="mb-4">
+                                <h5><i class="fas fa-map-marker-alt text-accent me-2"></i> Location</h5>
+                                <p>Our organization is based in Winnipeg, Manitoba.</p>
                             </div>
-                            <div class="program-detail">
-                                <h5><i class="fas fa-lock text-accent me-2"></i> Confidentiality</h5>
-                                <p class="mt-2">All services are completely confidential. We never share information without consent.</p>
+                            <div>
+                                <h5><i class="fas fa-lock text-accent me-2"></i> Our Commitment</h5>
+                                <p>We believe every person deserves to be treated with dignity, compassion, and respect[cite: 56]. We uphold the worth of each individual in every interaction[cite: 57].</p>
                             </div>
-                            
                             <hr class="my-4">
-                            
-                            <h5 class="mb-3">Upcoming Events</h5>
-                            <div class="event-item mb-3">
-                                <div class="d-flex">
-                                    <div class="event-date bg-primary text-white text-center p-2 rounded me-3">
-                                        <div class="fw-bold">20</div>
-                                        <small>JUN</small>
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-0">Sober Social Night</h6>
-                                        <small>6:00 PM @ Recovery Center</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="d-flex">
-                                    <div class="event-date bg-primary text-white text-center p-2 rounded me-3">
-                                        <div class="fw-bold">27</div>
-                                        <small>JUN</small>
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-0">Family Education Workshop</h6>
-                                        <small>4:30 PM @ North End Space</small>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <a href="#" class="btn btn-primary w-100 mt-4">Full Calendar</a>
+                            <a href="#contact" class="btn btn-primary w-100">Contact Us to Get Started</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Our Guiding Values</h2>
+                    <p class="lead text-muted mx-auto mb-5" style="max-width: 700px;">Our work is grounded in a deep commitment to the individuals and communities we serve[cite: 72]. These values guide every action we take.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                            <h4>Dignity and Respect </h4>
+                            <p>We honour the unique journey of each individual and uphold their worth in every interaction[cite: 57].</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                         <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-spa"></i></div>
+                            <h4>Hope and Transformation </h4>
+                            <p>We believe in the power of hope to ignite change and walk alongside individuals on their journey to transformation and purpose[cite: 66, 67].</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                         <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-brain"></i></div>
+                            <h4>Mental Well-being and Healing </h4>
+                            <p>We prioritize mental health by addressing stigma, encouraging resilience, and offering accessible, culturally sensitive support[cite: 69].</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-     <!-- Recovery Stories -->
-    <section class="py-5" style="background: linear-gradient(135deg, #2A5C8D 0%, #1E40AF 100%), url('images/recovery-bg.jpg') center/cover no-repeat; background-blend-mode: multiply;">
-        <div class="container">
-            <h2 class="text-center text-white mb-5">Recovery Journeys</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="story-card h-100 p-4 bg-white rounded shadow-sm">
-                        <div class="story-img mb-3 d-flex justify-content-center align-items-center" style="height:220px; overflow:hidden;">
-                            <img src="images/Mark's story.jpg" alt="Recovery story" class="img-fluid rounded" style="object-fit:cover; width:100%; height:100%; max-width:300px;">
-                        </div>
-                        <h4>Mark's Story</h4>
-                        <p>"At 17, I was addicted to meth. The peer mentors at HATA showed me recovery was possible. Today I'm 2 years clean and mentoring others."</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Read Full Story</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="story-card h-100 p-4 bg-white rounded shadow-sm">
-                        <div class="story-img mb-3 d-flex justify-content-center align-items-center" style="height:220px; overflow:hidden;">
-                            <img src="images/Jasmine.jpg" alt="Recovery story" class="img-fluid rounded" style="object-fit:cover; width:100%; height:100%; max-width:300px;">
-                        </div>
-                        <h4>Jasmine's Journey</h4>
-                        <p>"After losing everything to alcohol, HATA helped me rebuild. Their aftercare program kept me on track when I wanted to give up."</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Read Full Story</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="story-card h-100 p-4 bg-white rounded shadow-sm">
-                        <div class="story-img mb-3 d-flex justify-content-center align-items-center" style="height:220px; overflow:hidden;">
-                            <img src="images/The Rodriguez.jpg" alt="Recovery story" class="img-fluid rounded" style="object-fit:cover; width:100%; height:100%; max-width:300px;">
-                        </div>
-                        <h4>The Rodriguez Family</h4>
-                        <p>"When our son was using, we didn't know how to help. The family program taught us to support his recovery without enabling."</p>
-                        <a href="#" class="btn btn-sm btn-outline-primary">Read Full Story</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-  
-
-    <!-- Same footer as main page -->
-   <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
+    <footer class="footer-modern text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
-                            <h4 class="mb-0">HATA Humanitarian</h4>
-                        </div>
-                        <p>Empowering Winnipeg communities through mental health support, newcomer integration, and addiction recovery programs.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
+                        <h4 class="mb-0 text-white">HATA Humanitarian Inc.</h4>
                     </div>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    <p class="text-white-50">A non-profit organization based in Winnipeg, Manitoba, dedicated to transforming lives through education, advocacy, and holistic support[cite: 17, 18].</p>
+                    <div class="d-flex gap-2 mt-4 social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
-                <div class="col-lg-2 col-md-4">
+                <div class="col-lg-2 col-md-3 col-6">
                     <h5 class="mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
-                        <li class="mb-2"><a href="../#about" class="text-white-50">About</a></li>
-                        <li class="mb-2"><a href="../#programs" class="text-white-50">Programs</a></li>
-                        <li><a href="#contact" class="text-white-50">Contact</a></li>
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="index.html#about">About</a></li>
+                        <li class="mb-2"><a href="index.html#programs">Programs</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="mb-4">Programs</h5>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h5 class="mb-4">Our Programs</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="mental-health-support.html" class="text-white-50">Mental Health</a></li>
-                        <li class="mb-2"><a href="new comer.html" class="text-white-50">Newcomer Support</a></li>
-                        <li><a href="addiction-recovery.html" class="text-white-50">Addiction Recovery</a></li>
+                        <li class="mb-2"><a href="mental-health-support.html">Mental Health [cite: 30]</a></li>
+                        <li class="mb-2"><a href="newcomer-support.html">Diversity & Inclusion [cite: 38]</a></li>
+                        <li><a href="addiction-recovery.html">Addiction Recovery [cite: 46]</a></li>
                     </ul>
                 </div>
-                
-               
+                <div class="col-lg-3 col-md-5">
+                    <h5 class="mb-4">Get Involved</h5>
+                     <p class="text-white-50">Your support helps create lasting change. Join us in building a healthier, more inclusive community[cite: 9].</p>
+                     <a href="index.html#donate" class="btn btn-accent mt-2">Donate Today</a>
+                </div>
             </div>
-            
-            <hr class="my-4 bg-white-10">
-            
+            <hr class="my-4 bg-white opacity-10">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
+                    <p class="mb-0 text-white-50">&copy; 2025 HATA Humanitarian Inc. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="text-white-50">Privacy</a></li>
-                        <li class="list-inline-item"><span class="mx-2">•</span></li>
-                        <li class="list-inline-item"><a href="#" class="text-white-50">Terms</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50">Privacy Policy</a></li>
+                        <li class="list-inline-item mx-2 text-white-50">•</li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top btn btn-primary rounded-circle position-fixed">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // Initialize AOS animation
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
@@ -711,86 +516,25 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
-            
-            // Back to top button
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-        
-        // Back to top button
-        document.querySelector('.back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Counter animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-count');
-                const count = +counter.innerText;
-                const increment = target / speed;
-                
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-        
-        // Intersection Observer for counter animation
-        const counterSection = document.querySelector('#impact');
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateCounters();
-                observer.unobserve(counterSection);
-            }
-        }, { threshold: 0.5 });
-        
-        observer.observe(counterSection);
-        
-        // Donation amount selection
-        document.querySelectorAll('.donation-amount').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.donation-amount').forEach(btn => {
-                    btn.classList.remove('btn-primary');
-                    btn.classList.add('btn-outline-primary');
-                });
-                this.classList.remove('btn-outline-primary');
-                this.classList.add('btn-primary');
-            });
         });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
                 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 100, // Adjust for fixed navbar
                         behavior: 'smooth'
                     });
                 }
             });
         });
     </script>
-    <!-- Bootstrap JS Bundle (required for tabs to work) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
