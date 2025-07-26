@@ -1,852 +1,380 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newcomer Integration Program | HATA Humanitarian</title>
-    <meta name="description" content="Free settlement services for immigrants and refugees in Winnipeg - language classes, job search help, cultural orientation, and community connections.">
-    
-   
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="HATA Humanitarian empowers Winnipeg communities through mental health support, addiction recovery programs, and newcomer integration services.">
-    <meta name="keywords" content="humanitarian, Winnipeg, mental health, addiction recovery, newcomer support, nonprofit">
-    <meta name="author" content="HATA Humanitarian Inc.">
-    <meta property="og:title" content="HATA Humanitarian - Empowering Winnipeg Communities">
-    <meta property="og:description" content="Promoting mental well-being, supporting addiction recovery, and facilitating social inclusion in Winnipeg.">
-    <meta property="og:image" content="https://www.hatahumanitarian.org/images/social-preview.jpg">
-    <meta property="og:url" content="https://www.hatahumanitarian.org">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2a5c8d">
-    <meta name="msapplication-TileColor" content="#2a5c8d">
-    <meta name="theme-color" content="#ffffff">
-    
-    <!-- CSS -->
+    <meta name="description" content="Our Diversity & Inclusion Program helps immigrants and refugees build a successful new life in Winnipeg with free settlement services and community support.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/059669/FFFFFF?text=H">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-     <!-- Stylesheets (same as main site) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
-            --primary: #2A5C8D;
-            --secondary: #1E40AF;
-            --accent: #F59E0B;
+            --primary: #047857;   /* Welcoming, deep green */
+            --secondary: #059669; /* Brighter, vibrant green */
+            --accent: #F59E0B;    /* Same consistent accent gold */
             --light: #F8FAFC;
             --dark: #1E293B;
             --text: #334155;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --border-color: #e2e8f0;
+            --transition: all 0.4s ease-in-out;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.8;
+            background-color: #fff;
             overflow-x: hidden;
         }
         
-        h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-        
-        .bg-primary { background-color: var(--primary) !important; }
-        .bg-accent { background-color: var(--accent) !important; }
-        .text-accent { color: var(--accent) !important; }
-        
-        .btn-primary {
-            background-color: var(--primary);
-            border-color: var(--primary);
-            transition: var(--transition);
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary);
-            border-color: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-accent {
-            background-color: var(--accent);
-            border-color: var(--accent);
-            color: #fff;
-            transition: var(--transition);
-        }
-        
-        .btn-accent:hover {
-            background-color: #D97706;
-            border-color: #D97706;
-            color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Navigation */
-        .navbar {
-            transition: all 0.5s ease;
-            padding: 1rem 0;
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .navbar.scrolled {
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem 0;
-            background-color: rgba(255, 255, 255, 0.98);
-        }
-        
-        .nav-link {
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            position: relative;
-            color: var(--dark);
-        }
-        
-        .nav-link:after {
-            content: '';
+        /* Accessibility: Skip Link */
+        .skip-link {
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover:after,
-        .nav-link.active:after {
-            width: 70%;
-        }
-        
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        
-        .hero-description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .hero-image {
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        
-        .impact-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
-        }
-        
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--accent);
-        }
-        
-        /* Card Styling */
-        .feature-card {
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: var(--transition);
-            height: 100%;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-        
-        /* Testimonial */
-        .testimonial-card {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .testimonial-text:before {
-            content: '"';
-            position: absolute;
+            top: -40px;
             left: 0;
+            background: var(--accent);
+            color: white;
+            padding: 8px;
+            z-index: 10000;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
             top: 0;
-            font-size: 3rem;
-            line-height: 1;
-            color: var(--accent);
-            opacity: 0.3;
         }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .impact-stats {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-        }
-    
 
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/newcomer-hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
+        h1, h2, h3, h4, h5 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            color: var(--dark);
+            letter-spacing: 0.5px;
         }
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--primary);
+
+        .btn {
+            padding: 14px 35px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        .language-flag {
-            width: 40px;
-            border: 1px solid #ddd;
+
+        .btn-primary { background-color: var(--primary); border-color: var(--primary); color: #fff; }
+        .btn-primary:hover { background-color: var(--secondary); border-color: var(--secondary); color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(4, 120, 87, 0.2); }
+        .btn-accent { background-color: var(--accent); border-color: var(--accent); color: var(--dark); }
+        .btn-accent:hover { background-color: #D97706; border-color: #D97706; color: var(--dark); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2); }
+        
+        /* Enhanced Navigation */
+        .navbar { transition: all 0.4s ease; padding: 1.5rem 0; background-color: #fff; }
+        .navbar.scrolled { box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); padding: 1rem 0; }
+        .nav-link { font-weight: 500; color: var(--dark) !important; margin: 0 10px; position: relative; padding-bottom: 8px !important; }
+        .nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 3px; background-color: var(--accent); transition: width 0.3s ease; border-radius: 2px; }
+        .nav-link:hover::after, .nav-link.active::after { width: 40%; }
+        .nav-link.active { color: var(--primary) !important; }
+        .navbar .btn { padding: 10px 25px; }
+
+        /* Hero Section */
+        .hero { padding: 120px 0; background-color: var(--light); }
+        .hero h1 { font-size: 4rem; line-height: 1.2; }
+        .hero .lead { font-size: 1.2rem; color: var(--text); }
+        .hero-image-container { position: relative; height: 100%; }
+        .hero-image { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+        .hero-stats { margin-top: 2.5rem; }
+        .hero-stat { display: flex; align-items: center; }
+        .hero-stat i { font-size: 1.5rem; color: var(--primary); margin-right: 10px; }
+
+        /* Section Styling */
+        .section { padding: 100px 0; }
+        .section-subtitle { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+        
+        /* About Section */
+        .about-quote { font-family: 'DM Serif Display', serif; font-size: 1.75rem; line-height: 1.5; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 2rem; }
+
+        /* Activities Section */
+        .activities-section { background-color: var(--dark); }
+        .activity-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 2.5rem 0; transition: background-color 0.3s; }
+        .activity-item:last-child { border-bottom: none; }
+        .activity-item:hover { background-color: rgba(255,255,255,0.03); }
+        .activity-number { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--accent); line-height: 1; }
+        .activity-item h3 { color: #fff; }
+        .activity-item p { color: rgba(255,255,255,0.7); }
+
+        /* Testimonials Section */
+        .testimonial-card { background-color: #fff; padding: 2rem; border-radius: 12px; height: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .testimonial-card .card-body { flex-grow: 1; }
+        .testimonial-card img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+        .testimonial-text { font-style: italic; }
+
+        /* FAQ Section */
+        .faq-section .accordion-item { border: 1px solid var(--border-color); border-radius: 8px !important; margin-bottom: 1rem; }
+        .faq-section .accordion-button { font-weight: 600; color: var(--dark); }
+        .faq-section .accordion-button:not(.collapsed) { background-color: var(--light); color: var(--primary); box-shadow: none; }
+        .faq-section .accordion-button:focus { box-shadow: none; }
+
+        /* Partners Section */
+        .partners-section { background-color: var(--light); }
+        .partner-logo { max-width: 150px; filter: grayscale(100%); transition: filter 0.3s; opacity: 0.7; }
+        .partner-logo:hover { filter: grayscale(0%); opacity: 1; }
+
+        /* Footer */
+        .footer { background-color: var(--dark); color: rgba(255,255,255,0.6); padding: 80px 0 30px; }
+        .footer h5 { color: #fff; }
+        .footer a { color: rgba(255,255,255,0.6); transition: color 0.3s; }
+        .footer a:hover { color: var(--accent); }
+        .footer .social-icons a { font-size: 1.2rem; }
+
+        @media (max-width: 991.98px) {
+            .hero h1 { font-size: 3rem; }
+            .hero { padding: 80px 0; }
+            .hero-image-container { margin-top: 3rem; }
         }
     </style>
 </head>
-
 <body>
-    <!-- Navigation (same as main site) -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
-                <span class="fw-bold">HATA Humanitarian</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#programs">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#impact">Impact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-accent mt-2 mt-lg-0" href="../#donate">Donate Now</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <header id="header-placeholder"></header>
+    <script src="loadHeader.js"></script>
 
-    <!-- Hero Section -->
-    <section class="hero-bg text-white py-5">
-        <div class="container py-5">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="programs.html" class="text-white">Programs</a></li>
-                    <li class="breadcrumb-item active text-white" aria-current="page">Newcomer Integration</li>
-                </ol>
-            </nav>
-            
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-3">Newcomer Integration Program</h1>
-                    <p class="lead mb-4">Your guide to building a successful life in Winnipeg</p>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="#services" class="btn btn-accent btn-lg px-4">Our Services</a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg px-4">Get Help Today</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <img src="images/happy immigrant family.jpg" alt="Happy immigrant family" class="img-fluid rounded-3 shadow">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <div class="bg-primary text-white py-3">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-3">
-                    <div class="display-6 fw-bold">1,200+</div>
-                    <div>Newcomers Served Yearly</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="display-6 fw-bold">15</div>
-                    <div>Languages Spoken</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="display-6 fw-bold">83%</div>
-                    <div>Employment Success Rate</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="display-6 fw-bold">100%</div>
-                    <div>Free Services</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Program Services -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-3">Our Settlement Services</h2>
-                <p class="lead">Comprehensive support for all stages of your Canadian journey</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Language Services -->
-                <div class="col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4 text-center">
-                            <div class="service-icon rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 text-white">
-                                <i class="fas fa-language fs-3"></i>
-                            </div>
-                            <h3>Language Training</h3>
-                            <ul class="text-start mb-4">
-                                <li>English/French classes (CLB 1-8)</li>
-                                <li>Workplace communication skills</li>
-                                <li>Pronunciation coaching</li>
-                                <li>Citizenship test preparation</li>
-                                <li>Childcare available during classes</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary">View Class Schedule</a>
+    <main id="main-content">
+        <header class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h1 class="mb-4">Welcome to Winnipeg. Your Journey Starts Here.</h1>
+                        <p class="lead mb-4">Our Diversity & Inclusion Program is dedicated to helping immigrants and refugees build a successful new life with free settlement services, skills training, and community support.</p>
+                        <div class="hero-stats d-flex flex-wrap">
+                            <div class="hero-stat me-4 mb-2"><i class="fas fa-language"></i><span>Language Training</span></div>
+                            <div class="hero-stat me-4 mb-2"><i class="fas fa-laptop-code"></i><span>Essential Skills Workshops</span></div>
+                            <div class="hero-stat me-4 mb-2"><i class="fas fa-users"></i><span>Community Connection</span></div>
                         </div>
+                        <a href="#activities" class="btn btn-primary btn-lg mt-4">Explore Our Services</a>
                     </div>
-                </div>
-
-                <!-- Employment Services -->
-                <div class="col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4 text-center">
-                            <div class="service-icon rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 text-white">
-                                <i class="fas fa-briefcase fs-3"></i>
-                            </div>
-                            <h3>Employment Support</h3>
-                            <ul class="text-start mb-4">
-                                <li>Canadian-style resume writing</li>
-                                <li>Job interview practice</li>
-                                <li>Professional networking</li>
-                                <li>Foreign credential recognition</li>
-                                <li>Connections to employer partners</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary">Job Opportunities</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Settlement Services -->
-                <div class="col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4 text-center">
-                            <div class="service-icon rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 text-white">
-                                <i class="fas fa-home fs-3"></i>
-                            </div>
-                            <h3>Settlement Assistance</h3>
-                            <ul class="text-start mb-4">
-                                <li>Housing search support</li>
-                                <li>School registration help</li>
-                                <li>Healthcare system orientation</li>
-                                <li>Banking & financial literacy</li>
-                                <li>Public transit training</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary">Get Personalized Help</a>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="hero-image-container">
+                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2940&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e0e0e0/cccccc?text=Community+Workshop';" alt="A diverse group of people collaborating and learning in a bright workshop." class="hero-image" loading="eager">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Cultural Orientation -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="images/canada day.jpg" alt="Cultural orientation workshop" class="img-fluid rounded-3 shadow">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="mb-4">Canadian Cultural Orientation</h2>
-                    <p>Our interactive workshops help you understand:</p>
-                    <ul class="mb-4">
-                        <li>Canadian workplace culture</li>
-                        <li>Social norms and etiquette</li>
-                        <li>Winter survival skills</li>
-                        <li>Holidays and traditions</li>
-                        <li>Rights and responsibilities</li>
-                    </ul>
-                    <div class="alert alert-primary">
-                        <h4><i class="fas fa-calendar-check me-2"></i> Upcoming Sessions</h4>
-                        <p class="mb-1"><strong>June 15:</strong> Canadian Workplace Culture</p>
-                        <p class="mb-1"><strong>June 22:</strong> Managing Canadian Winters</p>
-                        <p><strong>June 29:</strong> Understanding Canadian Laws</p>
-                        <a href="#" class="btn btn-sm btn-primary mt-2">Register Now</a>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <p class="section-subtitle">Our Guiding Principle</p>
+                        <h2 class="mb-4">A Foundation of Inclusion & Belonging.</h2>
+                        <p>We believe every person deserves to be treated with dignity and respect. Our program focuses on empowering newcomers with essential skills and resources, ensuring they feel welcomed and equipped to build successful lives in their new community.</p>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
+                        <blockquote class="about-quote">
+                            "We are committed to fostering inclusive communities where everyone feels seen, valued, and supported. Diversity is our strength, and belonging is our goal."
+                        </blockquote>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Language Support -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">We Speak Your Language</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-6 col-md-3 col-lg-2 text-center">
-                    <img src="https://flagcdn.com/40x30/sa.png" alt="Arabic (Saudi Arabia)" class="language-flag mb-2">
-                    <div>Arabic</div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2 text-center">
-                    <img src="https://flagcdn.com/40x30/es.png" alt="Spanish (Spain)" class="language-flag mb-2">
-                    <div>Spanish</div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2 text-center">
-                    <img src="https://flagcdn.com/40x30/cn.png" alt="Mandarin (China)" class="language-flag mb-2">
-                    <div>Mandarin</div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2 text-center">
-                    <img src="https://flagcdn.com/40x30/ph.png" alt="Tagalog (Philippines)" class="language-flag mb-2">
-                    <div>Tagalog</div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2 text-center">
-                    <img src="https://flagcdn.com/40x30/ua.png" alt="Ukrainian (Ukraine)" class="language-flag mb-2">
-                    <div>Ukrainian</div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2 text-center">
-                    <img src="https://flagcdn.com/40x30/so.png" alt="Somali (Somalia)" class="language-flag mb-2">
-                    <div>Somali</div>
-                </div>
-            </div>
-            <p class="text-center mt-4">Plus 9 other languages through our interpreter network</p>
-        </div>
-    </section>
-
-    <!-- Success Stories -->
-    <section class="bg-primary text-white py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Newcomer Success Stories</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 bg-white bg-opacity-10">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <img src="images/client-ahmed.jpg" alt="Ahmed" class="rounded-circle me-3" width="60">
+        <section id="activities" class="activities-section section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <p class="section-subtitle" style="color: var(--accent);">Our Services</p>
+                        <h2 class="mb-4 text-white">How We Empower Newcomers.</h2>
+                        <p class="text-white-50">Our work is grounded in the lived experiences of the communities we serve. We offer practical, hands-on support to help you navigate your new life in Winnipeg with confidence.</p>
+                    </div>
+                    <div class="col-lg-7 offset-lg-1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="activity-item">
+                            <div class="d-flex align-items-start">
+                                <div class="activity-number me-4">01</div>
                                 <div>
-                                    <h4 class="mb-0">Ahmed</h4>
-                                    <small>From Syria, 2 years in Canada</small>
+                                    <h3 class="mb-2">Language & Communication</h3>
+                                    <p>Free language training (English & French) designed to improve your communication skills for daily life, employment, and building social connections.</p>
                                 </div>
                             </div>
-                            <p>"The employment program helped me rebuild my engineering career in Canada. I now work at a Winnipeg firm and mentor other newcomers."</p>
-                            <a href="#" class="btn btn-sm btn-accent">Read Full Story</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 bg-white bg-opacity-10">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <img src="images/client-maria.jpg" alt="Maria" class="rounded-circle me-3" width="60">
+                        <div class="activity-item">
+                            <div class="d-flex align-items-start">
+                                <div class="activity-number me-4">02</div>
                                 <div>
-                                    <h4 class="mb-0">Maria</h4>
-                                    <small>From Philippines, 1 year in Canada</small>
+                                    <h3 class="mb-2">Essential Skills Training</h3>
+                                    <p>Practical workshops on digital literacy, financial management, and understanding Canadian workplace culture to boost your employability and independence.</p>
                                 </div>
                             </div>
-                            <p>"The language classes gave me confidence to work in healthcare again. I passed my English test and now work as a care aide."</p>
-                            <a href="#" class="btn btn-sm btn-accent">Read Full Story</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 bg-white bg-opacity-10">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <img src="images/client-oleksandr.jpg" alt="Oleksandr" class="rounded-circle me-3" width="60">
+                        <div class="activity-item">
+                            <div class="d-flex align-items-start">
+                                <div class="activity-number me-4">03</div>
                                 <div>
-                                    <h4 class="mb-0">Oleksandr</h4>
-                                    <small>From Ukraine, 8 months in Canada</small>
+                                    <h3 class="mb-2">Systems Navigation Support</h3>
+                                    <p>One-on-one guidance to help you and your family navigate key Canadian systems, including healthcare, housing, and school registration for your children.</p>
                                 </div>
                             </div>
-                            <p>"When we arrived as refugees, HATA helped us find housing, register our children in school, and connect with the Ukrainian community."</p>
-                            <a href="#" class="btn btn-sm btn-accent">Read Full Story</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Get Involved -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">How You Can Help</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4 text-center">
-                            <i class="fas fa-hands-helping text-primary fs-1 mb-3"></i>
-                            <h3>Volunteer</h3>
-                            <p>Share your time and skills to welcome newcomers:</p>
-                            <ul class="text-start mb-4">
-                                <li>ESL conversation partner</li>
-                                <li>Cultural mentor</li>
-                                <li>Event volunteer</li>
-                                <li>Professional skills coach</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">Volunteer Now</a>
+        <section id="testimonials" class="section">
+            <div class="container">
+                <div class="text-center col-lg-8 mx-auto" data-aos="fade-up">
+                    <p class="section-subtitle">Voices from Our Community</p>
+                    <h2 class="mb-5">What Newcomers Are Saying.</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-card">
+                            <div class="card-body">
+                                <p class="testimonial-text">"The language classes gave me the confidence to speak with my neighbours and find a job. I finally feel like I am part of the community."</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
+                                <img src="https://placehold.co/60x60/059669/FFFFFF?text=A" alt="Avatar for Fatima A." loading="lazy">
+                                <div class="ms-3">
+                                    <h5 class="mb-0 fs-6">Fatima A.</h5>
+                                    <small class="text-muted">From Somalia</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4 text-center">
-                            <i class="fas fa-home text-primary fs-1 mb-3"></i>
-                            <h3>Host a Family</h3>
-                            <p>Provide temporary housing for newcomers:</p>
-                            <ul class="text-start mb-4">
-                                <li>Short-term stays (2-4 weeks)</li>
-                                <li>Cultural exchange opportunity</li>
-                                <li>Training and support provided</li>
-                                <li>Flexible commitment options</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">Learn About Hosting</a>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-card">
+                            <div class="card-body">
+                                <p class="testimonial-text">"HATA helped me understand how to enroll my children in school. It was a confusing process, and their guidance was a great relief for my family."</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
+                                <img src="https://placehold.co/60x60/F59E0B/FFFFFF?text=L" alt="Avatar for Li Wei" loading="lazy">
+                                <div class="ms-3">
+                                    <h5 class="mb-0 fs-6">Li W.</h5>
+                                    <small class="text-muted">From China</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4 text-center">
-                            <i class="fas fa-gift text-primary fs-1 mb-3"></i>
-                            <h3>Donate</h3>
-                            <p>Support our free services for newcomers:</p>
-                            <ul class="text-start mb-4">
-                                <li>Sponsor a language class</li>
-                                <li>Fund a welcome kit</li>
-                                <li>Support job training</li>
-                                <li>General program donation</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">Make a Donation</a>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-card">
+                            <div class="card-body">
+                                <p class="testimonial-text">"The digital skills workshop was so helpful. I learned how to create a resume and apply for jobs online, which led to my first job in Canada."</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
+                                <img src="https://placehold.co/60x60/1E293B/FFFFFF?text=M" alt="Avatar for Marco G." loading="lazy">
+                                <div class="ms-3">
+                                    <h5 class="mb-0 fs-6">Marco G.</h5>
+                                    <small class="text-muted">From Colombia</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-light py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="mb-4">Contact Our Settlement Team</h2>
-                    <div class="d-flex mb-4">
-                        <i class="fas fa-map-marker-alt text-primary mt-1 me-3"></i>
-                        <div>
-                            <h5>Main Office</h5>
-                            <p>123 Settlement Road, Winnipeg, MB R3C 1L9</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-4">
-                        <i class="fas fa-phone text-primary mt-1 me-3"></i>
-                        <div>
-                            <h5>Phone</h5>
-                            <p>(204) 555-7355 (Multilingual support)</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-4">
-                        <i class="fas fa-envelope text-primary mt-1 me-3"></i>
-                        <div>
-                            <h5>Email</h5>
-                            <p>settlement@hatahumanitarian.org</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <i class="fas fa-clock text-primary mt-1 me-3"></i>
-                        <div>
-                            <h5>Hours</h5>
-                            <p>Monday-Friday: 8:30am-4:30pm<br>
-                            Evening appointments available</p>
-                        </div>
-                    </div>
+        <section id="faq" class="section bg-light faq-section">
+            <div class="container">
+                <div class="text-center col-lg-8 mx-auto" data-aos="fade-up">
+                    <p class="section-subtitle">Got Questions?</p>
+                    <h2 class="mb-5">Frequently Asked Questions.</h2>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <h3 class="mb-4">Book an Appointment</h3>
-                            <form>
-                                <div class="mb-3">
-                                    <label class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" required>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Who is eligible for newcomer services?</button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">Our services are open to all newcomers, including permanent residents, refugees, temporary foreign workers, and international students living in Winnipeg.</div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" class="form-control" required>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How much do these services cost?</button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">All of our newcomer integration services are completely free of charge, thanks to the generous support of our funders and community donors.</div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Phone</label>
-                                    <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Do you provide support in languages other than English?</button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">Yes. Our team includes multilingual staff, and we have access to professional interpreters to ensure you can receive help in the language you are most comfortable with.</div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Preferred Language</label>
-                                    <select class="form-select">
-                                        <option>English</option>
-                                        <option>French</option>
-                                        <option>Arabic</option>
-                                        <option>Spanish</option>
-                                        <option>Other (please specify)</option>
-                                    </select>
+                            </div>
+                             <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How do I register for a workshop or get help?</button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">You can get started by calling our office, sending an email, or visiting us in person. Our friendly staff will listen to your needs and connect you with the right services.</div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">How Can We Help?</label>
-                                    <textarea class="form-control" rows="3"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Request Assistance</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer (same as main site) --> <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
-                            <h4 class="mb-0">HATA Humanitarian</h4>
-                        </div>
-                        <p>Empowering Winnipeg communities through mental health support, newcomer integration, and addiction recovery programs.</p>
-                    </div>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="mb-4">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
-                        <li class="mb-2"><a href="../#about" class="text-white-50">About</a></li>
-                        <li class="mb-2"><a href="../#programs" class="text-white-50">Programs</a></li>
-                        <li><a href="#contact" class="text-white-50">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="mb-4">Programs</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="mental-health-support.html" class="text-white-50">Mental Health</a></li>
-                        <li class="mb-2"><a href="new comer.html" class="text-white-50">Newcomer Support</a></li>
-                        <li><a href="addiction-recovery.html" class="text-white-50">Addiction Recovery</a></li>
-                    </ul>
-                </div>
-                
-               
-            </div>
-            
-            <hr class="my-4 bg-white-10">
-            
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="text-white-50">Privacy</a></li>
-                        
-                        <li class="list-inline-item"><a href="#" class="text-white-50">Terms</a></li>
-                    </ul>
+        <section class="partners-section py-5">
+            <div class="container" data-aos="fade-up">
+                <h5 class="text-center text-muted mb-4">In Partnership With & Supported By</h5>
+                <div class="d-flex flex-wrap justify-content-center align-items-center">
+                    <img src="https://placehold.co/150x60/cccccc/999999?text=Employer+Partner" alt="Employer Partner Logo" class="partner-logo mx-4 my-2" loading="lazy">
+                    <img src="https://placehold.co/150x60/cccccc/999999?text=Local+College" alt="Local College Logo" class="partner-logo mx-4 my-2" loading="lazy">
+                    <img src="https://placehold.co/150x60/cccccc/999999?text=Gov+of+Manitoba" alt="Government of Manitoba Logo" class="partner-logo mx-4 my-2" loading="lazy">
+                    <img src="https://placehold.co/150x60/cccccc/999999?text=City+of+Winnipeg" alt="City of Winnipeg Logo" class="partner-logo mx-4 my-2" loading="lazy">
+                    <img src="https://placehold.co/150x60/cccccc/999999?text=Community+Fdn" alt="Community Foundation Logo" class="partner-logo mx-4 my-2" loading="lazy">
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top btn btn-primary rounded-circle position-fixed">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-
-    <!-- Scripts -->
+    <script src="loadFooter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
     <script>
-        // Initialize AOS animation
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
-            once: true
+            once: true,
+            offset: 50
         });
-        
-        // Navbar scroll effect
+
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            // Back to top button
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-        
-        // Back to top button
-        document.querySelector('.back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Counter animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-count');
-                const count = +counter.innerText;
-                const increment = target / speed;
-                
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(animateCounters, 1);
+            if (navbar) {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
                 } else {
-                    counter.innerText = target;
+                    navbar.classList.remove('scrolled');
                 }
-            });
-        }
-        
-        // Intersection Observer for counter animation
-        const counterSection = document.querySelector('#impact');
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateCounters();
-                observer.unobserve(counterSection);
             }
-        }, { threshold: 0.5 });
-        
-        observer.observe(counterSection);
-        
-        // Donation amount selection
-        document.querySelectorAll('.donation-amount').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.donation-amount').forEach(btn => {
-                    btn.classList.remove('btn-primary');
-                    btn.classList.add('btn-outline-primary');
-                });
-                this.classList.remove('btn-outline-primary');
-                this.classList.add('btn-primary');
-            });
         });
-        
-        // Smooth scrolling for anchor links
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || href.length < 2) return;
+                
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
+                const targetElement = document.querySelector(href);
                 if (targetElement) {
+                    const navbar = document.querySelector('.navbar');
+                    const navbarHeight = navbar ? navbar.offsetHeight : 70;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - (navbarHeight + 20);
+
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
                 }

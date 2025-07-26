@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HATA Humanitarian Header</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Define brand colors and fonts from the new palette */
+        :root {
+            /* Primary Brand Colors */
+            --hata-blue: #0A2463;
+            --hata-red: #D80032;
+            
+            /* Neutral & Text Colors */
+            --text-dark: #1D1D1D;
+            --text-light: #F8F9FA;
+            --background-light: #FFFFFF;
+            --border-color: #DDDEE4;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Enhanced Navigation Bar Styling --- */
+        .navbar {
+            padding: 1.6rem;
+            background-color: var(--hata-blue);
+            /* Added transition for smoother scroll effects */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        /* Add a subtle shadow on scroll for depth */
+        .navbar-scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .navbar-brand span {
+            font-size: 1.25rem;
+            color: var(--text-light);
+        }
+        
+        /* --- Enhanced Navigation Link Styling --- */
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--text-light);
+        }
+        
+        /* Make the active link bolder for better visibility */
+        .navbar-nav .nav-link.active {
+            font-weight: 700;
+        }
+
+
+        /* Underline effect animates from the center */
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            height: 2px;
+            background-color: var(--hata-red);
+            transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 60%;
+        }
+        
+        /* --- Dropdown Menu Styling --- */
+        .dropdown-menu {
+            background-color: var(--hata-blue);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .dropdown-item {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .dropdown-item:hover, .dropdown-item:focus {
+            background-color: var(--hata-red);
+            color: var(--text-light);
+        }
+
+
+        /* --- Enhanced Button Styling --- */
+        .btn-donate {
+            background-color: var(--hata-red);
+            border-color: var(--hata-red);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(216, 0, 50, 0.1);
+        }
+
+        .btn-donate:hover {
+            background-color: #B20028; /* A darker shade of the brand red */
+            border-color: #A00023;
+            color: var(--text-light);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(216, 0, 50, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <!-- Using the official logo path -->
+                <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" onerror="this.onerror=null;this.src='https://placehold.co/40x40/FFFFFF/0A2463?text=H';" alt="HATA Humanitarian Logo" class="rounded-circle me-2" width="40" height="40">
+                <span class="font-serif fw-bold">HATA Humanitarian Inc.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#values">Core Values</a>
+                    </li>
+                    <!-- Programs Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownPrograms" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownPrograms">
+                            <li><a class="dropdown-item" href="mental-health-support.html">Stigma-Free & Mental Health</a></li>
+                            <li><a class="dropdown-item" href="new comer.html">Diversity and Inclusion</a></li>
+                            <li><a class="dropdown-item" href="addiction-recovery.html">Addiction-Free Program</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#team">Team</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-donate rounded-pill px-4" href="index.html#donate">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS for scroll effect -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('navbar');
+            
+            // Function to add/remove class on scroll
+            const handleScroll = () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            };
+
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+
+            // Logic to set active nav link based on URL
+            const currentPath = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+            let isProgramPage = false;
+            dropdownItems.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    isProgramPage = true;
+                }
+            });
+
+            if (isProgramPage) {
+                 // If on a program sub-page, keep "Programs" active
+                document.querySelector('#navbarDropdownPrograms').classList.add('active');
+            } else {
+                // Logic for non-program pages
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href').endsWith(currentPath) || (currentPath === '' && link.getAttribute('href').includes('index.html#home'))) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+
+        //load header.html content
+        
+    </script>
+
+</body>
+</html>

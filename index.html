@@ -173,20 +173,7 @@ input[type="button"]:focus {
     color: var(--text-light);
 }
 
-    /* Navbar link background color and hover effect */
-    .navbar-nav .nav-link {
-        color: var(--text-light) !important;
-        border-radius: 0.5rem;
-        margin: 0 0.25rem;
-        transition: background 0.2s, color 0.2s;
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
-        background-color: var(--hata-blue);
-        color: var(--hata-red) !important;
-    }
+   
 
     /* Custom colors - ALIGNED WITH ROOT COLORS */
     .bg-primary-custom {
@@ -200,6 +187,8 @@ input[type="button"]:focus {
     .text-accent {
       color: var(--hata-red);
     }
+
+    
     
     /* Hero section */
     .hero {
@@ -244,15 +233,7 @@ input[type="button"]:focus {
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     
-    /* Navbar transition */
-    .navbar {
-      transition: all 0.3s ease;
-    }
-    
-    .navbar.scrolled {
-      background-color: var(--hata-blue) !important;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+  
 
     /* About Values Section - Using HATA Logo Colors */
     #about-values {
@@ -547,30 +528,79 @@ We only override the margin and font-size.
 VALUES CAROUSEL STYLING
 ==================================================
 */
-
-/* Wrapper to center the card within each carousel slide */
-.value-card-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 3rem; /* Adds horizontal space so cards don't touch the controls */
-}
-
-/* Ensure the card doesn't stretch too wide */
-#valuesCarousel .value-card {
-  max-width: 600px; /* Adjust as needed */
-  width: 100%;
-}
-
-/* Style the carousel control arrows to use your brand color */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: var(--hata-blue); /* Sets the arrow container color */
-  border-radius: 50%;
-  padding: 1.2rem;
-  background-size: 50% 50%;
-}
-
-   
+   .values-carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .carousel-container {
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .value-card {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .carousel-dots button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 5px;
+    background: #ccc;
+    cursor: pointer;
+  }
+  
+  .carousel-dots button.active {
+    background: #333;
+  }
+  
+  @media (min-width: 768px) {
+    .value-card {
+      min-width: 50%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .value-card {
+      min-width: 33.33%;
+    }
+  }
    /*
 ==================================================
 PROGRAMS SECTION - BACKGROUND IMAGE STYLING
@@ -780,37 +810,10 @@ CTA / CONTACT SECTION STYLES
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--hata-blue);">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#home">
-        <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="rounded-circle me-2" width="40" height="40">
-        <span class="font-serif fw-bold">HATA Humanitarian Inc.</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-         
-          <li class="nav-item">
-            <a class="nav-link" href="#values">Core Values</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#programs">Programs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#team">Team</a>
-          </li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-success rounded-pill px-4" href="#donate">Donate</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Navigation (same as main site) -->
+    <header id="header-placeholder"></header>
+    <script src="loadHeader.js"></script>
+
 
 <!-- Hero Section -->
 <section id="home" class="hero d-flex align-items-center text-white position-relative overflow-hidden" style="min-height: 100vh; background-color: #000;">
@@ -917,113 +920,104 @@ CTA / CONTACT SECTION STYLES
 </section>
 
 
-    <!-- Values Section -->
-     <section id="values" class="values-section-bottom">
+
+<!-- Values Section -->
+<section id="values" class="values-section py-5" aria-label="Our Core Values">
   <div class="container">
-    <div class="text-center mb-5 animate">
-      <h2 class="display-5 fw-bold font-serif mb-3 values-title">Our Core Values</h2>
-      <p class="lead mx-auto values-subtitle" style="max-width: 700px;">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold font-serif mb-3">Our Core Values</h2>
+      <p class="lead mx-auto" style="max-width: 700px;">
         The principles that guide every action we take and every life we touch.
       </p>
     </div>
 
-    <div id="valuesCarousel" class="carousel slide">
-      <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <div class="value-card-wrapper">
-            <div class="value-card" tabindex="0">
-              <div class="value-icon-wrapper"><i class="fa-solid fa-heart"></i></div>
-              <h3>Dignity & Respect</h3>
-              <div class="value-description">
-                <p class="mb-0">We believe every person, regardless of background or circumstance, deserves to be treated with dignity, compassion, and respect. We honour the unique journey of each individual and uphold their worth in every interaction.</p>
-              </div>
+    <div class="values-carousel" role="region" aria-roledescription="carousel" aria-label="Core values carousel">
+      <button class="carousel-button prev" aria-label="Previous slide">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      
+      <div class="carousel-container">
+        <div class="carousel-track" aria-live="polite">
+          <!-- Value 1 -->
+          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 7">
+            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+            <h3>Dignity & Respect</h3>
+            <div class="value-description">
+              <p>We believe every person, regardless of background or circumstance, deserves to be treated with dignity, 
+              compassion, and respect. We honour the unique journey of each individual and uphold their worth in every 
+              interaction.</p>
             </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="value-card-wrapper">
-            <div class="value-card" tabindex="0">
-              <div class="value-icon-wrapper"><i class="fa-solid fa-users"></i></div>
-              <h3>Inclusion & Belonging</h3>
-              <div class="value-description">
-                <p class="mb-0">We are committed to fostering inclusive communities where everyone—newcomers, youth, marginalized individuals—feels seen, valued, and supported. Diversity is our strength, and belonging is our goal.</p>
-              </div>
+          </article>
+          
+          <!-- Value 2 -->
+          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 7">
+            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
+            <h3>Inclusion & Belonging</h3>
+            <div class="value-description">
+              <p>We are committed to fostering inclusive communities where everyone newcomers, youth, marginalized 
+              individuals feels seen, valued, and supported. Diversity is our strength, and belonging is our goal.</p>
             </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="value-card-wrapper">
-            <div class="value-card" tabindex="0">
-              <div class="value-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
-              <h3>Integrity & Accountability</h3>
-              <div class="value-description">
-                <p class="mb-0">We act with transparency, honesty, and a strong sense of responsibility. Our decisions and actions reflect our mission, and we are accountable to the people and communities we serve.</p>
-              </div>
+          </article>
+          
+          <!-- Value 3 -->
+          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 7">
+            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Integrity & Accountability</h3>
+            <div class="value-description">
+              <p>We act with transparency, honesty, and a strong sense of responsibility. Our decisions and actions reflect our 
+              mission, and we are accountable to the people and communities we serve.</p>
             </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="value-card-wrapper">
-            <div class="value-card" tabindex="0">
-              <div class="value-icon-wrapper"><i class="fa-solid fa-book-open-reader"></i></div>
-              <h3>Empowerment through Education</h3>
-              <div class="value-description">
-                <p class="mb-0">Knowledge transforms lives. We provide mindset education, life skills, and training to equip individuals with the tools they need to overcome challenges and shape their futures.</p>
-              </div>
+          </article>
+          
+          <!-- Value 4 -->
+          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 7">
+            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h3>Empowerment through Education</h3>
+            <div class="value-description">
+              <p>Knowledge transforms lives. We provide mindset education, life skills, and training to equip individuals with 
+              the tools they need to overcome challenges and shape their futures</p>
             </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="value-card-wrapper">
-            <div class="value-card" tabindex="0">
-              <div class="value-icon-wrapper"><i class="fa-solid fa-sun"></i></div>
-              <h3>Hope & Transformation</h3>
-              <div class="value-description">
-                <p class="mb-0">We believe in the power of hope to ignite change. From addiction recovery to newcomer integration, we walk alongside individuals on their journey to transformation and purpose.</p>
-              </div>
+          </article>
+          
+          <!-- Value 5 -->
+          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 7">
+            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-sun"></i></div>
+            <h3>Hope & Transformation</h3>
+            <div class="value-description">
+              <p>We believe in the power of hope to ignite change. From addiction recovery to newcomer integration, we walk 
+              alongside individuals on their journey to transformation and purpose.</p>
             </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="value-card-wrapper">
-            <div class="value-card" tabindex="0">
-              <div class="value-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
-              <h3>Mental Well-being & Healing</h3>
-              <div class="value-description">
-                <p class="mb-0">We prioritize mental health and recovery by addressing stigma, encouraging resilience, and offering accessible, culturally sensitive support. We believe healing is a right, not a privilege.</p>
-              </div>
+          </article>
+          
+          <!-- Value 6 -->
+          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="6 of 7">
+            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-brain"></i></div>
+            <h3>Mental Well-being</h3>
+            <div class="value-description">
+              <p>We prioritize mental health and recovery by addressing stigma, encouraging resilience, and offering accessible, 
+              culturally sensitive support. We believe healing is a right, not a privilege.</p>
             </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="value-card-wrapper">
-            <div class="value-card" tabindex="0">
-              <div class="value-icon-wrapper"><i class="fa-solid fa-people-group"></i></div>
-              <h3>Community-Centered Action</h3>
-              <div class="value-description">
-                <p class="mb-0">Our work is grounded in the lived experiences of the communities we serve. We engage collaboratively, build trust, and co-create solutions that bring lasting change.</p>
-              </div>
+          </article>
+          
+          <!-- Value 7 -->
+          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="7 of 7">
+            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
+            <h3>Community-Centered Action</h3>
+            <div class="value-description">
+              <p>Our work is grounded in the lived experiences of the communities we serve. We engage collaboratively, build 
+              trust, and co-create solutions that bring lasting change</p>
             </div>
-          </div>
+          </article>
         </div>
-
       </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#valuesCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+      
+      <button class="carousel-button next" aria-label="Next slide">
+        <i class="fa-solid fa-chevron-right"></i>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#valuesCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      
+      <div class="carousel-dots" role="tablist" aria-label="Slide navigation">
+        <!-- Dots will be added by JavaScript -->
+      </div>
     </div>
   </div>
 </section>
@@ -1125,6 +1119,7 @@ CTA / CONTACT SECTION STYLES
     </div>
   </div>
 </section>
+
   <!-- Testimonials Section 
   <section id="testimonials" class="py-5 py-lg-6 bg-white">
     <div class="container">
@@ -1343,23 +1338,168 @@ CTA / CONTACT SECTION STYLES
     </footer>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <script>
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // ========== Carousel Functionality ==========
+  const initCarousel = () => {
+    const carousel = document.querySelector('.values-carousel');
+    if (!carousel) return;
+
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    let slidesPerView = calculateSlidesPerView();
+    let autoSlideInterval;
+    
+    // Create navigation dots
+    const createDots = () => {
+      slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Slide ${index + 1}`);
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+    };
+    
+    // Calculate slides per view based on screen size
+    function calculateSlidesPerView() {
+      return window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+    }
+    
+    // Navigation functions
+    const goToSlide = (index) => {
+      currentIndex = index;
+      updateCarousel();
+      resetAutoSlide();
+    };
+    
+    const nextSlide = () => {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateCarousel();
+      resetAutoSlide();
+    };
+    
+    const prevSlide = () => {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateCarousel();
+      resetAutoSlide();
+    };
+    
+    // Update carousel display
+    const updateCarousel = () => {
+      const offset = -currentIndex * (100 / slidesPerView);
+      track.style.transform = `translateX(${offset}%)`;
+      
+      // Update dots
+      const dots = Array.from(dotsContainer.querySelectorAll('button'));
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+        dot.setAttribute('aria-selected', index === currentIndex);
+      });
+      
+      // Update slide ARIA labels
+      slides.forEach((slide, index) => {
+        slide.setAttribute('aria-label', `${index + 1} of ${slideCount}`);
+      });
+    };
+    
+    // Handle swipe gestures for touch devices
+    const handleTouchEvents = () => {
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        pauseAutoSlide();
+      }, {passive: true});
+      
+      track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+        resumeAutoSlide();
+      }, {passive: true});
+      
+      const handleSwipe = () => {
+        const swipeThreshold = 50;
+        if (touchStartX - touchEndX > swipeThreshold) {
+          nextSlide();
+        } else if (touchEndX - touchStartX > swipeThreshold) {
+          prevSlide();
+        }
+      };
+    };
+    
+    // Auto-slide functionality
+    const startAutoSlide = () => {
+      autoSlideInterval = setInterval(nextSlide, 5000);
+    };
+    
+    const pauseAutoSlide = () => {
+      clearInterval(autoSlideInterval);
+    };
+    
+    const resumeAutoSlide = () => {
+      startAutoSlide();
+    };
+    
+    const resetAutoSlide = () => {
+      pauseAutoSlide();
+      resumeAutoSlide();
+    };
+    
+    // Initialize carousel
+    createDots();
+    updateCarousel();
+    startAutoSlide();
+    handleTouchEvents();
+    
+    // Event listeners
+    carousel.querySelector('.next')?.addEventListener('click', nextSlide);
+    carousel.querySelector('.prev')?.addEventListener('click', prevSlide);
+    
+    // Keyboard navigation
+    carousel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
     });
     
-    // Smooth scrolling for anchor links
+    // Pause on hover
+    track.addEventListener('mouseenter', pauseAutoSlide);
+    track.addEventListener('mouseleave', resumeAutoSlide);
+    
+    // Responsive adjustments
+    const handleResize = () => {
+      slidesPerView = calculateSlidesPerView();
+      slides.forEach(slide => {
+        slide.style.minWidth = `${100 / slidesPerView}%`;
+      });
+      updateCarousel();
+    };
+    
+    window.addEventListener('resize', handleResize);
+    handleResize();
+  };
+
+  // ========== Navbar Scroll Effect ==========
+  const initNavbarScroll = () => {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+    
+    window.addEventListener('scroll', function() {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  };
+
+  // ========== Smooth Scrolling ==========
+  const initSmoothScrolling = () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
         
@@ -1371,9 +1511,11 @@ CTA / CONTACT SECTION STYLES
         }
       });
     });
-    
-    // Animation on scroll
-    function animateOnScroll() {
+  };
+
+  // ========== Animation on Scroll ==========
+  const initScrollAnimations = () => {
+    const animateOnScroll = () => {
       const elements = document.querySelectorAll('.animate');
       
       elements.forEach(element => {
@@ -1385,46 +1527,56 @@ CTA / CONTACT SECTION STYLES
           element.style.transform = 'translateY(0)';
         }
       });
-    }
+    };
     
-    document.addEventListener('DOMContentLoaded', function() {
-  const aboutImage = document.querySelector('.about-image');
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+  };
 
-  if (aboutImage) {
+  // ========== About Image Parallax ==========
+  const initAboutParallax = () => {
+    const aboutImage = document.querySelector('.about-image');
+    if (!aboutImage) return;
+    
     window.addEventListener('scroll', function() {
       const scrollY = window.scrollY;
-      const sectionOffsetTop = aboutImage.closest('.about-section-redesigned').offsetTop;
+      const section = aboutImage.closest('.about-section-redesigned');
+      if (!section) return;
+      
+      const sectionOffsetTop = section.offsetTop;
       const imageHeight = aboutImage.offsetHeight;
-
-      // Adjust the multiplier to control the parallax speed
       const parallaxValue = (scrollY - sectionOffsetTop + (window.innerHeight / 2) - (imageHeight / 2)) * 0.05;
-
+      
       aboutImage.style.transform = `translateY(${parallaxValue}px)`;
     });
-  }
-});
+  };
 
-document.addEventListener("DOMContentLoaded", function() {
+  // ========== Intersection Observer Animations ==========
+  const initIntersectionObserver = () => {
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
-                observer.unobserve(entry.target);
-            }
-        });
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.animate').forEach(el => {
-        el.style.animationPlayState = 'paused'; // Start paused
-        observer.observe(el);
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
     });
-});
+  };
 
-    // Run once on page load
-    window.addEventListener('load', animateOnScroll);
-    // Run on scroll
-    window.addEventListener('scroll', animateOnScroll);
-  </script>
+  // Initialize all components
+  initCarousel();
+  initNavbarScroll();
+  initSmoothScrolling();
+  initScrollAnimations();
+  initAboutParallax();
+  initIntersectionObserver();
+});
+ </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
