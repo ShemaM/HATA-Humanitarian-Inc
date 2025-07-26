@@ -72,14 +72,7 @@
         .btn-accent { background-color: var(--accent); border-color: var(--accent); color: #fff; }
         .btn-accent:hover { background-color: #D97706; border-color: #D97706; color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2); }
         
-        /* Enhanced Navigation */
-        .navbar { transition: all 0.4s ease; padding: 1.5rem 0; background-color: #fff; }
-        .navbar.scrolled { box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); padding: 1rem 0; }
-        .nav-link { font-weight: 500; color: var(--dark) !important; margin: 0 10px; position: relative; padding-bottom: 8px !important; }
-        .nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 3px; background-color: var(--accent); transition: width 0.3s ease; border-radius: 2px; }
-        .nav-link:hover::after, .nav-link.active::after { width: 40%; }
-        .nav-link.active { color: var(--primary) !important; }
-        .navbar .btn { padding: 10px 25px; }
+        
 
         /* Hero Section */
         .hero { padding: 120px 0; background-color: var(--light); }
@@ -149,7 +142,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6" data-aos="fade-right">
-                        <h1 class="mb-4">Stigma-Free Mental Health & Mindset Education.</h1>
+                        <h1 class="mb-4 mt-4">Stigma-Free Mental Health & Mindset Education.</h1>
                         <p class="lead mb-4">Our flagship program to address mental health concerns among youth by fostering resilience, normalizing conversations, and providing accessible support.</p>
                         <div class="hero-stats d-flex flex-wrap">
                             <div class="hero-stat me-4 mb-2"><i class="fas fa-users"></i><span>For Youth (Ages 13-24)</span></div>
@@ -227,58 +220,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="section">
-            <div class="container">
-                <div class="text-center col-lg-8 mx-auto" data-aos="fade-up">
-                    <p class="section-subtitle">Voices from Our Community</p>
-                    <h2 class="mb-5">What Participants Are Saying.</h2>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="testimonial-card">
-                            <div class="card-body">
-                                <p class="testimonial-text">"This program gave me a safe space to talk about things I couldn't discuss anywhere else. I finally feel understood."</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
-                                <img src="https://placehold.co/60x60/2A5C8D/FFFFFF?text=A" alt="Avatar for Alex P." loading="lazy">
-                                <div class="ms-3">
-                                    <h5 class="mb-0 fs-6">Alex P.</h5>
-                                    <small class="text-muted">Program Participant</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="testimonial-card">
-                            <div class="card-body">
-                                <p class="testimonial-text">"Learning about mental health in the workshops was eye-opening. I now have the tools to help myself and my friends."</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
-                                <img src="https://placehold.co/60x60/F59E0B/FFFFFF?text=J" alt="Avatar for Jordan M." loading="lazy">
-                                <div class="ms-3">
-                                    <h5 class="mb-0 fs-6">Jordan M.</h5>
-                                    <small class="text-muted">Workshop Attendee</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="testimonial-card">
-                            <div class="card-body">
-                                <p class="testimonial-text">"Becoming a peer mentor has been an incredibly rewarding experience. It's powerful to see the positive impact we can have."</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
-                                <img src="https://placehold.co/60x60/1E293B/FFFFFF?text=S" alt="Avatar for Sam K." loading="lazy">
-                                <div class="ms-3">
-                                    <h5 class="mb-0 fs-6">Sam K.</h5>
-                                    <small class="text-muted">Peer Mentor</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <!-- FAQ Section -->
         <section id="faq" class="section bg-light faq-section">
@@ -328,19 +270,7 @@
             </div>
         </section>
 
-        <!-- Partners Section -->
-        <section class="partners-section py-5">
-            <div class="container" data-aos="fade-up">
-                <h5 class="text-center text-muted mb-4">In Partnership With & Supported By</h5>
-                <div class="d-flex flex-wrap justify-content-center align-items-center">
-                    <img src="https://placehold.co/150x60/cccccc/999999?text=Partner+1" alt="Partner 1 Logo" class="partner-logo mx-4 my-2" loading="lazy">
-                    <img src="https://placehold.co/150x60/cccccc/999999?text=Partner+2" alt="Partner 2 Logo" class="partner-logo mx-4 my-2" loading="lazy">
-                    <img src="https://placehold.co/150x60/cccccc/999999?text=Supporter+A" alt="Supporter A Logo" class="partner-logo mx-4 my-2" loading="lazy">
-                    <img src="https://placehold.co/150x60/cccccc/999999?text=Partner+3" alt="Partner 3 Logo" class="partner-logo mx-4 my-2" loading="lazy">
-                    <img src="https://placehold.co/150x60/cccccc/999999?text=Supporter+B" alt="Supporter B Logo" class="partner-logo mx-4 my-2" loading="lazy">
-                </div>
-            </div>
-        </section>
+       
     </main>
 
     <!-- Footer -->

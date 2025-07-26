@@ -810,9 +810,9 @@ CTA / CONTACT SECTION STYLES
 </head>
 <body>
   <!-- Navigation -->
-  <!-- Navigation (same as main site) -->
-    <header id="header-placeholder"></header>
+  <header id="header-placeholder"></header>
     <script src="loadHeader.js"></script>
+
 
 
 <!-- Hero Section -->
@@ -926,7 +926,7 @@ CTA / CONTACT SECTION STYLES
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="display-5 fw-bold font-serif mb-3">Our Core Values</h2>
-      <p class="lead mx-auto" style="max-width: 700px;">
+      <p class="lead mx-auto text-black" style="max-width: 700px;">
         The principles that guide every action we take and every life we touch.
       </p>
     </div>
@@ -1057,7 +1057,7 @@ CTA / CONTACT SECTION STYLES
                 <span>Peer support and mentorship programs</span>
               </li>
             </ul>
-            <a href="mental-health-support.html" class="btn mt-auto">Learn More</a>
+            <a href="mental-health-support.html" class="btn btn-danger">Learn More</a>
           </div>
         </div>
       </div>
@@ -1084,7 +1084,7 @@ CTA / CONTACT SECTION STYLES
                 <span>Navigating the Canadian Education System for the Newcomer Students.</span>
               </li>
             </ul>
-            <a href="new comer.html" class="btn mt-auto">Learn More</a>
+            <a href="new comer.html" class="btn btn-danger">Learn More</a>
           </div>
         </div>
       </div>
@@ -1111,7 +1111,7 @@ CTA / CONTACT SECTION STYLES
                 <span>Community outreach programs to build trust and support recovery journeys.</span>
               </li>
             </ul>
-            <a href="addiction-recovery.html" class="btn mt-auto">Learn More</a>
+            <a href="addiction-recovery.html" class="btn btn-danger">Learn More</a>
           </div>
         </div>
       </div>
@@ -1485,15 +1485,7 @@ CTA / CONTACT SECTION STYLES
     handleResize();
   };
 
-  // ========== Navbar Scroll Effect ==========
-  const initNavbarScroll = () => {
-    const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
-    
-    window.addEventListener('scroll', function() {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
-  };
+  
 
   // ========== Smooth Scrolling ==========
   const initSmoothScrolling = () => {
@@ -1570,7 +1562,7 @@ CTA / CONTACT SECTION STYLES
 
   // Initialize all components
   initCarousel();
-  initNavbarScroll();
+ 
   initSmoothScrolling();
   initScrollAnimations();
   initAboutParallax();
