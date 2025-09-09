@@ -3,1575 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HATA Humanitarian Inc.</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+  <title>HATA Humanitarian Inc. | Winnipeg Non-Profit Organization</title>
+  <meta name="description" content="HATA Humanitarian Inc. is a non-profit organization in Winnipeg dedicated to promoting mental well-being, supporting addiction recovery, and facilitating social inclusion for newcomers and youth. Learn more about our programs and how you can get involved.">
+  <meta name="keywords" content="HATA Humanitarian, non-profit, Winnipeg, mental health, addiction recovery, newcomer support, youth empowerment, community support">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <meta name="description" content="HATA Humanitarian Inc. is a non-profit organization in Winnipeg dedicated to promoting mental well-being, supporting addiction recovery, and facilitating social inclusion for newcomers and youth. Learn more about our programs and how you can get involved.">
+  <meta name="keywords" content="HATA Humanitarian, non-profit, Winnipeg, mental health, addiction recovery, newcomer support, youth empowerment, community support">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    
-  <link rel="icon" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon" style="width: 50px; height: 50px; border-radius: 50%;">
-
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
   <style>
     :root {
-      /* Primary Brand Colors 
-        Derived directly from the logo's core colors.
-      */
-      --hata-blue: #0A2463;  /* A deep, strong blue from the hands and laurels. */
-      --hata-red: #D80032;   /* The vibrant red from the heart and central figures. */
-    
-      /* Neutral & Text Colors 
-        For backgrounds, text, and general UI elements.
-      */
-      --text-dark: #1D1D1D;      /* For body text on light backgrounds (near-black for readability). */
-      --text-light: #F8F9FA;     /* For text on dark backgrounds (soft off-white). */
-      --background-light: #FFFFFF; /* For main page backgrounds. */
-      --background-dark: #121828;  /* A dark slate blue for dark-themed sections. */
-      --border-color: #DDDEE4;    /* A light grey for borders and dividers. */
+      --hata-red: #D80032;
+      --hata-blue: #0A2463;
     }
-    /*
-==================================================
-GLOBAL STYLES: BASE, TYPOGRAPHY & BUTTONS
-==================================================
-*/
-
-/* --- Base & Reset --- */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 16px; /* Base font size for better scaling */
-}
-
-body {
-    font-family: 'Open Sans', system-ui, -apple-system, sans-serif; /* Default font */
-    line-height: 1.6;
-    background-color: var(--background-light);
-    color: var(--text-dark);
-}
-
-/* --- Typography --- */
-
-/* All Headings (h1, h2, h3, h4, h5, h6) */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora', 'Georgia', serif; /* A distinct, elegant font for headings */
-    font-weight: 700;
-    color: var(--text-light); /* Headings use the primary brand blue */
-    line-height: 1.2;
-    margin-bottom: 1rem; /* Space below headings */
-}
-
-h1 {
-    font-size: 2.75rem;
-}
-
-h2 {
-    font-size: 2.25rem;
-}
-
-h3 {
-    font-size: 1.75rem;
-}
-
-h4 {
-    font-size: 1.25rem;
-}
-
-/* All Paragraphs */
-p {
-    margin-bottom: 1rem; /* Consistent spacing between paragraphs */
-    color: var(--text-light);
-}
-
-a {
-    color: var(--hata-red);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--hata-red);
-}
-
-/* --- Buttons --- */
-
-/* Universal style for all buttons */
-.btn,
-button,
-input[type="submit"],
-input[type="button"] {
-    /* Base styling */
-    display: inline-block;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    
-    /* Font styling */
-    font-family: 'Open Sans', system-ui, sans-serif; /* Consistent font */
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    
-    /* Sizing */
-    padding: 0.75rem 1.75rem;
-
-    /* Default Color Scheme (Primary Action) */
-    background-color: var(--hata-red);
-    color: var(--text-light);
-}
-
-/* Hover and Focus States for all buttons */
-.btn:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.btn:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="button"]:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(230, 234, 242, 0.4); /* Focus ring using HATA Blue */
-}
-
-/* --- Optional Button Variations --- */
-
-/* Secondary Button (Blue) */
-.btn-secondary {
-    background-color: var(--hata-blue);
-    color: var(--background-light);
-}
-
-/* Outline Button */
-.btn-outline {
-    background-color: transparent;
-    border-color: var(--hata-blue);
-    color: var(--hata-blue);
-}
-
-.btn-outline:hover {
-    background-color: var(--hata-blue);
-    color: var(--text-light);
-}
-
-   
-
-    /* Custom colors - ALIGNED WITH ROOT COLORS */
-    .bg-primary-custom {
-      background-color: var(--hata-blue);
+    body {
+        font-family: 'Lato', sans-serif;
     }
-    
-    .bg-accent {
-      background-color: var(--hata-red);
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
     }
-    
-    .text-accent {
-      color: var(--hata-red);
-    }
-
-    
-    
-    /* Hero section */
-    .hero {
-        position: relative;
-        background-image: url('images/humanitarian.jpg'); /* Fallback image */
-        background-color: var(--background-dark); /* Fallback color */
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
-    }
-
-    /* Dark overlay for text contrast */
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4)); /* Gradient overlay */
-        z-index: 1;
-    }
-
-    /* Ensure content is above the overlay */
-    .hero .container {
-        position: relative;
-        z-index: 2;
-    }
-
-    /* Custom utility class for text width */
-    .hero-subtitle {
-        max-width: 700px;
-    }
-    
-    /* Card hover effect */
-    .card-hover {
-      transition: all 0.3s ease;
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-  
-
-    /* About Values Section - Using HATA Logo Colors */
-    #about-values {
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        color: var(--text-dark);
-        overflow: hidden;
-    }
-    
-    /* Top Section */
-    .about-section-top {
-        background: var(--background-dark);
-        padding: 5rem 0;
-        color: var(--text-light);
-        position: relative;
-    }
-    
-    .about-section-top::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('images/humanitarian.jpg') no-repeat center center/cover;
-        opacity: 0.08;
-        z-index: 0;
-    }
-    
-    .about-section-top .container {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .font-serif {
-        font-family: 'Georgia', serif;
-    }
-    
-    .text-white-75 {
-        color: rgba(248, 249, 250, 0.85) !important;
-    }
-    
-    /* Quote Block - Using Red Accent */
-    .border-success {
-        border-color: var(--hata-red) !important;
-        background-color: rgba(216, 0, 50, 0.08); /* RGBA of --hata-red */
-        transition: all 0.3s ease;
-        border-radius: 0 12px 12px 0;
-    }
-    
-    .border-success:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(10, 36, 99, 0.1); /* shadow from --hata-blue */
-        background-color: rgba(216, 0, 50, 0.12); /* RGBA of --hata-red */
-    }
-    
-    /* Values Section */
-    .values-section-bottom {
-        padding: 5rem 0;
-        background-color: var(--background-light);
-    }
-    
-    .values-title {
-        color: var(--hata-blue);
-        position: relative;
-        display: inline-block;
-    }
-    
-    .values-title::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background: var(--hata-red);
-        border-radius: 2px;
-    }
-    
-    .values-subtitle {
-        color: var(--text-dark);
-    }
-    
-    /* Value Cards - Blue/Red Theme */
-    .value-card {
-        background: var(--background-light);
-        border-radius: 12px;
-        padding: 2.5rem 2rem;
-        height: 100%;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-        box-shadow: 0 5px 15px rgba(10, 36, 99, 0.05); /* shadow from --hata-blue */
-        border: 1px solid var(--border-color);
-        text-align: center;
-        cursor: pointer;
-    }
-    
-    .value-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(10, 36, 99, 0.15); /* shadow from --hata-blue */
-        border-color: rgba(216, 0, 50, 0.2); /* border from --hata-red */
-    }
-    
-    .value-card:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(216, 0, 50, 0.3); /* focus from --hata-red */
-    }
-    
-    .value-icon-wrapper {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--hata-blue);
-        color: var(--text-light);
-        border-radius: 50%;
-        font-size: 2rem;
-        transition: all 0.3s ease;
-    }
-    
-    .value-card:hover .value-icon-wrapper {
-        transform: scale(1.1) rotate(5deg);
-        background: var(--hata-red);
-    }
-    
-    .value-card h3 {
-        color: var(--hata-blue);
-        margin-bottom: 1.5rem;
-        font-weight: 700;
-        position: relative;
-        padding-bottom: 0.5rem;
-    }
-    
-    .value-card h3::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 2px;
-        background: var(--hata-red);
-    }
-    
-    .value-description p {
-        color: var(--text-dark);
-        line-height: 1.7;
-    }
-    
-    /* Mission & Objectives Styling */
-    h3.fs-4.fw-bold {
-        color: var(--hata-blue);
-        position: relative;
-        display: inline-block;
-    }
-    
-    h3.fs-4.fw-bold::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 40px;
-        height: 3px;
-        background: var(--hata-red);
-    }
-    
-    
-    
-    /*
-==================================================
-REDESIGNED OBJECTIVES SECTION (Aligned with Global CSS)
-==================================================
-*/
-
-.objectives-container-redesigned {
-    max-width: 800px;
-    margin: 5rem auto;
-    padding: 0 1rem;
-}
-
-/* This title now inherits its base color, font-family, and font-weight 
-from the global h3 style. We only override what's needed for this specific design.
-*/
-.objectives-container-redesigned .objectives-title {
-    text-align: center;
-    font-size: 2.5rem; /* Make it larger than a standard h3 */
-    margin-bottom: 4rem; /* Give it more space */
-}
-
-.objectives-list {
-    list-style: none;
-    padding-left: 0;
-    position: relative;
-    border-left: 2px solid var(--border-color);
-    /* A counter to create custom numbering for list items */
-    counter-reset: objectives-counter; 
-}
-
-.objective-item {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    padding: 1.5rem 0 1.5rem 3.5rem;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    border-radius: 0 8px 8px 0;
-}
-
-/* Custom Numbering using the counter */
-.objective-item::before {
-    counter-increment: objectives-counter;
-    content: "0" counter(objectives-counter);
-    position: absolute;
-    left: -24px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--background-light);
-    color: var(--hata-red);
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Lora', serif; /* Use the heading font for the number */
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--border-color);
-    transition: border-color 0.3s ease;
-}
-
-/* Interactivity */
-.objective-item:hover {
-    background-color: rgba(10, 36, 99, 0.04);
-    transform: translateX(10px);
-}
-
-.objective-item:hover::before {
-    border-color: var(--hata-red);
-}
-
-.objective-item:hover .objective-icon {
-    color: var(--hata-red);
-}
-
-/* Icon and Text Styling */
-.objective-icon {
-    font-size: 2rem;
-    color: var(--hata-blue);
-    margin-right: 1.5rem;
-    margin-top: 0.25rem;
-    transition: color 0.3s ease;
-}
-
-/*
-The paragraph now inherits its base color and font-family from the global p style.
-We only override the margin and font-size.
-*/
-.objective-text p {
-    margin: 0; /* Override global p margin */
-    font-size: 1.1rem; /* Make text slightly larger than default */
-}
-
-/* Animation (re-uses existing keyframes) */
-.objective-item.animate {
-    opacity: 0;
-    animation: slideUpFade 0.7s ease-out forwards;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .objective-item {
-        padding-left: 2.5rem;
-    }
-    .objective-item::before {
-        font-size: 1.25rem;
-        width: 40px;
-        height: 40px;
-        left: -20px;
-    }
-    .objective-icon {
-        font-size: 1.75rem;
-        margin-right: 1rem;
-    }
-    .objective-text p {
-        font-size: 1rem;
-    }
-}
-    
-/*
-==================================================
-VALUES CAROUSEL STYLING
-==================================================
-*/
-   .values-carousel {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .carousel-container {
-    overflow: hidden;
-  }
-  
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .value-card {
-    min-width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .carousel-dots button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: none;
-    margin: 0 5px;
-    background: #ccc;
-    cursor: pointer;
-  }
-  
-  .carousel-dots button.active {
-    background: #333;
-  }
-  
-  @media (min-width: 768px) {
-    .value-card {
-      min-width: 50%;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .value-card {
-      min-width: 33.33%;
-    }
-  }
-   /*
-==================================================
-PROGRAMS SECTION - BACKGROUND IMAGE STYLING
-==================================================
-*/
-#programs {
-  position: relative;
-  background: linear-gradient(rgba(30, 58, 138, 0.2)), 
-              url('images/humanitarian.jpg') no-repeat center center;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 6rem 0;
-  overflow: hidden;
-}
-
-/* Improved overlay with gradient instead of flat color */
-#programs::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg, 
-    rgba(248, 250, 252, 0.95) 0%, 
-    rgba(248, 250, 252, 0.88) 100%
-  );
-  z-index: 0;
-}
-
-/* Container improvements */
-#programs .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* Enhanced frosted glass cards with brand colors */
-#programs .card {
-  background: rgba(255, 255, 255, 0.75);
-  -webkit-backdrop-filter: blur(12px) saturate(120%);
-  backdrop-filter: blur(12px) saturate(120%);
-  border: 1px solid rgba(249, 115, 22, 0.15) !important;
-  border-radius: 16px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.08);
-  overflow: hidden;
-}
-
-/* Hover effects with brand accent */
-#programs .card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(30, 58, 138, 0.15);
-  border-color: rgba(249, 115, 22, 0.3) !important;
-}
-
-/* Card inner glow effect on hover */
-#programs .card-hover:hover::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 0 1px rgba(249, 115, 22, 0.2);
-  border-radius: 16px;
-  pointer-events: none;
-}
-
-/* Title styling with animated underline */
-#programs .display-5 {
-  color: var(--hata-blue);
-  position: relative;
-  display: inline-block;
-  padding-bottom: 0.5rem;
-}
-
-#programs .display-5::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: var(--hata-red);
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-#programs .display-5:hover::after {
-  width: 120px;
-}
-
-/* Enhanced accent styling */
-.text-brand-accent {
-  color: var(--hata-red);
-  transition: color 0.3s ease;
-}
-
-/* Icon styling */
-#programs .card-icon {
-  font-size: 2.5rem;
-  color: var(--hata-blue);
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-#programs .card-hover:hover .card-icon {
-  color: var(--hata-red);
-  transform: scale(1.1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  #programs {
-    background-attachment: scroll;
-    padding: 4rem 0;
-  }
-  
-  #programs .card {
-    backdrop-filter: blur(8px);
-  }
-}
-
-@media (max-width: 768px) {
-  #programs::before {
-    background: linear-gradient(
-      135deg, 
-      rgba(248, 250, 252, 0.97) 0%, 
-      rgba(248, 250, 252, 0.94) 100%
-    );
-  }
-  
-  #programs .card {
-    background: rgba(255, 255, 255, 0.85);
-  }
-}
-
-/*
-==================================================
-CTA / CONTACT SECTION STYLES
-==================================================
-*/
-
-#contact {
-    background-color: var(--background-dark);
-    color: var(--text-light);
-}
-
-/* Ensure section titles are light on the dark background */
-#contact h2,
-#contact h3,
-#contact h4 {
-    color: var(--text-light);
-}
-
-#contact .lead {
-    color: rgba(248, 249, 250, 0.75); /* Muted light text */
-}
-
-/* Styling for the main "Donate" card */
-.cta-card-primary {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    height: 100%;
-}
-
-.cta-card-primary .list-unstyled strong {
-    color: var(--text-light);
-}
-
-.cta-card-primary .list-unstyled span {
-    color: rgba(248, 249, 250, 0.75);
-}
-
-/* Styling for the "Get in Touch" form card */
-.contact-form-card {
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    height: 100%;
-}
-
-/* Styling for the form inputs and textarea */
-.contact-form-card .form-control {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.2);
-    color: var(--text-light);
-    padding: 0.75rem 1rem;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.contact-form-card .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.contact-form-card .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.4); /* Focus ring using HATA Blue */
-    border-color: var(--hata-blue);
-    color: var(--text-light);
-}
-</style>
+    .bg-hata-red { background-color: var(--hata-red); }
+    .text-hata-red { color: var(--hata-red); }
+    .bg-hata-blue { background-color: var(--hata-blue); }
+    .text-hata-blue { color: var(--hata-blue); }
+  </style>
 </head>
-<body>
-  <!-- Navigation -->
-  <header id="header-placeholder"></header>
-    <script src="loadHeader.js"></script>
+<body class="bg-gray-50 text-gray-800">
 
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-12 mr-3">
+        <span class="text-xl font-bold text-hata-blue">HATA Humanitarian Inc.</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#about" class="hover:text-hata-red">About</a>
+        <a href="#programs" class="hover:text-hata-red">Programs</a>
+        <a href="#team" class="hover:text-hata-red">Team</a>
+        <a href="#contact" class="hover:text-hata-red">Contact</a>
+        <a href="donate.html" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate Now</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars text-2xl text-hata-blue"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <a href="#about" class="block px-6 py-3 hover:bg-gray-100">About</a>
+      <a href="#programs" class="block px-6 py-3 hover:bg-gray-100">Programs</a>
+      <a href="#team" class="block px-6 py-3 hover:bg-gray-100">Team</a>
+      <a href="#contact" class="block px-6 py-3 hover:bg-gray-100">Contact</a>
+      <a href="donate.html" class="block px-6 py-3 text-hata-red hover:bg-gray-100">Donate Now</a>
+    </div>
+  </header>
 
-
-<!-- Hero Section -->
-<section id="home" class="hero d-flex align-items-center text-white position-relative overflow-hidden" style="min-height: 100vh; background-color: #000;">
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top:0;left:0;z-index:0;object-fit:cover;">
-        <source src="images/video background.mp4" type="video/mp4">
-        <!-- Optionally add a webm source for better performance -->
-        <!-- <source src="videos/hero-background.webm" type="video/webm"> -->
-        Your browser does not support the video tag.
+  <!-- Hero Section -->
+  <section id="home" class="relative h-[800px] overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+      <source src="images/video background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
-    <!-- Overlay for contrast -->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.3)); z-index:1;"></div>
-    <!-- Hero Content -->
-    <div class="container text-center animate" style="position:relative; z-index:2;">
-        <span class="badge bg-white bg-opacity-25 px-4 py-2 rounded-pill text-uppercase fw-semibold mb-4">Empower. Save. Transform.</span>
-        <h1 class="display-3 fw-bold font-serif mb-4">Building a Community of Hope</h1>
-        <p class="lead mb-5 mx-auto hero-subtitle">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
+        <h1 class="text-5xl md:text-7xl font-bold">Building a Community of Hope</h1>
+        <p class="mt-6 text-lg md:text-xl max-w-3xl">
             Promoting mental well-being, supporting addiction recovery, and facilitating social inclusion in Winnipeg.
         </p>
-        <p>HATA Humanitarian Inc. bridges gaps in mental health care, addiction recovery, and newcomer integration. Through mindset education, stigma-free programs, and community-based support, we empower individuals—especially youth and newcomers—to build resilience, recover with dignity, and thrive in inclusive communities.</p>
-        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-            <a href="#programs" class="btn btn-success btn-lg rounded-pill px-4 py-3">Our Programs</a>
-            <a href="#about" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3">Learn More</a>
-        </div>
+        <a href="#programs" class="mt-10 bg-hata-red text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-transform transform hover:scale-105">Explore Our Programs</a>
     </div>
-</section>
+  </section>
 
-  
-<section id="about">
-
-  <div class="about-section-top">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-9 text-center animate">
-          <h2 class="display-5 fw-bold font-serif mb-4">About Us</h2>
-          <p class="fs-5 mb-4 text-white-75">
-            HATA Humanitarian Inc. is a non-profit organization based in Winnipeg, Manitoba, dedicated to transforming lives through education, advocacy, and holistic support. Founded with a commitment to fostering resilience, inclusivity, and positive change, our organization empowers newcomers and other immigrants to overcome challenges and achieve their full potential.
-          </p>
-          <p class="fs-5 mb-4 text-white-75">
-            By addressing critical issues such as mental health stigma, integration barriers, and substance addiction, we strive to create a thriving and compassionate community where everyone has the resources to succeed.
-          </p>
-          
-          <div class="border-start border-4 border-success p-4 d-inline-block my-4">
-            <p class="font-serif fst-italic fs-4 mb-0">
-              "Our vision is an inclusive community where every individual is empowered to thrive with resilience, dignity, and purpose."
-            </p>
-          </div>
-
-          <h3 class="fs-4 fw-bold mt-5 text-white fw-bold">Mission</h3>
-          <p class="fs-5 text-white-75 mb-5 mx-auto" style="max-width: 800px;">
-            To empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education, advocacy, and community engagement.
-          </p>
- <div class="objectives-container-redesigned">
-  <h3 class="objectives-title">Our Objectives</h3>
-  
-  <ol class="objectives-list">
-    
-    <li class="objective-item animate">
-      <div class="objective-icon">
-        <i class="bi bi-heart-pulse"></i>
-      </div>
-      <div class="objective-text">
-        <p>Promote mental well-being and break the stigma surrounding mental health.</p>
-      </div>
-    </li>
-
-    <li class="objective-item animate" data-delay="100ms">
-      <div class="objective-icon">
-        <i class="bi bi-people"></i>
-      </div>
-      <div class="objective-text">
-        <p>Facilitate the integration of newcomers by providing essential skills training.</p>
-      </div>
-    </li>
-
-    <li class="objective-item animate" data-delay="200ms">
-      <div class="objective-icon">
-        <i class="bi bi-life-preserver"></i>
-      </div>
-      <div class="objective-text">
-        <p>Support youth struggling with addiction through food assistance and mindset education.</p>
-      </div>
-    </li>
-
-    <li class="objective-item animate" data-delay="300ms">
-      <div class="objective-icon">
-        <i class="bi bi-diagram-3"></i>
-      </div>
-      <div class="objective-text">
-        <p>Build a supportive network that encourages resilience, personal growth, and social inclusion.</p>
-      </div>
-    </li>
-
-  </ol>
-</div>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-
-</section>
-
-
-
-<!-- Values Section -->
-<section id="values" class="values-section py-5" aria-label="Our Core Values">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold font-serif mb-3">Our Core Values</h2>
-      <p class="lead mx-auto text-black" style="max-width: 700px;">
-        The principles that guide every action we take and every life we touch.
-      </p>
-    </div>
-
-    <div class="values-carousel" role="region" aria-roledescription="carousel" aria-label="Core values carousel">
-      <button class="carousel-button prev" aria-label="Previous slide">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      
-      <div class="carousel-container">
-        <div class="carousel-track" aria-live="polite">
-          <!-- Value 1 -->
-          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 7">
-            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
-            <h3>Dignity & Respect</h3>
-            <div class="value-description">
-              <p>We believe every person, regardless of background or circumstance, deserves to be treated with dignity, 
-              compassion, and respect. We honour the unique journey of each individual and uphold their worth in every 
-              interaction.</p>
-            </div>
-          </article>
-          
-          <!-- Value 2 -->
-          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 7">
-            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
-            <h3>Inclusion & Belonging</h3>
-            <div class="value-description">
-              <p>We are committed to fostering inclusive communities where everyone newcomers, youth, marginalized 
-              individuals feels seen, valued, and supported. Diversity is our strength, and belonging is our goal.</p>
-            </div>
-          </article>
-          
-          <!-- Value 3 -->
-          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 7">
-            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3>Integrity & Accountability</h3>
-            <div class="value-description">
-              <p>We act with transparency, honesty, and a strong sense of responsibility. Our decisions and actions reflect our 
-              mission, and we are accountable to the people and communities we serve.</p>
-            </div>
-          </article>
-          
-          <!-- Value 4 -->
-          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 7">
-            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-book-open-reader"></i></div>
-            <h3>Empowerment through Education</h3>
-            <div class="value-description">
-              <p>Knowledge transforms lives. We provide mindset education, life skills, and training to equip individuals with 
-              the tools they need to overcome challenges and shape their futures</p>
-            </div>
-          </article>
-          
-          <!-- Value 5 -->
-          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 7">
-            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-sun"></i></div>
-            <h3>Hope & Transformation</h3>
-            <div class="value-description">
-              <p>We believe in the power of hope to ignite change. From addiction recovery to newcomer integration, we walk 
-              alongside individuals on their journey to transformation and purpose.</p>
-            </div>
-          </article>
-          
-          <!-- Value 6 -->
-          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="6 of 7">
-            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-brain"></i></div>
-            <h3>Mental Well-being</h3>
-            <div class="value-description">
-              <p>We prioritize mental health and recovery by addressing stigma, encouraging resilience, and offering accessible, 
-              culturally sensitive support. We believe healing is a right, not a privilege.</p>
-            </div>
-          </article>
-          
-          <!-- Value 7 -->
-          <article class="value-card carousel-slide" role="group" aria-roledescription="slide" aria-label="7 of 7">
-            <div class="value-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
-            <h3>Community-Centered Action</h3>
-            <div class="value-description">
-              <p>Our work is grounded in the lived experiences of the communities we serve. We engage collaboratively, build 
-              trust, and co-create solutions that bring lasting change</p>
-            </div>
-          </article>
-        </div>
-      </div>
-      
-      <button class="carousel-button next" aria-label="Next slide">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
-      
-      <div class="carousel-dots" role="tablist" aria-label="Slide navigation">
-        <!-- Dots will be added by JavaScript -->
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Programs Section -->
-
-<section id="programs" class="py-5 py-lg-6">
-  <div class="container">
-    <div class="text-center mb-5 animate">
-      <h2 class="display-5 fw-bold font-serif mb-3">Our Core Programs</h2>
-      <p class="lead mx-auto text-muted" style="max-width: 800px;">
-        HATA Humanitarian is dedicated to transforming lives by fostering mental well-being, promoting inclusivity, and supporting addiction recovery. Through our holistic approach, we aim to build a community where everyone feels valued, supported, and empowered to reach their full potential.
-      </p>
-    </div>
-    <div class="row g-4 justify-content-center">
-      
-      <div class="col-md-6 col-lg-4 animate">
-        <div class="card h-100 border-0 shadow-sm card-hover">
-          <div class="card-body p-4 d-flex flex-column">
-            <h3 class="h4 font-serif fw-bold mb-3">Stigma-Free & Mental Health | Mindset Education</h3>
-            <p class="text-muted mb-4">
-              This program is designed to address the growing mental health concerns among youths in Winnipeg. We aim to create an environment where mental health conversations are normalized, and support is readily accessible.
-            </p>
-            <h4 class="h5 fw-semibold mb-3">Key Activities:</h4>
-            <ul class="list-unstyled mb-4">
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>Mental health awareness workshops</span>
-              </li>
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>Positive mindset and resilience training</span>
-              </li>
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>Peer support and mentorship programs</span>
-              </li>
-            </ul>
-            <a href="mental-health-support.html" class="btn btn-danger">Learn More</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6 col-lg-4 animate delay-1">
-        <div class="card h-100 border-0 shadow-sm card-hover">
-          <div class="card-body p-4 d-flex flex-column">
-            <h3 class="h4 font-serif fw-bold mb-3">Diversity and Inclusion Program</h3>
-            <p class="text-muted mb-4">
-              Our Diversity and Inclusion Program focuses on helping newcomers integrate smoothly into life in Winnipeg. We ensure they feel welcomed and equipped to build successful lives in their new community.
-            </p>
-            <h4 class="h5 fw-semibold mb-3">Key Activities:</h4>
-            <ul class="list-unstyled mb-4">
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>Language training to enhance communication and confidence.</span>
-              </li>
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>Digital skills training for employability and daily life navigation.</span>
-              </li>
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>Navigating the Canadian Education System for the Newcomer Students.</span>
-              </li>
-            </ul>
-            <a href="new comer.html" class="btn btn-danger">Learn More</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6 col-lg-4 animate delay-2">
-        <div class="card h-100 border-0 shadow-sm card-hover">
-          <div class="card-body p-4 d-flex flex-column">
-            <h3 class="h4 font-serif fw-bold mb-3">Addiction-Free Program</h3>
-            <p class="text-muted mb-4">
-              This program is designed to approach and support drug-addicted youths by addressing their immediate needs and fostering long-term mindset change.
-            </p>
-            <h4 class="h5 fw-semibold mb-3">Key Activities:</h4>
-            <ul class="list-unstyled mb-4">
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>One-on-one and group mindset education sessions.</span>
-              </li>
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>Collaboration with rehabilitation services and mental health professionals.</span>
-              </li>
-              <li class="mb-2 d-flex">
-                <i class="fas fa-check-circle text-brand-accent me-2 mt-1"></i>
-                <span>Community outreach programs to build trust and support recovery journeys.</span>
-              </li>
-            </ul>
-            <a href="addiction-recovery.html" class="btn btn-danger">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- Testimonials Section 
-  <section id="testimonials" class="py-5 py-lg-6 bg-white">
-    <div class="container">
-      <div class="text-center mb-5 animate">
-        <h2 class="display-5 fw-bold font-serif mb-3">Stories of Transformation</h2>
-        <p class="text-muted mx-auto" style="max-width: 700px;">
-          Hear from those whose lives have been impacted by our work.
+  <!-- About Us Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-5xl font-bold text-hata-blue">About Us</h2>
+        <p class="mt-6 text-lg text-gray-600">
+            At the heart of our work is a belief that every person, regardless of background or circumstance, deserves the opportunity to thrive with dignity, resilience, and purpose. HATA Humanitarian Inc. exists to bridge the gaps in mental health care, addiction recovery, and newcomer integration.
         </p>
       </div>
-      <div class="row justify-content-center animate delay-1">
-        <div class="col-lg-8">
-          <div class="card border-0 shadow-sm position-relative">
-            <div class="card-body p-4 p-md-5 text-center testimonial-quote">
-              <p class="lead font-serif fst-italic mb-4">
-                "HATA Humanitarian provided a safe space for me to heal and grow. The mindset education program didn't just help me with my recovery; it gave me hope for the future."
+      <div class="mt-16 grid md:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+              <img src="images/community impact.jpg" alt="Community Impact" class="rounded-lg shadow-2xl w-full">
+              <div class="absolute -bottom-8 -right-8 bg-hata-red text-white p-6 rounded-lg shadow-xl w-2/3">
+                  <h4 class="text-2xl font-bold">Our Vision</h4>
+                  <p class="mt-2">An inclusive community where every individual is empowered to thrive with resilience, dignity, and purpose.</p>
+              </div>
+          </div>
+          <div>
+              <h3 class="text-4xl font-bold text-hata-blue mb-6">Our Mission</h3>
+              <p class="text-gray-600 text-lg">
+                Our mission is to empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education, advocacy, and community engagement. Whether it's providing mindset education in schools, helping newcomers acquire life skills, or supporting youth on their recovery journey, our work is guided by compassion, evidence-based approaches, and a commitment to equity.
               </p>
-              <p class="fw-semibold mb-1">A. Mohammed</p>
-              <p class="text-muted small">Program Participant</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="py-24 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-5xl font-bold text-hata-blue">Our Core Programs</h2>
+        <p class="mt-6 text-lg text-gray-600">
+          HATA Humanitarian is dedicated to transforming lives by fostering mental well-being, promoting inclusivity, and supporting addiction recovery.
+        </p>
+      </div>
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Program 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+          <div class="h-56 bg-cover bg-center program-1-bg"></div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">Stigma-Free & Mental Health</h3>
+            <p class="text-gray-600 mb-6">
+              Our flagship program, Stigma-Free and Mental Health, is designed to address the growing mental health concerns among youth in Winnipeg. Through workshops, seminars, and peer support groups, we equip youth with the tools to build emotional resilience and fight the stigma around mental health.
+            </p>
+            <a href="mental-health-support.html" class="font-bold text-hata-red group-hover:underline">Learn More &rarr;</a>
+          </div>
+        </div>
+        <!-- Program 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+          <div class="h-56 bg-cover bg-center program-2-bg"></div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">Diversity and Inclusion</h3>
+            <p class="text-gray-600 mb-6">
+              Our Diversity and Inclusion Program focuses on helping newcomers integrate smoothly into life in Winnipeg. We offer language training, digital skills workshops, and guidance on navigating local systems.
+            </p>
+            <a href="new comer.html" class="font-bold text-hata-red group-hover:underline">Learn More &rarr;</a>
+          </div>
+        </div>
+        <!-- Program 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+          <div class="h-56 bg-cover bg-center program-3-bg"></div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">Addiction-Free Program</h3>
+            <p class="text-gray-600 mb-6">
+              This program is designed to approach and support drug-addicted youths by addressing their immediate needs and fostering long-term mindset change. Through one-on-one and group mindset education sessions, and collaboration with rehabilitation services and mental health professionals, we provide a holistic approach to recovery.
+            </p>
+            <a href="addiction-recovery.html" class="font-bold text-hata-red group-hover:underline">Learn More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-5xl font-bold text-hata-blue">Our Board of Directors</h2>
+        <p class="mt-6 text-lg text-gray-600">
+          Our work is guided by a passionate leadership team with deep community roots and a commitment to creating change.
+        </p>
+      </div>
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Team Member 1 -->
+        <div class="text-center">
+          <img src="images/Pacific.JPEG" alt="Pacific Muhumure" class="w-48 h-48 rounded-full mx-auto shadow-2xl border-4 border-white">
+          <h3 class="text-3xl font-bold mt-6 text-hata-blue">Pacific Muhumure</h3>
+          <p class="text-gray-500 font-bold">CEO & Director</p>
+          <div class="mt-4">
+            <button class="team-member-button bg-hata-blue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition-colors">Read Bio</button>
+            <div class="team-member-bio hidden mt-4 text-left">
+              <p class="text-gray-600">Pacific Muhumure is a dedicated professional with a passion for community empowerment. He is pursuing his second-degree program at the University of Manitoba and holds a degree from Southern New Hampshire University, along with certifications from Harvard University, Boston University, and the United Nations. Pacific has collaborated with RLOs, Government Agencies, and the Ministry of Education to serve the underserved. His diverse experience as an Academic Advisor, Monitoring and Evaluation Officer, Teacher, and Digital Facilitator has fueled his passion for community engagement and advocacy. As a former refugee who has faced immense challenges, Pacific is dedicated to sharing his journey and teaching the importance of mental health and mindset education to inspire young people to unlock their full potential.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="text-center">
+          <img src="images/Angelique.JPG" alt="Angelique Nantabara" class="w-48 h-48 rounded-full mx-auto shadow-2xl border-4 border-white">
+          <h3 class="text-3xl font-bold mt-6 text-hata-blue">Angelique Nantabara</h3>
+          <p class="text-gray-500 font-bold">Community Leader | Advocate</p>
+          <div class="mt-4">
+            <button class="team-member-button bg-hata-blue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition-colors">Read Bio</button>
+            <div class="team-member-bio hidden mt-4 text-left">
+              <p class="text-gray-600">Angelique has been a dedicated community leader and advocate in Winnipeg for over 17 years. Originally from the Democratic Republic of Congo, she brings her lived experience to her work, supporting youth, newcomers, and individuals with disabilities. Her extensive experience includes working with various organizations focused on settlement services and community development. Beyond Canada, Angelique has been involved in global community development, demonstrating her commitment to a compassionate and culturally informed approach. Through her work, she has inspired and empowered countless immigrants across Canada.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="text-center">
+          <img src="images/Gentille.JPG" alt="Gentile Ntwayingabo" class="w-48 h-48 rounded-full mx-auto shadow-2xl border-4 border-white">
+          <h3 class="text-3xl font-bold mt-6 text-hata-blue">Gentille Ntwayingabo</h3>
+          <p class="text-gray-500 font-bold">Youth Advocate | Community Builder</p>
+          <div class="mt-4">
+            <button class="team-member-button bg-hata-blue text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition-colors">Read Bio</button>
+            <div class="team-member-bio hidden mt-4 text-left">
+              <p class="text-gray-600">Gentille Ntwayingabo immigrated to Canada from the Democratic Republic of Congo and has proudly called Winnipeg home for over 16 years. Her journey has inspired her lifelong passion for empowering others, especially youth. A graduate of Golden Bell High School, Gentile is currently pursuing a degree in Business Administration. Alongside her studies, she has worked extensively in community development and support. Gentile brings deep lived experience and heartfelt commitment to her work, understanding the barriers young immigrants face and dedicating herself to helping others overcome those hurdles. Through her involvement in youth programs and newcomer services, she strives to uplift and inspire the next generation.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
--->
-  <!-- Team Section -->
-  <section id="team" class="py-5 py-lg-6 bg-light">
-  <div class="container">
-    <div class="text-center mb-5 animate">
-      <h2 class="display-5 fw-bold font-serif mb-3 text-black">Our Board of Directors</h2>
-      <p class="text-muted mx-auto" style="max-width: 700px;">
-        Our work is guided by a passionate leadership team with deep community roots and a commitment to creating change.
-      </p>
-    </div>
-    <div class="row g-4 justify-content-center">
-      
-      <div class="col-md-6 col-lg-4 animate">
-        <div class="card h-100 border-0 shadow-sm card-hover">
-          <div class="card-body text-center p-4 d-flex flex-column">
-            <img src="images/Pacific.JPEG" alt="Pacific Muhumure" class="rounded-circle mb-3 mx-auto" style="width: 120px; height: 120px; object-fit: cover;">
-            <h3 class="h4 font-serif fw-bold mb-1">Pacific Muhumure</h3>
-            <p class="text-brand-accent fw-semibold mb-3">CEO & Director</p>
-            <p class="text-muted small">
-              With diverse experience in education and project management, Pacific is committed to empowering youth through education, advocacy, and mindset training, inspired by his own journey as a young refugee.
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-5xl font-bold text-hata-blue">Get in Touch</h2>
+            <p class="mt-6 text-lg text-gray-600">
+              We'd love to hear from you. Whether you have a question, a suggestion, or you want to get involved, please don't hesitate to reach out.
             </p>
-          </div>
         </div>
-      </div>
-      
-      <div class="col-md-6 col-lg-4 animate delay-1">
-        <div class="card h-100 border-0 shadow-sm card-hover">
-          <div class="card-body text-center p-4 d-flex flex-column">
-            <img src="images/Angelique.JPG" alt="Angelique Nantabara" class="rounded-circle mb-3 mx-auto" style="width: 120px; height: 120px; object-fit: cover;">
-            <h3 class="h4 font-serif fw-bold mb-1">Angelique Nantabara</h3>
-            <p class="text-brand-accent fw-semibold mb-3">Community Leader | Advocate</p>
-            <p class="text-muted small">
-              For over 17 years in Winnipeg, Angelique has been a passionate advocate for youth, newcomers, and individuals with disabilities, drawing from her own lived experience as a refugee from the Democratic Republic of Congo.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6 col-lg-4 animate delay-2">
-        <div class="card h-100 border-0 shadow-sm card-hover">
-          <div class="card-body text-center p-4 d-flex flex-column">
-            <img src="images/Gentille.JPG" alt="Gentile Ntwayingabo" class="rounded-circle mb-3 mx-auto" style="width: 120px; height: 120px; object-fit: cover;">
-            <h3 class="h4 font-serif fw-bold mb-1">Gentille Ntwayingabo</h3>
-            <p class="text-brand-accent fw-semibold mb-3">Youth Advocate | Community Builder</p>
-            <p class="text-muted small">
-              Immigrating from the DR Congo, Gentile has called Winnipeg home for over 16 years, a journey that ignited her passion for empowering youth and newcomers. Drawing on her deep lived experience, she works to help others overcome barriers, driven by a belief that every young person deserves the chance to thrive.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <section id="contact" class="py-5 py-lg-6" style="background-color: var(--background-dark); color: var(--text-light);">
-  <div class="container">
-    
-    <div class="text-center mb-5 animate">
-      <h2 class="display-5 fw-bold font-serif mb-3">Get Involved</h2>
-      <p class="lead mb-5 mx-auto" style="max-width: 800px;">
-        Your support is vital. Whether you choose to donate or have a question for our team, we're ready to connect.
-      </p>
-    </div>
-
-    <div class="row g-4 g-lg-5 align-items-stretch">
-
-      <div class="col-lg-7 animate">
-        <div class="cta-card-primary h-100">
-          <h3 class="font-serif">Support Our Mission Financially</h3>
-          <p>
-            Your generosity directly funds our core programs—from providing mental health resources for youth to empowering newcomers with essential skills. Every contribution creates lasting change.
-          </p>
-          <ul class="list-unstyled my-4">
-            <li class="d-flex align-items-center mb-2">
-              <i class="fas fa-check-circle text-brand-accent me-2"></i>
-              <strong>$25</strong><span class="ms-2">provides materials for a mindset workshop.</span>
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="fas fa-check-circle text-brand-accent me-2"></i>
-              <strong>$50</strong><span class="ms-2">supports a newcomer's digital skills training session.</span>
-            </li>
-            <li class="d-flex align-items-center">
-              <i class="fas fa-check-circle text-brand-accent me-2"></i>
-              <strong>$100</strong><span class="ms-2">helps fund our community outreach programs.</span>
-            </li>
-          </ul>
-          <a href="donate.html" class="btn btn-lg w-100 py-3">Donate Now</a>
-        </div>
-      </div>
-
-      <div class="col-lg-5 animate delay-1">
-        <div class="contact-form-card h-100">
-          <h4 class="font-serif">Send a Message</h4>
-          <p class="small mb-4">
-            Have feedback, an inquiry, or a question? We'd love to hear from you.
-          </p>
-          <form>
-            <div class="mb-3">
-              <label for="contactName" class="form-label visually-hidden">Name</label>
-              <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
-            </div>
-            <div class="mb-3">
-              <label for="contactEmail" class="form-label visually-hidden">Email</label>
-              <input type="email" class="form-control" id="contactEmail" placeholder="Your Email" required>
-            </div>
-            <div class="mb-3">
-              <label for="contactMessage" class="form-label visually-hidden">Message</label>
-              <textarea class="form-control" id="contactMessage" rows="5" placeholder="Your message, feedback, or inquiry..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-secondary w-100">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-   <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" height="50" class="me-2">
-                            <h4 class="mb-0">HATA Humanitarian</h4>
+        <div class="mt-16 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-3xl font-bold text-hata-blue mb-6">Direct Messaging</h3>
+                <div class="space-y-6">
+                    <a href="mailto:info@hatahumanitarian.org" class="flex items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fas fa-envelope text-4xl text-hata-red"></i>
+                        <div class="ml-6">
+                            <h4 class="text-2xl font-bold">Email Us</h4>
+                            <p class="text-gray-600">info@hatahumanitarian.org</p>
                         </div>
-                        <p>Empowering Winnipeg communities through mental health support, newcomer integration, and addiction recovery programs.</p>
-                    </div>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="mb-4">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
-                        <li class="mb-2"><a href="../#about" class="text-white-50">About</a></li>
-                        <li class="mb-2"><a href="../#programs" class="text-white-50">Programs</a></li>
-                        <li><a href="#contact" class="text-white-50">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="mb-4">Programs</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="mental-health-support.html" class="text-white-50">Mental Health</a></li>
-                        <li class="mb-2"><a href="new comer.html" class="text-white-50">Newcomer Support</a></li>
-                        <li><a href="addiction-recovery.html" class="text-white-50">Addiction Recovery</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-4 col-md-4">
-                    <h5 class="mb-4">Contact Information</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2 d-flex">
-                            <i class="fas fa-map-marker-alt me-3 pt-1"></i>
-                            <span>127 Clonard Avenue, Winnipeg, MB</span>
-                        </li>
-                        <li class="mb-2 d-flex">
-                            <i class="fas fa-phone me-3 pt-1"></i>
-                            <a href="tel:+14319988892" class="text-white-50">(431) 998 8892</a>
-                        </li>
-                        <li class="mb-2 d-flex">
-                            <i class="fas fa-envelope me-3 pt-1"></i>
-                            <a href="mailto:info@hatahumanitarian.org" class="text-white-50">info@hatahumanitarian.org</a>
-                        </li>
-                    </ul>
+                    </a>
+                    <a href="https://wa.me/14319988892" class="flex items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fab fa-whatsapp text-4xl text-green-500"></i>
+                        <div class="ml-6">
+                            <h4 class="text-2xl font-bold">WhatsApp</h4>
+                            <p class="text-gray-600">+1 (431) 998-8892</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            
-            <hr class="my-4 bg-white-10">
-            
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="text-white-50">Privacy</a></li>
-                        <li class="list-inline-item"><span class="mx-2">•</span></li>
-                        <li class="list-inline-item"><a href="#" class="text-white-50">Terms</a></li>
-                    </ul>
-                </div>
+            <div>
+                <img src="images/winnipeg.jpg" alt="Map of Winnipeg" class="rounded-lg shadow-2xl">
             </div>
         </div>
-    </footer>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
- <script>
-  document.addEventListener('DOMContentLoaded', function() {
-  // ========== Carousel Functionality ==========
-  const initCarousel = () => {
-    const carousel = document.querySelector('.values-carousel');
-    if (!carousel) return;
+    </div>
+  </section>
 
-    const track = carousel.querySelector('.carousel-track');
-    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
-    const dotsContainer = carousel.querySelector('.carousel-dots');
-    
-    let currentIndex = 0;
-    const slideCount = slides.length;
-    let slidesPerView = calculateSlidesPerView();
-    let autoSlideInterval;
-    
-    // Create navigation dots
-    const createDots = () => {
-      slides.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.setAttribute('role', 'tab');
-        dot.setAttribute('aria-label', `Slide ${index + 1}`);
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-      });
-    };
-    
-    // Calculate slides per view based on screen size
-    function calculateSlidesPerView() {
-      return window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-    }
-    
-    // Navigation functions
-    const goToSlide = (index) => {
-      currentIndex = index;
-      updateCarousel();
-      resetAutoSlide();
-    };
-    
-    const nextSlide = () => {
-      currentIndex = (currentIndex + 1) % slideCount;
-      updateCarousel();
-      resetAutoSlide();
-    };
-    
-    const prevSlide = () => {
-      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-      updateCarousel();
-      resetAutoSlide();
-    };
-    
-    // Update carousel display
-    const updateCarousel = () => {
-      const offset = -currentIndex * (100 / slidesPerView);
-      track.style.transform = `translateX(${offset}%)`;
-      
-      // Update dots
-      const dots = Array.from(dotsContainer.querySelectorAll('button'));
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentIndex);
-        dot.setAttribute('aria-selected', index === currentIndex);
-      });
-      
-      // Update slide ARIA labels
-      slides.forEach((slide, index) => {
-        slide.setAttribute('aria-label', `${index + 1} of ${slideCount}`);
-      });
-    };
-    
-    // Handle swipe gestures for touch devices
-    const handleTouchEvents = () => {
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      track.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        pauseAutoSlide();
-      }, {passive: true});
-      
-      track.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-        resumeAutoSlide();
-      }, {passive: true});
-      
-      const handleSwipe = () => {
-        const swipeThreshold = 50;
-        if (touchStartX - touchEndX > swipeThreshold) {
-          nextSlide();
-        } else if (touchEndX - touchStartX > swipeThreshold) {
-          prevSlide();
-        }
-      };
-    };
-    
-    // Auto-slide functionality
-    const startAutoSlide = () => {
-      autoSlideInterval = setInterval(nextSlide, 5000);
-    };
-    
-    const pauseAutoSlide = () => {
-      clearInterval(autoSlideInterval);
-    };
-    
-    const resumeAutoSlide = () => {
-      startAutoSlide();
-    };
-    
-    const resetAutoSlide = () => {
-      pauseAutoSlide();
-      resumeAutoSlide();
-    };
-    
-    // Initialize carousel
-    createDots();
-    updateCarousel();
-    startAutoSlide();
-    handleTouchEvents();
-    
-    // Event listeners
-    carousel.querySelector('.next')?.addEventListener('click', nextSlide);
-    carousel.querySelector('.prev')?.addEventListener('click', prevSlide);
-    
-    // Keyboard navigation
-    carousel.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') prevSlide();
-      if (e.key === 'ArrowRight') nextSlide();
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+        <a href="index.html" class="flex items-center justify-center mb-6">
+            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-14 mr-4">
+            <span class="text-2xl font-bold">HATA Humanitarian Inc.</span>
+        </a>
+        <div class="flex justify-center space-x-8 my-8">
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-linkedin-in text-2xl"></i></a>
+        </div>
+      <p class="text-sm text-gray-400">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
-    
-    // Pause on hover
-    track.addEventListener('mouseenter', pauseAutoSlide);
-    track.addEventListener('mouseleave', resumeAutoSlide);
-    
-    // Responsive adjustments
-    const handleResize = () => {
-      slidesPerView = calculateSlidesPerView();
-      slides.forEach(slide => {
-        slide.style.minWidth = `${100 / slidesPerView}%`;
-      });
-      updateCarousel();
-    };
-    
-    window.addEventListener('resize', handleResize);
-    handleResize();
-  };
 
-  
-
-  // ========== Smooth Scrolling ==========
-  const initSmoothScrolling = () => {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 70,
-            behavior: 'smooth'
-          });
+    const teamMemberButtons = document.querySelectorAll('.team-member-button');
+    teamMemberButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const bio = button.nextElementSibling;
+        bio.classList.toggle('hidden');
+        if (bio.classList.contains('hidden')) {
+            button.textContent = 'Read Bio';
+        } else {
+            button.textContent = 'Close Bio';
         }
       });
     });
-  };
+  </script>
 
-  // ========== Animation on Scroll ==========
-  const initScrollAnimations = () => {
-    const animateOnScroll = () => {
-      const elements = document.querySelectorAll('.animate');
-      
-      elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.2;
-        
-        if (elementPosition < screenPosition) {
-          element.style.opacity = '1';
-          element.style.transform = 'translateY(0)';
-        }
-      });
-    };
-    
-    window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
-  };
-
-  // ========== About Image Parallax ==========
-  const initAboutParallax = () => {
-    const aboutImage = document.querySelector('.about-image');
-    if (!aboutImage) return;
-    
-    window.addEventListener('scroll', function() {
-      const scrollY = window.scrollY;
-      const section = aboutImage.closest('.about-section-redesigned');
-      if (!section) return;
-      
-      const sectionOffsetTop = section.offsetTop;
-      const imageHeight = aboutImage.offsetHeight;
-      const parallaxValue = (scrollY - sectionOffsetTop + (window.innerHeight / 2) - (imageHeight / 2)) * 0.05;
-      
-      aboutImage.style.transform = `translateY(${parallaxValue}px)`;
-    });
-  };
-
-  // ========== Intersection Observer Animations ==========
-  const initIntersectionObserver = () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.animate').forEach(el => {
-      el.style.animationPlayState = 'paused';
-      observer.observe(el);
-    });
-  };
-
-  // Initialize all components
-  initCarousel();
- 
-  initSmoothScrolling();
-  initScrollAnimations();
-  initAboutParallax();
-  initIntersectionObserver();
-});
- </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

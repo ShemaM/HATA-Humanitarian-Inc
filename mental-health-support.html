@@ -1,320 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Stigma-Free Mental Health Program | HATA Humanitarian</title>
-    <meta name="description" content="Our flagship program to equip Winnipeg youth with the tools to build emotional resilience and fight the stigma around mental health.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://placehold.co/32x32/2A5C8D/FFFFFF?text=H">
-
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-    <style>
-        :root {
-            --primary: #2A5C8D;
-            --secondary: #1E40AF;
-            --accent: #F59E0B;
-            --light: #F8FAFC;
-            --dark: #1E293B;
-            --text: #334155;
-            --border-color: #e2e8f0;
-            --transition: all 0.4s ease-in-out;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text);
-            line-height: 1.8;
-            background-color: #fff;
-            overflow-x: hidden;
-        }
-        
-        /* Accessibility: Skip Link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--accent);
-            color: white;
-            padding: 8px;
-            z-index: 10000;
-            transition: top 0.3s;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 400;
-            color: var(--dark);
-            letter-spacing: 0.5px;
-        }
-
-        .btn {
-            padding: 14px 35px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .btn-primary { background-color: var(--primary); border-color: var(--primary); color: #fff; }
-        .btn-primary:hover { background-color: var(--secondary); border-color: var(--secondary); color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(42, 92, 141, 0.2); }
-        .btn-accent { background-color: var(--accent); border-color: var(--accent); color: #fff; }
-        .btn-accent:hover { background-color: #D97706; border-color: #D97706; color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2); }
-        
-        
-
-        /* Hero Section */
-        .hero { padding: 120px 0; background-color: var(--light); }
-        .hero h1 { font-size: 4rem; line-height: 1.2; }
-        .hero .lead { font-size: 1.2rem; color: var(--text); }
-        .hero-image-container { position: relative; height: 100%; }
-        .hero-image { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
-        .hero-stats { margin-top: 2.5rem; }
-        .hero-stat { display: flex; align-items: center; }
-        .hero-stat i { font-size: 1.5rem; color: var(--primary); margin-right: 10px; }
-
-        /* Section Styling */
-        .section { padding: 100px 0; }
-        .section-subtitle { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
-        
-        /* About Section */
-        .about-quote { font-family: 'DM Serif Display', serif; font-size: 1.75rem; line-height: 1.5; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 2rem; }
-
-        /* Activities Section */
-        .activities-section { background-color: var(--dark); }
-        .activity-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 2.5rem 0; transition: background-color 0.3s; }
-        .activity-item:last-child { border-bottom: none; }
-        .activity-item:hover { background-color: rgba(255,255,255,0.03); }
-        .activity-number { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--accent); line-height: 1; }
-        .activity-item h3 { color: #fff; }
-        .activity-item p { color: rgba(255,255,255,0.7); }
-
-        /* Testimonials Section */
-        .testimonial-card { background-color: #fff; padding: 2rem; border-radius: 12px; height: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
-        .testimonial-card .card-body { flex-grow: 1; }
-        .testimonial-card img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
-        .testimonial-text { font-style: italic; }
-
-        /* FAQ Section */
-        .faq-section .accordion-item { border: 1px solid var(--border-color); border-radius: 8px !important; margin-bottom: 1rem; }
-        .faq-section .accordion-button { font-weight: 600; color: var(--dark); }
-        .faq-section .accordion-button:not(.collapsed) { background-color: var(--light); color: var(--primary); box-shadow: none; }
-        .faq-section .accordion-button:focus { box-shadow: none; }
-
-        /* Partners Section */
-        .partners-section { background-color: var(--light); }
-        .partner-logo { max-width: 150px; filter: grayscale(100%); transition: filter 0.3s; opacity: 0.7; }
-        .partner-logo:hover { filter: grayscale(0%); opacity: 1; }
-
-        /* Footer */
-        .footer { background-color: var(--dark); color: rgba(255,255,255,0.6); padding: 80px 0 30px; }
-        .footer h5 { color: #fff; }
-        .footer a { color: rgba(255,255,255,0.6); transition: color 0.3s; }
-        .footer a:hover { color: var(--accent); }
-        .footer .social-icons a { font-size: 1.2rem; }
-
-        @media (max-width: 991.98px) {
-            .hero h1 { font-size: 3rem; }
-            .hero { padding: 80px 0; }
-            .hero-image-container { margin-top: 3rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Support Program | HATA Humanitarian Inc.</title>
+  <meta name="description" content="Our Stigma-Free Mental Health Program empowers youth in Winnipeg to build resilience and fight the stigma around mental health. Learn more about our workshops and peer support groups.">
+  <meta name="keywords" content="mental health, youth support, Winnipeg, non-profit, stigma-free, mental well-being, peer support, community support">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <meta name="description" content="Our Stigma-Free Mental Health Program empowers youth in Winnipeg to build resilience and fight the stigma around mental health. Learn more about our workshops and peer support groups.">
+  <meta name="keywords" content="mental health, youth support, Winnipeg, non-profit, stigma-free, mental well-being, peer support, community support">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
+  <style>
+    :root {
+      --hata-red: #D80032;
+      --hata-blue: #0A2463;
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+    .bg-hata-red { background-color: var(--hata-red); }
+    .text-hata-red { color: var(--hata-red); }
+    .bg-hata-blue { background-color: var(--hata-blue); }
+    .text-hata-blue { color: var(--hata-blue); }
+  </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-    <header id="header-placeholder"></header>
-    <script src="loadHeader.js"></script>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-12 mr-3">
+        <span class="text-xl font-bold text-hata-blue">HATA Humanitarian</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="hover:text-hata-red">About</a>
+        <a href="index.html#programs" class="hover:text-hata-red">Programs</a>
+        <a href="index.html#team" class="hover:text-hata-red">Team</a>
+        <a href="index.html#contact" class="hover:text-hata-red">Contact</a>
+        <a href="donate.html" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate Now</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars text-2xl text-hata-blue"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <a href="index.html#about" class="block px-6 py-3 hover:bg-gray-100">About</a>
+      <a href="index.html#programs" class="block px-6 py-3 hover:bg-gray-100">Programs</a>
+      <a href="index.html#team" class="block px-6 py-3 hover:bg-gray-100">Team</a>
+      <a href="index.html#contact" class="block px-6 py-3 hover:bg-gray-100">Contact</a>
+      <a href="donate.html" class="block px-6 py-3 text-hata-red hover:bg-gray-100">Donate Now</a>
+    </div>
+  </header>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <header class="hero">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <h1 class="mb-4 mt-4">Stigma-Free Mental Health & Mindset Education.</h1>
-                        <p class="lead mb-4">Our flagship program to address mental health concerns among youth by fostering resilience, normalizing conversations, and providing accessible support.</p>
-                        <div class="hero-stats d-flex flex-wrap">
-                            <div class="hero-stat me-4 mb-2"><i class="fas fa-users"></i><span>For Youth (Ages 13-24)</span></div>
-                            <div class="hero-stat me-4 mb-2"><i class="fas fa-shield-alt"></i><span>Free & Confidential</span></div>
-                        </div>
-                        <a href="#get-involved" class="btn btn-primary btn-lg mt-4">Join a Program</a>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <div class="hero-image-container">
-                            <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=2874&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e0e0e0/cccccc?text=Community+Support';" alt="A diverse group of young people sitting in a supportive circle." class="hero-image" loading="eager">
-                        </div>
-                    </div>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative h-[500px]">
+      <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('images/mental-health-support.jpg');"></div>
+      <div class="absolute inset-0 bg-hata-blue opacity-80"></div>
+      <div class="relative container mx-auto px-6 h-full flex flex-col justify-center text-white">
+        <h1 class="text-5xl md:text-6xl font-bold">Stigma-Free Mental Health Program</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-3xl">Fostering resilience, normalizing conversations, and providing accessible support.</p>
+      </div>
+    </section>
+
+    <!-- Program Details Section -->
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-hata-blue mb-6">Program Goals</h2>
+            <p class="text-gray-600 text-lg mb-4">Our flagship program to address mental health concerns among youth by fostering resilience, normalizing conversations, and providing accessible support. We aim to create an environment where mental health conversations are normalized, and support is readily accessible.</p>
+            <ul class="list-disc list-inside text-gray-600 text-lg space-y-2">
+                <li>Create a safe and open environment for mental health discussions.</li>
+                <li>Equip youth with tools for emotional resilience.</li>
+                <li>Reduce the stigma associated with mental health.</li>
+                <li>Promote a culture of understanding and acceptance.</li>
+            </ul>
+          </div>
+          <div>
+            <img src="images/stigma-free.jpg" alt="Community Support" class="rounded-lg shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-5xl font-bold text-hata-blue">How We Create Change</h2>
+                <p class="mt-6 text-lg text-gray-600">We achieve our mission through a holistic approach combining education, advocacy, and direct support. Our activities are designed to be dynamic, engaging, and impactful.</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-bullhorn text-5xl text-hata-red mb-6"></i>
+                    <h3 class="text-2xl font-bold text-hata-blue mb-4">Awareness Workshops</h3>
+                    <p class="text-gray-600">Interactive workshops and seminars designed to educate youth on mental health, the impact of stigma, and strategies for cultivating a positive mindset.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-fist-raised text-5xl text-hata-red mb-6"></i>
+                    <h3 class="text-2xl font-bold text-hata-blue mb-4">Resilience Training</h3>
+                    <p class="text-gray-600">Hands-on training that equips young people with practical tools and coping mechanisms to build emotional resilience and navigate life's challenges.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-comments text-5xl text-hata-red mb-6"></i>
+                    <h3 class="text-2xl font-bold text-hata-blue mb-4">Peer Support Circles</h3>
+                    <p class="text-gray-600">Safe, peer-led support groups that foster a sense of belonging and encourage open conversation, helping to normalize the mental health experience.</p>
                 </div>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- About the Program Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-5" data-aos="fade-right">
-                        <p class="section-subtitle">Our Core Belief</p>
-                        <h2 class="mb-4">A Foundation of Dignity & Purpose.</h2>
-                        <p>At the heart of our work is a powerful belief: that every individual, regardless of their background, deserves the opportunity to thrive with dignity, resilience, and purpose. HATA Humanitarian Inc. exists to bridge the gaps in mental health care, ensuring no one is left behind.</p>
-                    </div>
-                    <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
-                        <blockquote class="about-quote">
-                            "Through targeted programs that address mental well-being and combat stigma, we aim to create lasting transformation not just for individuals, but for entire communities."
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
 
-        <!-- Core Activities Section -->
-        <section id="activities" class="activities-section section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-up">
-                        <p class="section-subtitle" style="color: var(--accent);">Our Approach</p>
-                        <h2 class="mb-4 text-white">How We Create Change.</h2>
-                        <p class="text-white-50">We achieve our mission through a holistic approach combining education, advocacy, and direct support. Our activities are designed to be dynamic, engaging, and impactful.</p>
-                    </div>
-                    <div class="col-lg-7 offset-lg-1" data-aos="fade-up" data-aos-delay="100">
-                        <div class="activity-item">
-                            <div class="d-flex align-items-start">
-                                <div class="activity-number me-4">01</div>
-                                <div>
-                                    <h3 class="mb-2">Awareness Workshops</h3>
-                                    <p>Interactive workshops and seminars designed to educate youth on mental health, the impact of stigma, and strategies for cultivating a positive mindset.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="d-flex align-items-start">
-                                <div class="activity-number me-4">02</div>
-                                <div>
-                                    <h3 class="mb-2">Resilience Training</h3>
-                                    <p>Hands-on training that equips young people with practical tools and coping mechanisms to build emotional resilience and navigate life's challenges.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="d-flex align-items-start">
-                                <div class="activity-number me-4">03</div>
-                                <div>
-                                    <h3 class="mb-2">Peer Support Circles</h3>
-                                    <p>Safe, peer-led support groups that foster a sense of belonging and encourage open conversation, helping to normalize the mental health experience.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Get Involved Section -->
+    <section class="py-24 bg-hata-blue text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold">Get Involved</h2>
+            <p class="mt-6 text-lg opacity-80 max-w-2xl mx-auto">Your support can help us create a stigma-free community where everyone has the opportunity to thrive. Join us in our mission to promote mental well-being.</p>
+            <a href="donate.html" class="mt-10 inline-block bg-hata-red text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-transform transform hover:scale-105">Support This Program</a>
+        </div>
+    </section>
 
-        <!-- Testimonials Section -->
-        
+  </main>
 
-        <!-- FAQ Section -->
-        <section id="faq" class="section bg-light faq-section">
-            <div class="container">
-                <div class="text-center col-lg-8 mx-auto" data-aos="fade-up">
-                    <p class="section-subtitle">Got Questions?</p>
-                    <h2 class="mb-5">Frequently Asked Questions.</h2>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Who is eligible for this program?</button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">Our program is designed for youth in Winnipeg, typically between the ages of 13 and 24. If you're outside this age range but feel you would benefit, please reach out to us.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How much does it cost?</button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">All our programs and workshops are completely free of charge, thanks to the generous support of our donors and community partners.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Is everything confidential?</button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">Yes, confidentiality is a cornerstone of our program. We provide a safe and private environment for all participants. Information is never shared without your explicit consent, except in cases where there is a risk of harm to yourself or others, as required by law.</div>
-                                </div>
-                            </div>
-                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How do I sign up or get involved?</button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">It's easy! You can contact us through our contact page, send us an email, or call us directly. We also have options for volunteering or becoming a peer mentor if you'd like to help support our mission.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+        <a href="index.html" class="flex items-center justify-center mb-6">
+            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-14 mr-4">
+            <span class="text-2xl font-bold">HATA Humanitarian</span>
+        </a>
+        <div class="flex justify-center space-x-8 my-8">
+            <a href="#" class="hover:text-hata-red transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+            <a href="#" class="hover:text-hata-red transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="#" class="hover:text-hata-red transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+            <a href="#" class="hover:text-hata-red transition-colors"><i class="fab fa-linkedin-in text-2xl"></i></a>
+        </div>
+      <p class="text-sm text-gray-400">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
+    </div>
+  </footer>
 
-       
-    </main>
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    <!-- Footer -->
-    <script src="loadFooter.js"></script>
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 50
-        });
-
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#' || href.length < 2) return;
-                
-                e.preventDefault();
-                const targetElement = document.querySelector(href);
-                if (targetElement) {
-                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - (navbarHeight + 20);
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>

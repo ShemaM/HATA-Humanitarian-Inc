@@ -1,668 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Our Cause | HATA Humanitarian</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2A5C8D;
-            --accent: #F59E0B;
-            --light: #F8FAFC;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        
-
-
-        .donation-hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #1E429F 100%);
-        }
-        .progress-bar-custom {
-            height: 8px;
-            background-color: #e9ecef;
-        }
-        .progress-custom {
-            background-color: var(--accent);
-        }
-        .impact-card {
-            transition: transform 0.3s;
-        }
-        .impact-card:hover {
-            transform: translateY(-5px);
-        }
-        .payment-method {
-            border: 2px solid #dee2e6;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .payment-method.active {
-            border-color: var(--accent);
-            background-color: rgba(245, 158, 11, 0.05);
-        }
-        .donation-amount {
-            transition: all 0.3s;
-        }
-        .donation-amount.active {
-            background-color: var(--primary) !important;
-            color: white !important;
-            border-color: var(--primary) !important;
-        }
-        #credit-card-form {
-            transition: height 0.3s;
-        }
-        .thank-you-message {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | HATA Humanitarian Inc.</title>
+  <meta name="description" content="Support HATA Humanitarian Inc. and make a difference in the lives of youth and newcomers in Winnipeg. Your donation will help us continue our work in mental health, addiction recovery, and newcomer integration.">
+  <meta name="keywords" content="donate, support, non-profit, Winnipeg, HATA Humanitarian, community support, make a difference">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <meta name="description" content="Support HATA Humanitarian Inc. and make a difference in the lives of youth and newcomers in Winnipeg. Your donation will help us continue our work in mental health, addiction recovery, and newcomer integration.">
+  <meta name="keywords" content="donate, support, non-profit, Winnipeg, HATA Humanitarian, community support, make a difference">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
+  <style>
+    :root {
+      --hata-red: #D80032;
+      --hata-blue: #0A2463;
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+    .bg-hata-red { background-color: var(--hata-red); }
+    .text-hata-red { color: var(--hata-red); }
+    .bg-hata-blue { background-color: var(--hata-blue); }
+    .text-hata-blue { color: var(--hata-blue); }
+  </style>
 </head>
-<body>
-    <!-- Navigation (same as main site) -->
-    <header id="header-placeholder"></header>
-    <script src="loadHeader.js"></script>
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- Donation Hero -->
-    <section class="donation-hero text-white py-5">
-        <div class="container py-4">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-5 mt-5">Your Support Changes Lives</h1>
-                    <p class="lead mb-4">Every donation helps us empower communities through mental health support, newcomer integration, and addiction recovery programs.</p>
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="me-3">
-                            <div class="fs-3 fw-bold">$1000</div>
-                            <div class="small">Raised this year</div>
-                        </div>
-                        <div class="progress flex-grow-1 progress-bar-custom">
-                            <div class="progress-bar progress-custom" role="progressbar" style="width: 65%"></div>
-                        </div>
-                        <div class="ms-3">
-                            <div class="fs-3 fw-bold">20%</div>
-                            <div class="small">of $5000 goal</div>
-                        </div>
-                    </div>
-                    <a href="#donate-now" class="btn btn-outline-warning btn-lg px-4 bg-orange-transparent">Donate Now</a>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <img src="images/community impact.jpg" alt="Community impact" class="img-fluid rounded shadow">
-                </div>
-            </div>
-        </div>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-12 mr-3">
+        <span class="text-xl font-bold text-hata-blue">HATA Humanitarian</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="hover:text-hata-red">About</a>
+        <a href="index.html#programs" class="hover:text-hata-red">Programs</a>
+        <a href="index.html#team" class="hover:text-hata-red">Team</a>
+        <a href="index.html#contact" class="hover:text-hata-red">Contact</a>
+        <a href="donate.html" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate Now</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars text-2xl text-hata-blue"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <a href="index.html#about" class="block px-6 py-3 hover:bg-gray-100">About</a>
+      <a href="index.html#programs" class="block px-6 py-3 hover:bg-gray-100">Programs</a>
+      <a href="index.html#team" class="block px-6 py-3 hover:bg-gray-100">Team</a>
+      <a href="index.html#contact" class="block px-6 py-3 hover:bg-gray-100">Contact</a>
+      <a href="donate.html" class="block px-6 py-3 text-hata-red hover:bg-gray-100">Donate Now</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative h-[500px]">
+      <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('images/donate.html');"></div>
+      <div class="absolute inset-0 bg-hata-blue opacity-80"></div>
+      <div class="relative container mx-auto px-6 h-full flex flex-col justify-center text-white">
+        <h1 class="text-5xl md:text-6xl font-bold">Your Support Changes Lives</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-3xl">Every donation helps us empower communities through mental health support, newcomer integration, and addiction recovery programs.</p>
+      </div>
     </section>
 
-    <!-- Impact Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Your Donation at Work</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card impact-card h-100 border-0 shadow-sm">
-                        <img src="images/mental health workshop.jpg" class="card-img-top" alt="Mental health program">
-                        <div class="card-body">
-                            <h3 class="h5"><i class="fas fa-brain text-accent me-2"></i> Mental Health</h3>
-                            <p>$50 provides one counseling session for a youth in need</p>
-                            <div class="d-flex justify-content-between small">
-                                <span>500+ sessions funded</span>
-                                <span class="fw-bold">$25,000</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card impact-card h-100 border-0 shadow-sm">
-                        <img src="images/happy immigrant family.jpg" class="card-img-top" alt="Newcomer program">
-                        <div class="card-body">
-                            <h3 class="h5"><i class="fas fa-globe-americas text-accent me-2"></i> Newcomers</h3>
-                            <p>$100 provides language classes for a family for one month</p>
-                            <div class="d-flex justify-content-between small">
-                                <span>120 families supported</span>
-                                <span class="fw-bold">$12,000</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card impact-card h-100 border-0 shadow-sm">
-                        <img src="images/humanitarian.jpg" class="card-img-top" alt="Recovery program">
-                        <div class="card-body">
-                            <h3 class="h5"><i class="fas fa-leaf text-accent me-2"></i> Recovery</h3>
-                            <p>$75 provides a week of addiction recovery support</p>
-                            <div class="d-flex justify-content-between small">
-                                <span>80 individuals helped</span>
-                                <span class="fw-bold">$6,000</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Donation Section -->
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-5xl font-bold text-hata-blue">Make a Difference Today</h2>
+          <p class="mt-6 text-lg text-gray-600">Your generous contribution will directly support our programs and help us create a lasting impact in the community. We rely on the support of individuals like you to continue our work.</p>
+        </div>
+        <div class="mt-16 max-w-2xl mx-auto bg-white rounded-xl shadow-2xl p-10 text-center">
+          <h3 class="text-3xl font-bold text-hata-blue mb-4">Donate Securely Online</h3>
+          <p class="text-gray-600 mb-8">Click the button below to make a secure online donation through our trusted payment partner. Your donation is processed securely and you will receive a receipt for your contribution.</p>
+          <a href="#" class="inline-block bg-hata-red text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-transform transform hover:scale-105">Donate Now via PayPal</a>
+          
+        </div>
+
+        <div class="mt-24 text-center max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold text-hata-blue">Other Ways to Give</h2>
+            <p class="mt-6 text-lg text-gray-600">We also accept donations through e-transfer or by mail. Please see the details below.</p>
+        </div>
+        <div class="mt-16 grid md:grid-cols-2 gap-12">
+            <div class="bg-white rounded-xl shadow-2xl p-10">
+                <h3 class="text-3xl font-bold text-hata-blue mb-4">E-Transfer</h3>
+                <p class="text-gray-600">You can send an e-transfer to our email address: <a href="mailto:info@hatahumanitarian.org" class="text-hata-red hover:underline">info@hatahumanitarian.org</a>. Please include your full name and address in the message for tax receipt purposes.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-2xl p-10">
+                <h3 class="text-3xl font-bold text-hata-blue mb-4">By Mail</h3>
+                <p class="text-gray-600">You can mail a check to our office address: <br> 127 Clonard Avenue, Winnipeg, MB. <br> Please make checks payable to HATA Humanitarian Inc.</p>
             </div>
         </div>
+      </div>
     </section>
 
-    <!-- Donation Form -->
-    <section id="donate-now" class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow">
-                        <div class="card-body p-4 p-md-5">
-                            <h2 class="text-center mb-4">Make a Donation</h2>
-                            
-                            <!-- Step 1: Donation Amount -->
-                            <div id="step-amount" class="donation-step">
-                                <h3 class="h5 mb-3">1. Select Your Donation Amount</h3>
-                                <div class="row g-2 mb-4">
-                                    <div class="col-6 col-md-3">
-                                        <button type="button" class="btn btn-outline-primary donation-amount w-100 py-3" data-amount="25">$25</button>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <button type="button" class="btn btn-outline-primary donation-amount w-100 py-3" data-amount="50">$50</button>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <button type="button" class="btn btn-outline-primary donation-amount w-100 py-3" data-amount="100">$100</button>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <button type="button" class="btn btn-outline-primary donation-amount w-100 py-3" data-amount="250">$250</button>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <label class="form-label">Or enter a custom amount</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">$</span>
-                                        <input type="number" class="form-control" id="custom-amount" min="1" placeholder="Other amount">
-                                    </div>
-                                </div>
-                                <button id="next-to-frequency" class="btn btn-primary w-100">Next</button>
-                            </div>
-                            
-                            <!-- Step 2: Donation Frequency -->
-                            <div id="step-frequency" class="donation-step" style="display: none;">
-                                <h3 class="h5 mb-3">2. Select Donation Frequency</h3>
-                                <div class="row g-2 mb-4">
-                                    <div class="col-md-6">
-                                        <button type="button" class="btn btn-outline-primary frequency-option w-100 py-3 active" data-frequency="one-time">
-                                            <i class="fas fa-gift me-2"></i> One-Time
-                                        </button>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="button" class="btn btn-outline-primary frequency-option w-100 py-3" data-frequency="monthly">
-                                            <i class="fas fa-calendar-alt me-2"></i> Monthly
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <button id="back-to-amount" class="btn btn-outline-secondary">Back</button>
-                                    <button id="next-to-details" class="btn btn-primary">Next</button>
-                                </div>
-                            </div>
-                            
-                            <!-- Step 3: Donor Details -->
-                            <div id="step-details" class="donation-step" style="display: none;">
-                                <h3 class="h5 mb-3">3. Your Information</h3>
-                                <form id="donor-info-form">
-                                    <div class="row g-3 mb-4">
-                                        <div class="col-md-6">
-                                            <label class="form-label">First Name</label>
-                                            <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Last Name</label>
-                                            <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Email</label>
-                                            <input type="email" class="form-control" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Phone</label>
-                                            <input type="tel" class="form-control">
-                                        </div>
-                                        <div class="col-12">
-                                            <label class="form-label">Address</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label">City</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label">Province</label>
-                                            <select class="form-select">
-                                                <option>Manitoba</option>
-                                                <option>Alberta</option>
-                                                <option>British Columbia</option>
-                                                <option>Ontario</option>
-                                                <option>Quebec</option>
-                                                <option>Other</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label">Postal Code</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <button id="back-to-frequency" class="btn btn-outline-secondary">Back</button>
-                                        <button id="next-to-payment" class="btn btn-primary">Next</button>
-                                    </div>
-                                </form>
-                            </div>
-                            
-                            <!-- Step 4: Payment Method -->
-                            <div id="step-payment" class="donation-step" style="display: none;">
-                                <h3 class="h5 mb-3">4. Payment Method</h3>
-                                <div class="row g-2 mb-4">
-                                    <div class="col-md-6">
-                                        <div class="payment-method p-3 rounded active" data-method="credit">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
-                                                <label class="form-check-label fw-bold" for="creditCard">
-                                                    <i class="far fa-credit-card me-2"></i> Credit Card
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="payment-method p-3 rounded" data-method="paypal">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
-                                                <label class="form-check-label fw-bold" for="paypal">
-                                                    <i class="fab fa-paypal me-2"></i> PayPal
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Credit Card Form -->
-                                <div id="credit-card-form">
-                                    <div class="row g-3 mb-4">
-                                        <div class="col-12">
-                                            <label class="form-label">Card Number</label>
-                                            <input type="text" class="form-control" placeholder="1234 5678 9012 3456">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Expiration Date</label>
-                                            <input type="text" class="form-control" placeholder="MM/YY">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Security Code</label>
-                                            <input type="text" class="form-control" placeholder="CVC">
-                                        </div>
-                                        <div class="col-12">
-                                            <label class="form-label">Name on Card</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- PayPal Button (hidden by default) -->
-                                <div id="paypal-button-container" style="display: none;"></div>
-                                
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" id="savePayment" checked>
-                                    <label class="form-check-label" for="savePayment">
-                                        Save payment method for future donations
-                                    </label>
-                                </div>
-                                
-                                <div class="d-flex justify-content-between">
-                                    <button id="back-to-details" class="btn btn-outline-secondary">Back</button>
-                                    <button id="submit-donation" class="btn btn-accent">Donate Now</button>
-                                </div>
-                            </div>
-                            
-                            <!-- Thank You Message (hidden by default) -->
-                            <div id="thank-you" class="thank-you-message text-center py-4">
-                                <div class="mb-4">
-                                    <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
-                                </div>
-                                <h3 class="mb-3">Thank You for Your Generous Support!</h3>
-                                <p class="mb-4">Your donation receipt has been sent to your email. You've made a real difference in our community.</p>
-                                <a href="index.html" class="btn btn-primary">Return to Homepage</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+        <a href="index.html" class="flex items-center justify-center mb-6">
+            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-14 mr-4">
+            <span class="text-2xl font-bold">HATA Humanitarian</span>
+        </a>
+        <div class="flex justify-center space-x-8 my-8">
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-linkedin-in text-2xl"></i></a>
         </div>
-    </section>
+      <p class="text-sm text-gray-400">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
+    </div>
+  </footer>
 
-     <!-- Footer -->
-    <script src="loadFooter.js"></script>
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top btn btn-primary rounded-circle position-fixed">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
-     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        // Initialize AOS animation
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            // Back to top button
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-        
-        // Back to top button
-        document.querySelector('.back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Counter animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-count');
-                const count = +counter.innerText;
-                const increment = target / speed;
-                
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-        
-        // Intersection Observer for counter animation
-        const counterSection = document.querySelector('#impact');
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateCounters();
-                observer.unobserve(counterSection);
-            }
-        }, { threshold: 0.5 });
-        
-        observer.observe(counterSection);
-        
-        // Donation amount selection
-        document.querySelectorAll('.donation-amount').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.donation-amount').forEach(btn => {
-                    btn.classList.remove('btn-primary');
-                    btn.classList.add('btn-outline-primary');
-                });
-                this.classList.remove('btn-outline-primary');
-                this.classList.add('btn-primary');
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-    <!-- Bootstrap JS Bundle (required for tabs to work) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- PayPal SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=CAD"></script>
-    
-    <script>
-        // Donation Form Logic
-        $(document).ready(function() {
-            let donationData = {
-                amount: 0,
-                frequency: 'one-time',
-                donorInfo: {},
-                paymentMethod: 'credit'
-            };
-            
-            // Amount Selection
-            $('.donation-amount').click(function() {
-                $('.donation-amount').removeClass('active');
-                $(this).addClass('active');
-                donationData.amount = $(this).data('amount');
-                $('#custom-amount').val('');
-            });
-            
-            $('#custom-amount').on('input', function() {
-                if($(this).val()) {
-                    $('.donation-amount').removeClass('active');
-                    donationData.amount = parseFloat($(this).val());
-                }
-            });
-            
-            // Frequency Selection
-            $('.frequency-option').click(function() {
-                $('.frequency-option').removeClass('active');
-                $(this).addClass('active');
-                donationData.frequency = $(this).data('frequency');
-            });
-            
-            // Payment Method Selection
-            $('.payment-method').click(function() {
-                $('.payment-method').removeClass('active');
-                $(this).addClass('active');
-                donationData.paymentMethod = $(this).data('method');
-                
-                if(donationData.paymentMethod === 'credit') {
-                    $('#credit-card-form').show();
-                    $('#paypal-button-container').hide();
-                } else {
-                    $('#credit-card-form').hide();
-                    $('#paypal-button-container').show();
-                }
-            });
-            
-            // Form Navigation
-            $('#next-to-frequency').click(function() {
-                if(donationData.amount > 0) {
-                    $('#step-amount').hide();
-                    $('#step-frequency').show();
-                } else {
-                    alert('Please select or enter a donation amount');
-                }
-            });
-            
-            $('#next-to-details').click(function() {
-                $('#step-frequency').hide();
-                $('#step-details').show();
-            });
-            
-            $('#next-to-payment').click(function() {
-                if($('#donor-info-form')[0].checkValidity()) {
-                    // Save donor info
-                    donationData.donorInfo = {
-                        firstName: $('#donor-info-form input:nth-child(1)').val(),
-                        lastName: $('#donor-info-form input:nth-child(2)').val(),
-                        email: $('#donor-info-form input:nth-child(3)').val(),
-                        phone: $('#donor-info-form input:nth-child(4)').val(),
-                        address: $('#donor-info-form input:nth-child(5)').val(),
-                        city: $('#donor-info-form input:nth-child(6)').val(),
-                        province: $('#donor-info-form select').val(),
-                        postalCode: $('#donor-info-form input:nth-child(8)').val()
-                    };
-                    
-                    $('#step-details').hide();
-                    $('#step-payment').show();
-                } else {
-                    $('#donor-info-form')[0].reportValidity();
-                }
-            });
-            
-            // Back buttons
-            $('#back-to-amount').click(function() {
-                $('#step-frequency').hide();
-                $('#step-amount').show();
-            });
-            
-            $('#back-to-frequency').click(function() {
-                $('#step-details').hide();
-                $('#step-frequency').show();
-            });
-            
-            $('#back-to-details').click(function() {
-                $('#step-payment').hide();
-                $('#step-details').show();
-            });
-            
-            // Process Donation
-            $('#submit-donation').click(function() {
-                if(donationData.paymentMethod === 'credit') {
-                    // Validate credit card fields
-                    const cardNumber = $('#credit-card-form input:nth-child(1)').val();
-                    const expDate = $('#credit-card-form input:nth-child(2)').val();
-                    const cvc = $('#credit-card-form input:nth-child(3)').val();
-                    const nameOnCard = $('#credit-card-form input:nth-child(4)').val();
-                    
-                    if(!cardNumber || !expDate || !cvc || !nameOnCard) {
-                        alert('Please complete all credit card fields');
-                        return;
-                    }
-                    
-                    // Process via Stripe API (example)
-                    processStripePayment();
-                } else {
-                    // PayPal processing handled by their SDK
-                }
-            });
-            
-            // Stripe Payment Processing (example)
-            function processStripePayment() {
-                // In a real implementation, you would:
-                // 1. Create a payment intent with your backend
-                // 2. Confirm the card payment
-                // 3. Handle success/error responses
-                
-                // Simulate API call
-                console.log('Processing donation:', donationData);
-                
-                // Show success message
-                $('#step-payment').hide();
-                $('#thank-you').show();
-                
-                // In a real implementation, you would send this data to your backend
-                const donationRecord = {
-                    amount: donationData.amount,
-                    frequency: donationData.frequency,
-                    donor: donationData.donorInfo,
-                    paymentMethod: donationData.paymentMethod,
-                    date: new Date().toISOString()
-                };
-                
-                // Example API call (replace with your actual endpoint)
-                /*
-                fetch('https://your-api-endpoint.com/donations', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(donationRecord),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                    $('#step-payment').hide();
-                    $('#thank-you').show();
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    alert('There was an error processing your donation. Please try again.');
-                });
-                */
-            }
-            
-            // PayPal Integration
-            paypal.Buttons({
-                createOrder: function(data, actions) {
-                    return actions.order.create({
-                        purchase_units: [{
-                            amount: {
-                                value: donationData.amount.toString(),
-                                currency_code: 'CAD'
-                            }
-                        }]
-                    });
-                },
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        console.log('Transaction completed by ' + details.payer.name.given_name);
-                        
-                        // Send donation data to your backend
-                        const paypalDonation = {
-                            amount: donationData.amount,
-                            frequency: donationData.frequency,
-                            donor: donationData.donorInfo,
-                            paymentMethod: 'paypal',
-                            paypalTransactionId: details.id,
-                            date: new Date().toISOString()
-                        };
-                        
-                        // Example API call (replace with your actual endpoint)
-                        /*
-                        fetch('https://your-api-endpoint.com/donations', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(paypalDonation),
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Success:', data);
-                            $('#step-payment').hide();
-                            $('#thank-you').show();
-                        });
-                        */
-                        
-                        // For demo purposes:
-                        $('#step-payment').hide();
-                        $('#thank-you').show();
-                    });
-                }
-            }).render('#paypal-button-container');
-        });
-    </script>
 </body>
 </html>

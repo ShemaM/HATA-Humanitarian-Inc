@@ -1,370 +1,167 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Addiction Recovery Program | HATA Humanitarian</title>
-    <meta name="description" content="Our program offers a new path to recovery for youth in Winnipeg, providing mindset education, collaborative care, and community support.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <link rel="icon" type="image/png" href="https://placehold.co/32x32/1E3A8A/FFFFFF?text=H">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-    <style>
-        :root {
-            --primary: #1E3A8A;   /* Deep, trustworthy indigo */
-            --secondary: #3B5998; /* Softer, approachable blue */
-            --accent: #C5A66A;    /* Warm, hopeful gold */
-            --light: #F8FAFC;
-            --dark: #1E293B;
-            --text: #334155;
-            --border-color: #e2e8f0;
-            --transition: all 0.4s ease-in-out;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text);
-            line-height: 1.8;
-            background-color: #fff;
-            overflow-x: hidden;
-        }
-        
-        /* Accessibility: Skip Link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--accent);
-            color: white;
-            padding: 8px;
-            z-index: 10000;
-            transition: top 0.3s;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 400;
-            color: var(--dark);
-            letter-spacing: 0.5px;
-        }
-
-        .btn {
-            padding: 14px 35px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .btn-primary { background-color: var(--primary); border-color: var(--primary); color: #fff; }
-        .btn-primary:hover { background-color: var(--secondary); border-color: var(--secondary); color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(30, 58, 138, 0.2); }
-        .btn-accent { background-color: var(--accent); border-color: var(--accent); color: var(--dark); }
-        .btn-accent:hover { background-color: #B39254; border-color: #B39254; color: var(--dark); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(197, 166, 106, 0.2); }
-        
-        
-
-        /* Hero Section */
-        .hero { padding: 120px 0; background-color: var(--light); }
-        .hero h1 { font-size: 4rem; line-height: 1.2; }
-        .hero .lead { font-size: 1.2rem; color: var(--text); }
-        .hero-image-container { position: relative; height: 100%; }
-        .hero-image { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
-        .hero-stats { margin-top: 2.5rem; }
-        .hero-stat { display: flex; align-items: center; }
-        .hero-stat i { font-size: 1.5rem; color: var(--primary); margin-right: 10px; }
-
-        /* Section Styling */
-        .section { padding: 100px 0; }
-        .section-subtitle { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
-        
-        /* About Section */
-        .about-quote { font-family: 'DM Serif Display', serif; font-size: 1.75rem; line-height: 1.5; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 2rem; }
-
-        /* Activities Section */
-        .activities-section { background-color: var(--dark); }
-        .activity-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 2.5rem 0; transition: background-color 0.3s; }
-        .activity-item:last-child { border-bottom: none; }
-        .activity-item:hover { background-color: rgba(255,255,255,0.03); }
-        .activity-number { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--accent); line-height: 1; }
-        .activity-item h3 { color: #fff; }
-        .activity-item p { color: rgba(255,255,255,0.7); }
-
-        /* Testimonials Section */
-        .testimonial-card { background-color: #fff; padding: 2rem; border-radius: 12px; height: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
-        .testimonial-card .card-body { flex-grow: 1; }
-        .testimonial-card img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
-        .testimonial-text { font-style: italic; }
-
-        /* FAQ Section */
-        .faq-section .accordion-item { border: 1px solid var(--border-color); border-radius: 8px !important; margin-bottom: 1rem; }
-        .faq-section .accordion-button { font-weight: 600; color: var(--dark); }
-        .faq-section .accordion-button:not(.collapsed) { background-color: var(--light); color: var(--primary); box-shadow: none; }
-        .faq-section .accordion-button:focus { box-shadow: none; }
-
-        /* Partners Section */
-        .partners-section { background-color: var(--light); }
-        .partner-logo { max-width: 150px; filter: grayscale(100%); transition: filter 0.3s; opacity: 0.7; }
-        .partner-logo:hover { filter: grayscale(0%); opacity: 1; }
-
-        /* Footer */
-        .footer { background-color: var(--dark); color: rgba(255,255,255,0.6); padding: 80px 0 30px; }
-        .footer h5 { color: #fff; }
-        .footer a { color: rgba(255,255,255,0.6); transition: color 0.3s; }
-        .footer a:hover { color: var(--accent); }
-        .footer .social-icons a { font-size: 1.2rem; }
-
-        @media (max-width: 991.98px) {
-            .hero h1 { font-size: 3rem; }
-            .hero { padding: 80px 0; }
-            .hero-image-container { margin-top: 3rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addiction Recovery Program | HATA Humanitarian Inc.</title>
+  <meta name="description" content="Our Addiction-Free Program provides a supportive and non-judgmental environment for youth in Winnipeg to overcome addiction. Learn more about our holistic approach to recovery.">
+  <meta name="keywords" content="addiction recovery, youth support, Winnipeg, non-profit, addiction-free, recovery program, mental health, community support">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <meta name="description" content="Our Addiction-Free Program provides a supportive and non-judgmental environment for youth in Winnipeg to overcome addiction. Learn more about our holistic approach to recovery.">
+  <meta name="keywords" content="addiction recovery, youth support, Winnipeg, non-profit, addiction-free, recovery program, mental health, community support">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
+  <style>
+    :root {
+      --hata-red: #D80032;
+      --hata-blue: #0A2463;
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+    .bg-hata-red { background-color: var(--hata-red); }
+    .text-hata-red { color: var(--hata-red); }
+    .bg-hata-blue { background-color: var(--hata-blue); }
+    .text-hata-blue { color: var(--hata-blue); }
+  </style>
 </head>
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="bg-gray-50 text-gray-800">
 
-    <header id="header-placeholder"></header>
-    <script src="loadHeader.js"></script>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-12 mr-3">
+        <span class="text-xl font-bold text-hata-blue">HATA Humanitarian</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="hover:text-hata-red">About</a>
+        <a href="index.html#programs" class="hover:text-hata-red">Programs</a>
+        <a href="index.html#team" class="hover:text-hata-red">Team</a>
+        <a href="index.html#contact" class="hover:text-hata-red">Contact</a>
+        <a href="donate.html" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate Now</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars text-2xl text-hata-blue"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <a href="index.html#about" class="block px-6 py-3 hover:bg-gray-100">About</a>
+      <a href="index.html#programs" class="block px-6 py-3 hover:bg-gray-100">Programs</a>
+      <a href="index.html#team" class="block px-6 py-3 hover:bg-gray-100">Team</a>
+      <a href="index.html#contact" class="block px-6 py-3 hover:bg-gray-100">Contact</a>
+      <a href="donate.html" class="block px-6 py-3 text-hata-red hover:bg-gray-100">Donate Now</a>
+    </div>
+  </header>
 
-    <main id="main-content">
-        <header class="hero">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <h1 class="mb-4 mt-4">A New Path to Recovery & Resilience.</h1>
-                        <p class="lead mb-4">Our Addiction-Free Program supports youth by addressing immediate needs and fostering the long-term mindset change required for a successful recovery journey.</p>
-                        <div class="hero-stats d-flex flex-wrap">
-                            <div class="hero-stat me-4 mb-2"><i class="fas fa-users"></i><span>For Youth in Winnipeg</span></div>
-                            <div class="hero-stat me-4 mb-2"><i class="fas fa-shield-alt"></i><span>Confidential & Free</span></div>
-                            <div class="hero-stat me-4 mb-2"><i class="fas fa-hand-holding-heart"></i><span>Holistic Support</span></div>
-                        </div>
-                        <a href="#activities" class="btn btn-primary btn-lg mt-4">Learn About Our Approach</a>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <div class="hero-image-container">
-                            <img src="https://images.unsplash.com/photo-1556484687-3063616463de?q=80&w=2940&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x600/e0e0e0/cccccc?text=Supportive+Community';" alt="A supportive group therapy session with diverse individuals." class="hero-image" loading="eager">
-                        </div>
-                    </div>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative h-[500px]">
+      <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('images/addiction-recovery.jpg');"></div>
+      <div class="absolute inset-0 bg-hata-blue opacity-80"></div>
+      <div class="relative container mx-auto px-6 h-full flex flex-col justify-center text-white">
+        <h1 class="text-5xl md:text-6xl font-bold">Addiction Recovery Program</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-3xl">A New Path to Recovery & Resilience.</p>
+      </div>
+    </section>
+
+    <!-- Program Details Section -->
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-hata-blue mb-6">Program Goals</h2>
+            <p class="text-gray-600 text-lg mb-4">Our Addiction-Free Program supports youth by addressing immediate needs and fostering the long-term mindset change required for a successful recovery journey. We aim to create a supportive and non-judgmental environment where youth can heal and build a foundation for a healthy future.</p>
+            <ul class="list-disc list-inside text-gray-600 text-lg space-y-2">
+                <li>Provide a safe and supportive space for recovery.</li>
+                <li>Equip youth with coping mechanisms and life skills.</li>
+                <li>Foster a sense of community and belonging.</li>
+                <li>Promote long-term well-being and resilience.</li>
+            </ul>
+          </div>
+          <div>
+            <img src="images/recovery group.jpg" alt="Supportive Community" class="rounded-lg shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-5xl font-bold text-hata-blue">Our Approach</h2>
+                <p class="mt-6 text-lg text-gray-600">We are dedicated to transforming lives by fostering well-being and supporting recovery. Our holistic approach aims to build a community where everyone feels valued and empowered.</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-brain text-5xl text-hata-red mb-6"></i>
+                    <h3 class="text-2xl font-bold text-hata-blue mb-4">Mindset Education</h3>
+                    <p class="text-gray-600">One-on-one and group mindset education sessions designed to equip youth with the tools they need to overcome challenges and build emotional resilience.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-users text-5xl text-hata-red mb-6"></i>
+                    <h3 class="text-2xl font-bold text-hata-blue mb-4">Collaborative Care</h3>
+                    <p class="text-gray-600">We work in close collaboration with rehabilitation services and mental health professionals to ensure our youth have access to comprehensive, professional care.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <i class="fas fa-hand-holding-heart text-5xl text-hata-red mb-6"></i>
+                    <h3 class="text-2xl font-bold text-hata-blue mb-4">Community Outreach</h3>
+                    <p class="text-gray-600">Dynamic community outreach programs designed to build trust, foster a sense of belonging, and support individuals throughout their entire recovery journey.</p>
                 </div>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <section id="about" class="section">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-5" data-aos="fade-right">
-                        <p class="section-subtitle">Our Core Belief</p>
-                        <h2 class="mb-4">A Foundation of Dignity & Purpose.</h2>
-                        <p>At the heart of our work is a powerful belief: that every individual, regardless of their circumstances, deserves the opportunity to thrive with dignity, resilience, and purpose. We exist to bridge the gaps in addiction recovery care, ensuring no one is left behind.</p>
-                    </div>
-                    <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
-                        <blockquote class="about-quote">
-                            "Our work is guided by compassion, evidence-based approaches, and a commitment to equity. We aim to create lasting transformation not just for individuals, but for entire communities."
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
 
-        <section id="activities" class="activities-section section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-up">
-                        <p class="section-subtitle" style="color: var(--accent);">Our Approach</p>
-                        <h2 class="mb-4 text-white">How We Support Recovery.</h2>
-                        <p class="text-white-50">We are dedicated to transforming lives by fostering well-being and supporting recovery. Our holistic approach aims to build a community where everyone feels valued and empowered.</p>
-                    </div>
-                    <div class="col-lg-7 offset-lg-1" data-aos="fade-up" data-aos-delay="100">
-                        <div class="activity-item">
-                            <div class="d-flex align-items-start">
-                                <div class="activity-number me-4">01</div>
-                                <div>
-                                    <h3 class="mb-2">Mindset Education</h3>
-                                    <p>One-on-one and group mindset education sessions designed to equip youth with the tools they need to overcome challenges and build emotional resilience.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="d-flex align-items-start">
-                                <div class="activity-number me-4">02</div>
-                                <div>
-                                    <h3 class="mb-2">Collaborative Care</h3>
-                                    <p>We work in close collaboration with rehabilitation services and mental health professionals to ensure our youth have access to comprehensive, professional care.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="d-flex align-items-start">
-                                <div class="activity-number me-4">03</div>
-                                <div>
-                                    <h3 class="mb-2">Community Outreach</h3>
-                                    <p>Dynamic community outreach programs designed to build trust, foster a sense of belonging, and support individuals throughout their entire recovery journey.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Get Involved Section -->
+    <section class="py-24 bg-hata-blue text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold">Get Involved</h2>
+            <p class="mt-6 text-lg opacity-80 max-w-2xl mx-auto">Your support can make a real difference in the lives of youth struggling with addiction. Join us in our mission to build a community of hope and recovery.</p>
+            <a href="donate.html" class="mt-10 inline-block bg-hata-red text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-transform transform hover:scale-105">Support This Program</a>
+        </div>
+    </section>
 
-        <section id="testimonials" class="section">
-            <div class="container">
-                <div class="text-center col-lg-8 mx-auto" data-aos="fade-up">
-                    <p class="section-subtitle">Voices from Our Community</p>
-                    <h2 class="mb-5">What Participants Are Saying.</h2>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="testimonial-card">
-                            <div class="card-body">
-                                <p class="testimonial-text">"I finally found a place where I didn't feel judged. The support here is real, and it’s made all the difference in my recovery."</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
-                                <img src="https://placehold.co/60x60/1E3A8A/FFFFFF?text=M" alt="Avatar for Maya L." loading="lazy">
-                                <div class="ms-3">
-                                    <h5 class="mb-0 fs-6">Maya L.</h5>
-                                    <small class="text-muted">Program Participant</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="testimonial-card">
-                            <div class="card-body">
-                                <p class="testimonial-text">"The mindset education taught me new ways to cope with stress and triggers. It’s given me tools I'll use for the rest of my life."</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
-                                <img src="https://placehold.co/60x60/C5A66A/FFFFFF?text=D" alt="Avatar for David R." loading="lazy">
-                                <div class="ms-3">
-                                    <h5 class="mb-0 fs-6">David R.</h5>
-                                    <small class="text-muted">Program Participant</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="testimonial-card">
-                            <div class="card-body">
-                                <p class="testimonial-text">"It's not just about stopping drug use; it's about building a new life. HATA helped me find purpose again."</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 pt-0 d-flex align-items-center">
-                                <img src="https://placehold.co/60x60/1E293B/FFFFFF?text=S" alt="Avatar for Sarah Chen" loading="lazy">
-                                <div class="ms-3">
-                                    <h5 class="mb-0 fs-6">Sarah C.</h5>
-                                    <small class="text-muted">Program Alumna</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  </main>
 
-        <!--
-        <section id="faq" class="section bg-light faq-section">
-            <div class="container">
-                <div class="text-center col-lg-8 mx-auto" data-aos="fade-up">
-                    <p class="section-subtitle">Got Questions?</p>
-                    <h2 class="mb-5">Frequently Asked Questions.</h2>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Who is eligible for the recovery program?</button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">This program is designed for youth in Winnipeg who are struggling with addiction and are seeking support for long-term recovery. If you are unsure about your eligibility, please contact us.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How much does the program cost?</button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">Our program is completely free of charge. We believe that financial barriers should never prevent someone from accessing the help they need.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Is the program confidential?</button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">Absolutely. Confidentiality is fundamental to our work. We provide a safe, private, and non-judgmental environment for all participants. Your information will never be shared without your explicit consent, except where required by law to ensure safety.</div>
-                                </div>
-                            </div>
-                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How do I get help or sign up?</button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">Taking the first step is easy and courageous. You can contact us through our website's contact page, send us an email, or call us directly. Our team is ready to listen and help you begin your journey.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
--->
-      
-    </main>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+        <a href="index.html" class="flex items-center justify-center mb-6">
+            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-14 mr-4">
+            <span class="text-2xl font-bold">HATA Humanitarian</span>
+        </a>
+        <div class="flex justify-center space-x-8 my-8">
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-linkedin-in text-2xl"></i></a>
+        </div>
+      <p class="text-sm text-gray-400">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
+    </div>
+  </footer>
 
-   <script src="loadFooter.js"></script>
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 50
-        });
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            // Check if navbar exists to prevent errors during dynamic loading
-            if (navbar) {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            }
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#' || href.length < 2) return;
-                
-                e.preventDefault();
-                const targetElement = document.querySelector(href);
-                if (targetElement) {
-                    const navbar = document.querySelector('.navbar');
-                    const navbarHeight = navbar ? navbar.offsetHeight : 70; // Default height if navbar not found
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - (navbarHeight + 20);
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
