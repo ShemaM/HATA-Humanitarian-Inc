@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - HATA Humanitarian Inc.</title>
+  <meta name="description" content="Get in touch with HATA Humanitarian Inc. Reach out via email, phone, or visit us in Winnipeg. We'd love to hear from you.">
+  <meta name="keywords" content="HATA Humanitarian contact, Winnipeg non-profit contact, mental health support contact, addiction recovery help">
+  <meta name="author" content="HATA Humanitarian Inc.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --hata-red: #D80032;
+      --hata-blue: #0A2463;
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+    .bg-hata-red { background-color: var(--hata-red); }
+    .text-hata-red { color: var(--hata-red); }
+    .bg-hata-blue { background-color: var(--hata-blue); }
+    .text-hata-blue { color: var(--hata-blue); }
+    
+    .contact-card {
+      transition: all 0.3s ease;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <div class="w-10 h-10 bg-hata-blue rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+          H
+        </div>
+        <span class="text-xl font-bold text-hata-blue">HATA Humanitarian Inc.</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="hover:text-hata-red">About</a>
+        <a href="index.html#programs" class="hover:text-hata-red">Programs</a>
+        <a href="index.html#team" class="hover:text-hata-red">Team</a>
+        <a href="contact.html" class="text-hata-red font-semibold">Contact</a>
+        <a href="donate.html" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate Now</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none text-gray-700" aria-label="Toggle mobile menu" title="Toggle mobile menu">
+  <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+</button>
+
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <a href="index.html#about" class="block px-6 py-3 hover:bg-gray-100 text-gray-700">About</a>
+      <a href="index.html#programs" class="block px-6 py-3 hover:bg-gray-100 text-gray-700">Programs</a>
+      <a href="index.html#team" class="block px-6 py-3 hover:bg-gray-100 text-gray-700">Team</a>
+      <a href="contact.html" class="block px-6 py-3 text-hata-red hover:bg-gray-100 font-semibold">Contact</a>
+      <a href="donate.html" class="block px-6 py-3 text-hata-red hover:bg-gray-100">Donate Now</a>
+    </div>
+  </header>
+
+  <!-- Contact Hero Section -->
+  <section class="relative h-96 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-hata-blue to-hata-red opacity-90"></div>
+    <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
+        <h1 class="text-4xl md:text-5xl font-bold">Get in Touch</h1>
+        <p class="mt-6 text-lg md:text-xl max-w-3xl">
+          We'd love to hear from you. Whether you have a question, a suggestion, or you want to get involved, please don't hesitate to reach out.
+        </p>
+    </div>
+  </section>
+
+  <!-- Contact Methods Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-hata-blue">How to Reach Us</h2>
+        <p class="mt-6 text-lg text-gray-600">
+          There are several ways to connect with our team. Choose the method that works best for you.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Email -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-envelope text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">Email Us</h3>
+          <p class="text-gray-600 mb-4">Send us a message directly</p>
+          <a href="mailto:pacificmuhumure3@gmail.com" class="text-hata-red font-semibold hover:underline">
+            📤Email Us Now
+          </a>
+        </div>
+        
+        
+        
+        <!-- WhatsApp -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fab fa-whatsapp text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">WhatsApp</h3>
+          <p class="text-gray-600 mb-4">Message us on WhatsApp</p>
+          <a href="https://wa.me/14319988892" class="text-hata-red font-semibold hover:underline" target="_blank">
+            Send a Message
+          </a>
+        </div>
+        
+        <!-- Visit -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-map-marker-alt text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">Visit Us</h3>
+          <p class="text-gray-600 mb-4">Come see us in Winnipeg</p>
+          <p class="text-hata-red font-semibold">
+            Winnipeg, Manitoba
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-hata-blue">Frequently Asked Questions</h2>
+        <p class="mt-6 text-lg text-gray-600">
+          Quick answers to common questions we receive.
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="text-xl font-semibold text-hata-blue mb-2">How quickly will I receive a response to my inquiry?</h3>
+          <p class="text-gray-600">We strive to respond to all inquiries within 24-48 hours during business days. For urgent matters, please call us directly.</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="text-xl font-semibold text-hata-blue mb-2">Do you offer emergency support services?</h3>
+          <p class="text-gray-600">While we provide various support programs, we are not an emergency service. If you are in crisis, please call 911 or reach out to specialized emergency services in our community.</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="text-xl font-semibold text-hata-blue mb-2">Can I volunteer with HATA Humanitarian?</h3>
+          <p class="text-gray-600">Yes! We welcome volunteers. Please indicate your interest in volunteering when you contact us, and we'll provide you with more information about current opportunities.</p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="text-xl font-semibold text-hata-blue mb-2">Are you available for speaking engagements?</h3>
+          <p class="text-gray-600">Yes, our team members are available for speaking engagements, workshops, and community events. Please contact us with details about your event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+        <a href="index.html" class="flex items-center justify-center mb-6">
+            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-14 mr-4">
+            <span class="text-2xl font-bold">HATA Humanitarian Inc.</span>
+        </a>
+        <div class="flex justify-center space-x-8 my-8">
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+            <a href="javascript:void(0)" class="hover:text-hata-red transition-colors"><i class="fab fa-linkedin-in text-2xl"></i></a>
+        </div>
+      <p class="text-sm text-gray-400">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/contact.js"></script>
+
+</body>
+</html>

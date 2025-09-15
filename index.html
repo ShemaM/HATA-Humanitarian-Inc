@@ -44,6 +44,152 @@
         cursor: pointer;
     }
     
+    /* Partners Section Styles */
+        .partners-section {
+            padding: 80px 0;
+            background-color: #f9fbfd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .partners-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .partners-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .partners-header h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .partners-header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .partner-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            padding: 25px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .partner-logo {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .partner-logo-placeholder {
+            width: 180px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 6px;
+            color: white;
+        }
+        
+        .partner-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+        
+        .partner-card p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .partner-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            margin-top: auto;
+        }
+        
+        .partner-link:hover {
+            color: #2980b9;
+        }
+        
+        .partner-link i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .partners-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .cta-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .partners-header h2 {
+                font-size: 2rem;
+            }
+            
+            .partners-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -80,10 +226,14 @@
 
   <!-- Hero Section -->
   <section id="home" class="relative h-[800px] overflow-hidden">
-    <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
-      <source src="images/video background.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+   <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+  <source src="images/video%20background.mp4" type="video/mp4">
+  <track src="captions-en.vtt" kind="subtitles" srclang="en" label="English Subtitles" default>
+  <track src="description-en.vtt" kind="descriptions" srclang="en" label="English Descriptions">
+  Your browser does not support the video tag.
+</video>
+
+
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
         <h1 class="text-5xl md:text-7xl font-bold">Building a Community of Hope</h1>
@@ -218,39 +368,116 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-24 bg-gray-100">
+  <!-- Contact Methods Section -->
+  <section class="py-16 bg-white">
     <div class="container mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto">
-            <h2 class="text-5xl font-bold text-hata-blue">Get in Touch</h2>
-            <p class="mt-6 text-lg text-gray-600">
-              We'd love to hear from you. Whether you have a question, a suggestion, or you want to get involved, please don't hesitate to reach out.
-            </p>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-hata-blue">How to Reach Us</h2>
+        <p class="mt-6 text-lg text-gray-600">
+          There are several ways to connect with our team. Choose the method that works best for you.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Email -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-envelope text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">Email Us</h3>
+          <p class="text-gray-600 mb-4">Send us a message directly</p>
+          <a href="mailto:pacificmuhumure3@gmail.com" class="text-hata-red font-semibold hover:underline">
+            📤Email Us Now
+          </a>
         </div>
-        <div class="mt-16 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-3xl font-bold text-hata-blue mb-6">Direct Messaging</h3>
-                <div class="space-y-6">
-                    <a href="mailto:info@hatahumanitarian.org" class="flex items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <i class="fas fa-envelope text-4xl text-hata-red"></i>
-                        <div class="ml-6">
-                            <h4 class="text-2xl font-bold">Email Us</h4>
-                            <p class="text-gray-600">info@hatahumanitarian.org</p>
-                        </div>
-                    </a>
-                    <a href="https://wa.me/14319988892" class="flex items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <i class="fab fa-whatsapp text-4xl text-green-500"></i>
-                        <div class="ml-6">
-                            <h4 class="text-2xl font-bold">WhatsApp</h4>
-                            <p class="text-gray-600">+1 (431) 998-8892</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <img src="images/winnipeg.jpg" alt="Map of Winnipeg" class="rounded-lg shadow-2xl">
-            </div>
+        
+        <!-- Phone -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-phone text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">Call Us</h3>
+          <p class="text-gray-600 mb-4">Speak with our team directly</p>
+          <a href="tel:+14319988892" class="text-hata-red font-semibold hover:underline">
+            📞Call
+          </a>
         </div>
+        
+        <!-- WhatsApp -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fab fa-whatsapp text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">WhatsApp</h3>
+          <p class="text-gray-600 mb-4">Message us on WhatsApp</p>
+          <a href="https://wa.me/14319988892" class="text-hata-red font-semibold hover:underline" target="_blank">
+            Send a Message
+          </a>
+        </div>
+        
+        <!-- Visit -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-map-marker-alt text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">Visit Us</h3>
+          <p class="text-gray-600 mb-4">Come see us in Winnipeg</p>
+          <p class="text-hata-red font-semibold">
+            Winnipeg, Manitoba
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Partners Section -->
+  <!-- Partners Grid Section -->
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-hata-blue animate-slide-up">Our Collaborative Network</h2>
+        <p class="mt-6 text-lg text-gray-600 animate-slide-up">
+          We're grateful for the organizations and institutions that support our mission and work alongside us to create positive change.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Partner 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300 animate-slide-up">
+            <div class="h-40 flex items-center justify-center mb-6">
+                <img src="images/Computers.jpg" alt="Computers For Schools Manitoba" class="max-h-24 max-w-full">
+            </div>
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">Computers For Schools Manitoba</h3>
+            <p class="text-gray-600 mb-6">Providing technology access to support our digital skills training programs for newcomers and youth in the community.</p>
+            <a href="https://www.c4smb.ca/" class="text-hata-red font-semibold flex items-center hover:underline" target="_blank" rel="noopener">
+                Visit website <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+        </div>
+        
+        <!-- Partner 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300 animate-slide-up">
+            <div class="h-40 flex items-center justify-center mb-6">
+                <img src="images/Chambers.png" alt="Winnipeg Chamber of Commerce" class="max-h-24 max-w-full">
+            </div>
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">Winnipeg Chamber of Commerce</h3>
+            <p class="text-gray-600 mb-6">Connecting us with local businesses to create employment opportunities for newcomers and support community initiatives.</p>
+            <a href="https://www.winnipeg-chamber.com/" class="text-hata-red font-semibold flex items-center hover:underline" target="_blank" rel="noopener">
+                Visit website <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+        </div>
+        
+        <!-- Partner 3 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300 animate-slide-up">
+            <div class="h-40 flex items-center justify-center mb-6">
+                <img src="images/cropped-U_multicultural_logo.webp" alt="U Multicultural" class="max-h-24 max-w-full">
+            </div>
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">U Multicultural</h3>
+            <p class="text-gray-600 mb-6">Amplifying our message through their media platform and helping us reach diverse communities across Winnipeg.</p>
+            <a href="https://u-channel.ca/" class="text-hata-red font-semibold flex items-center hover:underline" target="_blank" rel="noopener">
+                Visit website <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -271,27 +498,7 @@
     </div>
   </footer>
 
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    const teamMemberButtons = document.querySelectorAll('.team-member-button');
-    teamMemberButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const bio = button.nextElementSibling;
-        bio.classList.toggle('hidden');
-        if (bio.classList.contains('hidden')) {
-            button.textContent = 'Read Bio';
-        } else {
-            button.textContent = 'Close Bio';
-        }
-      });
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 </html>
