@@ -208,6 +208,8 @@ function getFeaturedActivities() {
 }
 
 async function handleApi(req, res, url) {
+  const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
+  
   if (req.method === "GET" && url.pathname === "/api/health") {
     return sendJson(res, 200, { status: "ok" });
   }
@@ -220,20 +222,31 @@ async function handleApi(req, res, url) {
   }
 
   if (req.method === "POST" && url.pathname === "/api/contact") {
+    // Rate limiting for contact form
+    if (isRateLimited(clientIp)) {
+      return sendJson(res, 429, { status: "error", message: "Too many requests. Please try again later." });
+    }
+    
     try {
       const body = await readBody(req);
       const payload = JSON.parse(body || "{}");
-      const name = String(payload.name || "").trim();
-      const email = String(payload.email || "").trim();
-      const message = String(payload.message || "").trim();
+      const name = String(payload.name || "").trim().slice(0, 200);
+      const email = String(payload.email || "").trim().slice(0, 200);
+      const message = String(payload.message || "").trim().slice(0, 5000);
 
       if (!name || !email || !message) {
         return sendJson(res, 400, { status: "error", message: "Please provide name, email, and message." });
       }
+      
+      // Basic email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return sendJson(res, 400, { status: "error", message: "Please provide a valid email address." });
+      }
 
       // For now: log the message. Swap this out for an email provider later.
       // eslint-disable-next-line no-console
-      console.log("[contact]", { name, email, message });
+      console.log("[contact]", { name, email, message: message.slice(0, 100) + "..." });
 
       return sendJson(res, 200, { status: "success", message: "Thanks — we received your message." });
     } catch {
