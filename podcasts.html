@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roots and Oases Podcast | HATA Humanitarian Inc.</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body class="bg-slate-50 text-gray-900">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-hata-blue shadow">
+    Skip to content
+  </a>
+
+  <header class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <nav class="container mx-auto hata-gutter py-3 sm:py-4 flex items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-3 min-w-0">
+        <img src="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Humanitarian Inc. Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white p-1 ring-1 ring-black/5">
+        <span class="min-w-0">
+          <span class="block text-base sm:text-lg font-extrabold text-hata-blue tracking-tight truncate">HATA Humanitarian Inc.</span>
+          <span class="block text-xs sm:text-sm text-gray-500 truncate">Community-led support</span>
+        </span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="/#about" class="hover:text-hata-red">About</a>
+        <a href="/#programs" class="hover:text-hata-red">Programs</a>
+        <a href="/#team" class="hover:text-hata-red">Team</a>
+        <a href="/podcasts" class="text-hata-red font-semibold">Podcasts</a>
+        <a href="/contact" class="hover:text-hata-red">Contact</a>
+        <a href="/partners" class="hover:text-hata-red">Partners</a>
+        <a href="/donate" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate</a>
+      </div>
+      <div class="lg:hidden">
+        <button id="mobile-menu-button" class="rounded-full p-2 ring-1 ring-gray-200 hover:bg-gray-50 transition focus:outline-none" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars text-2xl text-hata-blue"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100">
+      <a href="/#about" class="block hata-gutter py-3 hover:bg-gray-100">About</a>
+      <a href="/#programs" class="block hata-gutter py-3 hover:bg-gray-100">Programs</a>
+      <a href="/#team" class="block hata-gutter py-3 hover:bg-gray-100">Team</a>
+      <a href="/podcasts" class="block hata-gutter py-3 text-hata-red hover:bg-gray-100 font-semibold">Podcasts</a>
+      <a href="/contact" class="block hata-gutter py-3 hover:bg-gray-100">Contact</a>
+      <a href="/partners" class="block hata-gutter py-3 hover:bg-gray-100">Partners</a>
+      <a href="/donate" class="block hata-gutter py-3 text-hata-red hover:bg-gray-100 font-semibold">Donate</a>
+    </div>
+  </header>
+
+  <nav aria-label="Breadcrumb" class="hata-breadcrumbs bg-white/70 border-b border-gray-100">
+    <div class="container mx-auto hata-gutter py-3">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+        <li><a href="/" class="font-semibold text-hata-blue">Home</a></li>
+        <li aria-hidden="true" class="text-gray-400">/</li>
+        <li aria-current="page" class="text-gray-700 font-semibold">Podcasts</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Podcast Hero -->
+    <section class="relative overflow-hidden bg-slate-950 text-white">
+      <img src="/images/mental%20health%20workshop.jpg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-25">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/65 to-slate-950"></div>
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-red-500/30 blur-3xl"></div>
+      <div class="absolute -bottom-28 -right-24 h-80 w-80 rounded-full bg-blue-500/30 blur-3xl"></div>
+
+      <div class="relative container mx-auto hata-gutter py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 text-center lg:text-left">
+            <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold text-white ring-1 ring-white/15">
+              <i class="fa-solid fa-microphone-lines text-hata-red"></i>
+              <span>HATA Podcast</span>
+            </p>
+            <h1 class="mt-6 text-4xl md:text-6xl font-bold tracking-tight">Roots &amp; Oases</h1>
+            <p class="mt-3 text-lg md:text-xl font-semibold text-white/90">
+              Stories, tools, and conversations that move communities forward
+            </p>
+            <p class="mt-6 text-base md:text-lg text-white/85 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              We share practical mental well-being guidance, recovery-centered support, and newcomer integration stories—made for people doing real life.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <a href="#trailer" class="inline-flex items-center justify-center rounded-full bg-hata-red px-8 py-3.5 font-semibold text-white hover:bg-red-700 transition">
+                <i class="fa-solid fa-circle-play mr-2"></i>
+                Watch trailer
+              </a>
+              <a href="mailto:info@hatahumanitarian.org?subject=Roots%20and%20Oases%20updates" class="inline-flex items-center justify-center rounded-full bg-white/10 px-8 py-3.5 font-semibold text-white ring-1 ring-white/15 hover:bg-white/15 transition">
+                Email for updates
+              </a>
+            </div>
+
+            <div class="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-sm text-white/80">
+              <span class="font-semibold text-white/90">Listen on:</span>
+              <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 ring-1 ring-white/10"><i class="fa-brands fa-spotify"></i> Spotify <span class="text-white/60">(coming soon)</span></span>
+              <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 ring-1 ring-white/10"><i class="fa-brands fa-apple"></i> Apple Podcasts <span class="text-white/60">(coming soon)</span></span>
+              <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 ring-1 ring-white/10"><i class="fa-brands fa-youtube"></i> YouTube <span class="text-white/60">(coming soon)</span></span>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-5">
+            <div class="rounded-3xl bg-white/5 ring-1 ring-white/15 shadow-2xl backdrop-blur p-5 md:p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-xs font-extrabold tracking-wider text-white/80">BREAKING</p>
+                  <h2 class="mt-2 text-2xl font-bold">Now streaming: trailer</h2>
+                  <p class="mt-2 text-sm text-white/80 leading-relaxed">Roots &amp; Oases is warming up. Watch the trailer and share it with your community.</p>
+                </div>
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-hata-red text-white shadow-lg">
+                  <i class="fa-solid fa-headphones"></i>
+                </div>
+              </div>
+
+              <div class="mt-6 overflow-hidden rounded-2xl bg-black/30 ring-1 ring-white/10">
+                <video class="w-full aspect-video max-h-[260px] bg-black" autoplay muted loop playsinline preload="metadata" poster="/images/background-image.jpg" aria-label="Roots and Oases podcast trailer">
+                  <source src="/images/Roots%20and%20Oases.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href="mailto:info@hatahumanitarian.org?subject=Roots%20and%20Oases%20updates" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-hata-blue hover:bg-slate-100 transition">
+                  Email for updates
+                </a>
+                <a href="/donate" class="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-2.5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/15 transition">
+                  Support the work
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Themes -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto hata-gutter">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">What we’ll talk about</h2>
+            <p class="mt-4 text-base md:text-lg text-gray-600 leading-relaxed">
+              High-energy conversations with practical takeaways. Built for youth, newcomers, families, and anyone looking for hope and tools.
+            </p>
+          </div>
+          <a href="mailto:info@hatahumanitarian.org?subject=Roots%20and%20Oases%20updates" class="inline-flex items-center justify-center rounded-full bg-hata-red px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 transition">
+            Email for updates
+          </a>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+            <div class="relative h-44 overflow-hidden">
+              <img src="/images/Mental%20Health.jpg" alt="Mental health support" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
+                <i class="fa-solid fa-brain text-hata-red"></i>
+                <span>Mental well-being</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-hata-blue">Stigma-Free Stories</h3>
+              <p class="mt-2 text-sm text-gray-600 leading-relaxed">Real conversations about resilience, coping tools, and breaking stigma—without judgment.</p>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+            <div class="relative h-44 overflow-hidden">
+              <img src="/images/happy%20immigrant%20family.jpg" alt="Newcomer integration" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
+                <i class="fa-solid fa-people-group text-hata-red"></i>
+                <span>Newcomer voices</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-hata-blue">Roots & New Beginnings</h3>
+              <p class="mt-2 text-sm text-gray-600 leading-relaxed">Stories, tips, and support that help newcomers navigate systems and feel at home.</p>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+            <div class="relative h-44 overflow-hidden">
+              <img src="/images/recovery%20group.jpg" alt="Addiction recovery support group" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
+                <i class="fa-solid fa-hand-holding-heart text-hata-red"></i>
+                <span>Recovery</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-hata-blue">Recovery & Resilience</h3>
+              <p class="mt-2 text-sm text-gray-600 leading-relaxed">Mindset education, support pathways, and community stories that keep hope alive.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trailer + CTA -->
+    <section id="trailer" class="py-20 bg-gradient-to-b from-slate-50 to-white">
+      <div class="container mx-auto hata-gutter">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5">
+            <p class="text-sm font-semibold text-hata-red">Podcast trailer</p>
+            <h2 class="mt-3 text-3xl md:text-4xl font-bold text-hata-blue">A quick preview of what’s coming</h2>
+            <p class="mt-5 text-base md:text-lg text-gray-600 leading-relaxed">
+              Short clips, practical tools, and community-centered conversations—made to be shared.
+            </p>
+
+            <ul class="mt-8 space-y-3 text-sm text-gray-700">
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Real stories and real-life support</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Guest conversations with community leaders</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Resources shared after each episode</span></li>
+            </ul>
+
+            <div class="mt-10 flex flex-wrap gap-3">
+              <a href="mailto:info@hatahumanitarian.org?subject=Roots%20and%20Oases%20updates" class="inline-flex items-center justify-center rounded-full bg-hata-red px-8 py-3 font-semibold text-white hover:bg-red-700 transition">
+                Email for updates
+              </a>
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-8 py-3 font-semibold text-hata-blue hover:bg-gray-50 transition">
+                Support our programs
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="rounded-3xl bg-white shadow-2xl ring-1 ring-black/5 overflow-hidden max-w-2xl mx-auto">
+              <div class="flex items-center justify-between gap-4 p-5 border-b border-gray-100">
+                <div class="min-w-0">
+                  <p class="text-xs font-extrabold tracking-wider text-hata-red">NOW PLAYING</p>
+                  <p class="mt-1 font-semibold text-hata-blue truncate">Roots & Oases — Trailer</p>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-gray-500">
+                  <i class="fa-solid fa-wave-square text-hata-blue"></i>
+                  <span>Audio-first stories</span>
+                </div>
+              </div>
+              <video class="w-full aspect-video max-h-[360px] bg-black" controls preload="metadata" poster="/images/background-image.jpg">
+                <source src="/images/Roots%20and%20Oases.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-white">
+    <div class="border-t border-white/10">
+      <div class="container mx-auto hata-gutter py-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <a href="/" class="flex items-center gap-3">
+              <img src="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Humanitarian Inc. Logo" class="h-12 w-12 rounded-xl bg-white p-1">
+              <div class="min-w-0">
+                <p class="text-lg font-bold leading-tight">HATA Humanitarian Inc.</p>
+                <p class="mt-1 text-sm text-white/70">Winnipeg • Community-led support</p>
+              </div>
+            </a>
+
+            <p class="mt-5 text-sm leading-relaxed text-white/75">
+              Promoting mental well-being, supporting addiction recovery, and facilitating social inclusion in Winnipeg.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full bg-hata-red px-6 py-3 text-sm font-semibold text-white hover:bg-red-700 transition">
+                Donate
+              </a>
+              <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/15 transition">
+                Contact
+              </a>
+            </div>
+
+            <div class="mt-6 flex items-center gap-4">
+              <a href="https://www.linkedin.com/company/humanitarian-aid-through-advocacy-hata/about/" class="text-white/75 hover:text-white transition-colors" target="_blank" rel="noopener" aria-label="HATA on LinkedIn">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="mailto:info@hatahumanitarian.org" class="text-white/75 hover:text-white transition-colors" aria-label="Email HATA">
+                <i class="fa-solid fa-envelope text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 grid grid-cols-2 gap-10 sm:grid-cols-3">
+            <div>
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Quick Links</h2>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li><a href="/" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li><a href="/#about" class="text-white/70 hover:text-white transition-colors">About</a></li>
+                <li><a href="/#programs" class="text-white/70 hover:text-white transition-colors">Programs</a></li>
+                <li><a href="/podcasts" class="text-white/70 hover:text-white transition-colors">Podcasts</a></li>
+                <li><a href="/partners" class="text-white/70 hover:text-white transition-colors">Partners</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Programs</h2>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li><a href="/programs/mental-health" class="text-white/70 hover:text-white transition-colors">Stigma-Free &amp; Mental Health</a></li>
+                <li><a href="/programs/newcomer" class="text-white/70 hover:text-white transition-colors">Diversity &amp; Inclusion</a></li>
+                <li><a href="/programs/addiction-recovery" class="text-white/70 hover:text-white transition-colors">Addiction-Free Program</a></li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Get In Touch</h2>
+              <ul class="mt-4 space-y-3 text-sm text-white/70">
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-location-dot mt-0.5 text-white/50"></i>
+                  <span>Winnipeg, Manitoba</span>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-envelope mt-0.5 text-white/50"></i>
+                  <a href="mailto:info@hatahumanitarian.org" class="hover:text-white transition-colors">info@hatahumanitarian.org</a>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-bell mt-0.5 text-white/50"></i>
+                  <a href="/contact" class="hover:text-white transition-colors">Get updates</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 md:p-8">
+          <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="inline-flex items-center rounded-full bg-hata-red px-2.5 py-0.5 text-[11px] font-extrabold tracking-wider text-white">BREAKING</span>
+                <span class="text-xs font-semibold text-white/75">A fresh milestone is coming</span>
+              </div>
+              <h2 class="mt-3 text-2xl font-bold">Celebrate a win with us</h2>
+              <p class="mt-2 text-sm text-white/75 leading-relaxed">
+                Support the next phase of our community programs and stay updated as we share new successes.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-hata-blue hover:bg-slate-100 transition">
+                Get updates
+              </a>
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full bg-hata-red px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 transition">
+                Donate now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>&copy; 2026 HATA Humanitarian Inc. All rights reserved.</p>
+          <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <a href="/sitemap.xml" class="hover:text-white transition-colors">Sitemap</a>
+            <span class="text-white/25" aria-hidden="true">•</span>
+            <a href="/contact" class="hover:text-white transition-colors">Contact</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

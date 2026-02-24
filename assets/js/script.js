@@ -102,7 +102,7 @@ if (contactForm) {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/api/contact', { // Backend URL
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -131,7 +131,7 @@ if (donateForm) {
     const amount = parseInt(document.getElementById('amount').value) * 100; // Convert to cents
 
     try {
-      const response = await fetch('http://localhost:3000/api/donate/create-checkout-session', { // Backend URL
+      const response = await fetch('/api/donate/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

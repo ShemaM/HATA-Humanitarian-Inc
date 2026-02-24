@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
+  <link rel="icon" href="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/site.css">
   <style>
     :root {
       --hata-red: #D80032;
@@ -29,58 +30,78 @@
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-hata-blue shadow">
+    Skip to content
+  </a>
 
   <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="flex items-center">
-        <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-12 mr-3">
-        <span class="text-xl font-bold text-hata-blue">HATA Humanitarian</span>
+  <header class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <nav class="container mx-auto hata-gutter py-3 sm:py-4 flex items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-3 min-w-0">
+        <img src="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white p-1 ring-1 ring-black/5">
+        <span class="min-w-0">
+          <span class="block text-base sm:text-lg font-extrabold text-hata-blue tracking-tight truncate">HATA Humanitarian Inc.</span>
+          <span class="block text-xs sm:text-sm text-gray-500 truncate">Community-led support</span>
+        </span>
       </a>
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="index.html#about" class="hover:text-hata-red">About</a>
-        <a href="index.html#programs" class="hover:text-hata-red">Programs</a>
-        <a href="index.html#team" class="hover:text-hata-red">Team</a>
-        <a href="Contact.html" class="hover:text-hata-red">Contact</a>
-        <a href="Partners.html" class="hover:text-hata-red">Partners</a>
-        <a href="donate.html" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate Now</a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="/#about" class="hover:text-hata-red">About</a>
+        <a href="/#programs" class="hover:text-hata-red">Programs</a>
+        <a href="/#team" class="hover:text-hata-red">Team</a>
+        <a href="/podcasts" class="hover:text-hata-red">Podcasts</a>
+        <a href="/contact" class="hover:text-hata-red">Contact</a>
+        <a href="/partners" class="hover:text-hata-red">Partners</a>
+        <a href="/donate" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate</a>
       </div>
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle mobile menu">
+      <div class="lg:hidden">
+        <button id="mobile-menu-button" class="rounded-full p-2 ring-1 ring-gray-200 hover:bg-gray-50 transition focus:outline-none" aria-label="Toggle mobile menu">
           <i class="fas fa-bars text-2xl text-hata-blue"></i>
         </button>
       </div>
     </nav>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white">
-      <a href="index.html#about" class="block px-6 py-3 hover:bg-gray-100">About</a>
-      <a href="index.html#programs" class="block px-6 py-3 hover:bg-gray-100">Programs</a>
-      <a href="index.html#team" class="block px-6 py-3 hover:bg-gray-100">Team</a>
-      <a href="Contact.html" class="block px-6 py-3 hover:bg-gray-100">Contact</a>
-      <a href="Partners.html" class="block px-6 py-3 hover:bg-gray-100">Partners</a>
-      <a href="donate.html" class="block px-6 py-3 text-hata-red hover:bg-gray-100">Donate Now</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100">
+      <a href="/#about" class="block hata-gutter py-3 hover:bg-gray-100">About</a>
+      <a href="/#programs" class="block hata-gutter py-3 hover:bg-gray-100">Programs</a>
+      <a href="/#team" class="block hata-gutter py-3 hover:bg-gray-100">Team</a>
+      <a href="/podcasts" class="block hata-gutter py-3 hover:bg-gray-100">Podcasts</a>
+      <a href="/contact" class="block hata-gutter py-3 hover:bg-gray-100">Contact</a>
+      <a href="/partners" class="block hata-gutter py-3 hover:bg-gray-100">Partners</a>
+      <a href="/donate" class="block hata-gutter py-3 text-hata-red hover:bg-gray-100 font-semibold">Donate</a>
     </div>
   </header>
 
-  <main>
+  <nav aria-label="Breadcrumb" class="hata-breadcrumbs bg-white/70 border-b border-gray-100">
+    <div class="container mx-auto hata-gutter py-3">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+        <li><a href="/" class="font-semibold text-hata-blue">Home</a></li>
+        <li aria-hidden="true" class="text-gray-400">/</li>
+        <li><a href="/#programs" class="font-semibold text-hata-blue">Programs</a></li>
+        <li aria-hidden="true" class="text-gray-400">/</li>
+        <li aria-current="page" class="text-gray-700 font-semibold">Addiction recovery</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main">
     <!-- Hero Section -->
     <section class="relative h-[500px]">
-      <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('images/addiction-recovery.jpg');"></div>
-      <div class="absolute inset-0 bg-hata-blue opacity-80"></div>
-      <div class="relative container mx-auto px-6 h-full flex flex-col justify-center text-white">
-        <h1 class="text-5xl md:text-6xl font-bold">Addiction Recovery Program</h1>
-        <p class="mt-4 text-lg md:text-xl max-w-3xl">A New Path to Recovery & Resilience.</p>
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/addiction-recovery.jpg');"></div>
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative container mx-auto hata-gutter h-full flex flex-col justify-center text-white">
+        <h1 class="text-4xl md:text-5xl font-bold">Addiction recovery program</h1>
+        <p class="mt-4 text-base md:text-lg max-w-3xl text-white/90 leading-relaxed">A new path to recovery and resilience.</p>
       </div>
     </section>
 
     <!-- Program Details Section -->
     <section class="py-24">
-      <div class="container mx-auto px-6">
+      <div class="container mx-auto hata-gutter">
         <div class="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-4xl font-bold text-hata-blue mb-6">Program Goals</h2>
-            <p class="text-gray-600 text-lg mb-4">Our Addiction-Free Program supports youth by addressing immediate needs and fostering the long-term mindset change required for a successful recovery journey. We aim to create a supportive and non-judgmental environment where youth can heal and build a foundation for a healthy future.</p>
-            <ul class="list-disc list-inside text-gray-600 text-lg space-y-2">
+            <h2 class="text-2xl md:text-3xl font-bold text-hata-blue mb-6">Program goals</h2>
+            <p class="text-gray-600 text-base md:text-lg mb-4 leading-relaxed">Our Addiction-Free Program supports youth by addressing immediate needs and fostering the long-term mindset change required for a successful recovery journey.</p>
+            <ul class="list-disc list-inside text-gray-600 text-base md:text-lg space-y-2">
                 <li>Provide a safe and supportive space for recovery.</li>
                 <li>Equip youth with coping mechanisms and life skills.</li>
                 <li>Foster a sense of community and belonging.</li>
@@ -88,7 +109,7 @@
             </ul>
           </div>
           <div>
-            <img src="images/recovery group.jpg" alt="A group of people sitting in a circle and talking in a support group." class="rounded-lg shadow-2xl">
+            <img src="/images/recovery group.jpg" alt="A group of people sitting in a circle and talking in a support group." class="rounded-lg shadow-2xl">
           </div>
         </div>
       </div>
@@ -96,24 +117,24 @@
 
     <!-- Our Approach Section -->
     <section class="py-24 bg-white">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto hata-gutter">
             <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-5xl font-bold text-hata-blue">Our Approach</h2>
-                <p class="mt-6 text-lg text-gray-600">We are dedicated to transforming lives by fostering well-being and supporting recovery. Our holistic approach aims to build a community where everyone feels valued and empowered.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">Our approach</h2>
+                <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">We are dedicated to transforming lives by fostering well-being and supporting recovery.</p>
             </div>
             <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
                 <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
-                    <i class="fas fa-brain text-5xl text-hata-red mb-6"></i>
+                    <i class="fas fa-brain text-4xl text-hata-red mb-6"></i>
                     <h3 class="text-2xl font-bold text-hata-blue mb-4">Mindset Education</h3>
                     <p class="text-gray-600">One-on-one and group mindset education sessions designed to equip youth with the tools they need to overcome challenges and build emotional resilience.</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
-                    <i class="fas fa-users text-5xl text-hata-red mb-6"></i>
+                    <i class="fas fa-users text-4xl text-hata-red mb-6"></i>
                     <h3 class="text-2xl font-bold text-hata-blue mb-4">Collaborative Care</h3>
                     <p class="text-gray-600">We work in close collaboration with rehabilitation services and mental health professionals to ensure our youth have access to comprehensive, professional care.</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
-                    <i class="fas fa-hand-holding-heart text-5xl text-hata-red mb-6"></i>
+                    <i class="fas fa-hand-holding-heart text-4xl text-hata-red mb-6"></i>
                     <h3 class="text-2xl font-bold text-hata-blue mb-4">Community Outreach</h3>
                     <p class="text-gray-600">Dynamic community outreach programs designed to build trust, foster a sense of belonging, and support individuals throughout their entire recovery journey.</p>
                 </div>
@@ -124,38 +145,130 @@
     
 
     <!-- Get Involved Section -->
-    <section class="py-24 bg-hata-blue text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold">Get Involved</h2>
-            <p class="mt-6 text-lg opacity-80 max-w-2xl mx-auto">Your support can make a real difference in the lives of youth struggling with addiction. Join us in our mission to build a community of hope and recovery.</p>
-            <a href="donate.html" class="mt-10 inline-block bg-hata-red text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-transform transform hover:scale-105">Support This Program</a>
+    <section class="py-20 bg-gradient-to-r from-blue-50 via-white to-red-50">
+        <div class="container mx-auto hata-gutter text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">Get involved</h2>
+            <p class="mt-6 text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">Your support can make a real difference in the lives of youth struggling with addiction. Join us in our mission to build a community of hope and recovery.</p>
+            <a href="/donate" class="mt-10 inline-block bg-hata-red text-white px-10 py-4 rounded-full font-bold text-base md:text-lg hover:bg-red-700 transition-transform transform hover:scale-105">Support this program</a>
         </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-16">
-    <div class="container mx-auto px-6 text-center">
-        <a href="index.html" class="flex items-center justify-center mb-6">
-            <img src="images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-14 mr-4">
-            <span class="text-2xl font-bold">HATA Humanitarian</span>
-        </a>
-        <div class="flex justify-center space-x-8 my-8">
-            <a href="https://www.linkedin.com/company/humanitarian-aid-through-advocacy-hata/about/" class="hover:text-hata-red transition-colors" target="_blank"><i class="fab fa-linkedin-in text-2xl"></i></a>
+  <footer class="bg-slate-950 text-white">
+    <div class="border-t border-white/10">
+      <div class="container mx-auto hata-gutter py-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <a href="/" class="flex items-center gap-3">
+              <img src="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Humanitarian Inc. Logo" class="h-12 w-12 rounded-xl bg-white p-1">
+              <div class="min-w-0">
+                <p class="text-lg font-bold leading-tight">HATA Humanitarian Inc.</p>
+                <p class="mt-1 text-sm text-white/70">Winnipeg • Community-led support</p>
+              </div>
+            </a>
+
+            <p class="mt-5 text-sm leading-relaxed text-white/75">
+              Promoting mental well-being, supporting addiction recovery, and facilitating social inclusion in Winnipeg.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full bg-hata-red px-6 py-3 text-sm font-semibold text-white hover:bg-red-700 transition">
+                Donate
+              </a>
+              <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/15 transition">
+                Contact
+              </a>
+            </div>
+
+            <div class="mt-6 flex items-center gap-4">
+              <a href="https://www.linkedin.com/company/humanitarian-aid-through-advocacy-hata/about/" class="text-white/75 hover:text-white transition-colors" target="_blank" rel="noopener" aria-label="HATA on LinkedIn">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="mailto:info@hatahumanitarian.org" class="text-white/75 hover:text-white transition-colors" aria-label="Email HATA">
+                <i class="fa-solid fa-envelope text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 grid grid-cols-2 gap-10 sm:grid-cols-3">
+            <div>
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Quick Links</h2>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li><a href="/" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li><a href="/#about" class="text-white/70 hover:text-white transition-colors">About</a></li>
+                <li><a href="/#programs" class="text-white/70 hover:text-white transition-colors">Programs</a></li>
+                <li><a href="/podcasts" class="text-white/70 hover:text-white transition-colors">Podcasts</a></li>
+                <li><a href="/partners" class="text-white/70 hover:text-white transition-colors">Partners</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Programs</h2>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li><a href="/programs/mental-health" class="text-white/70 hover:text-white transition-colors">Stigma-Free &amp; Mental Health</a></li>
+                <li><a href="/programs/newcomer" class="text-white/70 hover:text-white transition-colors">Diversity &amp; Inclusion</a></li>
+                <li><a href="/programs/addiction-recovery" class="text-white/70 hover:text-white transition-colors">Addiction-Free Program</a></li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Get In Touch</h2>
+              <ul class="mt-4 space-y-3 text-sm text-white/70">
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-location-dot mt-0.5 text-white/50"></i>
+                  <span>Winnipeg, Manitoba</span>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-envelope mt-0.5 text-white/50"></i>
+                  <a href="mailto:info@hatahumanitarian.org" class="hover:text-white transition-colors">info@hatahumanitarian.org</a>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-bell mt-0.5 text-white/50"></i>
+                  <a href="/contact" class="hover:text-white transition-colors">Get updates</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      <p class="text-sm text-gray-400">&copy; 2025 HATA Humanitarian Inc. All rights reserved.</p>
+
+        <div class="mt-12 rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 md:p-8">
+          <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="inline-flex items-center rounded-full bg-hata-red px-2.5 py-0.5 text-[11px] font-extrabold tracking-wider text-white">BREAKING</span>
+                <span class="text-xs font-semibold text-white/75">A fresh milestone is coming</span>
+              </div>
+              <h2 class="mt-3 text-2xl font-bold">Celebrate a win with us</h2>
+              <p class="mt-2 text-sm text-white/75 leading-relaxed">
+                Support the next phase of our community programs and stay updated as we share new successes.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-hata-blue hover:bg-slate-100 transition">
+                Get updates
+              </a>
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full bg-hata-red px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 transition">
+                Donate now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>&copy; 2026 HATA Humanitarian Inc. All rights reserved.</p>
+          <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <a href="/sitemap.xml" class="hover:text-white transition-colors">Sitemap</a>
+            <span class="text-white/25" aria-hidden="true">•</span>
+            <a href="/contact" class="hover:text-white transition-colors">Contact</a>
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+  <script src="/assets/js/main.js"></script>
 
 </body>
 </html>

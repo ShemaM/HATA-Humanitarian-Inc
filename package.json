@@ -1,0 +1,10 @@
+{
+  "name": "hata-humanitarian-inc",
+  "private": true,
+  "version": "0.0.0",
+  "description": "HATA Humanitarian Inc. website",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
+

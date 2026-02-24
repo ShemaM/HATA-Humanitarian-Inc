@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate | HATA Humanitarian Inc.</title>
-  
+  <title>Get Updates | HATA Humanitarian Inc.</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,31 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
   <link rel="stylesheet" href="/assets/css/site.css">
-  <style>
-    :root {
-      --hata-red: #D80032;
-      --hata-blue: #0A2463;
-    }
-    body {
-        font-family: 'Lato', sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Playfair Display', serif;
-    }
-    .bg-hata-red { background-color: var(--hata-red); }
-    .text-hata-red { color: var(--hata-red); }
-    .bg-hata-blue { background-color: var(--hata-blue); }
-    .text-hata-blue { color: var(--hata-blue); }
-  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-gray-900">
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-hata-blue shadow">
     Skip to content
   </a>
 
-  <!-- Header -->
   <header class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100">
-    <nav class="container mx-auto hata-gutter py-3 sm:py-4 flex items-center justify-between gap-4" aria-label="Main navigation">
+    <nav class="container mx-auto hata-gutter py-3 sm:py-4 flex items-center justify-between gap-4">
       <a href="/" class="flex items-center gap-3 min-w-0">
         <img src="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Humanitarian Inc. Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white p-1 ring-1 ring-black/5">
         <span class="min-w-0">
@@ -55,11 +38,11 @@
       </div>
       <div class="lg:hidden">
         <button id="mobile-menu-button" class="rounded-full p-2 ring-1 ring-gray-200 hover:bg-gray-50 transition focus:outline-none" aria-label="Toggle mobile menu">
-          <i class="fas fa-bars text-2xl text-hata-blue"></i>
+          <i class="fas fa-bars text-2xl text-hata-blue" aria-hidden="true"></i>
         </button>
       </div>
     </nav>
-    <!-- Mobile Menu -->
+
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100">
       <a href="/#about" class="block hata-gutter py-3 hover:bg-gray-100">About</a>
       <a href="/#programs" class="block hata-gutter py-3 hover:bg-gray-100">Programs</a>
@@ -76,56 +59,92 @@
       <ol class="flex flex-wrap items-center gap-2 text-sm text-gray-600">
         <li><a href="/" class="font-semibold text-hata-blue">Home</a></li>
         <li aria-hidden="true" class="text-gray-400">/</li>
-        <li aria-current="page" class="text-gray-700 font-semibold">Donate</li>
+        <li aria-current="page" class="text-gray-700 font-semibold">Get updates</li>
       </ol>
     </div>
   </nav>
 
   <main id="main">
-    <!-- Hero Section -->
-    <section class="relative h-[460px]">
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/humanitarian.jpg');"></div>
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="relative container mx-auto hata-gutter h-full flex flex-col justify-center text-white">
-        <h1 class="text-4xl md:text-5xl font-bold">Your support changes lives</h1>
-        <p class="mt-4 text-base md:text-lg max-w-3xl text-white/90 leading-relaxed">Every donation helps us empower communities through mental health support, newcomer integration, and addiction recovery programs.</p>
+    <section class="relative overflow-hidden bg-slate-950 text-white">
+      <img src="/images/community%20impact.jpg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-25">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-950/70 to-slate-950"></div>
+      <div class="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-red-500/25 blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-28 h-80 w-80 rounded-full bg-blue-500/25 blur-3xl"></div>
+
+      <div class="relative container mx-auto hata-gutter py-20">
+        <div class="max-w-3xl">
+          <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold text-white ring-1 ring-white/15">
+            <i class="fa-solid fa-bell text-hata-red"></i>
+            <span>Updates hub</span>
+          </p>
+          <h1 class="mt-6 text-4xl md:text-6xl font-bold tracking-tight">Get updates from HATA</h1>
+          <p class="mt-6 text-base md:text-lg text-white/85 leading-relaxed">
+            Stay in the loop on program events, new podcast drops (Roots &amp; Oases), and community announcements.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Donation Section -->
-    <section class="py-24">
+    <section class="py-20 bg-white">
       <div class="container mx-auto hata-gutter">
-        <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">Make a difference today</h2>
-          <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">Your generous contribution will directly support our programs and help us create a lasting impact in the community. We rely on the support of individuals like you to continue our work.</p>
-        </div>
-        <div class="mt-16 max-w-2xl mx-auto bg-white rounded-xl shadow-2xl p-10 text-center">
-          <h3 class="text-3xl font-bold text-hata-blue mb-4">Donate Securely Online</h3>
-          <p class="text-gray-600 mb-8">Click the button below to make a secure online donation through our trusted payment partner. Your donation is processed securely and you will receive a receipt for your contribution.</p>
-          <a href="#" class="inline-block bg-hata-red text-white px-12 py-4 rounded-full font-bold text-base md:text-lg hover:bg-red-700 transition-transform transform hover:scale-105">Donate Now via PayPal</a>
-          
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">Choose how you want updates</h2>
+            <p class="mt-4 text-base md:text-lg text-gray-600 leading-relaxed">
+              The site is static right now, so we’ll connect you to the best channels for updates.
+            </p>
+          </div>
         </div>
 
-        <div class="mt-24 text-center max-w-3xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-hata-blue">Other ways to give</h2>
-            <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">We also accept donations through e-transfer or by mail. Please see the details below.</p>
-        </div>
-        <div class="mt-16 grid md:grid-cols-2 gap-12">
-            <div class="bg-white rounded-xl shadow-2xl p-10">
-                <h3 class="text-3xl font-bold text-hata-blue mb-4">E-Transfer</h3>
-                <p class="text-gray-600">You can send an e-transfer to our email address: <a href="mailto:info@hatahumanitarian.org" class="text-hata-red hover:underline">info@hatahumanitarian.org</a>. Please include your full name and address in the message for tax receipt purposes.</p>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <article class="rounded-3xl bg-white shadow-xl ring-1 ring-black/5 p-6">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-50 text-hata-red">
+              <i class="fa-solid fa-envelope text-xl"></i>
             </div>
-            <div class="bg-white rounded-xl shadow-2xl p-10">
-                <h3 class="text-3xl font-bold text-hata-blue mb-4">By Mail</h3>
-                <p class="text-gray-600">You can mail a check to our office address: <br> 127 Clonard Avenue, Winnipeg, MB. <br> Please make checks payable to HATA Humanitarian Inc.</p>
+            <h3 class="mt-4 text-xl font-bold text-hata-blue">Email updates</h3>
+            <p class="mt-2 text-sm text-gray-600 leading-relaxed">Send us a quick email and we’ll share the latest updates.</p>
+            <a href="mailto:info@hatahumanitarian.org?subject=Updates%20request" class="mt-5 inline-flex items-center justify-center rounded-full bg-hata-red px-6 py-2.5 text-sm font-semibold text-white hover:bg-red-700 transition">
+              Email us
+            </a>
+          </article>
+
+          <article class="rounded-3xl bg-white shadow-xl ring-1 ring-black/5 p-6">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-hata-blue">
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
             </div>
+            <h3 class="mt-4 text-xl font-bold text-hata-blue">LinkedIn</h3>
+            <p class="mt-2 text-sm text-gray-600 leading-relaxed">Follow our page for public announcements and wins.</p>
+            <a href="https://www.linkedin.com/company/humanitarian-aid-through-advocacy-hata/about/" target="_blank" rel="noopener" class="mt-5 inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-2.5 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+              Follow
+            </a>
+          </article>
+
+          <article class="rounded-3xl bg-white shadow-xl ring-1 ring-black/5 p-6">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-hata-blue">
+              <i class="fa-solid fa-microphone-lines text-xl"></i>
+            </div>
+            <h3 class="mt-4 text-xl font-bold text-hata-blue">Roots &amp; Oases</h3>
+            <p class="mt-2 text-sm text-gray-600 leading-relaxed">Watch the trailer and check back for new episodes.</p>
+            <a href="/podcasts" class="mt-5 inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-2.5 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+              Go to podcasts
+            </a>
+          </article>
+
+          <article class="rounded-3xl bg-white shadow-xl ring-1 ring-black/5 p-6">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-hata-blue">
+              <i class="fa-solid fa-calendar-days text-xl"></i>
+            </div>
+            <h3 class="mt-4 text-xl font-bold text-hata-blue">Events</h3>
+            <p class="mt-2 text-sm text-gray-600 leading-relaxed">See featured events and announcements on the home page.</p>
+            <a href="/#home" class="mt-5 inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-2.5 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+              View highlights
+            </a>
+          </article>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer class="bg-slate-950 text-white">
     <div class="border-t border-white/10">
       <div class="container mx-auto hata-gutter py-16">
@@ -196,7 +215,7 @@
                 </li>
                 <li class="flex gap-3">
                   <i class="fa-solid fa-bell mt-0.5 text-white/50"></i>
-                  <a href="/contact" class="hover:text-white transition-colors">Get updates</a>
+                  <a href="/updates" class="hover:text-white transition-colors">Get updates</a>
                 </li>
               </ul>
             </div>
@@ -208,15 +227,15 @@
             <div class="min-w-0">
               <div class="flex flex-wrap items-center gap-3">
                 <span class="inline-flex items-center rounded-full bg-hata-red px-2.5 py-0.5 text-[11px] font-extrabold tracking-wider text-white">BREAKING</span>
-                <span class="text-xs font-semibold text-white/75">A fresh milestone is coming</span>
+                <span class="text-xs font-semibold text-white/75">Stay in the loop</span>
               </div>
-              <h2 class="mt-3 text-2xl font-bold">Celebrate a win with us</h2>
+              <h2 class="mt-3 text-2xl font-bold">Get updates in one place</h2>
               <p class="mt-2 text-sm text-white/75 leading-relaxed">
-                Support the next phase of our community programs and stay updated as we share new successes.
+                See the best ways to follow our announcements, events, and podcast drops.
               </p>
             </div>
             <div class="flex flex-wrap gap-3">
-              <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-hata-blue hover:bg-slate-100 transition">
+              <a href="/updates" class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-hata-blue hover:bg-slate-100 transition">
                 Get updates
               </a>
               <a href="/donate" class="inline-flex items-center justify-center rounded-full bg-hata-red px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 transition">
@@ -239,6 +258,6 @@
   </footer>
 
   <script src="/assets/js/main.js"></script>
-
 </body>
 </html>
+

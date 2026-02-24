@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.hatahumanitarian.org/index.html</loc>
-    <lastmod>2025-09-16</lastmod>
+    <loc>https://www.hatahumanitarian.org/</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/addiction-recovery.html</loc>
-    <lastmod>2025-09-16</lastmod>
+    <loc>https://www.hatahumanitarian.org/programs/addiction-recovery</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/donate.html</loc>
-    <lastmod>2025-09-16</lastmod>
+    <loc>https://www.hatahumanitarian.org/donate</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/mental-health-support.html</loc>
-    <lastmod>2025-09-16</lastmod>
+    <loc>https://www.hatahumanitarian.org/programs/mental-health</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/new-comer.html</loc>
-    <lastmod>2025-09-16</lastmod>
+    <loc>https://www.hatahumanitarian.org/programs/newcomer</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/Contact.html</loc>
-    <lastmod>2025-09-16</lastmod>
+    <loc>https://www.hatahumanitarian.org/contact</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/Partners.html</loc>
-    <lastmod>2025-09-16</lastmod>
+    <loc>https://www.hatahumanitarian.org/partners</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hatahumanitarian.org/podcasts</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
