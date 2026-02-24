@@ -530,27 +530,32 @@
   </section>
 
   <!-- Programs Section -->
-  <section id="programs" class="py-24 bg-gradient-to-b from-white via-white to-slate-50">
-    <div class="container mx-auto hata-gutter">
+  <section id="programs" class="py-24 relative overflow-hidden">
+    <!-- Background with brand blue -->
+    <div class="absolute inset-0 bg-[#0A2463]"></div>
+    <div class="absolute inset-0 opacity-10" style="background-image: url('/images/winnipeg.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0A2463] via-[#0A2463]/95 to-[#0A2463]"></div>
+    
+    <div class="relative container mx-auto hata-gutter">
       <div class="text-center max-w-3xl mx-auto">
-        <p class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1 text-sm font-semibold text-hata-blue ring-1 ring-blue-100">
-          <i class="fa-solid fa-star text-hata-red"></i>
-          <span>Our programs</span>
-        </p>
-        <h2 class="mt-4 text-3xl md:text-4xl font-bold text-hata-blue">Our Core Programs</h2>
-        <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-bold text-white mb-4">
+          <i class="fa-solid fa-star text-[#D80032]"></i>
+          <span>Our Programs</span>
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold text-white">Our Core Programs</h2>
+        <p class="mt-6 text-lg text-white/80 leading-relaxed">
           HATA Humanitarian is dedicated to transforming lives by fostering mental well-being, promoting inclusivity, and supporting addiction recovery.
         </p>
       </div>
 
-      <div class="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div class="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <!-- Program 1 -->
-        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-2xl" data-testid="program-mental-health">
           <div class="relative h-64">
             <div class="absolute inset-0 bg-cover bg-center program-1-bg" role="img" aria-label="Mental health support program"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
-              <i class="fa-solid fa-brain text-hata-red"></i>
+            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-[#0A2463] shadow-lg">
+              <i class="fa-solid fa-brain text-[#D80032]"></i>
               <span>Mental well-being</span>
             </div>
             <div class="absolute bottom-5 left-5 right-5">
@@ -562,15 +567,15 @@
           </div>
           <div class="p-7">
             <ul class="space-y-3 text-sm text-gray-700">
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Workshops and seminars</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Peer support and guidance</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Stigma-reduction tools</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Workshops and seminars</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Peer support and guidance</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Stigma-reduction tools</span></li>
             </ul>
             <div class="mt-7 flex flex-wrap items-center gap-3">
-              <a href="/programs/mental-health" class="inline-flex items-center justify-center rounded-full bg-hata-blue px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
+              <a href="/programs/mental-health" class="inline-flex items-center justify-center rounded-full bg-[#0A2463] px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
                 Learn more
               </a>
-              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-[#0A2463] hover:bg-gray-50 transition">
                 Support
               </a>
             </div>
@@ -578,12 +583,12 @@
         </article>
 
         <!-- Program 2 -->
-        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-2xl" data-testid="program-newcomer">
           <div class="relative h-64">
             <div class="absolute inset-0 bg-cover bg-center program-2-bg" role="img" aria-label="Newcomer integration program"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
-              <i class="fa-solid fa-people-roof text-hata-red"></i>
+            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-[#0A2463] shadow-lg">
+              <i class="fa-solid fa-people-roof text-[#D80032]"></i>
               <span>Inclusion</span>
             </div>
             <div class="absolute bottom-5 left-5 right-5">
@@ -595,15 +600,15 @@
           </div>
           <div class="p-7">
             <ul class="space-y-3 text-sm text-gray-700">
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Language and life-skill supports</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Digital skills workshops</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Navigation of local systems</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Language and life-skill supports</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Digital skills workshops</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Navigation of local systems</span></li>
             </ul>
             <div class="mt-7 flex flex-wrap items-center gap-3">
-              <a href="/programs/newcomer" class="inline-flex items-center justify-center rounded-full bg-hata-blue px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
+              <a href="/programs/newcomer" class="inline-flex items-center justify-center rounded-full bg-[#0A2463] px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
                 Learn more
               </a>
-              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-[#0A2463] hover:bg-gray-50 transition">
                 Support
               </a>
             </div>
@@ -611,12 +616,12 @@
         </article>
 
         <!-- Program 3 -->
-        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-2xl" data-testid="program-addiction">
           <div class="relative h-64">
             <div class="absolute inset-0 bg-cover bg-center program-3-bg" role="img" aria-label="Addiction recovery program"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
-              <i class="fa-solid fa-hand-holding-heart text-hata-red"></i>
+            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-[#0A2463] shadow-lg">
+              <i class="fa-solid fa-hand-holding-heart text-[#D80032]"></i>
               <span>Recovery</span>
             </div>
             <div class="absolute bottom-5 left-5 right-5">
@@ -628,15 +633,15 @@
           </div>
           <div class="p-7">
             <ul class="space-y-3 text-sm text-gray-700">
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Mindset education sessions</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Group and 1:1 supports</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Connected care pathways</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Mindset education sessions</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Group and 1:1 supports</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-[#D80032]"></i><span>Connected care pathways</span></li>
             </ul>
             <div class="mt-7 flex flex-wrap items-center gap-3">
-              <a href="/programs/addiction-recovery" class="inline-flex items-center justify-center rounded-full bg-hata-blue px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
+              <a href="/programs/addiction-recovery" class="inline-flex items-center justify-center rounded-full bg-[#0A2463] px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
                 Learn more
               </a>
-              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-[#0A2463] hover:bg-gray-50 transition">
                 Support
               </a>
             </div>
