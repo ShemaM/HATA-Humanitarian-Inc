@@ -442,28 +442,89 @@
   </section>
 
   <!-- About Us Section -->
-  <section id="about" class="py-24 bg-white">
-    <div class="container mx-auto hata-gutter">
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">About Us</h2>
-        <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
-            At the heart of our work is a belief that every person, regardless of background or circumstance, deserves the opportunity to thrive with dignity, resilience, and purpose. HATA Humanitarian Inc. exists to bridge the gaps in mental health care, addiction recovery, and newcomer integration.
+  <section id="about" class="py-24 relative overflow-hidden">
+    <!-- Background with brand color accent -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50/50"></div>
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-[#0A2463]/5 -skew-x-12 transform origin-top-right"></div>
+    
+    <div class="relative container mx-auto hata-gutter">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 rounded-full bg-[#D80032]/10 px-4 py-2 text-sm font-bold text-[#D80032] mb-4">
+          <i class="fa-solid fa-heart"></i>
+          <span>Who We Are</span>
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[#0A2463]">About HATA Humanitarian</h2>
+        <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+          At the heart of our work is a belief that every person deserves the opportunity to thrive with dignity, resilience, and purpose.
         </p>
       </div>
-      <div class="mt-16 grid md:grid-cols-2 gap-16 items-center">
-          <div class="relative">
-              <img src="/images/community impact.jpg" alt="Community Impact" class="rounded-lg shadow-2xl w-full">
-              <div class="absolute -bottom-8 -right-8 bg-hata-red text-white p-6 rounded-lg shadow-xl w-2/3">
-                  <h4 class="text-2xl font-bold">Our Vision</h4>
-                  <p class="mt-2">An inclusive community where every individual is empowered to thrive with resilience, dignity, and purpose.</p>
+
+      <!-- Main Content Grid -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Image Collage -->
+        <div class="relative" data-testid="about-image-section">
+          <div class="relative z-10">
+            <img src="/images/community impact.jpg" alt="Community Impact" class="rounded-2xl shadow-2xl w-full aspect-[4/3] object-cover">
+          </div>
+          <!-- Floating Vision Card -->
+          <div class="absolute -bottom-8 -right-4 md:-right-8 bg-gradient-to-br from-[#D80032] to-rose-600 text-white p-6 md:p-8 rounded-2xl shadow-2xl max-w-xs z-20">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                <i class="fa-solid fa-eye text-white"></i>
               </div>
+              <h4 class="text-xl font-bold">Our Vision</h4>
+            </div>
+            <p class="text-white/90 text-sm leading-relaxed">An inclusive community where every individual is empowered to thrive with resilience, dignity, and purpose.</p>
           </div>
+          <!-- Decorative element -->
+          <div class="absolute -top-4 -left-4 w-24 h-24 bg-[#0A2463]/10 rounded-2xl -z-10"></div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="space-y-8" data-testid="about-content">
           <div>
-              <h3 class="text-4xl font-bold text-hata-blue mb-6">Our Mission</h3>
-              <p class="text-gray-600 text-lg">
-                Our mission is to empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education, advocacy, and community engagement. Whether it's providing mindset education in schools, helping newcomers acquire life skills, or supporting youth on their recovery journey, our work is guided by compassion, evidence-based approaches, and a commitment to equity.
-              </p>
+            <h3 class="text-3xl md:text-4xl font-bold text-[#0A2463] mb-6 flex items-center gap-3">
+              <span class="w-12 h-1 bg-[#D80032] rounded-full"></span>
+              Our Mission
+            </h3>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Our mission is to empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education, advocacy, and community engagement.
+            </p>
           </div>
+
+          <!-- Key Points -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div class="w-12 h-12 rounded-xl bg-[#0A2463]/10 flex items-center justify-center mb-4">
+                <i class="fa-solid fa-graduation-cap text-[#0A2463] text-xl"></i>
+              </div>
+              <h4 class="font-bold text-[#0A2463] mb-2">Mindset Education</h4>
+              <p class="text-gray-600 text-sm">Providing education in schools to build resilience</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div class="w-12 h-12 rounded-xl bg-[#D80032]/10 flex items-center justify-center mb-4">
+                <i class="fa-solid fa-hands-holding-child text-[#D80032] text-xl"></i>
+              </div>
+              <h4 class="font-bold text-[#0A2463] mb-2">Newcomer Support</h4>
+              <p class="text-gray-600 text-sm">Helping newcomers acquire essential life skills</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4">
+                <i class="fa-solid fa-seedling text-emerald-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-[#0A2463] mb-2">Recovery Journey</h4>
+              <p class="text-gray-600 text-sm">Supporting youth on their recovery journey</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
+                <i class="fa-solid fa-scale-balanced text-amber-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-[#0A2463] mb-2">Commitment to Equity</h4>
+              <p class="text-gray-600 text-sm">Evidence-based approaches guided by compassion</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
