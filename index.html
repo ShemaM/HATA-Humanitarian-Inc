@@ -194,39 +194,39 @@
   </a>
 
   <!-- Header -->
-  <header class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100">
-    <nav class="container mx-auto hata-gutter py-3 sm:py-4 flex items-center justify-between gap-4">
-      <a href="/" class="flex items-center gap-3 min-w-0">
+  <header class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100" data-testid="main-header">
+    <nav class="container mx-auto hata-gutter py-3 sm:py-4 flex items-center justify-between gap-4" data-testid="main-nav">
+      <a href="/" class="flex items-center gap-3 min-w-0" data-testid="logo-link">
         <img src="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white p-1 ring-1 ring-black/5">
         <span class="min-w-0">
           <span class="block text-base sm:text-lg font-extrabold text-hata-blue tracking-tight truncate">HATA Humanitarian Inc.</span>
           <span class="block text-xs sm:text-sm text-gray-500 truncate">Community-led support</span>
         </span>
       </a>
-      <div class="hidden lg:flex items-center gap-7">
-        <a href="#about" class="hover:text-hata-red">About</a>
-        <a href="#programs" class="hover:text-hata-red">Programs</a>
-        <a href="#team" class="hover:text-hata-red">Team</a>
-        <a href="/podcasts" class="hover:text-hata-red">Podcasts</a>
-        <a href="/contact" class="hover:text-hata-red">Contact</a>
-        <a href="/partners" class="hover:text-hata-red">Partners</a>
-        <a href="/donate" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors">Donate</a>
+      <div class="hidden lg:flex items-center gap-7" data-testid="desktop-nav">
+        <a href="#about" class="hover:text-hata-red" data-testid="nav-about">About</a>
+        <a href="#programs" class="hover:text-hata-red" data-testid="nav-programs">Programs</a>
+        <a href="#team" class="hover:text-hata-red" data-testid="nav-team">Team</a>
+        <a href="/podcasts" class="hover:text-hata-red" data-testid="nav-podcasts">Podcasts</a>
+        <a href="/contact" class="hover:text-hata-red" data-testid="nav-contact">Contact</a>
+        <a href="/partners" class="hover:text-hata-red" data-testid="nav-partners">Partners</a>
+        <a href="/donate" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors" data-testid="nav-donate">Donate</a>
       </div>
       <div class="lg:hidden">
-        <button id="mobile-menu-button" class="rounded-full p-2 ring-1 ring-gray-200 hover:bg-gray-50 transition focus:outline-none" aria-label="Toggle mobile menu">
+        <button id="mobile-menu-button" class="rounded-full p-2 ring-1 ring-gray-200 hover:bg-gray-50 transition focus:outline-none" aria-label="Toggle mobile menu" data-testid="mobile-menu-button">
           <i class="fas fa-bars text-2xl text-hata-blue"></i>
         </button>
       </div>
     </nav>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100">
-      <a href="#about" class="block hata-gutter py-3 hover:bg-gray-100">About</a>
-      <a href="#programs" class="block hata-gutter py-3 hover:bg-gray-100">Programs</a>
-      <a href="#team" class="block hata-gutter py-3 hover:bg-gray-100">Team</a>
-      <a href="/podcasts" class="block hata-gutter py-3 hover:bg-gray-100">Podcasts</a>
-      <a href="/contact" class="block hata-gutter py-3 hover:bg-gray-100">Contact</a>
-      <a href="/partners" class="block hata-gutter py-3 hover:bg-gray-100">Partners</a>
-      <a href="/donate" class="block hata-gutter py-3 text-hata-red hover:bg-gray-100 font-semibold">Donate</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100" data-testid="mobile-menu">
+      <a href="#about" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-about">About</a>
+      <a href="#programs" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-programs">Programs</a>
+      <a href="#team" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-team">Team</a>
+      <a href="/podcasts" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-podcasts">Podcasts</a>
+      <a href="/contact" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-contact">Contact</a>
+      <a href="/partners" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-partners">Partners</a>
+      <a href="/donate" class="block hata-gutter py-3 text-hata-red hover:bg-gray-100 font-semibold" data-testid="mobile-nav-donate">Donate</a>
     </div>
   </header>
 
