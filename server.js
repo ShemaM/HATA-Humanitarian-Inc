@@ -13,6 +13,38 @@ const { URL } = require("node:url");
 const PORT = Number(process.env.PORT) || 3000;
 const ROOT_DIR = __dirname;
 
+// Simple in-memory rate limiter
+const rateLimitStore = new Map();
+const RATE_LIMIT_WINDOW_MS = 60000; // 1 minute
+const RATE_LIMIT_MAX_REQUESTS = 10; // 10 requests per minute
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const record = rateLimitStore.get(ip);
+  
+  if (!record || now - record.windowStart > RATE_LIMIT_WINDOW_MS) {
+    rateLimitStore.set(ip, { windowStart: now, count: 1 });
+    return false;
+  }
+  
+  if (record.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return true;
+  }
+  
+  record.count++;
+  return false;
+}
+
+// Clean up old entries periodically
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, record] of rateLimitStore) {
+    if (now - record.windowStart > RATE_LIMIT_WINDOW_MS * 2) {
+      rateLimitStore.delete(ip);
+    }
+  }
+}, RATE_LIMIT_WINDOW_MS);
+
 const PAGE_ROUTES = new Map([
   ["/", "index.html"],
   ["/donate", "donate.html"],
