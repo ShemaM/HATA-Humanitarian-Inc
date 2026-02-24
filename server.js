@@ -19,15 +19,17 @@ const PAGE_ROUTES = new Map([
   ["/contact", "Contact.html"],
   ["/partners", "Partners.html"],
   ["/podcasts", "podcasts.html"],
+  ["/updates", "updates.html"],
   ["/programs/mental-health", "mental-health-support.html"],
   ["/programs/addiction-recovery", "addiction-recovery.html"],
-  ["/programs/newcomer", "new comer.html"],
+  ["/programs/newcomer", "newcomer.html"],
   // Back-compat for sitemap / older links
-  ["/new-comer", "new comer.html"],
-  ["/new-comer.html", "new comer.html"],
+  ["/new-comer", "newcomer.html"],
+  ["/new-comer.html", "newcomer.html"],
   ["/partners.html", "Partners.html"],
   ["/contact.html", "Contact.html"],
   ["/podcasts.html", "podcasts.html"],
+  ["/updates.html", "updates.html"],
 ]);
 
 const CONTENT_TYPES = new Map([
