@@ -82,43 +82,145 @@
   </nav>
 
   <main id="main">
-    <!-- Hero Section -->
-    <section class="relative h-[460px]">
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/humanitarian.jpg');"></div>
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="relative container mx-auto hata-gutter h-full flex flex-col justify-center text-white">
-        <h1 class="text-4xl md:text-5xl font-bold">Your support changes lives</h1>
-        <p class="mt-4 text-base md:text-lg max-w-3xl text-white/90 leading-relaxed">Every donation helps us empower communities through mental health support, newcomer integration, and addiction recovery programs.</p>
+    <!-- Hero Section - Reimagined -->
+    <section class="relative min-h-[500px] overflow-hidden" data-testid="donate-hero">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0A2463] to-[#0A2463]/90"></div>
+      <div class="absolute inset-0 opacity-20" style="background-image: url('/images/humanitarian.jpg'); background-size: cover; background-position: center;"></div>
+      <!-- Decorative elements -->
+      <div class="absolute top-20 right-20 w-64 h-64 rounded-full bg-[#D80032]/20 blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-48 h-48 rounded-full bg-white/10 blur-2xl"></div>
+      
+      <div class="relative container mx-auto hata-gutter py-24 flex flex-col items-center justify-center text-center text-white">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-bold mb-6">
+          <i class="fa-solid fa-heart text-[#D80032]"></i>
+          <span>Make an Impact</span>
+        </span>
+        <h1 class="text-5xl md:text-6xl font-bold max-w-3xl leading-tight">Your Support <span class="text-[#D80032]">Changes Lives</span></h1>
+        <p class="mt-6 text-xl max-w-2xl text-white/90 leading-relaxed">Every donation helps us empower communities through mental health support, newcomer integration, and addiction recovery programs.</p>
+        <div class="mt-10 flex flex-wrap gap-4 justify-center">
+          <a href="#donate-options" class="group inline-flex items-center gap-3 bg-[#D80032] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-all">
+            <span>Donate Now</span>
+            <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+          </a>
+          <a href="/contact" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+            <span>Contact Us</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Donation Section -->
-    <section class="py-24">
+    <!-- Impact Stats Section -->
+    <section class="py-16 bg-white border-b border-gray-100">
       <div class="container mx-auto hata-gutter">
-        <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">Make a difference today</h2>
-          <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">Your generous contribution will directly support our programs and help us create a lasting impact in the community. We rely on the support of individuals like you to continue our work.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="p-6">
+            <div class="text-4xl md:text-5xl font-bold text-[#D80032]">3</div>
+            <p class="mt-2 text-gray-600 font-medium">Core Programs</p>
+          </div>
+          <div class="p-6">
+            <div class="text-4xl md:text-5xl font-bold text-[#0A2463]">500+</div>
+            <p class="mt-2 text-gray-600 font-medium">Lives Impacted</p>
+          </div>
+          <div class="p-6">
+            <div class="text-4xl md:text-5xl font-bold text-[#D80032]">100%</div>
+            <p class="mt-2 text-gray-600 font-medium">Community-driven</p>
+          </div>
+          <div class="p-6">
+            <div class="text-4xl md:text-5xl font-bold text-[#0A2463]">5+</div>
+            <p class="mt-2 text-gray-600 font-medium">Years of Service</p>
+          </div>
         </div>
-        <div class="mt-16 max-w-2xl mx-auto bg-white rounded-xl shadow-2xl p-10 text-center">
-          <h3 class="text-3xl font-bold text-hata-blue mb-4">Donate Securely Online</h3>
-          <p class="text-gray-600 mb-8">Click the button below to make a secure online donation through our trusted payment partner. Your donation is processed securely and you will receive a receipt for your contribution.</p>
-          <a href="mailto:info@hatahumanitarian.org?subject=Donation%20Inquiry" class="inline-block bg-hata-red text-white px-12 py-4 rounded-full font-bold text-base md:text-lg hover:bg-red-700 transition-transform transform hover:scale-105" data-testid="donate-cta">Contact Us to Donate</a>
-          
+      </div>
+    </section>
+
+    <!-- Donation Options Section -->
+    <section id="donate-options" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+      <div class="container mx-auto hata-gutter">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-flex items-center gap-2 rounded-full bg-[#D80032]/10 px-4 py-2 text-sm font-bold text-[#D80032] mb-4">
+            <i class="fa-solid fa-gift"></i>
+            <span>Ways to Give</span>
+          </span>
+          <h2 class="text-4xl md:text-5xl font-bold text-[#0A2463]">Make a Difference Today</h2>
+          <p class="mt-6 text-lg text-gray-600 leading-relaxed">Your generous contribution directly supports our programs and creates lasting impact in the community.</p>
         </div>
 
-        <div class="mt-24 text-center max-w-3xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-hata-blue">Other ways to give</h2>
-            <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">We also accept donations through e-transfer or by mail. Please see the details below.</p>
+        <!-- Main Donation Card -->
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100" data-testid="donation-card">
+            <div class="bg-gradient-to-r from-[#0A2463] to-[#0A2463]/90 p-8 text-center text-white">
+              <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-hand-holding-heart text-3xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold">Support Our Mission</h3>
+              <p class="mt-2 text-white/80">Choose your preferred donation method below</p>
+            </div>
+            
+            <div class="p-10">
+              <div class="grid md:grid-cols-3 gap-6">
+                <!-- E-Transfer -->
+                <div class="group bg-slate-50 rounded-2xl p-6 text-center hover:bg-[#0A2463] hover:text-white transition-all duration-300 cursor-pointer" data-testid="donate-etransfer">
+                  <div class="w-16 h-16 rounded-2xl bg-[#0A2463] group-hover:bg-white flex items-center justify-center mx-auto mb-4 transition-colors">
+                    <i class="fa-solid fa-mobile-screen text-white group-hover:text-[#0A2463] text-2xl transition-colors"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-[#0A2463] group-hover:text-white mb-2 transition-colors">E-Transfer</h4>
+                  <p class="text-sm text-gray-600 group-hover:text-white/80 transition-colors">Send to: info@hatahumanitarian.org</p>
+                </div>
+
+                <!-- By Mail -->
+                <div class="group bg-slate-50 rounded-2xl p-6 text-center hover:bg-[#D80032] hover:text-white transition-all duration-300 cursor-pointer" data-testid="donate-mail">
+                  <div class="w-16 h-16 rounded-2xl bg-[#D80032] group-hover:bg-white flex items-center justify-center mx-auto mb-4 transition-colors">
+                    <i class="fa-solid fa-envelope text-white group-hover:text-[#D80032] text-2xl transition-colors"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-[#0A2463] group-hover:text-white mb-2 transition-colors">By Mail</h4>
+                  <p class="text-sm text-gray-600 group-hover:text-white/80 transition-colors">127 Clonard Ave, Winnipeg, MB</p>
+                </div>
+
+                <!-- Contact Us -->
+                <a href="mailto:info@hatahumanitarian.org?subject=Donation%20Inquiry" class="group bg-slate-50 rounded-2xl p-6 text-center hover:bg-emerald-600 hover:text-white transition-all duration-300" data-testid="donate-contact">
+                  <div class="w-16 h-16 rounded-2xl bg-emerald-600 group-hover:bg-white flex items-center justify-center mx-auto mb-4 transition-colors">
+                    <i class="fa-solid fa-comments text-white group-hover:text-emerald-600 text-2xl transition-colors"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-[#0A2463] group-hover:text-white mb-2 transition-colors">Contact Us</h4>
+                  <p class="text-sm text-gray-600 group-hover:text-white/80 transition-colors">We'll help you donate</p>
+                </a>
+              </div>
+
+              <div class="mt-10 text-center">
+                <a href="mailto:info@hatahumanitarian.org?subject=Donation%20Inquiry" class="inline-flex items-center gap-3 bg-[#D80032] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-all hover:shadow-lg hover:shadow-[#D80032]/25" data-testid="donate-cta">
+                  <i class="fa-solid fa-heart"></i>
+                  <span>Donate Today</span>
+                </a>
+                <p class="mt-4 text-sm text-gray-500">Tax receipts available for all donations</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="mt-16 grid md:grid-cols-2 gap-12">
-            <div class="bg-white rounded-xl shadow-2xl p-10">
-                <h3 class="text-3xl font-bold text-hata-blue mb-4">E-Transfer</h3>
-                <p class="text-gray-600">You can send an e-transfer to our email address: <a href="mailto:info@hatahumanitarian.org" class="text-hata-red hover:underline">info@hatahumanitarian.org</a>. Please include your full name and address in the message for tax receipt purposes.</p>
+
+        <!-- Additional Info -->
+        <div class="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#0A2463]/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-shield-check text-[#0A2463] text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-[#0A2463] mb-2">Secure & Transparent</h4>
+                <p class="text-gray-600 text-sm">All donations are processed securely. You'll receive a receipt and can track how your contribution makes an impact.</p>
+              </div>
             </div>
-            <div class="bg-white rounded-xl shadow-2xl p-10">
-                <h3 class="text-3xl font-bold text-hata-blue mb-4">By Mail</h3>
-                <p class="text-gray-600">You can mail a check to our office address: <br> 127 Clonard Avenue, Winnipeg, MB. <br> Please make checks payable to HATA Humanitarian Inc.</p>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#D80032]/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-receipt text-[#D80032] text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-[#0A2463] mb-2">Tax Deductible</h4>
+                <p class="text-gray-600 text-sm">HATA Humanitarian Inc. is a registered non-profit. Include your name and address for tax receipt purposes.</p>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
