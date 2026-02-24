@@ -230,6 +230,217 @@
     </div>
   </header>
 
+
+  <main id="main">
+  <!-- Hero Section - Modernized -->
+  <section id="home" class="relative isolate min-h-[90vh] overflow-hidden bg-slate-950" data-testid="hero-section">
+    <!-- Background with modern treatment -->
+    <div class="absolute inset-0">
+      <img src="/images/humanitarian.jpg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/95 to-transparent"></div>
+      <!-- Animated gradient orbs -->
+      <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#D80032]/20 blur-[120px] animate-pulse"></div>
+      <div class="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#0A2463]/30 blur-[100px]"></div>
+    </div>
+    
+    <!-- Grid pattern overlay -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+    <div class="relative container mx-auto hata-gutter min-h-[90vh] py-20 flex flex-col justify-center">
+      <!-- Top badge -->
+      <div class="mb-8">
+        <span class="inline-flex items-center gap-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 px-5 py-2.5 text-sm font-medium text-white/90" data-testid="hero-location-badge">
+          <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Serving Winnipeg, Manitoba</span>
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left content -->
+        <div class="max-w-2xl" data-testid="hero-content">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+            Building 
+            <span class="relative inline-block">
+              <span class="relative z-10">Hope</span>
+              <span class="absolute bottom-2 left-0 w-full h-4 bg-[#D80032]/40 -skew-x-3"></span>
+            </span>
+            Through
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D80032] to-rose-400">Community</span>
+          </h1>
+          
+          <p class="mt-8 text-xl text-white/70 leading-relaxed max-w-xl">
+            We promote mental well-being, support addiction recovery, and create pathways for newcomer integration—one person, one story at a time.
+          </p>
+
+          <!-- Stats row -->
+          <div class="mt-10 flex flex-wrap gap-8 border-l-2 border-[#D80032]/50 pl-6">
+            <div data-testid="stat-programs">
+              <p class="text-4xl font-bold text-white">3</p>
+              <p class="text-sm text-white/60 mt-1">Core Programs</p>
+            </div>
+            <div data-testid="stat-focus">
+              <p class="text-4xl font-bold text-white">100%</p>
+              <p class="text-sm text-white/60 mt-1">Community-focused</p>
+            </div>
+            <div data-testid="stat-years">
+              <p class="text-4xl font-bold text-white">5+</p>
+              <p class="text-sm text-white/60 mt-1">Years of Impact</p>
+            </div>
+          </div>
+
+          <!-- CTA buttons -->
+          <div class="mt-12 flex flex-wrap gap-4">
+            <a href="#programs" class="group inline-flex items-center gap-3 bg-[#D80032] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-all duration-300 hover:shadow-lg hover:shadow-[#D80032]/25" data-testid="hero-cta-programs">
+              <span>Explore Programs</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="/donate" class="inline-flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300" data-testid="hero-cta-donate">
+              <i class="fa-solid fa-heart text-[#D80032]"></i>
+              <span>Support Our Work</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right side - Featured card -->
+        <aside id="featured-activities" class="lg:pl-8" data-testid="featured-activities">
+          <div class="rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-2xl p-8">
+            <!-- Card header -->
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <p class="text-xs font-bold tracking-wider text-[#D80032] uppercase">Latest Updates</p>
+                <h2 class="mt-1 text-2xl font-bold text-white">What's Happening</h2>
+              </div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D80032]/20 text-[#D80032]">
+                <i class="fa-solid fa-bell text-lg"></i>
+              </div>
+            </div>
+
+            <!-- Carousel -->
+            <div data-hata-carousel>
+              <div class="hata-no-scrollbar flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth" data-carousel-viewport tabindex="0" aria-label="Featured highlights carousel">
+                
+                <!-- Slide: Podcast -->
+                <div class="min-w-full snap-start" data-carousel-slide>
+                  <div class="rounded-2xl bg-gradient-to-br from-[#0A2463]/50 to-[#0A2463]/30 border border-white/10 p-5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
+                        <i class="fa-solid fa-microphone-lines text-xl"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold text-white">Roots & Oases Podcast</p>
+                        <p class="mt-2 text-sm text-white/70 leading-relaxed">
+                          Stories, tools, and conversations that move communities forward.
+                        </p>
+                        <a href="/podcasts" class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#D80032] hover:text-red-400 transition-colors" data-testid="podcast-link">
+                          <span>Listen now</span>
+                          <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide: Programs -->
+                <div class="min-w-full snap-start" data-carousel-slide>
+                  <div class="rounded-2xl bg-gradient-to-br from-[#D80032]/30 to-[#D80032]/10 border border-white/10 p-5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
+                        <i class="fa-solid fa-hands-holding-heart text-xl"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2">
+                          <span class="inline-flex items-center rounded-full bg-[#D80032] px-2 py-0.5 text-[10px] font-bold tracking-wider text-white uppercase">New</span>
+                          <p class="text-sm font-bold text-white">Program Updates</p>
+                        </div>
+                        <p class="mt-2 text-sm text-white/70 leading-relaxed">
+                          Mental health workshops, newcomer support, and recovery programs expanding in 2026.
+                        </p>
+                        <a href="#programs" class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#D80032] hover:text-red-400 transition-colors" data-testid="programs-link">
+                          <span>View all programs</span>
+                          <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide: Get involved -->
+                <div class="min-w-full snap-start" data-carousel-slide>
+                  <div class="rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 border border-white/10 p-5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
+                        <i class="fa-solid fa-users text-xl"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold text-white">Get Involved</p>
+                        <p class="mt-2 text-sm text-white/70 leading-relaxed">
+                          Volunteer, donate, or partner with us to make a difference in Winnipeg.
+                        </p>
+                        <a href="/contact" class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors" data-testid="contact-link">
+                          <span>Connect with us</span>
+                          <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Loading placeholder -->
+                <div class="min-w-full snap-start hidden" data-carousel-slide data-featured-slide-placeholder>
+                  <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <p class="text-sm font-semibold text-[#D80032]">Loading</p>
+                    <p class="mt-2 text-sm text-white/60" data-featured-status>Loading featured events…</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel controls -->
+              <div class="mt-5 flex items-center justify-between">
+                <div class="flex items-center gap-2" data-carousel-dots aria-label="Featured highlights pagination"></div>
+                <div class="flex items-center gap-2">
+                  <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed transition" data-carousel-prev aria-label="Previous highlight">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                  </button>
+                  <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed transition" data-carousel-next aria-label="Next highlight">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick links -->
+            <div class="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3">
+              <a href="/podcasts" class="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition" data-testid="quick-link-podcasts">
+                <i class="fa-solid fa-headphones text-[#D80032]"></i>
+                <span>Podcasts</span>
+              </a>
+              <a href="/contact" class="inline-flex items-center gap-2 rounded-full bg-[#D80032] px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-700 transition" data-testid="quick-link-contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact Us</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-white/40">
+        <span class="text-xs font-medium tracking-wider uppercase">Scroll to explore</span>
+        <div class="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2">
+          <div class="w-1.5 h-3 rounded-full bg-white/40 animate-bounce"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Events (hidden, data loaded into hero) -->
+  <section id="featured-events-section" class="hidden" aria-hidden="true">
+    <div class="container mx-auto hata-gutter">
+      <p class="text-sm text-gray-600" data-featured-status>Featured events will be displayed here.</p>
+      <ul data-featured-list></ul>
+    </div>
+  </section>
+
   <!-- About Us Section -->
   <section id="about" class="py-24 bg-white">
     <div class="container mx-auto hata-gutter">
