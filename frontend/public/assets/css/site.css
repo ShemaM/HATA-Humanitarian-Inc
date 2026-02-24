@@ -1,0 +1,174 @@
+:root {
+  --hata-red: #d80032;
+  --hata-blue: #0a2463;
+  --site-gutter: clamp(1.25rem, 3vw, 3rem);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 16px;
+}
+
+/* The site currently trends large on desktop; scale down slightly for a more natural feel. */
+@media (min-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Consistent page gutters across the site (replaces repeated px-* classes). */
+.hata-gutter {
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter);
+}
+
+/* Global page loader (shown during page-to-page navigation). */
+.hata-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(900px 420px at 15% 20%, rgba(216, 0, 50, 0.22), transparent 60%),
+    radial-gradient(820px 420px at 85% 80%, rgba(10, 36, 99, 0.22), transparent 60%),
+    rgba(2, 6, 23, 0.66);
+  backdrop-filter: blur(10px);
+}
+
+.hata-loader[hidden] {
+  display: none;
+}
+
+.hata-loader__panel {
+  width: min(680px, 100%);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #111827;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+@media (min-width: 640px) {
+  .hata-loader__panel {
+    padding: 24px;
+  }
+}
+
+.hata-loader__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.hata-loader__mark {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--hata-red);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  box-shadow: 0 10px 26px rgba(216, 0, 50, 0.35);
+}
+
+.hata-loader__spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  animation: hata-spin 900ms linear infinite;
+}
+
+@keyframes hata-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hata-loader__title {
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hata-red);
+}
+
+.hata-loader__message {
+  margin-top: 6px;
+  font-weight: 800;
+  color: var(--hata-blue);
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.hata-loader__hint {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(17, 24, 39, 0.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hata-loader__spinner {
+    animation: none;
+  }
+}
+
+/* Hide scrollbars for horizontal carousels (keeps scroll accessible). */
+.hata-no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hata-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.bg-hata-red {
+  background-color: var(--hata-red);
+}
+.text-hata-red {
+  color: var(--hata-red);
+}
+.bg-hata-blue {
+  background-color: var(--hata-blue);
+}
+.text-hata-blue {
+  color: var(--hata-blue);
+}
+
+/* Small HCI wins: consistent focus + better link underlines */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--hata-red);
+  outline-offset: 3px;
+}
+
+.hata-breadcrumbs a {
+  text-decoration: none;
+}
+.hata-breadcrumbs a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

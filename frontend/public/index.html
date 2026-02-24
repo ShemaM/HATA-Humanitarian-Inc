@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HATA Humanitarian Inc. | Winnipeg Non-Profit Organization</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <style>
+    :root {
+      --hata-red: #D80032;
+      --hata-blue: #0A2463;
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+    .bg-hata-red { background-color: var(--hata-red); }
+    .text-hata-red { color: var(--hata-red); }
+    .bg-hata-blue { background-color: var(--hata-blue); }
+    .text-hata-blue { color: var(--hata-blue); }
+    #programs .program-1-bg {
+        background-image: url("/images/Mental%20Health.jpg");
+    }
+    #programs .program-2-bg {
+        background-image: url("/images/newcomer.jpg");
+    }
+    #programs .program-3-bg {
+        background-image: url("/images/addiction-recovery.jpg");
+    }
+    .team-member-button {
+        cursor: pointer;
+    }
+    
+    /* Partners Section Styles */
+        .partners-section {
+            padding: 80px 0;
+            background-color: #f9fbfd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .partners-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .partners-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .partners-header h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .partners-header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .partner-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            padding: 25px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .partner-logo {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .partner-logo-placeholder {
+            width: 180px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 6px;
+            color: white;
+        }
+        
+        .partner-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+        
+        .partner-card p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .partner-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            margin-top: auto;
+        }
+        
+        .partner-link:hover {
+            color: #2980b9;
+        }
+        
+        .partner-link i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .partners-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .cta-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .partners-header h2 {
+                font-size: 2rem;
+            }
+            
+            .partners-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-hata-blue shadow">
+    Skip to content
+  </a>
+
+  <!-- Header -->
+  <header class="bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100" data-testid="main-header">
+    <nav class="container mx-auto hata-gutter py-3 sm:py-4 flex items-center justify-between gap-4" data-testid="main-nav">
+      <a href="/" class="flex items-center gap-3 min-w-0" data-testid="logo-link">
+        <img src="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white p-1 ring-1 ring-black/5">
+        <span class="min-w-0">
+          <span class="block text-base sm:text-lg font-extrabold text-hata-blue tracking-tight truncate">HATA Humanitarian Inc.</span>
+          <span class="block text-xs sm:text-sm text-gray-500 truncate">Community-led support</span>
+        </span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7" data-testid="desktop-nav">
+        <a href="#about" class="hover:text-hata-red" data-testid="nav-about">About</a>
+        <a href="#programs" class="hover:text-hata-red" data-testid="nav-programs">Programs</a>
+        <a href="#team" class="hover:text-hata-red" data-testid="nav-team">Team</a>
+        <a href="/podcasts" class="hover:text-hata-red" data-testid="nav-podcasts">Podcasts</a>
+        <a href="/contact" class="hover:text-hata-red" data-testid="nav-contact">Contact</a>
+        <a href="/partners" class="hover:text-hata-red" data-testid="nav-partners">Partners</a>
+        <a href="/donate" class="bg-hata-red text-white px-5 py-2 rounded-full font-bold hover:bg-red-700 transition-colors" data-testid="nav-donate">Donate</a>
+      </div>
+      <div class="lg:hidden">
+        <button id="mobile-menu-button" class="rounded-full p-2 ring-1 ring-gray-200 hover:bg-gray-50 transition focus:outline-none" aria-label="Toggle mobile menu" data-testid="mobile-menu-button">
+          <i class="fas fa-bars text-2xl text-hata-blue"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100" data-testid="mobile-menu">
+      <a href="#about" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-about">About</a>
+      <a href="#programs" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-programs">Programs</a>
+      <a href="#team" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-team">Team</a>
+      <a href="/podcasts" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-podcasts">Podcasts</a>
+      <a href="/contact" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-contact">Contact</a>
+      <a href="/partners" class="block hata-gutter py-3 hover:bg-gray-100" data-testid="mobile-nav-partners">Partners</a>
+      <a href="/donate" class="block hata-gutter py-3 text-hata-red hover:bg-gray-100 font-semibold" data-testid="mobile-nav-donate">Donate</a>
+    </div>
+  </header>
+
+
+  <main id="main">
+  <!-- Hero Section - Modernized -->
+  <section id="home" class="relative isolate min-h-[90vh] overflow-hidden bg-slate-950" data-testid="hero-section">
+    <!-- Background with modern treatment -->
+    <div class="absolute inset-0">
+      <img src="/images/humanitarian.jpg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/95 to-transparent"></div>
+      <!-- Animated gradient orbs -->
+      <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#D80032]/20 blur-[120px] animate-pulse"></div>
+      <div class="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#0A2463]/30 blur-[100px]"></div>
+    </div>
+    
+    <!-- Grid pattern overlay -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+    <div class="relative container mx-auto hata-gutter min-h-[90vh] py-20 flex flex-col justify-center">
+      <!-- Top badge -->
+      <div class="mb-8">
+        <span class="inline-flex items-center gap-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 px-5 py-2.5 text-sm font-medium text-white/90" data-testid="hero-location-badge">
+          <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Serving Winnipeg, Manitoba</span>
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left content -->
+        <div class="max-w-2xl" data-testid="hero-content">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+            Building 
+            <span class="relative inline-block">
+              <span class="relative z-10">Hope</span>
+              <span class="absolute bottom-2 left-0 w-full h-4 bg-[#D80032]/40 -skew-x-3"></span>
+            </span>
+            Through
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D80032] to-rose-400">Community</span>
+          </h1>
+          
+          <p class="mt-8 text-xl text-white/70 leading-relaxed max-w-xl">
+            We promote mental well-being, support addiction recovery, and create pathways for newcomer integration—one person, one story at a time.
+          </p>
+
+          <!-- Stats row -->
+          <div class="mt-10 flex flex-wrap gap-8 border-l-2 border-[#D80032]/50 pl-6">
+            <div data-testid="stat-programs">
+              <p class="text-4xl font-bold text-white">3</p>
+              <p class="text-sm text-white/60 mt-1">Core Programs</p>
+            </div>
+            <div data-testid="stat-focus">
+              <p class="text-4xl font-bold text-white">100%</p>
+              <p class="text-sm text-white/60 mt-1">Community-focused</p>
+            </div>
+            <div data-testid="stat-years">
+              <p class="text-4xl font-bold text-white">5+</p>
+              <p class="text-sm text-white/60 mt-1">Years of Impact</p>
+            </div>
+          </div>
+
+          <!-- CTA buttons -->
+          <div class="mt-12 flex flex-wrap gap-4">
+            <a href="#programs" class="group inline-flex items-center gap-3 bg-[#D80032] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-all duration-300 hover:shadow-lg hover:shadow-[#D80032]/25" data-testid="hero-cta-programs">
+              <span>Explore Programs</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="/donate" class="inline-flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300" data-testid="hero-cta-donate">
+              <i class="fa-solid fa-heart text-[#D80032]"></i>
+              <span>Support Our Work</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right side - Featured card -->
+        <aside id="featured-activities" class="lg:pl-8" data-testid="featured-activities">
+          <div class="rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-2xl p-8">
+            <!-- Card header -->
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <p class="text-xs font-bold tracking-wider text-[#D80032] uppercase">Latest Updates</p>
+                <h2 class="mt-1 text-2xl font-bold text-white">What's Happening</h2>
+              </div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D80032]/20 text-[#D80032]">
+                <i class="fa-solid fa-bell text-lg"></i>
+              </div>
+            </div>
+
+            <!-- Carousel -->
+            <div data-hata-carousel>
+              <div class="hata-no-scrollbar flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth" data-carousel-viewport tabindex="0" aria-label="Featured highlights carousel">
+                
+                <!-- Slide: Podcast -->
+                <div class="min-w-full snap-start" data-carousel-slide>
+                  <div class="rounded-2xl bg-gradient-to-br from-[#0A2463]/50 to-[#0A2463]/30 border border-white/10 p-5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
+                        <i class="fa-solid fa-microphone-lines text-xl"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold text-white">Roots & Oases Podcast</p>
+                        <p class="mt-2 text-sm text-white/70 leading-relaxed">
+                          Stories, tools, and conversations that move communities forward.
+                        </p>
+                        <a href="/podcasts" class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#D80032] hover:text-red-400 transition-colors" data-testid="podcast-link">
+                          <span>Listen now</span>
+                          <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide: Programs -->
+                <div class="min-w-full snap-start" data-carousel-slide>
+                  <div class="rounded-2xl bg-gradient-to-br from-[#D80032]/30 to-[#D80032]/10 border border-white/10 p-5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
+                        <i class="fa-solid fa-hands-holding-heart text-xl"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2">
+                          <span class="inline-flex items-center rounded-full bg-[#D80032] px-2 py-0.5 text-[10px] font-bold tracking-wider text-white uppercase">New</span>
+                          <p class="text-sm font-bold text-white">Program Updates</p>
+                        </div>
+                        <p class="mt-2 text-sm text-white/70 leading-relaxed">
+                          Mental health workshops, newcomer support, and recovery programs expanding in 2026.
+                        </p>
+                        <a href="#programs" class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#D80032] hover:text-red-400 transition-colors" data-testid="programs-link">
+                          <span>View all programs</span>
+                          <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide: Get involved -->
+                <div class="min-w-full snap-start" data-carousel-slide>
+                  <div class="rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 border border-white/10 p-5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
+                        <i class="fa-solid fa-users text-xl"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold text-white">Get Involved</p>
+                        <p class="mt-2 text-sm text-white/70 leading-relaxed">
+                          Volunteer, donate, or partner with us to make a difference in Winnipeg.
+                        </p>
+                        <a href="/contact" class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors" data-testid="contact-link">
+                          <span>Connect with us</span>
+                          <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Loading placeholder -->
+                <div class="min-w-full snap-start hidden" data-carousel-slide data-featured-slide-placeholder>
+                  <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <p class="text-sm font-semibold text-[#D80032]">Loading</p>
+                    <p class="mt-2 text-sm text-white/60" data-featured-status>Loading featured events…</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel controls -->
+              <div class="mt-5 flex items-center justify-between">
+                <div class="flex items-center gap-2" data-carousel-dots aria-label="Featured highlights pagination"></div>
+                <div class="flex items-center gap-2">
+                  <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed transition" data-carousel-prev aria-label="Previous highlight">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                  </button>
+                  <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed transition" data-carousel-next aria-label="Next highlight">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick links -->
+            <div class="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3">
+              <a href="/podcasts" class="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition" data-testid="quick-link-podcasts">
+                <i class="fa-solid fa-headphones text-[#D80032]"></i>
+                <span>Podcasts</span>
+              </a>
+              <a href="/contact" class="inline-flex items-center gap-2 rounded-full bg-[#D80032] px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-700 transition" data-testid="quick-link-contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact Us</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-white/40">
+        <span class="text-xs font-medium tracking-wider uppercase">Scroll to explore</span>
+        <div class="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2">
+          <div class="w-1.5 h-3 rounded-full bg-white/40 animate-bounce"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Events (hidden, data loaded into hero) -->
+  <section id="featured-events-section" class="hidden" aria-hidden="true">
+    <div class="container mx-auto hata-gutter">
+      <p class="text-sm text-gray-600" data-featured-status>Featured events will be displayed here.</p>
+      <ul data-featured-list></ul>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="container mx-auto hata-gutter">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">About Us</h2>
+        <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
+            At the heart of our work is a belief that every person, regardless of background or circumstance, deserves the opportunity to thrive with dignity, resilience, and purpose. HATA Humanitarian Inc. exists to bridge the gaps in mental health care, addiction recovery, and newcomer integration.
+        </p>
+      </div>
+      <div class="mt-16 grid md:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+              <img src="/images/community impact.jpg" alt="Community Impact" class="rounded-lg shadow-2xl w-full">
+              <div class="absolute -bottom-8 -right-8 bg-hata-red text-white p-6 rounded-lg shadow-xl w-2/3">
+                  <h4 class="text-2xl font-bold">Our Vision</h4>
+                  <p class="mt-2">An inclusive community where every individual is empowered to thrive with resilience, dignity, and purpose.</p>
+              </div>
+          </div>
+          <div>
+              <h3 class="text-4xl font-bold text-hata-blue mb-6">Our Mission</h3>
+              <p class="text-gray-600 text-lg">
+                Our mission is to empower and transform lives by promoting mental well-being, fostering inclusivity, and supporting addiction recovery through education, advocacy, and community engagement. Whether it's providing mindset education in schools, helping newcomers acquire life skills, or supporting youth on their recovery journey, our work is guided by compassion, evidence-based approaches, and a commitment to equity.
+              </p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="py-24 bg-gradient-to-b from-white via-white to-slate-50">
+    <div class="container mx-auto hata-gutter">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1 text-sm font-semibold text-hata-blue ring-1 ring-blue-100">
+          <i class="fa-solid fa-star text-hata-red"></i>
+          <span>Our programs</span>
+        </p>
+        <h2 class="mt-4 text-3xl md:text-4xl font-bold text-hata-blue">Our Core Programs</h2>
+        <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
+          HATA Humanitarian is dedicated to transforming lives by fostering mental well-being, promoting inclusivity, and supporting addiction recovery.
+        </p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Program 1 -->
+        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+          <div class="relative h-64">
+            <div class="absolute inset-0 bg-cover bg-center program-1-bg" role="img" aria-label="Mental health support program"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
+              <i class="fa-solid fa-brain text-hata-red"></i>
+              <span>Mental well-being</span>
+            </div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <h3 class="text-2xl font-bold text-white">Stigma-Free & Mental Health</h3>
+              <p class="mt-2 text-sm text-white/90 leading-relaxed">
+                Youth workshops, seminars, and peer support to build resilience and reduce stigma.
+              </p>
+            </div>
+          </div>
+          <div class="p-7">
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Workshops and seminars</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Peer support and guidance</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Stigma-reduction tools</span></li>
+            </ul>
+            <div class="mt-7 flex flex-wrap items-center gap-3">
+              <a href="/programs/mental-health" class="inline-flex items-center justify-center rounded-full bg-hata-blue px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
+                Learn more
+              </a>
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+                Support
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Program 2 -->
+        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+          <div class="relative h-64">
+            <div class="absolute inset-0 bg-cover bg-center program-2-bg" role="img" aria-label="Newcomer integration program"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
+              <i class="fa-solid fa-people-roof text-hata-red"></i>
+              <span>Inclusion</span>
+            </div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <h3 class="text-2xl font-bold text-white">Diversity and Inclusion</h3>
+              <p class="mt-2 text-sm text-white/90 leading-relaxed">
+                Practical support that helps newcomers integrate into life in Winnipeg with confidence.
+              </p>
+            </div>
+          </div>
+          <div class="p-7">
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Language and life-skill supports</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Digital skills workshops</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Navigation of local systems</span></li>
+            </ul>
+            <div class="mt-7 flex flex-wrap items-center gap-3">
+              <a href="/programs/newcomer" class="inline-flex items-center justify-center rounded-full bg-hata-blue px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
+                Learn more
+              </a>
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+                Support
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Program 3 -->
+        <article class="group relative overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5">
+          <div class="relative h-64">
+            <div class="absolute inset-0 bg-cover bg-center program-3-bg" role="img" aria-label="Addiction recovery program"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-hata-blue ring-1 ring-white/30">
+              <i class="fa-solid fa-hand-holding-heart text-hata-red"></i>
+              <span>Recovery</span>
+            </div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <h3 class="text-2xl font-bold text-white">Addiction-Free Program</h3>
+              <p class="mt-2 text-sm text-white/90 leading-relaxed">
+                Holistic support and mindset education, guided by collaboration with professional services.
+              </p>
+            </div>
+          </div>
+          <div class="p-7">
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Mindset education sessions</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Group and 1:1 supports</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-circle-check mt-0.5 text-hata-red"></i><span>Connected care pathways</span></li>
+            </ul>
+            <div class="mt-7 flex flex-wrap items-center gap-3">
+              <a href="/programs/addiction-recovery" class="inline-flex items-center justify-center rounded-full bg-hata-blue px-6 py-3 text-sm font-semibold text-white hover:bg-blue-950 transition">
+                Learn more
+              </a>
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-hata-blue hover:bg-gray-50 transition">
+                Support
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-24 bg-white">
+    <div class="container mx-auto hata-gutter">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-hata-blue">Our Board of Directors</h2>
+        <p class="mt-6 text-base md:text-lg text-gray-600 leading-relaxed">
+          Our work is guided by a passionate leadership team with deep community roots and a commitment to creating change.
+        </p>
+      </div>
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Team Member 1 -->
+        <div class="text-center">
+          <img src="/images/Pacific.JPEG" alt="Pacific Muhumure" class="w-40 h-40 rounded-full mx-auto shadow-2xl border-4 border-white object-cover">
+          <h3 class="text-2xl font-bold mt-6 text-hata-blue">Pacific Muhumure</h3>
+          <p class="text-gray-500 font-bold">CEO & Director</p>
+          <div class="mt-4">
+            <button class="team-member-button bg-white text-hata-blue border border-blue-100 px-6 py-2 rounded-full font-bold hover:bg-blue-50 transition-colors">Read Bio</button>
+            <div class="team-member-bio hidden mt-4 text-left">
+              <p class="text-gray-600">Pacific Muhumure is a dedicated professional with a passion for community empowerment. He is pursuing his second-degree program at the University of Manitoba and holds a degree from Southern New Hampshire University, along with certifications from Harvard University, Boston University, and the United Nations. Pacific has collaborated with RLOs, Government Agencies, and the Ministry of Education to serve the underserved. His diverse experience as an Academic Advisor, Monitoring and Evaluation Officer, Teacher, and Digital Facilitator has fueled his passion for community engagement and advocacy. As a former refugee who has faced immense challenges, Pacific is dedicated to sharing his journey and teaching the importance of mental health and mindset education to inspire young people to unlock their full potential.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="text-center">
+          <img src="/images/Angelique.JPG" alt="Angelique Nantabara" class="w-40 h-40 rounded-full mx-auto shadow-2xl border-4 border-white object-cover">
+          <h3 class="text-2xl font-bold mt-6 text-hata-blue">Angelique Nantabara</h3>
+          <p class="text-gray-500 font-bold">Community Leader | Advocate</p>
+          <div class="mt-4">
+            <button class="team-member-button bg-white text-hata-blue border border-blue-100 px-6 py-2 rounded-full font-bold hover:bg-blue-50 transition-colors">Read Bio</button>
+            <div class="team-member-bio hidden mt-4 text-left">
+              <p class="text-gray-600">Angelique has been a dedicated community leader and advocate in Winnipeg for over 17 years. Originally from the Democratic Republic of Congo, she brings her lived experience to her work, supporting youth, newcomers, and individuals with disabilities. Her extensive experience includes working with various organizations focused on settlement services and community development. Beyond Canada, Angelique has been involved in global community development, demonstrating her commitment to a compassionate and culturally informed approach. Through her work, she has inspired and empowered countless immigrants across Canada.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="text-center">
+          <img src="/images/Gentille.JPG" alt="Gentile Ntwayingabo" class="w-40 h-40 rounded-full mx-auto shadow-2xl border-4 border-white object-cover">
+          <h3 class="text-2xl font-bold mt-6 text-hata-blue">Gentille Ntwayingabo</h3>
+          <p class="text-gray-500 font-bold">Youth Advocate | Community Builder</p>
+          <div class="mt-4">
+            <button class="team-member-button bg-white text-hata-blue border border-blue-100 px-6 py-2 rounded-full font-bold hover:bg-blue-50 transition-colors">Read Bio</button>
+            <div class="team-member-bio hidden mt-4 text-left">
+              <p class="text-gray-600">Gentille Ntwayingabo immigrated to Canada from the Democratic Republic of Congo and has proudly called Winnipeg home for over 16 years. Her journey has inspired her lifelong passion for empowering others, especially youth. A graduate of Golden Bell High School, Gentile is currently pursuing a degree in Business Administration. Alongside her studies, she has worked extensively in community development and support. Gentile brings deep lived experience and heartfelt commitment to her work, understanding the barriers young immigrants face and dedicating herself to helping others overcome those hurdles. Through her involvement in youth programs and newcomer services, she strives to uplift and inspire the next generation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Methods Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto hata-gutter">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-hata-blue">How to Reach Us</h2>
+        <p class="mt-6 text-lg text-gray-600">
+          There are several ways to connect with our team. Choose the method that works best for you.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Email -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-envelope text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">Email Us</h3>
+          <p class="text-gray-600 mb-4">Send us a message directly</p>
+          <a href="mailto:info@hatainc.ca" class="text-hata-red font-semibold hover:underline">
+            📤Email Us Now
+          </a>
+        </div>
+        
+        <!-- Phone -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-phone text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">Call Us</h3>
+          <p class="text-gray-600 mb-4">Speak with our team directly</p>
+          <a href="tel:+14319988892" class="text-hata-red font-semibold hover:underline">
+            📞Call
+          </a>
+        </div>
+        
+        <!-- WhatsApp -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fab fa-whatsapp text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">WhatsApp</h3>
+          <p class="text-gray-600 mb-4">Message us on WhatsApp</p>
+          <a href="https://wa.me/14319988892" class="text-hata-red font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
+            Send a Message
+          </a>
+        </div>
+        
+        <!-- Visit -->
+        <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-map-marker-alt text-hata-blue text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-hata-blue mb-3">Visit Us</h3>
+          <p class="text-gray-600 mb-4">Come see us in Winnipeg</p>
+          <p class="text-hata-red font-semibold">
+            Winnipeg, Manitoba
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Partners Section -->
+  <!-- Partners Grid Section -->
+  <section class="py-24 bg-white">
+    <div class="container mx-auto hata-gutter">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-hata-blue animate-slide-up">Our Collaborative Network</h2>
+        <p class="mt-6 text-lg text-gray-600 animate-slide-up">
+          We're grateful for the organizations and institutions that support our mission and work alongside us to create positive change.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Partner 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300 animate-slide-up">
+            <div class="h-40 flex items-center justify-center mb-6">
+                <img src="/images/Computers.jpg" alt="Computers For Schools Manitoba" class="max-h-24 max-w-full">
+            </div>
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">Computers For Schools Manitoba</h3>
+            <p class="text-gray-600 mb-6">Providing technology access to support our digital skills training programs for newcomers and youth in the community.</p>
+            <a href="https://www.c4smb.ca/" class="text-hata-red font-semibold flex items-center hover:underline" target="_blank" rel="noopener">
+                Visit website <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+        </div>
+        
+        <!-- Partner 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300 animate-slide-up">
+            <div class="h-40 flex items-center justify-center mb-6">
+                <img src="/images/Chambers.png" alt="Logo of Winnipeg Chamber of Commerce" class="max-h-24 max-w-full">
+            </div>
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">Winnipeg Chamber of Commerce</h3>
+            <p class="text-gray-600 mb-6">Connecting us with local businesses to create employment opportunities for newcomers and support community initiatives.</p>
+            <a href="https://www.winnipeg-chamber.com/" class="text-hata-red font-semibold flex items-center hover:underline" target="_blank" rel="noopener">
+                Visit website <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+        </div>
+        
+        <!-- Partner 3 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300 animate-slide-up">
+            <div class="h-40 flex items-center justify-center mb-6">
+                <img src="/images/cropped-U_multicultural_logo.webp" alt="U Multicultural" class="max-h-24 max-w-full">
+            </div>
+            <h3 class="text-2xl font-bold text-hata-blue mb-4">U Multicultural</h3>
+            <p class="text-gray-600 mb-6">Amplifying our message through their media platform and helping us reach diverse communities across Winnipeg.</p>
+            <a href="https://u-channel.ca/" class="text-hata-red font-semibold flex items-center hover:underline" target="_blank" rel="noopener">
+                Visit website <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-white">
+    <div class="border-t border-white/10">
+      <div class="container mx-auto hata-gutter py-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <a href="/" class="flex items-center gap-3">
+              <img src="/images/HATA HUMANITARIAN LOGO pdf (1)-1.png" alt="HATA Humanitarian Inc. Logo" class="h-12 w-12 rounded-xl bg-white p-1">
+              <div class="min-w-0">
+                <p class="text-lg font-bold leading-tight">HATA Humanitarian Inc.</p>
+                <p class="mt-1 text-sm text-white/70">Winnipeg • Community-led support</p>
+              </div>
+            </a>
+
+            <p class="mt-5 text-sm leading-relaxed text-white/75">
+              Promoting mental well-being, supporting addiction recovery, and facilitating social inclusion in Winnipeg.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full bg-hata-red px-6 py-3 text-sm font-semibold text-white hover:bg-red-700 transition">
+                Donate
+              </a>
+              <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/15 transition">
+                Contact
+              </a>
+            </div>
+
+            <div class="mt-6 flex items-center gap-4">
+              <a href="https://www.linkedin.com/company/humanitarian-aid-through-advocacy-hata/about/" class="text-white/75 hover:text-white transition-colors" target="_blank" rel="noopener" aria-label="HATA on LinkedIn">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="mailto:info@hatahumanitarian.org" class="text-white/75 hover:text-white transition-colors" aria-label="Email HATA">
+                <i class="fa-solid fa-envelope text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 grid grid-cols-2 gap-10 sm:grid-cols-3">
+            <div>
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Quick Links</h2>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li><a href="/" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li><a href="/#about" class="text-white/70 hover:text-white transition-colors">About</a></li>
+                <li><a href="/#programs" class="text-white/70 hover:text-white transition-colors">Programs</a></li>
+                <li><a href="/podcasts" class="text-white/70 hover:text-white transition-colors">Podcasts</a></li>
+                <li><a href="/partners" class="text-white/70 hover:text-white transition-colors">Partners</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Programs</h2>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li><a href="/programs/mental-health" class="text-white/70 hover:text-white transition-colors">Stigma-Free &amp; Mental Health</a></li>
+                <li><a href="/programs/newcomer" class="text-white/70 hover:text-white transition-colors">Diversity &amp; Inclusion</a></li>
+                <li><a href="/programs/addiction-recovery" class="text-white/70 hover:text-white transition-colors">Addiction-Free Program</a></li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <h2 class="text-sm font-extrabold tracking-wider text-white/80">Get In Touch</h2>
+              <ul class="mt-4 space-y-3 text-sm text-white/70">
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-location-dot mt-0.5 text-white/50"></i>
+                  <span>Winnipeg, Manitoba</span>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-envelope mt-0.5 text-white/50"></i>
+                  <a href="mailto:info@hatahumanitarian.org" class="hover:text-white transition-colors">info@hatahumanitarian.org</a>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-bell mt-0.5 text-white/50"></i>
+                  <a href="/contact" class="hover:text-white transition-colors">Get updates</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 md:p-8">
+          <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="inline-flex items-center rounded-full bg-hata-red px-2.5 py-0.5 text-[11px] font-extrabold tracking-wider text-white">BREAKING</span>
+                <span class="text-xs font-semibold text-white/75">A fresh milestone is coming</span>
+              </div>
+              <h2 class="mt-3 text-2xl font-bold">Celebrate a win with us</h2>
+              <p class="mt-2 text-sm text-white/75 leading-relaxed">
+                Support the next phase of our community programs and stay updated as we share new successes.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-hata-blue hover:bg-slate-100 transition">
+                Get updates
+              </a>
+              <a href="/donate" class="inline-flex items-center justify-center rounded-full bg-hata-red px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 transition">
+                Donate now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>&copy; 2026 HATA Humanitarian Inc. All rights reserved.</p>
+          <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <a href="/sitemap.xml" class="hover:text-white transition-colors">Sitemap</a>
+            <span class="text-white/25" aria-hidden="true">•</span>
+            <a href="/contact" class="hover:text-white transition-colors">Contact</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/featured-activities.js"></script>
+
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" data-testid="back-to-top-btn" class="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#D80032] text-white shadow-lg transition-all duration-300 opacity-0 invisible hover:bg-red-700 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#D80032] focus:ring-offset-2" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+</body>
+</html>
