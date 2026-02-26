@@ -1,57 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.hatahumanitarian.org/</loc>
+    <loc>https://hatainc.ca/</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/programs/addiction-recovery</loc>
+    <loc>https://hatainc.ca/programs/addiction-recovery</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/donate</loc>
+    <loc>https://hatainc.ca/donate</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/programs/mental-health</loc>
+    <loc>https://hatainc.ca/programs/mental-health</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/programs/newcomer</loc>
+    <loc>https://hatainc.ca/programs/newcomer</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/contact</loc>
+    <loc>https://hatainc.ca/contact</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/partners</loc>
+    <loc>https://hatainc.ca/partners</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/podcasts</loc>
+    <loc>https://hatainc.ca/podcasts</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hatahumanitarian.org/updates</loc>
+    <loc>https://hatainc.ca/updates</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <!-- NEW THEME PAGES – adjust actual URLs if different -->
+  <url>
+    <loc>https://hatainc.ca/themes/immigrants-education</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hatainc.ca/themes/multiculturalism-manitoba</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
