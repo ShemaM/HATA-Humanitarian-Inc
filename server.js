@@ -264,7 +264,7 @@ async function handleApi(req, res, url) {
   return sendJson(res, 404, { status: "error", message: "Not found" });
 }
 
-const server = http.createServer(async (req, res) => {
+async function handler(req, res) {
   applyBaseHeaders(res);
 
   const url = new URL(req.url || "/", `http://${req.headers.host || "localhost"}`);
@@ -305,27 +305,33 @@ const server = http.createServer(async (req, res) => {
 
   // Fallback 404
   sendText(res, 404, "Not Found");
-});
+}
 
-server.on("error", (err) => {
-  if (err && err.code === "EADDRINUSE") {
+module.exports = handler;
+
+if (require.main === module) {
+  const server = http.createServer(handler);
+
+  server.on("error", (err) => {
+    if (err && err.code === "EADDRINUSE") {
+      // eslint-disable-next-line no-console
+      console.error(
+        [
+          `Port ${PORT} is already in use, so the website server cannot start.`,
+          `Find what's using it: netstat -ano | findstr ":${PORT}"`,
+          `Then stop that process/service and re-run: node server.js`,
+        ].join("\n")
+      );
+      process.exit(1);
+    }
+
     // eslint-disable-next-line no-console
-    console.error(
-      [
-        `Port ${PORT} is already in use, so the website server cannot start.`,
-        `Find what's using it: netstat -ano | findstr ":${PORT}"`,
-        `Then stop that process/service and re-run: node server.js`,
-      ].join("\n")
-    );
+    console.error("Server error:", err);
     process.exit(1);
-  }
+  });
 
-  // eslint-disable-next-line no-console
-  console.error("Server error:", err);
-  process.exit(1);
-});
-
-server.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+  server.listen(PORT, () => {
+    // eslint-disable-next-line no-console
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}

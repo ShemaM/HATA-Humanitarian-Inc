@@ -1,0 +1,15 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/contact", "destination": "/Contact.html" },
+    { "source": "/partners", "destination": "/Partners.html" },
+    { "source": "/podcasts", "destination": "/podcasts.html" },
+    { "source": "/updates", "destination": "/updates.html" },
+    { "source": "/programs/mental-health", "destination": "/mental-health-support.html" },
+    { "source": "/programs/newcomer", "destination": "/newcomer.html" },
+    { "source": "/programs/addiction-recovery", "destination": "/addiction-recovery.html" },
+    { "source": "/new-comer", "destination": "/newcomer.html" },
+    { "source": "/api/(.*)", "destination": "/server.js" }
+  ]
+}
