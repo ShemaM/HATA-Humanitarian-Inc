@@ -268,6 +268,9 @@ async function handler(req, res) {
   applyBaseHeaders(res);
 
   const url = new URL(req.url || "/", `http://${req.headers.host || "localhost"}`);
+  
+  // Log request for Vercel debugging
+  console.log(`[request] ${req.method} ${url.pathname}`);
 
   if (url.pathname.startsWith("/api/")) {
     return handleApi(req, res, url);
