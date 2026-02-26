@@ -134,15 +134,63 @@ body {
   display: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* ========== BASE TYPOGRAPHY ========== */
+/* Consistent styles for all headings and paragraphs – override with utilities when needed */
+h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
+  color: var(--hata-blue);          /* default for light backgrounds – override with text-white on dark */
+  font-weight: 700;                  /* all headings bold by default */
+  line-height: 1.2;                  /* tighter leading for headings */
+  margin-top: 0;                      /* remove default margins – add spacing via utilities */
+  margin-bottom: 0.5em;               /* consistent bottom margin (can be removed with m-0) */
 }
 
+h1 {
+  font-size: 2.5rem;                  /* 40px */
+}
+h2 {
+  font-size: 2rem;                    /* 32px */
+}
+h3 {
+  font-size: 1.75rem;                  /* 28px */
+}
+h4 {
+  font-size: 1.5rem;                   /* 24px */
+}
+h5 {
+  font-size: 1.25rem;                   /* 20px */
+}
+h6 {
+  font-size: 1.125rem;                  /* 18px */
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;                     /* 16px */
+  line-height: 1.6;                     /* comfortable reading */
+  color: #4b5563;                       /* gray-600 – good contrast on white */
+  margin-top: 0;
+  margin-bottom: 1rem;                   /* consistent spacing between paragraphs */
+}
+
+small, .text-small {
+  font-size: 0.875rem;                   /* 14px */
+  line-height: 1.5;
+  color: #6b7280;                         /* gray-500 */
+}
+
+/* Links (base style) */
+a {
+  color: var(--hata-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--hata-red);
+}
+
+/* Utility classes for backgrounds – ensure text contrast */
 .bg-hata-red {
   background-color: var(--hata-red);
 }
@@ -155,6 +203,9 @@ h6 {
 .text-hata-blue {
   color: var(--hata-blue);
 }
+
+/* When using dark backgrounds, you must manually add text-white (or similar) */
+/* Example: <div class="bg-hata-blue text-white"> ... </div> */
 
 /* Small HCI wins: consistent focus + better link underlines */
 a:focus-visible,
@@ -172,3 +223,4 @@ textarea:focus-visible {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
